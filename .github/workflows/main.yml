@@ -1,0 +1,38 @@
+name: GDC Data Crawler
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # 6시간마다 자동으로 실행 (UTC 기준)
+  workflow_dispatch: # 수동으로도 즉시 실행 가능하게 설정
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 스크립트가 data.json을 수정하고 커밋할 수 있는 권한 부여
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-node-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run Crawler
+      env:
+        NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+        NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+      run: python crawler.py
+
+    - name: Commit and Push if changed
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add data.json
+        git diff-index --quiet HEAD || git commit -m "Update GDC data"
+        git push
