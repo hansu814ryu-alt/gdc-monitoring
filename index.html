@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDC 뉴스 & 잡코리아 채용 정보</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 20px; background-color: #f9f9f9; }
+        h1 { color: #333; text-align: center; }
+        .container { display: flex; gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .section { flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { border-bottom: 2px solid #007bff; padding-bottom: 10px; color: #007bff; }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        a { text-decoration: none; color: #222; font-weight: bold; }
+        a:hover { color: #007bff; }
+        .date, .company { font-size: 0.85em; color: #777; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>🌐 GDC 정보 모니터링 대시보드</h1>
+    <div class="container">
+        <!-- 뉴스 섹션 -->
+        <div class="section">
+            <h2>📰 네이버 뉴스 (GDC 관련)</h2>
+            <ul id="news-list">공동 로딩 중...</ul>
+        </div>
+        
+        <!-- 채용공고 섹션 -->
+        <div class="section">
+            <h2>💼 잡코리아 채용 (베트남/IT/BSE/통번역)</h2>
+            <ul id="job-list">공고 로딩 중...</ul>
+        </div>
+    </div>
+
+    <script>
+        // 수집된 data.json 파일을 읽어와 화면에 뿌려줍니다.
+        fetch('./data.json')
+            .then(response => response.json())
+            .then(data => {
+                // 뉴스 출력
+                const newsList = document.getElementById('news-list');
+                newsList.innerHTML = '';
+                if(data.news.length === 0) newsList.innerHTML = '<li>검색된 뉴스가 없습니다.</li>';
+                data.news.forEach(item => {
+                    newsList.innerHTML += `<li><a href="${item.link}" target="_blank">${item.title}</a><div class="date">${item.pubDate}</div></li>`;
+                });
+
+                // 채용공고 출력
+                const jobList = document.getElementById('job-list');
+                jobList.innerHTML = '';
+                if(data.jobs.length === 0) jobList.innerHTML = '<li>조건에 맞는 채용공고가 없습니다.</li>';
+                data.jobs.forEach(item => {
+                    jobList.innerHTML += `<li><a href="${item.link}" target="_blank">[${item.company}] ${item.title}</a></li>`;
+                });
+            })
+            .catch(err => {
+                document.getElementById('news-list').innerHTML = '<li>데이터를 불러오지 못했습니다.</li>';
+                document.getElementById('job-list').innerHTML = '<li>데이터를 불러오지 못했습니다.</li>';
+                console.error(err);
+            });
+    </script>
+</body>
+</html>
