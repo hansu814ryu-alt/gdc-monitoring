@@ -3,63 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDC 뉴스 & 잡코리아 채용 정보</title>
+    <title>IT/AX 트렌드 모니터링</title>
     <style>
-        body { font-family: 'Arial', sans-serif; margin: 20px; background-color: #f9f9f9; }
-        h1 { color: #333; text-align: center; }
-        .container { display: flex; gap: 20px; max-width: 1200px; margin: 0 auto; }
-        .section { flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { border-bottom: 2px solid #007bff; padding-bottom: 10px; color: #007bff; }
-        ul { list-style: none; padding: 0; }
-        li { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
-        a { text-decoration: none; color: #222; font-weight: bold; }
-        a:hover { color: #007bff; }
-        .date, .company { font-size: 0.85em; color: #777; margin-top: 5px; }
+        body { font-family: 'Arial', sans-serif; margin: 20px; background-color: #f4f7fa; color: #333; }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); gap: 20px; max-width: 1400px; margin: 0 auto; }
+        .section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { font-size: 1.2rem; color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 0; }
+        ul { list-style: none; padding: 0; margin: 0; height: 300px; overflow-y: auto; } /* 스크롤 적용 */
+        li { padding: 12px 0; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+        a { text-decoration: none; color: #2980b9; font-weight: bold; }
+        a:hover { color: #e74c3c; text-decoration: underline; }
+        .date { font-size: 0.8em; color: #95a5a6; margin-top: 5px; }
+        
+        /* 스크롤바 디자인 */
+        ul::-webkit-scrollbar { width: 6px; }
+        ul::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 4px; }
     </style>
 </head>
 <body>
-
-    <h1>🌐 GDC 정보 모니터링 대시보드</h1>
-    <div class="container">
-        <!-- 뉴스 섹션 -->
+    <h1>📊 IT/AX 트렌드 & GDC 모니터링 대시보드</h1>
+    
+    <div class="grid-container">
+        <!-- 1. 뉴스: GDC -->
         <div class="section">
-            <h2>📰 네이버 뉴스 (GDC 관련)</h2>
-            <ul id="news-list">공동 로딩 중...</ul>
+            <h2>📰 GDC 뉴스 (게임 제외)</h2>
+            <ul id="gdc-news-list">로딩 중...</ul>
         </div>
         
-        <!-- 채용공고 섹션 -->
+        <!-- 2. 뉴스: AX/AI -->
         <div class="section">
-            <h2>💼 잡코리아 채용 (베트남/IT/BSE/통번역)</h2>
-            <ul id="job-list">공고 로딩 중...</ul>
+            <h2>📰 AI 기술 근황 & AX 전환 사례</h2>
+            <ul id="ax-news-list">로딩 중...</ul>
+        </div>
+
+        <!-- 3. 채용: 베트남 IT -->
+        <div class="section">
+            <h2>💼 베트남 채용 (IT/BSE/통번역)</h2>
+            <ul id="vn-job-list">로딩 중...</ul>
+        </div>
+
+        <!-- 4. 채용: AX 전담 -->
+        <div class="section">
+            <h2>💼 AX 전담 인력 채용</h2>
+            <ul id="ax-job-list">로딩 중...</ul>
         </div>
     </div>
 
     <script>
-        // 수집된 data.json 파일을 읽어와 화면에 뿌려줍니다.
         fetch('./data.json')
             .then(response => response.json())
             .then(data => {
-                // 뉴스 출력
-                const newsList = document.getElementById('news-list');
-                newsList.innerHTML = '';
-                if(data.news.length === 0) newsList.innerHTML = '<li>검색된 뉴스가 없습니다.</li>';
-                data.news.forEach(item => {
-                    newsList.innerHTML += `<li><a href="${item.link}" target="_blank">${item.title}</a><div class="date">${item.pubDate}</div></li>`;
-                });
+                const renderList = (elementId, dataArray, isJob = false) => {
+                    const el = document.getElementById(elementId);
+                    el.innerHTML = '';
+                    if (!dataArray || dataArray.length === 0) {
+                        el.innerHTML = '<li>데이터가 없습니다.</li>';
+                        return;
+                    }
+                    dataArray.forEach(item => {
+                        if (isJob) {
+                            el.innerHTML += `<li><a href="${item.link}" target="_blank">[${item.company}] ${item.title}</a></li>`;
+                        } else {
+                            el.innerHTML += `<li><a href="${item.link}" target="_blank">${item.title}</a><div class="date">${item.pubDate}</div></li>`;
+                        }
+                    });
+                };
 
-                // 채용공고 출력
-                const jobList = document.getElementById('job-list');
-                jobList.innerHTML = '';
-                if(data.jobs.length === 0) jobList.innerHTML = '<li>조건에 맞는 채용공고가 없습니다.</li>';
-                data.jobs.forEach(item => {
-                    jobList.innerHTML += `<li><a href="${item.link}" target="_blank">[${item.company}] ${item.title}</a></li>`;
-                });
+                renderList('gdc-news-list', data.gdc_news, false);
+                renderList('ax-news-list', data.ax_news, false);
+                renderList('vn-job-list', data.vn_jobs, true);
+                renderList('ax-job-list', data.ax_jobs, true);
             })
-            .catch(err => {
-                document.getElementById('news-list').innerHTML = '<li>데이터를 불러오지 못했습니다.</li>';
-                document.getElementById('job-list').innerHTML = '<li>데이터를 불러오지 못했습니다.</li>';
-                console.error(err);
-            });
+            .catch(err => console.error('데이터 로드 실패:', err));
     </script>
 </body>
 </html>
