@@ -13,10 +13,13 @@
         a { text-decoration: none; color: #2980b9; font-size: 1.1em; font-weight: bold; }
         a:hover { color: #e74c3c; text-decoration: underline; }
         .meta { color: #888; font-size: 0.9em; margin-top: 5px; }
+        .back-btn { display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #3498db; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.9em; }
+        .back-btn:hover { background-color: #2980b9; }
     </style>
 </head>
 <body>
     <div class="container">
+        <a href="./index.html" class="back-btn">← 메인 대시보드로 돌아가기</a>
         <h1 id="page-title">전체 데이터 로딩 중...</h1>
         <ul id="full-list"></ul>
     </div>
@@ -26,32 +29,40 @@
         const urlParams = new URLSearchParams(window.location.search);
         const type = urlParams.get('type');
         
+        // 타이틀에 사람인 반영
         const titles = {
             'gdc': '📊 GDC 시장 및 경쟁사 동향 전체보기',
             'ax': '📰 AI 기술 근황 & AX 전환 사례 전체보기',
-            'vn': '💼 베트남 채용 (IT/BSE/통번역) 전체보기',
-            'axjob': '💼 AX 전담 인력 채용 전체보기'
+            'vn': '💼 사람인 베트남 채용 (IT/BSE/통번역) 전체보기',
+            'axjob': '💼 사람인 AX 전담 인력 채용 전체보기'
         };
         
         document.getElementById('page-title').innerText = titles[type] || '전체 데이터';
 
+        // data.json 불러오기
         fetch('./data.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) throw new Error('데이터를 불러올 수 없습니다.');
+                return response.json();
+            })
             .then(data => {
                 const listEl = document.getElementById('full-list');
                 let targetData = [];
                 let isJob = false;
 
+                // 쿼리 파라미터에 따라 데이터 매핑
                 if (type === 'gdc') targetData = data.gdc.data;
                 else if (type === 'ax') targetData = data.ax_news.data;
                 else if (type === 'vn') { targetData = data.vn_jobs.data; isJob = true; }
                 else if (type === 'axjob') { targetData = data.ax_jobs.data; isJob = true; }
 
+                // 데이터가 없을 때 처리
                 if (!targetData || targetData.length === 0) {
                     listEl.innerHTML = '<li>수집된 데이터가 없습니다.</li>';
                     return;
                 }
 
+                // 리스트 렌더링
                 targetData.forEach(item => {
                     if (isJob) {
                         listEl.innerHTML += `<li><a href="${item.link}" target="_blank">[${item.company}] ${item.title}</a></li>`;
@@ -61,7 +72,8 @@
                 });
             })
             .catch(err => {
-                document.getElementById('full-list').innerHTML = '<li>데이터를 불러오는 중 오류가 발생했습니다.</li>';
+                document.getElementById('full-list').innerHTML = '<li>데이터를 불러오는 중 오류가 발생했습니다. 크롤링이 완료되었는지 확인해 주세요.</li>';
+                console.error(err);
             });
     </script>
 </body>
