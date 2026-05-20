@@ -6,7 +6,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-# [신규] 키워드 가중치 기반 데이터 정렬 함수
+# 1. 키워드 가중치 기반 데이터 정렬 함수
 def sort_items_by_relevance(items, keywords):
     for item in items:
         score = 0
@@ -15,10 +15,9 @@ def sort_items_by_relevance(items, keywords):
             if kw in title_lower:
                 score += 1
         item['score'] = score
-    # 가중치 점수가 높은 순서대로 정렬하여 반환
     return sorted(items, key=lambda x: x.get('score', 0), reverse=True)
 
-# AI 시사점 도출 함수 (오류 픽스 및 모델 안정화)
+# 2. AI 시사점 도출 함수 
 def get_ai_insight(news_list, api_key):
     if not api_key: return "⚠️ GEMINI_API_KEY가 설정되지 않았습니다."
     if not news_list: return "수집된 기사가 없어 시사점을 생성할 수 없습니다."
@@ -26,7 +25,6 @@ def get_ai_insight(news_list, api_key):
     try:
         import google.generativeai as genai
         genai.configure(api_key=api_key)
-        # 최신 API 버전에 맞는 모델명 적용 및 폴백(Fallback) 구조
         try:
             model = genai.GenerativeModel('gemini-1.5-flash-latest')
         except Exception:
@@ -40,23 +38,20 @@ def get_ai_insight(news_list, api_key):
     except Exception as e:
         return f"시사점 생성 실패: {e}"
 
-# 네이버 뉴스 크롤링
-def get_naver_news(client_id, client_secret, query, exclude_keywords=None):
+# 3. 네이버 뉴스 크롤링 (요약 본문 추출 추가)
+def get_naver_news(client_id, client_secret, query, display=20):
     url = "https://openapi.naver.com/v1/search/news.json"
     headers = {"X-Naver-Client-Id": client_id, "X-Naver-Client-Secret": client_secret}
-    params = {"query": query, "display": 30, "sort": "sim"}
+    params = {"query": query, "display": display, "sort": "sim"}
     filtered_news = []
     
     try:
         response = requests.get(url, headers=headers, params=params)
         if response.status_code == 200:
             for item in response.json().get('items', []):
-                title_lower = item['title'].lower()
-                desc_lower = item['description'].lower()
-                if exclude_keywords and any(ex in title_lower or ex in desc_lower for ex in exclude_keywords):
-                    continue
                 filtered_news.append({
                     "title": item['title'].replace("<b>", "").replace("</b>", ""),
+                    "description": item['description'].replace("<b>", "").replace("</b>", ""),
                     "link": item['link'],
                     "pubDate": item['pubDate']
                 })
@@ -64,7 +59,7 @@ def get_naver_news(client_id, client_secret, query, exclude_keywords=None):
         print(f"네이버 뉴스 오류 ({query}): {e}")
     return filtered_news
 
-# 잡코리아 크롤링
+# 4. 잡코리아 크롤링
 def get_jobkorea_postings(search_keyword, include_keywords=None):
     url = f"https://www.jobkorea.co.kr/Search/?stext={search_keyword}"
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
@@ -94,7 +89,7 @@ def get_jobkorea_postings(search_keyword, include_keywords=None):
         print(f"잡코리아 오류 ({search_keyword}): {e}")
     return filtered_jobs
 
-# 이메일 섹션 생성 헬퍼
+# 5. 이메일 섹션 생성 헬퍼
 def build_email_section(title, insight, data_list, more_link, is_job=False):
     html = f"<h2>{title}</h2>"
     if insight:
@@ -105,12 +100,10 @@ def build_email_section(title, insight, data_list, more_link, is_job=False):
         if is_job: html += f"<li><a href='{item['link']}' target='_blank'>[{item['company']}] {item['title']}</a></li>"
         else: html += f"<li><a href='{item['link']}' target='_blank'>{item['title']}</a><div class='meta'>{item['pubDate']}</div></li>"
     html += "</ul>"
-    
-    # 이메일에서는 메인 웹 대시보드로 유도
     html += f"<div style='text-align:right; margin-top:8px;'><a href='{more_link}' target='_blank' style='font-size:13px; color:#555; text-decoration:none;'>[웹페이지에서 전체 보기]</a></div><br>"
     return html
 
-# 이메일 발송
+# 6. 이메일 발송
 def send_email(data, pages_url):
     sender_email = os.environ.get("SENDER_EMAIL")
     sender_password = os.environ.get("SENDER_PASSWORD")
@@ -138,8 +131,9 @@ def send_email(data, pages_url):
     except Exception as e:
         print(f"이메일 발송 실패: {e}")
 
+
 if __name__ == "__main__":
-    # 아래 URL을 본인의 깃허브 페이지 주소로 변경하시면 이메일의 더보기 링크가 정상 작동합니다.
+    # 아래 URL을 본인의 깃허브 페이지 주소로 변경해주세요. (예: https://myid.github.io/gdc-monitoring)
     GITHUB_PAGES_URL = "https://본인아이디.github.io/저장소이름" 
     
     NAVER_ID = os.environ.get("NAVER_CLIENT_ID", "")
@@ -147,18 +141,49 @@ if __name__ == "__main__":
     GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
     
     print("--- 🚀 데이터 크롤링 시작 ---")
-    raw_gdc = get_naver_news(NAVER_ID, NAVER_SECRET, query="GDC", exclude_keywords=['game', '게임', '게임개발', 'game development'])
-    raw_ax_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="AX 전환") + get_naver_news(NAVER_ID, NAVER_SECRET, query="AI 기술 도입")
+    
+    # ==========================================
+    # [핵심 로직 변경] 1. GDC 뉴스 수집 (IT 오프쇼어링 이중 맥락 필터링)
+    # ==========================================
+    raw_gdc = []
+    gdc_links = set() # 중복 기사 제거용
+    
+    # 다중 검색어로 네이버 DB에서 정확한 후보군 1차 확보
+    gdc_queries = ["GDC 오프쇼어링", "GDC 딜리버리", "GDC 개발", "글로벌 딜리버리 센터", "글로벌 개발 센터"]
+    
+    exclude_kw = ['game', '게임', '컨퍼런스', '바이오', '의료', '전시']
+    context_kw = ['it', '소프트웨어', '개발', '오프쇼어링', '아웃소싱', '거점', '인력', '해외', '딜리버리', '센터', '전환', '구축']
+
+    for q in gdc_queries:
+        items = get_naver_news(NAVER_ID, NAVER_SECRET, query=q, display=15)
+        for item in items:
+            # 제목과 요약본을 합쳐서 문맥(Context) 파악
+            text_context = (item['title'] + " " + item['description']).lower()
+            
+            # 1. 배제 키워드가 하나라도 있으면 스킵
+            if any(ex in text_context for ex in exclude_kw):
+                continue
+                
+            # 2. 필수 맥락 키워드가 포함된 경우만 수집 통과
+            if any(ctx in text_context for ctx in context_kw):
+                if item['link'] not in gdc_links:
+                    raw_gdc.append(item)
+                    gdc_links.add(item['link'])
+
+    # 2. AI 뉴스 수집
+    raw_ax_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="AX 전환", display=20) + get_naver_news(NAVER_ID, NAVER_SECRET, query="AI 기술 도입", display=20)
+    
+    # 3 & 4. 잡코리아 채용 공고 수집
     raw_vn_jobs = get_jobkorea_postings("베트남", ['it', '개발', '소프트웨어', 'software', 'bse', '브릿지', 'bridge', '통역', '번역'])
     raw_ax_jobs = get_jobkorea_postings("AX", ['ax', 'ai', '인공지능', '전환', '트랜스포메이션', '데이터'])
     
     print("--- 🛠️ 핵심 키워드 가중치 기반 정렬 ---")
-    # 뉴스: 기술 성능평가 및 기업 재무/투자 지표 관련 키워드 우대
-    news_keywords = ['반도체', '차세대', 'llm', 'ai', '가치', '평가', 'pbr', 'per', '실적', '성능']
+    # 뉴스: 기술 평가 및 비즈니스 실적/투자 관련 용어 우대
+    news_keywords = ['반도체', '차세대', 'llm', 'ai', '가치', '평가', 'pbr', 'per', '실적', '성능', '도입', '성공']
     sorted_gdc = sort_items_by_relevance(raw_gdc, news_keywords)
     sorted_ax_news = sort_items_by_relevance(raw_ax_news, news_keywords)
     
-    # 채용: 핵심 인력 직무 관련 우대
+    # 채용: 핵심 책임자/전문가 직무 용어 우대
     job_keywords = ['리더', '매니저', 'pm', 'bse', '통역', '번역']
     sorted_vn_jobs = sort_items_by_relevance(raw_vn_jobs, job_keywords)
     sorted_ax_jobs = sort_items_by_relevance(raw_ax_jobs, job_keywords)
