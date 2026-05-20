@@ -175,12 +175,12 @@ if __name__ == "__main__":
     
     print("--- 🚀 데이터 크롤링 시작 ---")
     
-    gdc_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="GDC", exclude_keywords=['game', '게임', '게임개발', 'game development'])
+    gdc_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="GDC", exclude_keywords=['game', '게임', '게임개발', 'game development', '물류'])
     ax_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="AX 전환", display=15)
     ax_news += get_naver_news(NAVER_ID, NAVER_SECRET, query="AI 기술 도입", display=15)
     
     vn_jobs = get_jobkorea_postings(search_keyword="베트남", include_keywords=['it', '개발', '소프트웨어', 'software', 'bse', '브릿지', 'bridge', '통역', '번역'])
-    ax_jobs = get_jobkorea_postings(search_keyword="AX", include_keywords=['ax', 'ai', '인공지능', '전환', '트랜스포메이션', '데이터'])
+    ax_jobs = get_jobkorea_postings(search_keyword="AI", include_keywords=['ax', 'ai', 'AX전환', '트랜스포메이션', '데이터'])
     
     print("--- 🏁 데이터 크롤링 완료 ---")
     
