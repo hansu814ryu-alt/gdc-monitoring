@@ -1,7 +1,6 @@
 import os
 import json
 import requests
-from bs4 import BeautifulSoup
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -16,7 +15,7 @@ def sort_items_by_relevance(items, keywords):
         item['score'] = score
     return sorted(items, key=lambda x: x.get('score', 0), reverse=True)
 
-# 2. 베트남 채용 전용 필터링 및 정렬 함수 (메인 노출 여부 분기)
+# 2. 베트남 채용 전용 필터링 및 정렬 함수
 def process_vn_jobs(jobs):
     processed = []
     for job in jobs:
@@ -34,12 +33,10 @@ def process_vn_jobs(jobs):
         
         if any(kw in title for kw in kr_work_kw): score += 20
         if any(kw in title for kw in it_kw): score += 10
-        if any(kw in title for local_k in local_kw for local_k in local_kw): score -= 15
+        if any(kw in title for local_k in local_kw): score -= 15
             
         job['score'] = score
-        
-        # [핵심] 가점을 받아 1순위 로직에 부합하는(10점 이상) 공고만 메인에 표기 (is_main = True)
-        # 현지 채용 등 감점을 받아 점수가 낮으면 메인에서 제외 (전체보기에만 표기)
+        # 1순위 조건 부합 여부 판단 (10점 이상)
         job['is_main'] = (score >= 10)
         
         processed.append(job)
@@ -90,7 +87,7 @@ def get_ai_insight(news_list, api_key):
     except Exception as e:
         return f"시사점 생성 실패: {e}"
 
-# 5. 네이버 뉴스 크롤링
+# 5. 네이버 뉴스 API 수집
 def get_naver_news(client_id, client_secret, query, display=20):
     url = "https://openapi.naver.com/v1/search/news.json"
     headers = {"X-Naver-Client-Id": client_id, "X-Naver-Client-Secret": client_secret}
@@ -111,53 +108,63 @@ def get_naver_news(client_id, client_secret, query, display=20):
         print(f"네이버 뉴스 오류 ({query}): {e}")
     return filtered_news
 
-# 6. 사람인(Saramin) 크롤링
-def get_saramin_postings(search_keyword, include_keywords=None):
-    url = f"https://www.saramin.co.kr/zf_user/search/recruit?searchword={search_keyword}"
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+# 6. [신규] 원티드(Wanted) API 기반 채용공고 수집
+def get_wanted_postings(search_keyword, include_keywords=None):
+    # 원티드 채용 검색 API 엔드포인트
+    url = "https://www.wanted.co.kr/api/v4/jobs"
+    params = {
+        "country": "kr",
+        "locations": "all",
+        "years": "-1", # 경력 무관 전체
+        "limit": "50", # 50개까지 수집
+        "query": search_keyword,
+        "job_sort": "job.latest_order" # 최신순
+    }
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "Accept": "application/json, text/plain, */*",
+        "Referer": "https://www.wanted.co.kr/"
+    }
     filtered_jobs = []
     
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, params=params, timeout=10)
         if response.status_code == 200:
-            soup = BeautifulSoup(response.text, 'html.parser')
-            for job in soup.select('.item_recruit, .box_item'):
+            job_lists = response.json().get('data', [])
+            
+            for job in job_lists:
                 try:
-                    title_elem = job.select_one('.job_tit a, .str_tit, .box_item a')
-                    company_elem = job.select_one('.corp_name a, .box_item .name')
+                    title = job.get('position', '')
+                    company = job.get('company', {}).get('name', '기업명 미상')
+                    job_id = job.get('id', '')
+                    link = f"https://www.wanted.co.kr/wd/{job_id}"
                     
-                    if title_elem:
-                        title = title_elem.get_text(strip=True)
-                        company = company_elem.get_text(strip=True) if company_elem else "기업명 미상"
-                        link = title_elem['href']
-                        if link and not link.startswith('http'): 
-                            link = "https://www.saramin.co.kr" + link
-                        
-                        if include_keywords:
-                            if any(kw in title.lower() for kw in include_keywords):
-                                filtered_jobs.append({"title": title, "company": company, "link": link})
-                        else:
+                    if include_keywords:
+                        if any(kw in title.lower() for kw in include_keywords):
                             filtered_jobs.append({"title": title, "company": company, "link": link})
+                    else:
+                        filtered_jobs.append({"title": title, "company": company, "link": link})
                 except Exception:
                     continue
+        else:
+            print(f"❌ 원티드 API 통신 에러 ({search_keyword}): 상태코드 {response.status_code}")
     except Exception as e:
-        print(f"사람인 크롤링 오류 ({search_keyword}): {e}")
+        print(f"원티드 API 오류 ({search_keyword}): {e}")
     return filtered_jobs
 
-# 7. 이메일 섹션 생성 헬퍼 (is_main 반영)
+# 7. 이메일 섹션 생성 헬퍼
 def build_email_section(title, insight, data_list, more_link, is_job=False):
     html = f"<h2>{title}</h2>"
     if insight:
         html += f"<div style='background-color:#f0f7ff; padding:12px; margin-bottom:15px; border-left:4px solid #0056b3; font-size:14px; color:#333;'><strong>💡 [AI 시사점]</strong><br>{insight}</div>"
     
-    # is_main이 명시적으로 False인 항목을 메인 노출에서 제외
     display_list = [item for item in data_list if item.get('is_main', True)]
     
     html += "<ul>"
     if not data_list: 
         html += "<li>수집된 데이터가 없습니다.</li>"
     elif not display_list:
-        html += "<li style='color:#7f8c8d; font-size:13px;'>📌 1순위 조건에 부합하는 공고가 없습니다. 전체보기에서 후순위 공고를 확인하세요.</li>"
+        html += "<li style='color:#7f8c8d; font-size:13px;'>📌 1순위 조건에 부합하는 공고가 없습니다. 전체보기에서 확인하세요.</li>"
     else:
         for item in display_list[:5]:
             if is_job: html += f"<li><a href='{item['link']}' target='_blank'>[{item['company']}] {item['title']}</a></li>"
@@ -178,8 +185,8 @@ def send_email(data, pages_url):
     
     html_content += build_email_section("📊 GDC 시장 및 경쟁사 동향", data['gdc']['insight'], data['gdc']['data'], f"{pages_url}/more.html?type=gdc")
     html_content += build_email_section("📰 AI 기술 근황 & AX 전환 사례", data['ax_news']['insight'], data['ax_news']['data'], f"{pages_url}/more.html?type=ax")
-    html_content += build_email_section("💼 사람인 베트남 채용 (IT/BSE/통번역)", "", data['vn_jobs']['data'], f"{pages_url}/more.html?type=vn", True)
-    html_content += build_email_section("💼 사람인 AX 전담 인력 채용", "", data['ax_jobs']['data'], f"{pages_url}/more.html?type=axjob", True)
+    html_content += build_email_section("💼 원티드 베트남 채용 (IT/BSE/통번역)", "", data['vn_jobs']['data'], f"{pages_url}/more.html?type=vn", True)
+    html_content += build_email_section("💼 원티드 AX 전담 인력 채용", "", data['ax_jobs']['data'], f"{pages_url}/more.html?type=axjob", True)
     html_content += "</body></html>"
 
     msg = MIMEMultipart()
@@ -196,12 +203,16 @@ def send_email(data, pages_url):
         print(f"이메일 발송 실패: {e}")
 
 if __name__ == "__main__":
+    # 아래 URL을 본인의 깃허브 페이지 주소로 변경해주세요. (끝에 / 금지)
     GITHUB_PAGES_URL = "https://hansu814ryu-alt.github.io/gdc-monitoring" 
     
     NAVER_ID = os.environ.get("NAVER_CLIENT_ID", "")
     NAVER_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "")
     GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
     
+    print("--- 🚀 데이터 크롤링 시작 ---")
+    
+    # 1. GDC 뉴스 수집
     raw_gdc = []
     gdc_links = set()
     gdc_queries = ["GDC 오프쇼어링", "GDC 딜리버리", "GDC 개발", "글로벌 딜리버리 센터", "글로벌 개발 센터"]
@@ -218,11 +229,14 @@ if __name__ == "__main__":
                     raw_gdc.append(item)
                     gdc_links.add(item['link'])
 
+    # 2. AX 뉴스 수집
     raw_ax_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="AX 전환", display=20) + get_naver_news(NAVER_ID, NAVER_SECRET, query="AI 기술 도입", display=20)
     
-    raw_vn_jobs = get_saramin_postings("베트남", ['it', '개발', '소프트웨어', 'software', 'bse', '브릿지', 'bridge', '통역', '번역'])
-    raw_ax_jobs = get_saramin_postings("AX")
+    # 3 & 4. 원티드 채용 공고 수집 (함수 교체 완료)
+    raw_vn_jobs = get_wanted_postings("베트남", ['it', '개발', '소프트웨어', 'software', 'bse', '브릿지', 'bridge', '통역', '번역'])
+    raw_ax_jobs = get_wanted_postings("AX")
     
+    print("--- 🛠️ 핵심 키워드 가중치 기반 정렬 ---")
     news_keywords = ['반도체', '차세대', 'llm', 'ai', '가치', '평가', 'pbr', 'per', '실적', '성능', '도입', '성공']
     sorted_gdc = sort_items_by_relevance(raw_gdc, news_keywords)
     sorted_ax_news = sort_items_by_relevance(raw_ax_news, news_keywords)
@@ -230,6 +244,7 @@ if __name__ == "__main__":
     sorted_vn_jobs = process_vn_jobs(raw_vn_jobs)
     sorted_ax_jobs = process_ax_jobs(raw_ax_jobs)
     
+    print("--- 🧠 AI 시사점 분석 중 ---")
     gdc_insight = get_ai_insight(sorted_gdc, GEMINI_KEY)
     ax_insight = get_ai_insight(sorted_ax_news, GEMINI_KEY)
     
@@ -242,3 +257,6 @@ if __name__ == "__main__":
     
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=4)
+    print("✅ data.json 저장 완료.")
+
+    send_email(result, GITHUB_PAGES_URL)
