@@ -1,15 +1,15 @@
-name: GDC Data Crawler
+name: GDC and AX Data Crawler
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # 6시간마다 자동으로 실행 (UTC 기준)
-  workflow_dispatch: # 수동으로도 즉시 실행 가능하게 설정
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 스크립트가 data.json을 수정하고 커밋할 수 있는 권한 부여
+      contents: write
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -25,10 +25,8 @@ jobs:
 
     - name: Run Crawler
       env:
-        # 네이버 뉴스 API 키
         NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
         NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
-        # 이메일 발송을 위한 Gmail 정보
         SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
         RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
@@ -39,5 +37,5 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add data.json
-        git diff-index --quiet HEAD || git commit -m "Update GDC data"
+        git diff-index --quiet HEAD || git commit -m "Update Crawled Data"
         git push
