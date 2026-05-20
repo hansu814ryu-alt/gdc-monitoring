@@ -61,16 +61,26 @@
                 const renderSection = (elementPrefix, sectionData, isJob = false) => {
                     const ul = document.getElementById(`${elementPrefix}-list`);
                     ul.innerHTML = '';
+                    
+                    // 수집된 데이터 자체가 아예 없는 경우
                     if (!sectionData.data || sectionData.data.length === 0) {
                         ul.innerHTML = '<li>데이터가 없습니다.</li>';
                     } else {
-                        sectionData.data.slice(0, 5).forEach(item => {
-                            if (isJob) {
-                                ul.innerHTML += `<li><a href="${item.link}" target="_blank">[${item.company}] ${item.title}</a></li>`;
-                            } else {
-                                ul.innerHTML += `<li><a href="${item.link}" target="_blank">${item.title}</a><div class="date">${item.pubDate}</div></li>`;
-                            }
-                        });
+                        // is_main 필드가 명시적으로 false인 데이터를 제외한 리스트업
+                        const displayList = sectionData.data.filter(item => item.is_main !== false);
+                        
+                        // 수집된 데이터는 있으나, 메인 화면 조건(1순위)을 통과한 공고가 없는 경우
+                        if (displayList.length === 0) {
+                            ul.innerHTML = '<li style="color:#7f8c8d; font-size:0.9em;">📌 1순위 조건에 부합하는 공고가 없습니다.<br>하단 [전체보기]에서 후순위 공고를 확인하세요.</li>';
+                        } else {
+                            displayList.slice(0, 5).forEach(item => {
+                                if (isJob) {
+                                    ul.innerHTML += `<li><a href="${item.link}" target="_blank">[${item.company}] ${item.title}</a></li>`;
+                                } else {
+                                    ul.innerHTML += `<li><a href="${item.link}" target="_blank">${item.title}</a><div class="date">${item.pubDate}</div></li>`;
+                                }
+                            });
+                        }
                     }
 
                     if (sectionData.insight) {
@@ -89,5 +99,3 @@
             })
             .catch(err => console.error('데이터 로드 실패:', err));
     </script>
-</body>
-</html>
