@@ -28,7 +28,7 @@
             <h2>📊 GDC 시장 및 경쟁사 동향</h2>
             <div id="gdc-insight" class="insight-box" style="display:none;"></div>
             <ul id="gdc-list"></ul>
-            <div class="more-link"><a id="gdc-more" href="#" target="_blank">[+ 새 창에서 더보기]</a></div>
+            <div class="more-link"><a href="./more.html?type=gdc" target="_blank">[+ 수집된 기사 전체보기]</a></div>
         </div>
         
         <!-- 2. AX 뉴스 -->
@@ -36,21 +36,21 @@
             <h2>📰 AI 기술 근황 & AX 전환 사례</h2>
             <div id="ax-insight" class="insight-box" style="display:none;"></div>
             <ul id="ax-list"></ul>
-            <div class="more-link"><a id="ax-more" href="#" target="_blank">[+ 새 창에서 더보기]</a></div>
+            <div class="more-link"><a href="./more.html?type=ax" target="_blank">[+ 수집된 기사 전체보기]</a></div>
         </div>
 
         <!-- 3. 베트남 채용 -->
         <div class="section">
             <h2>💼 베트남 채용 (IT/BSE/통번역)</h2>
             <ul id="vn-list"></ul>
-            <div class="more-link"><a id="vn-more" href="#" target="_blank">[+ 새 창에서 더보기]</a></div>
+            <div class="more-link"><a href="./more.html?type=vn" target="_blank">[+ 수집된 공고 전체보기]</a></div>
         </div>
 
         <!-- 4. AX 채용 -->
         <div class="section">
             <h2>💼 AX 전담 인력 채용</h2>
             <ul id="ax-job-list"></ul>
-            <div class="more-link"><a id="ax-job-more" href="#" target="_blank">[+ 새 창에서 더보기]</a></div>
+            <div class="more-link"><a href="./more.html?type=axjob" target="_blank">[+ 수집된 공고 전체보기]</a></div>
         </div>
     </div>
 
@@ -59,7 +59,6 @@
             .then(response => response.json())
             .then(data => {
                 const renderSection = (elementPrefix, sectionData, isJob = false) => {
-                    // 데이터 리스트 렌더링 (최대 5개)
                     const ul = document.getElementById(`${elementPrefix}-list`);
                     ul.innerHTML = '';
                     if (!sectionData.data || sectionData.data.length === 0) {
@@ -74,19 +73,12 @@
                         });
                     }
 
-                    // 인사이트 렌더링
                     if (sectionData.insight) {
                         const insightBox = document.getElementById(`${elementPrefix}-insight`);
                         if(insightBox) {
                             insightBox.innerHTML = `<strong>💡 [AI 시사점]</strong><br>${sectionData.insight}`;
                             insightBox.style.display = 'block';
                         }
-                    }
-
-                    // 더보기 링크 설정
-                    const moreLink = document.getElementById(`${elementPrefix}-more`);
-                    if(moreLink && sectionData.more_link) {
-                        moreLink.href = sectionData.more_link;
                     }
                 };
 
