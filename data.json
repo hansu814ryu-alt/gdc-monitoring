@@ -118,14 +118,14 @@
             "pubDate": "Mon, 18 May 2026 14:00:00 +0900"
         },
         {
-            "title": "36년만에 사명 변경 '한컴', 소버린 에이전틱 OS 기업 전환 선언",
-            "link": "https://n.news.naver.com/mnews/article/030/0003429162?sid=105",
-            "pubDate": "Tue, 19 May 2026 14:37:00 +0900"
-        },
-        {
             "title": "LG CNS, 북미 제조 AX 시장 공략…현지서 스마트팩토리 솔루션 전시",
             "link": "https://n.news.naver.com/mnews/article/277/0005765434?sid=105",
             "pubDate": "Wed, 20 May 2026 10:00:00 +0900"
+        },
+        {
+            "title": "36년만에 사명 변경 '한컴', 소버린 에이전틱 OS 기업 전환 선언",
+            "link": "https://n.news.naver.com/mnews/article/030/0003429162?sid=105",
+            "pubDate": "Tue, 19 May 2026 14:37:00 +0900"
         },
         {
             "title": "코오롱베니트, '제조DX컨설팅팀' 신설…제조 DX·AX 전환 전담",
@@ -138,11 +138,6 @@
             "pubDate": "Wed, 20 May 2026 10:18:00 +0900"
         },
         {
-            "title": "코오롱베니트, 제조 DX·AX 전담조직 띄웠다…외부 고객 확보 속도전",
-            "link": "https://n.news.naver.com/mnews/article/092/0002423352?sid=105",
-            "pubDate": "Tue, 19 May 2026 11:02:00 +0900"
-        },
-        {
             "title": "북미 제조 AX 시장 진출 박차…LG CNS, 스마트팩토리 설루션 ‘팩토바’...",
             "link": "https://n.news.naver.com/mnews/article/016/0002645795?sid=105",
             "pubDate": "Wed, 20 May 2026 10:01:00 +0900"
@@ -153,14 +148,19 @@
             "pubDate": "Wed, 20 May 2026 10:00:00 +0900"
         },
         {
+            "title": "LG CNS, 美 'IoT 테크 엑스포'서 팩토바 공개… 북미 제조 AX 시장 정조준",
+            "link": "https://www.nbntv.kr/news/articleView.html?idxno=340138",
+            "pubDate": "Wed, 20 May 2026 10:08:00 +0900"
+        },
+        {
             "title": "심플랫폼, 더화에 구독형 '누비슨 AX' 공급",
             "link": "https://n.news.naver.com/mnews/article/003/0013955481?sid=101",
             "pubDate": "Wed, 20 May 2026 08:06:00 +0900"
         },
         {
-            "title": "LG CNS, 美 'IoT 테크 엑스포'서 팩토바 공개… 북미 제조 AX 시장 정조준",
-            "link": "https://www.nbntv.kr/news/articleView.html?idxno=340138",
-            "pubDate": "Wed, 20 May 2026 10:08:00 +0900"
+            "title": "코오롱베니트, 제조 DX·AX 전담조직 띄웠다…외부 고객 확보 속도전",
+            "link": "https://n.news.naver.com/mnews/article/092/0002423352?sid=105",
+            "pubDate": "Tue, 19 May 2026 11:02:00 +0900"
         },
         {
             "title": "경남테크노파크 제조 DX·AX 확산 컨설팅 지원 추진",
@@ -198,24 +198,24 @@
             "pubDate": "Wed, 20 May 2026 08:31:00 +0900"
         },
         {
-            "title": "한화오션, AI 함정 기술 고도화…MS·구글과 연구회 개최",
-            "link": "https://n.news.naver.com/mnews/article/119/0003092325?sid=101",
-            "pubDate": "Wed, 20 May 2026 08:59:00 +0900"
-        },
-        {
             "title": "카카오, AI 신뢰성 승부수… 구글 딥마인드와 맞손",
             "link": "https://www.kizmom.com/news/articleView.html?idxno=110387",
             "pubDate": "Wed, 20 May 2026 09:46:00 +0900"
         },
         {
-            "title": "비디오·일정관리·업무 한번에…'슈퍼앱' 진화한 구글 제미나이 [구글...",
-            "link": "https://n.news.naver.com/mnews/article/015/0005288959?sid=105",
-            "pubDate": "Wed, 20 May 2026 02:48:00 +0900"
+            "title": "한화오션, AI 함정 기술 고도화…MS·구글과 연구회 개최",
+            "link": "https://n.news.naver.com/mnews/article/119/0003092325?sid=101",
+            "pubDate": "Wed, 20 May 2026 08:59:00 +0900"
         },
         {
             "title": "카카오, 구글 딥마인드와 손잡고 AI 워터마킹 도입…아시아 첫 '신스ID'...",
             "link": "https://n.news.naver.com/mnews/article/014/0005523995?sid=105",
             "pubDate": "Wed, 20 May 2026 10:03:00 +0900"
+        },
+        {
+            "title": "비디오·일정관리·업무 한번에…'슈퍼앱' 진화한 구글 제미나이 [구글...",
+            "link": "https://n.news.naver.com/mnews/article/015/0005288959?sid=105",
+            "pubDate": "Wed, 20 May 2026 02:48:00 +0900"
         },
         {
             "title": "&quot;AI 생성 콘텐츠&quot; 카카오, 亞 기업 최초 구글 AI 워터마크 도입",
