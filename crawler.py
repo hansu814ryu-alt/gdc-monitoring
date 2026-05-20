@@ -69,6 +69,10 @@ def get_jobkorea_postings(search_keyword, include_keywords=None):
                                 filtered_jobs.append({"title": title, "company": company, "link": link})
                         else:
                             filtered_jobs.append({"title": title, "company": company, "link": link})
+        else:
+            # 에러 발생 시 로그 출력
+            print(f"❌ 잡코리아 크롤링 에러 ({search_keyword}): 상태코드 {response.status_code}")
+            
                 except Exception:
                     continue
     except Exception as e:
