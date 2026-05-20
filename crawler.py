@@ -6,7 +6,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-# 1. 네이버 뉴스 공통 수집 함수
+# 1. 네이버 뉴스 공통 수집 함수 (디버깅 추가)
 def get_naver_news(client_id, client_secret, query, exclude_keywords=None, display=20):
     url = "https://openapi.naver.com/v1/search/news.json"
     headers = {
@@ -18,6 +18,8 @@ def get_naver_news(client_id, client_secret, query, exclude_keywords=None, displ
     filtered_news = []
     try:
         response = requests.get(url, headers=headers, params=params)
+        
+        # 정상 응답인 경우
         if response.status_code == 200:
             news_data = response.json().get('items', [])
             
@@ -35,21 +37,35 @@ def get_naver_news(client_id, client_secret, query, exclude_keywords=None, displ
                     "link": item['link'],
                     "pubDate": item['pubDate']
                 })
+        # 에러가 발생한 경우 로그 출력
+        else:
+            print(f"❌ 네이버 API 에러 ({query}): 상태코드 {response.status_code}")
+            print(f"   상세 내용: {response.text}")
+            
     except Exception as e:
-        print(f"네이버 뉴스 크롤링 중 오류 발생 ({query}): {e}")
+        print(f"네이버 뉴스 통신 중 치명적 오류 발생 ({query}): {e}")
+        
     return filtered_news
 
-# 2. 잡코리아 공통 수집 함수
+# 2. 잡코리아 공통 수집 함수 (디버깅 추가)
 def get_jobkorea_postings(search_keyword, include_keywords=None):
     url = f"https://www.jobkorea.co.kr/Search/?stext={search_keyword}"
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
     
     filtered_jobs = []
     try:
         response = requests.get(url, headers=headers)
+        
+        # 정상 응답인 경우
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             job_lists = soup.select('.post')
+            
+            # 잡코리아 구조 변경 확인용 로그
+            if not job_lists:
+                print(f"⚠️ 잡코리아 접속은 성공했으나 검색결과(.post)를 찾지 못했습니다. ({search_keyword})")
             
             for job in job_lists:
                 try:
@@ -63,20 +79,21 @@ def get_jobkorea_postings(search_keyword, include_keywords=None):
                         company = company_elem.get_text(strip=True) if company_elem else "기업명 미상"
                         link = "https://www.jobkorea.co.kr" + link_elem['href']
                         
-                        # 포함 키워드가 있다면 제목에 포함된 경우만 수집
+                        # 포함 키워드가 있다면 제목에 포함된 경우만 수집 (OR 로직)
                         if include_keywords:
                             if any(kw in title_lower for kw in include_keywords):
                                 filtered_jobs.append({"title": title, "company": company, "link": link})
                         else:
                             filtered_jobs.append({"title": title, "company": company, "link": link})
-        else:
-            # 에러 발생 시 로그 출력
-            print(f"❌ 잡코리아 크롤링 에러 ({search_keyword}): 상태코드 {response.status_code}")
-            
                 except Exception:
                     continue
+        # 에러가 발생한 경우 로그 출력 (봇 차단 등)
+        else:
+            print(f"❌ 잡코리아 크롤링 에러 ({search_keyword}): 상태코드 {response.status_code}")
+            
     except Exception as e:
-        print(f"잡코리아 크롤링 중 오류 발생 ({search_keyword}): {e}")
+        print(f"잡코리아 통신 중 치명적 오류 발생 ({search_keyword}): {e}")
+        
     return filtered_jobs
 
 # 3. 이메일 발송 함수
@@ -86,7 +103,7 @@ def send_email(data):
     receiver_email = os.environ.get("RECEIVER_EMAIL")
 
     if not sender_email or not sender_password or not receiver_email:
-        print("이메일 환경변수(Secrets)가 설정되지 않았습니다.")
+        print("⚠️ 이메일 환경변수(Secrets)가 누락되어 메일을 발송하지 않습니다.")
         return
 
     html_content = """
@@ -106,27 +123,23 @@ def send_email(data):
         <h1>📊 IT/AX 및 GDC 모니터링 대시보드</h1>
     """
     
-    # 1. GDC 뉴스
     html_content += "<h2>📰 GDC 뉴스 (게임 제외)</h2><ul>"
-    if not data['gdc_news']: html_content += "<li>새로운 뉴스가 없습니다.</li>"
+    if not data['gdc_news']: html_content += "<li>수집된 데이터가 없습니다.</li>"
     for item in data['gdc_news']: html_content += f"<li><a href='{item['link']}' target='_blank'>{item['title']}</a><div class='meta'>{item['pubDate']}</div></li>"
     html_content += "</ul>"
 
-    # 2. AI & AX 뉴스
     html_content += "<h2>📰 AI 기술 근황 & AX 전환 사례</h2><ul>"
-    if not data['ax_news']: html_content += "<li>새로운 뉴스가 없습니다.</li>"
+    if not data['ax_news']: html_content += "<li>수집된 데이터가 없습니다.</li>"
     for item in data['ax_news']: html_content += f"<li><a href='{item['link']}' target='_blank'>{item['title']}</a><div class='meta'>{item['pubDate']}</div></li>"
     html_content += "</ul>"
 
-    # 3. 베트남 채용
     html_content += "<h2>💼 베트남 채용 (IT/BSE/통번역)</h2><ul>"
-    if not data['vn_jobs']: html_content += "<li>조건에 맞는 공고가 없습니다.</li>"
+    if not data['vn_jobs']: html_content += "<li>수집된 데이터가 없습니다.</li>"
     for item in data['vn_jobs']: html_content += f"<li><a href='{item['link']}' target='_blank'>[{item['company']}] {item['title']}</a></li>"
     html_content += "</ul>"
 
-    # 4. AX 채용
     html_content += "<h2>💼 AX 전담 인력 채용</h2><ul>"
-    if not data['ax_jobs']: html_content += "<li>조건에 맞는 공고가 없습니다.</li>"
+    if not data['ax_jobs']: html_content += "<li>수집된 데이터가 없습니다.</li>"
     for item in data['ax_jobs']: html_content += f"<li><a href='{item['link']}' target='_blank'>[{item['company']}] {item['title']}</a></li>"
     html_content += "</ul></body></html>"
 
@@ -140,30 +153,33 @@ def send_email(data):
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(sender_email, sender_password)
             server.sendmail(sender_email, receiver_email, msg.as_string())
-        print("이메일 발송 성공!")
+        print("✅ 이메일 발송 성공!")
     except Exception as e:
-        print(f"이메일 발송 실패: {e}")
+        print(f"❌ 이메일 발송 실패: {e}")
 
 if __name__ == "__main__":
+    # GitHub Secrets 가져오기
     NAVER_ID = os.environ.get("NAVER_CLIENT_ID", "")
     NAVER_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "")
     
-    print("데이터 크롤링 시작...")
+    print("--- 🚀 데이터 크롤링 시작 ---")
     
     # 1. GDC 뉴스 (게임 제외)
     gdc_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="GDC", exclude_keywords=['game', '게임', '게임개발', 'game development'])
     
-    # 2. AI 및 AX 기술 동향 (관련 키워드 2개를 합침)
+    # 2. AI 및 AX 기술 동향
     ax_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="AX 전환", display=15)
     ax_news += get_naver_news(NAVER_ID, NAVER_SECRET, query="AI 기술 도입", display=15)
     
-    # 3. 베트남 IT 인력 (기존 조건 유지)
+    # 3. 베트남 IT 인력 채용
     vn_jobs = get_jobkorea_postings(search_keyword="베트남", include_keywords=['it', '개발', '소프트웨어', 'software', 'bse', '브릿지', 'bridge', '통역', '번역'])
     
-    # 4. AX 전담 인력
+    # 4. AX 전담 인력 채용
     ax_jobs = get_jobkorea_postings(search_keyword="AX", include_keywords=['ax', 'ai', '인공지능', '전환', '트랜스포메이션', '데이터'])
     
-    # 데이터 취합
+    print("--- 🏁 데이터 크롤링 완료 ---")
+    
+    # 데이터 취합 및 저장
     result = {
         "gdc_news": gdc_news,
         "ax_news": ax_news,
@@ -173,7 +189,8 @@ if __name__ == "__main__":
     
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=4)
-    print("data.json 저장 완료.")
+    print("✅ data.json 파일 저장 완료.")
 
-    print("이메일 발송 시작...")
+    # 이메일 발송
+    print("--- 📧 이메일 발송 시작 ---")
     send_email(result)
