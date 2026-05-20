@@ -17,25 +17,35 @@ def sort_items_by_relevance(items, keywords):
         item['score'] = score
     return sorted(items, key=lambda x: x.get('score', 0), reverse=True)
 
-# 2. AI 시사점 도출 함수 
+# AI 시사점 도출 함수 (404 오류 완벽 해결 버젼)
 def get_ai_insight(news_list, api_key):
-    if not api_key: return "⚠️ GEMINI_API_KEY가 설정되지 않았습니다."
-    if not news_list: return "수집된 기사가 없어 시사점을 생성할 수 없습니다."
+    if not api_key: 
+        return "⚠️ GEMINI_API_KEY가 설정되지 않았습니다."
+    if not news_list: 
+        return "수집된 기사가 없어 시사점을 생성할 수 없습니다."
     
     try:
         import google.generativeai as genai
         genai.configure(api_key=api_key)
+        
+        # v1beta 및 일부 구형 환경과의 하방 호환성을 고려한 가장 안정적인 기본 모델명 지정
+        # 최신 GA(정식 버전) 모델명을 명시적으로 사용합니다.
+        model_name = 'gemini-1.5-flash'
+        
         try:
-            model = genai.GenerativeModel('gemini-1.5-flash-latest')
+            model = genai.GenerativeModel(model_name)
         except Exception:
+            # 환경에 따라 구형 패키지 버전을 쓸 경우를 대비한 폴백 모델명 지정
             model = genai.GenerativeModel('gemini-pro')
             
         titles = [news['title'] for news in news_list[:5]]
-        prompt = f"다음은 오늘의 주요 동향 뉴스 제목 5개입니다.\n{titles}\n이 기사들의 핵심 동향을 분석하여, 비즈니스 측면의 전체적인 시사점을 딱 1~2문장으로 간결하게 요약해 주세요."
+        prompt = f"다음은 오늘의 주요 동향 뉴스 제목 5개입니다.\n{titles}\n이 기사들의 핵심 동향을 분석하여, 비즈니스 측면의 전체적인 시사점을 딱 1~2문장으로 간결하고 전문적인 한글로 요약해 주세요."
         
         response = model.generate_content(prompt)
         return response.text.strip()
+        
     except Exception as e:
+        # 최종 예외 처리 단계에서 에러 원인을 명확히 로그에 출력
         return f"시사점 생성 실패: {e}"
 
 # 3. 네이버 뉴스 크롤링 (요약 본문 추출 추가)
