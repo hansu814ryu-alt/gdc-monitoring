@@ -6,7 +6,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-# 1. 키워드 가중치 기반 데이터 정렬 함수
+# 1. 뉴스 정렬 함수 (가중치 기반)
 def sort_items_by_relevance(items, keywords):
     for item in items:
         score = 0
@@ -17,7 +17,58 @@ def sort_items_by_relevance(items, keywords):
         item['score'] = score
     return sorted(items, key=lambda x: x.get('score', 0), reverse=True)
 
-# 2. AI 시사점 도출 함수 (404 오류 완벽 해결 버젼)
+# 2. [신규] 베트남 채용 전용 필터링 및 정렬 함수
+def process_vn_jobs(jobs):
+    processed = []
+    for job in jobs:
+        score = 0
+        title = job['title'].lower()
+        
+        # [조건 3] 한국인의 베트남/해외 파견 제외
+        exclude_kw = ['주재원', '파견', '현지법인', '해외발령', '교민', '베트남 주재', '해외 주재', '해외법인']
+        if any(kw in title for kw in exclude_kw):
+            continue
+            
+        # [조건 2] 베트남인이 한국에서 IT직군 채용 (1순위 가점)
+        kr_work_kw = ['베트남인', '외국인', '국내근무', '한국어', '한국근무', 'd-10', 'e-7', 'f-2', 'f-5']
+        it_kw = ['개발', 'it', 'sw', 'bse', '브릿지', '소프트웨어', '프로그래머']
+        
+        if any(kw in title for kw in kr_work_kw): score += 20
+        if any(kw in title for kw in it_kw): score += 10
+            
+        # [조건 1] 베트남 법인/현지 채용은 후순위 (감점)
+        local_kw = ['법인', '현지', '하노이', '호치민', '다낭', '해외근무', '베트남 근무']
+        if any(kw in title for kw in local_kw): score -= 10
+            
+        job['score'] = score
+        processed.append(job)
+        
+    return sorted(processed, key=lambda x: x.get('score', 0), reverse=True)
+
+# 3. [신규] AX 전담 인력 전용 정렬 함수
+def process_ax_jobs(jobs):
+    for job in jobs:
+        score = 0
+        title = job['title'].lower()
+        company = job['company'].lower()
+        
+        # [조건 4] 대기업 채용 우선순위 가점
+        large_corps = ['삼성', 'sk', 'lg', '현대', '롯데', 'cj', '한화', '신세계', 'kt', '네이버', '카카오', '포스코', 'hd', '대기업']
+        if any(kw in company for kw in large_corps) or '대기업' in title:
+            score += 20
+            
+        # [조건 5] AX 전환 직접 연관성 가점
+        ax_direct = ['ax', 'ai 트랜스포메이션', 'ai전환', '인공지능 전환', 'ax 기획', 'ax전략', 'ai 혁신']
+        ai_general = ['ai', '인공지능', '데이터']
+        
+        if any(kw in title for kw in ax_direct): score += 30
+        elif any(kw in title for kw in ai_general): score += 5
+            
+        job['score'] = score
+        
+    return sorted(jobs, key=lambda x: x.get('score', 0), reverse=True)
+
+# 4. AI 시사점 도출 함수
 def get_ai_insight(news_list, api_key):
     if not api_key: return "⚠️ GEMINI_API_KEY가 설정되지 않았습니다."
     if not news_list: return "수집된 기사가 없어 시사점을 생성할 수 없습니다."
@@ -26,7 +77,6 @@ def get_ai_insight(news_list, api_key):
         import google.generativeai as genai
         genai.configure(api_key=api_key)
         
-        # 404 에러 방지를 위해 사용 가능한 최신 모델들을 순서대로 시도합니다.
         model_candidates = ['gemini-2.5-flash', 'gemini-1.5-flash', 'models/gemini-1.5-flash', 'gemini-pro']
         response = None
         
@@ -37,18 +87,14 @@ def get_ai_insight(news_list, api_key):
             try:
                 model = genai.GenerativeModel(model_name)
                 response = model.generate_content(prompt)
-                if response and response.text:
-                    print(f"✅ Gemini 모델 호출 성공: {model_name}")
-                    return response.text.strip()
-            except Exception as e:
-                print(f"⚠️ {model_name} 호출 실패, 다음 모델 시도 중... (이유: {e})")
+                if response and response.text: return response.text.strip()
+            except Exception:
                 continue
-                
-        return "⚠️ 모든 Gemini 모델 호출에 실패했습니다. API 키 권한이나 버전을 확인해주세요."
+        return "⚠️ 모든 Gemini 모델 호출에 실패했습니다."
     except Exception as e:
         return f"시사점 생성 실패: {e}"
 
-# 3. 네이버 뉴스 크롤링
+# 5. 네이버 뉴스 크롤링
 def get_naver_news(client_id, client_secret, query, display=20):
     url = "https://openapi.naver.com/v1/search/news.json"
     headers = {"X-Naver-Client-Id": client_id, "X-Naver-Client-Secret": client_secret}
@@ -69,19 +115,16 @@ def get_naver_news(client_id, client_secret, query, display=20):
         print(f"네이버 뉴스 오류 ({query}): {e}")
     return filtered_news
 
-# 4. [신규] 사람인(Saramin) 공통 수집 함수 (잡코리아 대체)
+# 6. 사람인(Saramin) 공통 수집 함수
 def get_saramin_postings(search_keyword, include_keywords=None):
     url = f"https://www.saramin.co.kr/zf_user/search/recruit?searchword={search_keyword}"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     filtered_jobs = []
     
     try:
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
-            # 사람인의 전형적인 검색 결과 공고 아이템 선택자 적용
             job_lists = soup.select('.item_recruit, .box_item')
             
             for job in job_lists:
@@ -96,7 +139,6 @@ def get_saramin_postings(search_keyword, include_keywords=None):
                         if link and not link.startswith('http'): 
                             link = "https://www.saramin.co.kr" + link
                         
-                        # 키워드 필터링 (OR 로직)
                         if include_keywords:
                             if any(kw in title.lower() for kw in include_keywords):
                                 filtered_jobs.append({"title": title, "company": company, "link": link})
@@ -104,13 +146,11 @@ def get_saramin_postings(search_keyword, include_keywords=None):
                             filtered_jobs.append({"title": title, "company": company, "link": link})
                 except Exception:
                     continue
-        else:
-            print(f"❌ 사람인 크롤링 에러 ({search_keyword}): 상태코드 {response.status_code}")
     except Exception as e:
         print(f"사람인 크롤링 오류 ({search_keyword}): {e}")
     return filtered_jobs
 
-# 5. 이메일 섹션 생성 헬퍼
+# 7. 이메일 섹션 생성 헬퍼
 def build_email_section(title, insight, data_list, more_link, is_job=False):
     html = f"<h2>{title}</h2>"
     if insight:
@@ -124,7 +164,7 @@ def build_email_section(title, insight, data_list, more_link, is_job=False):
     html += f"<div style='text-align:right; margin-top:8px;'><a href='{more_link}' target='_blank' style='font-size:13px; color:#555; text-decoration:none;'>[웹페이지에서 전체 보기]</a></div><br>"
     return html
 
-# 6. 이메일 발송
+# 8. 이메일 발송
 def send_email(data, pages_url):
     sender_email = os.environ.get("SENDER_EMAIL")
     sender_password = os.environ.get("SENDER_PASSWORD")
@@ -135,8 +175,8 @@ def send_email(data, pages_url):
     
     html_content += build_email_section("📊 GDC 시장 및 경쟁사 동향", data['gdc']['insight'], data['gdc']['data'], f"{pages_url}/more.html?type=gdc")
     html_content += build_email_section("📰 AI 기술 근황 & AX 전환 사례", data['ax_news']['insight'], data['ax_news']['data'], f"{pages_url}/more.html?type=ax")
-    html_content += build_email_section("💼 베트남 채용 (IT/BSE/통번역)", "", data['vn_jobs']['data'], f"{pages_url}/more.html?type=vn", True)
-    html_content += build_email_section("💼 AX 전담 인력 채용", "", data['ax_jobs']['data'], f"{pages_url}/more.html?type=axjob", True)
+    html_content += build_email_section("💼 사람인 베트남 채용 (IT/BSE/통번역)", "", data['vn_jobs']['data'], f"{pages_url}/more.html?type=vn", True)
+    html_content += build_email_section("💼 사람인 AX 전담 인력 채용", "", data['ax_jobs']['data'], f"{pages_url}/more.html?type=axjob", True)
     html_content += "</body></html>"
 
     msg = MIMEMultipart()
@@ -152,6 +192,7 @@ def send_email(data, pages_url):
     except Exception as e:
         print(f"이메일 발송 실패: {e}")
 
+
 if __name__ == "__main__":
     GITHUB_PAGES_URL = "https://hansu814ryu-alt.github.io/gdc-monitoring" 
     
@@ -161,7 +202,7 @@ if __name__ == "__main__":
     
     print("--- 🚀 데이터 크롤링 시작 ---")
     
-    # 1. GDC 뉴스 수집 (맥락 기반 필터링)
+    # 1. GDC 뉴스 수집
     raw_gdc = []
     gdc_links = set()
     gdc_queries = ["GDC 오프쇼어링", "GDC 딜리버리", "GDC 개발", "글로벌 딜리버리 센터", "글로벌 개발 센터"]
@@ -181,18 +222,18 @@ if __name__ == "__main__":
     # 2. AX 뉴스 수집
     raw_ax_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="AX 전환", display=20) + get_naver_news(NAVER_ID, NAVER_SECRET, query="AI 기술 도입", display=20)
     
-    # 3 & 4. 사람인(Saramin) 채용 공고 수집으로 변경
+    # 3 & 4. 채용 공고 수집 
     raw_vn_jobs = get_saramin_postings("베트남", ['it', '개발', '소프트웨어', 'software', 'bse', '브릿지', 'bridge', '통역', '번역'])
-    raw_ax_jobs = get_saramin_postings("AX", ['ax', 'ai', '인공지능', '전환', '트랜스포메이션', '데이터'])
+    raw_ax_jobs = get_saramin_postings("AX")
     
     print("--- 🛠️ 핵심 키워드 가중치 기반 정렬 ---")
     news_keywords = ['반도체', '차세대', 'llm', 'ai', '가치', '평가', 'pbr', 'per', '실적', '성능', '도입', '성공']
     sorted_gdc = sort_items_by_relevance(raw_gdc, news_keywords)
     sorted_ax_news = sort_items_by_relevance(raw_ax_news, news_keywords)
     
-    job_keywords = ['리더', '매니저', 'pm', 'bse', '통역', '번역']
-    sorted_vn_jobs = sort_items_by_relevance(raw_vn_jobs, job_keywords)
-    sorted_ax_jobs = sort_items_by_relevance(raw_ax_jobs, job_keywords)
+    # [적용] 전용 프로세스(필터링/정렬) 태우기
+    sorted_vn_jobs = process_vn_jobs(raw_vn_jobs)
+    sorted_ax_jobs = process_ax_jobs(raw_ax_jobs)
     
     print("--- 🧠 AI 시사점 분석 중 ---")
     gdc_insight = get_ai_insight(sorted_gdc, GEMINI_KEY)
