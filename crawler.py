@@ -153,7 +153,7 @@ def send_email(data, pages_url):
         print(f"이메일 발송 실패: {e}")
 
 if __name__ == "__main__":
-    GITHUB_PAGES_URL = "https://본인아이디.github.io/저장소이름" 
+    GITHUB_PAGES_URL = "https://hansu814ryu.github.io/gdc-monitoring" 
     
     NAVER_ID = os.environ.get("NAVER_CLIENT_ID", "")
     NAVER_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "")
