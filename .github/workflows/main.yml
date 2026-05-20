@@ -1,8 +1,10 @@
-name: GDC and AX Data Crawler
+name: Trends and AX Data Crawler
 
 on:
   schedule:
-    - cron: '0 */24 * * *'
+    # 한국 시간(KST) 월~금 오전 8시 발송 
+    # = UTC 기준 일~목(0-4) 23시 00분
+    - cron: '0 23 * * 0-4'
   workflow_dispatch:
 
 jobs:
@@ -27,6 +29,7 @@ jobs:
       env:
         NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
         NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
         RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
