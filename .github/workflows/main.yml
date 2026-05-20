@@ -23,6 +23,8 @@ jobs:
 
     - name: Install dependencies
       run: |
+        pip install --upgrade google-generativeai
+        pip install -r requirements.txt
         pip install -r requirements.txt
 
     - name: Run Crawler
