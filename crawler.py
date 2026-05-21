@@ -106,7 +106,7 @@ def process_data_with_ai_batch(data_list, data_type, api_key):
            - 중견기업: 60~79점
            - 스타트업/미상: 30~59점
         3. {data_type}가 GDC나 AX 관련 뉴스인 경우, 관련성이 높을수록 가점을 줍니다.
-        4. {data_type}가 채용 공고인 경우, 파견/주재원 등 배제 조건 뉘앙스가 보이면 0점 처리하세요.
+        4. {data_type}가 채용 공고인 경우, 베트남 현지법인의 한국인 채용 등 파견/주재원 등 배제 조건 뉘앙스가 보이면 0점 처리하세요.
         5. 점수가 40점 이상이면 'is_main': true, 아니면 false로 설정하세요.
         
         [출력 형식] (다른 설명 없이 JSON 배열만 출력)
@@ -245,8 +245,8 @@ if __name__ == "__main__":
     GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
     
     print("--- 🚀 데이터 크롤링 시작 ---")
-    raw_gdc = get_naver_news(NAVER_ID, NAVER_SECRET, query="GDC 오프쇼어링") + get_naver_news(NAVER_ID, NAVER_SECRET, query="글로벌 딜리버리 센터")
-    raw_ax_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="AX 전환") + get_naver_news(NAVER_ID, NAVER_SECRET, query="AI 기술 도입")
+    raw_gdc = get_naver_news(NAVER_ID, NAVER_SECRET, query="GDC") + get_naver_news(NAVER_ID, NAVER_SECRET, query="글로벌 딜리버리 센터") + get_naver_news(NAVER_ID, NAVER_SECRET, query="오프쇼어")
+    raw_ax_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="AX 전환") + get_naver_news(NAVER_ID, NAVER_SECRET, query="AI")
     raw_vn_jobs = get_wanted_postings("베트남", ['it', '개발', '소프트웨어', 'bse', '통역', '번역'])
     raw_ax_jobs = get_wanted_postings("AX")
     
