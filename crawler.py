@@ -264,6 +264,7 @@ if __name__ == "__main__":
     result = {
         "gdc": {"data": sorted_gdc, "insight": gdc_insight},
         "ax_news": {"data": sorted_ax_news, "insight": ax_insight},
+        "vn_jobs": {"data": sorted_vn_jobs},
         "ax_jobs": {"data": sorted_ax_jobs}
     }
     
