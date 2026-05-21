@@ -174,12 +174,22 @@ def build_email_section(title, insight, data_list, more_link, is_job=False):
     html += f"<div style='text-align:right; margin-top:8px;'><a href='{more_link}' target='_blank' style='font-size:13px; color:#555; text-decoration:none;'>[웹페이지에서 전체 보기]</a></div><br>"
     return html
 
-# 8. 이메일 발송
+# 8. 이메일 발송 (다중 수신자 및 RFC 5321 오류 해결 적용)
 def send_email(data, pages_url):
     sender_email = os.environ.get("SENDER_EMAIL")
     sender_password = os.environ.get("SENDER_PASSWORD")
-    receiver_email = os.environ.get("RECEIVER_EMAIL")
-    if not sender_email or not sender_password or not receiver_email: return
+    raw_receiver_email = os.environ.get("RECEIVER_EMAIL", "")
+    
+    if not sender_email or not sender_password or not raw_receiver_email: 
+        print("⚠️ 이메일 환경변수가 누락되어 발송을 건너뜁니다.")
+        return
+
+    # 여러 명의 수신자를 쉼표 기준으로 분리하고 공백 제거하여 리스트로 생성
+    receiver_list = [email.strip() for email in raw_receiver_email.split(",") if email.strip()]
+
+    if not receiver_list:
+        print("⚠️ 유효한 수신자 이메일 주소가 없습니다.")
+        return
 
     html_content = "<html><head><style>body { font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; } h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 25px; } ul { list-style-type: none; padding: 0; } li { padding: 8px 0; border-bottom: 1px dashed #ccc; } a { color: #007bff; text-decoration: none; font-weight: bold; } .meta { color: #888; font-size: 12px; margin-top: 3px; }</style></head><body><h1>📊 일일 트렌드 및 경쟁사 동향 리포트</h1>"
     
@@ -192,15 +202,18 @@ def send_email(data, pages_url):
     msg = MIMEMultipart()
     msg['Subject'] = "📊 [자동화] 일일 트렌드 및 경쟁사 동향 리포트"
     msg['From'] = sender_email
-    msg['To'] = receiver_email
+    msg['To'] = ", ".join(receiver_list) # 수신자에게 보여지는 To 헤더는 쉼표로 연결된 문자열 형태
     msg.attach(MIMEText(html_content, 'html'))
 
     try:
+        print(f"발송 대기 중... 수신자 주소 리스트: {receiver_list}") # 디버깅용 로그 추가
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(sender_email, sender_password)
-            server.sendmail(sender_email, receiver_email, msg.as_string())
+            # sendmail 함수에는 반드시 리스트(receiver_list) 형태로 전달
+            server.sendmail(sender_email, receiver_list, msg.as_string())
+        print("✅ 이메일 발송 성공")
     except Exception as e:
-        print(f"이메일 발송 실패: {e}")
+        print(f"❌ 이메일 발송 실패: {e}")
 
 if __name__ == "__main__":
     # 아래 URL을 본인의 깃허브 페이지 주소로 변경해주세요. (끝에 / 금지)
@@ -251,12 +264,4 @@ if __name__ == "__main__":
     result = {
         "gdc": {"data": sorted_gdc, "insight": gdc_insight},
         "ax_news": {"data": sorted_ax_news, "insight": ax_insight},
-        "vn_jobs": {"data": sorted_vn_jobs},
-        "ax_jobs": {"data": sorted_ax_jobs}
-    }
-    
-    with open('data.json', 'w', encoding='utf-8') as f:
-        json.dump(result, f, ensure_ascii=False, indent=4)
-    print("✅ data.json 저장 완료.")
-
-    send_email(result, GITHUB_PAGES_URL)
+        "vn_jobs": {"data": sorted_
