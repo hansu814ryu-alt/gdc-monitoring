@@ -264,4 +264,11 @@ if __name__ == "__main__":
     result = {
         "gdc": {"data": sorted_gdc, "insight": gdc_insight},
         "ax_news": {"data": sorted_ax_news, "insight": ax_insight},
-        "vn_jobs": {"data": sorted_
+        "ax_jobs": {"data": sorted_ax_jobs}
+    }
+    
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump(result, f, ensure_ascii=False, indent=4)
+    print("✅ data.json 저장 완료.")
+
+    send_email(result, GITHUB_PAGES_URL)
