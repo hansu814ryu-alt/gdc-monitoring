@@ -4,7 +4,7 @@ on:
   schedule:
     # 한국 시간(KST) 월~금 오전 8시 발송 
     # = UTC 기준 일~목(0-4) 23시 00분
-    - cron: '0 23 * * 0-4'
+    - cron: '0 23 * * 0-6'
   workflow_dispatch:
 
 jobs:
