@@ -35,16 +35,7 @@ jobs:
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
         RECEIVER_EMAIL: "${{ secrets.RECEIVER_EMAIL }}"
         
-        # 👇 추가된 부분: 메일 서론 작성 (| 기호를 써서 여러 줄 작성)
-        EMAIL_INTRO: |
-          안녕하세요. 
-          GDC실행그룹(서비스일류화) 류한수프로입니다.
-          
-          최신 GDC동향 및 AX(AI Transformation) 트렌드를 공유드립니다.
-          
-          오늘 수집된 주요 데이터 및 리포트는 아래와 같습니다.
-          --------------------------------------------------
-          
+         
       run: python crawler.py
 
     - name: Commit and Push if changed
