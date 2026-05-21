@@ -5,6 +5,18 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+# 1. main.yml에서 작성한 서론(EMAIL_INTRO) 불러오기
+email_intro = os.environ.get('EMAIL_INTRO' \n\n')
+
+# 2. 크롤링된 데이터 결과물 (기존 코드에 있는 부분)
+crawled_data_result = "여기에 크롤링된 데이터 결과가 들어갑니다..."
+
+# 3. 서론과 크롤링 데이터를 합쳐서 최종 메일 본문 생성
+final_body = email_intro + "\n" + crawled_data_result
+
+# (이후 메일 발송 로직에 final_body를 적용)
+# msg.attach(MIMEText(final_body, 'html' 또는 'plain'))
+
 # 1. 뉴스 정렬 함수 (가중치 기반)
 def sort_items_by_relevance(items, keywords):
     for item in items:
