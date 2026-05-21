@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # 1. main.yml에서 작성한 서론(EMAIL_INTRO) 불러오기
-email_intro = os.environ.get('EMAIL_INTRO' \n\n')
+email_intro = os.environ.get('EMAIL_INTRO' '\n\n')
 
 # 2. 크롤링된 데이터 결과물 (기존 코드에 있는 부분)
 crawled_data_result = "여기에 크롤링된 데이터 결과가 들어갑니다..."
