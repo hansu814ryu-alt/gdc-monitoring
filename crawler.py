@@ -279,4 +279,38 @@ if __name__ == "__main__":
     
     print("--- 🚀 1주일 한정 데이터 크롤링 시작 ---")
     
-    # 1. GDC 뉴스 (수
+    # 1. GDC 뉴스 (수집량 약간 늘려 1주일 필터에 대비)
+    raw_gdc = []
+    gdc_queries = ["GDC 오프쇼어링", "GDC 딜리버리", "글로벌 딜리버리 센터", "글로벌 개발 센터"]
+    for q in gdc_queries:
+        raw_gdc.extend(get_naver_news(NAVER_ID, NAVER_SECRET, query=q, display=30))
+
+    # 2. AX 뉴스 수집
+    raw_ax_news = get_naver_news(NAVER_ID, NAVER_SECRET, query="AX 전환", display=30) + get_naver_news(NAVER_ID, NAVER_SECRET, query="AI 기술 도입", display=30)
+    
+    # 3 & 4. 원티드 채용 공고
+    raw_vn_jobs = get_wanted_postings("베트남", ['it', '개발', '소프트웨어', 'software', 'bse', '브릿지', 'bridge', '통역', '번역'])
+    raw_ax_jobs = get_wanted_postings("AX")
+    
+    print("--- 🛠️ 고도화된 정렬 및 필터링 적용 ---")
+    sorted_gdc = process_gdc_news(raw_gdc)
+    sorted_ax_news = process_ax_news(raw_ax_news)
+    sorted_vn_jobs = process_vn_jobs(raw_vn_jobs)
+    sorted_ax_jobs = process_ax_jobs(raw_ax_jobs)
+    
+    print("--- 🧠 AI 시사점 분석 중 ---")
+    gdc_insight = get_ai_insight(sorted_gdc, GEMINI_KEY)
+    ax_insight = get_ai_insight(sorted_ax_news, GEMINI_KEY)
+    
+    result = {
+        "gdc": {"data": sorted_gdc, "insight": gdc_insight},
+        "ax_news": {"data": sorted_ax_news, "insight": ax_insight},
+        "vn_jobs": {"data": sorted_vn_jobs},
+        "ax_jobs": {"data": sorted_ax_jobs}
+    }
+    
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump(result, f, ensure_ascii=False, indent=4)
+    print("✅ data.json 최신화 완료.")
+
+    send_email(result, GITHUB_PAGES_URL)
