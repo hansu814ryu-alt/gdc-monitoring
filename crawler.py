@@ -80,12 +80,13 @@ def get_wanted_postings(search_keyword, include_keywords=None):
         print(f"원티드 API 오류 ({search_keyword}): {e}")
     return filtered_jobs
 
-# ✅ [신규] 옵션 C: 주요 테크 블로그 RSS 직접 수집
+# ✅ [수정] 옵션 C: 순수 해외 IT 언론 매체 RSS 직접 수집 (기술 블로그 배제)
 def get_overseas_rss_news():
+    # AWS, Google 등 벤더사 자사 블로그를 제외하고, 공신력 있는 글로벌 테크 뉴스 매체만 타겟팅
     rss_urls = [
-        "https://aws.amazon.com/blogs/machine-learning/feed/", # AWS AI Blog
-        "https://techcrunch.com/category/artificial-intelligence/feed/", # TechCrunch AI
-        # 향후 OpenAI, Google DeepMind 등 양질의 RSS 피드 URL을 이곳에 추가하시면 됩니다.
+        "https://techcrunch.com/category/artificial-intelligence/feed/", # TechCrunch (테크/스타트업/AI 뉴스)
+        "https://venturebeat.com/category/ai/feed/", # VentureBeat (엔터프라이즈 AI 트렌드 특화)
+        "https://www.theverge.com/rss/artificial-intelligence/index.xml" # The Verge (대중적/산업적 AI 이슈)
     ]
     filtered_news = []
     
