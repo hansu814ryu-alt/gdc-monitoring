@@ -282,10 +282,10 @@ def send_email(data, pages_url):
     """
     
     html_content += build_email_section("📊 GDC 오프쇼어링 (MSP/ITO 위탁) 동향", data['gdc']['insight'], data['gdc']['data'], f"{pages_url}/more.html?type=gdc")
-    html_content += build_email_section("🌍 해외 AI 원천기술 및 아키텍처 (번역본)", data['overseas']['insight'], data['overseas']['data'], f"{pages_url}/more.html?type=overseas", is_overseas=True)
+    html_content += build_email_section("🌍 해외 AI 원천기술 및 아키텍처", data['overseas']['insight'], data['overseas']['data'], f"{pages_url}/more.html?type=overseas", is_overseas=True)
     html_content += build_email_section("🏢 국내 기업 Enterprise AX (운영모델 전환)", data['ax_news']['insight'], data['ax_news']['data'], f"{pages_url}/more.html?type=ax")
-    html_content += build_email_section("💼 원티드 베트남 채용", "", data['vn_jobs']['data'], f"{pages_url}/more.html?type=vn", is_job=True)
-    html_content += build_email_section("💼 원티드 AX 전담 인력 채용", "", data['ax_jobs']['data'], f"{pages_url}/more.html?type=axjob", is_job=True)
+    html_content += build_email_section("💼 베트남 온사이트인력 채용", "", data['vn_jobs']['data'], f"{pages_url}/more.html?type=vn", is_job=True)
+    html_content += build_email_section("💼 AX 전담 인력 채용", "", data['ax_jobs']['data'], f"{pages_url}/more.html?type=axjob", is_job=True)
 
     msg = MIMEMultipart()
     msg['Subject'] = "📊 [자동화] 기술 트렌드 및 채용 동향 리포트"
