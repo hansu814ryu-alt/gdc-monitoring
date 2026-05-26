@@ -2,10 +2,10 @@
     "gdc": {
         "data": [
             {
-                "title": "STT GDC, 'STT 서울1' 데이터센터 티어 3 설계 인증 획득",
-                "description": "STT GDC의 'STT 서울(Seoul)1' 데이터센터가 티어 3 설계 인증을 획득했다. STT GDC(ST Telemedia Global Datacentres)는 STT 서울 1이 '업타임 인스티튜트 티어 3(Uptime Institute Tier III)' 설계인증(TCDD)을 획득했다고 19일... ",
-                "link": "https://www.epnc.co.kr/news/articleView.html?idxno=401946",
-                "pubDate": "Tue, 19 May 2026 10:26:00 +0900",
+                "title": "LG씨엔에스, 금융권 차세대 전산망 사이클 재개 '수혜'…AI 데이터센터 ...",
+                "description": "이는 해외 개발 인력 약 1200명 규모의 '글로벌 딜리버리 센터(GDC)'와 자체 AI 코딩 플랫폼인 'AIND'가 수익성 개선에 직접적으로 기여한 결과라고 분석했다. 투자자들이 가장 주목해야 할 핵심 모멘텀으로는 15~20년 만에... ",
+                "link": "http://www.newsprime.co.kr/news/article.html?no=732260",
+                "pubDate": "Mon, 04 May 2026 07:34:00 +0900",
                 "score": 95,
                 "is_main": true
             },
@@ -16,438 +16,281 @@
                 "pubDate": "Thu, 30 Apr 2026 11:34:00 +0900",
                 "score": 90,
                 "is_main": true
-            },
-            {
-                "title": "한전, 해상풍력 '전력 고속도로' 직접 연결… 송전선 416km 줄여 3.6조 아...",
-                "description": "이번 협약에는 글로벌 신재생에너지 자산운용사인 CIP(코펜하겐 인프라스트럭처 파트너스, 해금·해송풍력)를 비롯해 크레도오프쇼어(신안블루), 딥워터오프쇼어(청해진), 조도풍력발전(외병도), 다도풍력(운림) 등이 대거... ",
-                "link": "https://www.goodkyung.com/news/articleView.html?idxno=287070",
-                "pubDate": "Sat, 16 May 2026 14:44:00 +0900",
-                "score": 90,
-                "is_main": true
-            },
-            {
-                "title": "SBM 오프쇼어, 자사주 매입 이어 앙골라 FPSO 계약 2032년까지 연장",
-                "description": "SBM 오프쇼어(SBM Offshore N.V., SBFFF)가 최근 주주환원과 포트폴리오 재편을 병행하며 시장의 주목을 받고 있다. 심해 해양 인프라 전문기업인 SBM 오프쇼어는 대규모 자사주 매입 프로그램을 이어가는 한편, 앙골라 해역... ",
-                "link": "https://www.tokenpost.kr/news/market/357208",
-                "pubDate": "Thu, 07 May 2026 16:28:00 +0900",
-                "score": 90,
-                "is_main": true
-            },
-            {
-                "title": "[ZD브리핑] 삼성전자 노사 잠정합의안 운명은…재계 파장 촉각",
-                "description": "STT GDC도 같은 날 여의도 FKI타워 본사 사무실에서 아시아 지역 AI 인프라 개발 현황과 전망에 대한 인사이트를 공유하는 미디어 세션을 개최합니다. 이날 행사에선 허철회 STT GDC 코리아 대표가 참석해 아시아 지역 내 AI... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002424016?sid=105",
-                "pubDate": "Sun, 24 May 2026 13:34:00 +0900",
-                "score": 85,
-                "is_main": true
-            },
-            {
-                "title": "화학연, 전기로 이산화탄소 분해하는 니켈 기반 SOEC 상용화 성큼",
-                "description": "지르코니아)와 GDC(가돌리늄 도핑 세리아)라는 2가지 소재를 함께 사용된다. YSZ는 산소 이온 이동성은 낮지만 내구성이 좋고, GDC는 내구성이 떨어지지만 이온 이동성이 높아 이산화탄소 전환 성능을 보완해준다. 다만 두... ",
-                "link": "https://www.ggilbo.com/news/articleView.html?idxno=1160018",
-                "pubDate": "Mon, 25 May 2026 15:05:00 +0900",
-                "score": 85,
-                "is_main": true
-            },
-            {
-                "title": "&quot;직구 빨라진다&quot;…CJ대한통운·아이허브, 10년 동맹 중동으로 확대",
-                "description": "CJ대한통운 역시 아이허브와 함께 구축한 GDC 모델과 자동화·디지털 운영 역량을 다른 글로벌 이커머스 고객으로 확장하는 데 속도를 내고 있다. CJ대한통운은 지난해 완공한 사우디GDC(Global Distribution Center)에... ",
-                "link": "https://n.news.naver.com/mnews/article/421/0008939207?sid=101",
-                "pubDate": "Tue, 12 May 2026 11:38:00 +0900",
-                "score": 85,
-                "is_main": true
-            },
-            {
-                "title": "울산경제자유구역청, 덴마크 CIP 찾아 해상풍력 협력논의",
-                "description": "이경식 울산경자청장이 덴마크 코펜하겐에 있는 CIP 본사를 방문해 코펜하겐 오프쇼어 파트너스(COP) 관계자... 코펜하겐 오프쇼어 파트너스(COP) 관계자 등과 면담했다고 20일 밝혔다. CIP는 덴마크에 본사를 둔 세계 최대... ",
-                "link": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1057383",
-                "pubDate": "Thu, 21 May 2026 00:04:00 +0900",
-                "score": 85,
-                "is_main": true
-            },
-            {
-                "title": "LS전선·LS마린솔루션, 해송해상풍력 우선협상 선정…해저케이블 ‘국산...",
-                "description": "글로벌 재생에너지 투자개발사인 코펜하겐 인프라스트럭쳐 파트너스(CIP)가 사업 전반을 총괄하며, 산하 개발사 코펜하겐 오프쇼어 파트너스(COP)가 프로젝트 개발을 맡고 있다. 업계에서는 이번 프로젝트를 계기로 국내... ",
-                "link": "https://n.news.naver.com/mnews/article/029/0003027389?sid=101",
-                "pubDate": "Tue, 19 May 2026 10:53:00 +0900",
-                "score": 85,
-                "is_main": true
-            },
-            {
-                "title": "CJ대한통운 1분기 영업익 921억…택배 성장세에 전년 대비 7.9%↑(상보)",
-                "description": "사우디 GDC 가동에 따른 CBE 물량 증대도 실적 향상에 기여했다. CL 부문은 수익성 고심…특송센터 등... &lt;용어설명&gt; ■ GDC(Global Distribution Center) GDC(Global Distribution Center)는 글로벌 물류 거점센터를 의미한다. 각국... ",
-                "link": "https://n.news.naver.com/mnews/article/421/0008941268?sid=101",
-                "pubDate": "Wed, 13 May 2026 09:32:00 +0900",
-                "score": 80,
-                "is_main": true
-            },
-            {
-                "title": "현대글로비스, 중장기 성장 옵션 다각화…&quot;항공·트레이딩까지&quot;",
-                "description": "글로벌물류센터(GDC) 가동을 추진 중이다. 항공 포워딩(항공화물 운송 주선)으로 기존 완성차 해상운송 중심의 사업 구조를 다각화하기 위한 것으로 풀이된다. 지상 5층, 연면적 4만4420㎡ 규모의 GDC는 현대글로비스가 자체... ",
-                "link": "https://daily.hankooki.com/news/articleView.html?idxno=1369165",
-                "pubDate": "Wed, 20 May 2026 15:32:00 +0900",
-                "score": 80,
-                "is_main": true
-            },
-            {
-                "title": "한진, '온라인수출 중소기업 물류지원 사업' 수행기관 4년 연속 선정",
-                "description": "특히 한진은 이번 사업에 국내 물류사 중 최대 규모의 통관 시설을 갖춘 '인천공항 글로벌 권역 물류센터(GDC)'와 지난해 12월 개소한 '유럽 풀필먼트 센터'를 투입한다. 인천공항 GDC를 통해 역직구 화물의 신속하고 정확한... ",
-                "link": "https://n.news.naver.com/mnews/article/008/0005356841?sid=101",
-                "pubDate": "Wed, 13 May 2026 09:37:00 +0900",
-                "score": 80,
-                "is_main": true
-            },
-            {
-                "title": "한화오션, 싱가포르 '오프쇼어 법인' 설립…해양플랜트 속도",
-                "description": "한화오션이 싱가포르에 오프쇼어(해양) 법인을 신규 설립했다. 한화오션은 조선과 방산 이외에도... 15일 한화오션의 분기보고서에 따르면 회사는 올해 1분기 싱가포르에 한화오션 오프쇼어 홀딩스(Hanwha Ocean Offshore... ",
-                "link": "https://n.news.naver.com/mnews/article/293/0000084738?sid=101",
-                "pubDate": "Fri, 15 May 2026 16:33:00 +0900",
-                "score": 80,
-                "is_main": true
-            },
-            {
-                "title": "네덜란드, H₂ CO₂ 파이프라인 네트워크 위한 토양조사",
-                "description": "오프쇼어에너지에 따르면 Fugro와 Sweco는 네덜란드의 세 산업 지역을 연결하고 지정된 해상 저장 장소로 수소와 직접 포집된 CO₂를 운송할 파이프라인 네트워크를 위한 토양 조사 현장 조사 작업을 수행하고 있다.... ",
-                "link": "https://www.gasnews.com/news/articleView.html?idxno=125234",
-                "pubDate": "Fri, 22 May 2026 07:08:00 +0900",
-                "score": 75,
-                "is_main": true
-            },
-            {
-                "title": "[POP!운송] &quot;미래 기술부터 글로벌 영토 확장까지&quot;… 업계, 모빌리티 시...",
-                "description": "국내 자동차 및 모빌리티 업계가 미래 디자인 혁신, 충전 인프라 강화, 그리고 글로벌 시장 공략이라는 세... 라스트마일 딜리버리 전기 자전거 등을 실제 제품 수준의 '하이피델리티 프로토타입'으로 구현해냈다.... ",
-                "link": "http://www.popcornnews.net/news/articleView.html?idxno=119895",
-                "pubDate": "Wed, 29 Apr 2026 15:32:00 +0900",
-                "score": 70,
-                "is_main": true
-            },
-            {
-                "title": "[Who Is ?] 김성권 씨에스윈드 회장",
-                "description": "하부구조물 설치는 글로벌 해양 엔지니어링 기업 벨기에 데메 오프쇼어(DEME Offshore)가 맡는다. 데메는... △덴마크법인 세계 최대 모노파일 납품 완료 씨에스윈드의 덴마크법인 씨에스윈드 오프쇼어(CS WIND Offshore)... ",
-                "link": "https://www.businesspost.co.kr/BP?command=article_view&num=436755",
-                "pubDate": "Mon, 11 May 2026 07:02:00 +0900",
-                "score": 70,
-                "is_main": true
-            },
-            {
-                "title": "배송이 곧 경쟁력…물류 손잡은 플랫폼들, 해외직구 판 바뀐다",
-                "description": "CJ대한통운은 2018년 인천에 GDC(Global Distribution Center)를 구축했다. 일본·싱가포르·호주 주문 물량을 미국이... 양사는 지난해 구축한 사우디 GDC를 올해 본격 가동하며 중동 풀필먼트 운영에 들어갔다. 사실상 해외직구... ",
-                "link": "https://n.news.naver.com/mnews/article/022/0004127479?sid=101",
-                "pubDate": "Tue, 12 May 2026 08:49:00 +0900",
-                "score": 65,
-                "is_main": true
-            },
-            {
-                "title": "[TOP's Pick] [자동차·부품] 모델솔루션, 미국 아트센터와 차세대 디자...",
-                "description": "휴대용 DJ 컨트롤러 ‘DJ Deck’, 자율주행 기반 미래형 쇼핑 카트 ‘Grocery Cart’, 라스트마일 딜리버리 전기... 지난 2년간 수행된 연구 결과를 공유하기 위해 ‘아프리카 모빌리티 산업의 글로벌 경쟁력과 비즈니스... ",
-                "link": "https://www.topdaily.kr/articles/109894",
-                "pubDate": "Wed, 29 Apr 2026 13:51:00 +0900",
-                "score": 60,
-                "is_main": true
             }
         ],
-        "insight": "이 기사 제목들은 인공지능(AI) 수요 급증에 따른 데이터센터 등 핵심 디지털 인프라의 투자 확대 및 공급 부족 심화 현상과 더불어, 재생에너지 전환과 기존 에너지 자산의 안정적 운영을 위한 광범위한 에너지 인프라 투자가 현재 비즈니스 환경의 핵심 동력임을 보여줍니다. 이는 디지털 전환과 에너지 전환이라는 두 가지 메가트렌드에 대한 기업들의 전략적 대응을 시사합니다."
+        "insight": "AI 기술 확산과 금융권 IT 인프라 현대화가 데이터센터 수요를 폭발적으로 증가시키고 있으며, LG CNS와 같은 IT 서비스 기업은 이러한 시장의 공급 부족 상황과 맞물려 AI 데이터센터 사업을 확장하며 큰 비즈니스 기회를 얻고 있음을 시사한다."
+    },
+    "overseas": {
+        "data": [
+            {
+                "title": "Break the context window barrier with Amazon Bedrock AgentCore",
+                "description": "In this post, you will learn how to implement Recursive Language Models (RLM) using Amazon Bedrock AgentCore Code Interpreter and the Strands Agents SDK. By the end, you will know how to process documents of varying lengths, with no upper bound on context size, use Bedrock AgentCore Code Interpreter as persistent working memory for iterative document analysis, and orchestrate sub-large language model (sub-LLM) calls from within a sandboxed Python environment to analyze specific document sections",
+                "link": "https://aws.amazon.com/blogs/machine-learning/break-the-context-window-barrier-with-amazon-bedrock-agentcore/",
+                "pubDate": "Thu, 21 May 2026 16:08:54 +0000",
+                "score": 98,
+                "is_main": true,
+                "translated_title": "Amazon Bedrock AgentCore로 컨텍스트 윈도우 한계 돌파",
+                "translated_desc": "Amazon Bedrock AgentCore 코드 인터프리터와 Strands Agents SDK를 활용한 재귀 언어 모델 구현을 통해 컨텍스트 윈도우 한계를 극복하고, 다양한 길이의 문서를 효율적으로 분석하는 고급 에이전트 아키텍처 및 LLMOps 기법을 소개합니다."
+            },
+            {
+                "title": "Integrating AWS API MCP Server with Amazon Quick using Amazon Bedrock AgentCore Runtime",
+                "description": "This post shows you how to use Amazon Bedrock AgentCore Runtime with Model Context Protocol (MCP) support to connect Amazon Quick with AWS services through the AWS API MCP Server, creating a conversational AI assistant that translates natural language into AWS Command Line Interface (AWS CLI) commands, without the need to switch between tools during critical moments.",
+                "link": "https://aws.amazon.com/blogs/machine-learning/integrating-aws-api-mcp-server-with-amazon-quick-suite-using-amazon-bedrock-agentcore-runtime/",
+                "pubDate": "Thu, 21 May 2026 16:32:09 +0000",
+                "score": 95,
+                "is_main": true,
+                "translated_title": "Amazon Bedrock AgentCore 런타임을 사용하여 AWS API MCP 서버와 Amazon Quick 통합",
+                "translated_desc": "Amazon Bedrock AgentCore 런타임과 Model Context Protocol (MCP) 지원을 활용하여 AWS API MCP 서버를 통해 Amazon Quick을 AWS 서비스와 통합하고, 자연어를 AWS CLI 명령으로 변환하는 대화형 AI 어시스턴트를 구축하는 방법을 소개합니다."
+            },
+            {
+                "title": "Build AI-powered dashboard automation agents with NLP on Amazon Bedrock AgentCore",
+                "description": "This solution combines the power of Amazon Bedrock AgentCore, Strands Agents, and Amazon Quick transforms to deliver a secure, scalable, and intelligent system for building and operating AI agents while transforming data into actionable business insights.",
+                "link": "https://aws.amazon.com/blogs/machine-learning/build-ai-powered-dashboard-automation-agents-with-nlp-on-amazon-bedrock-agentcore/",
+                "pubDate": "Thu, 21 May 2026 15:55:29 +0000",
+                "score": 95,
+                "is_main": true,
+                "translated_title": "Amazon Bedrock AgentCore를 활용한 NLP 기반 AI 대시보드 자동화 에이전트 구축",
+                "translated_desc": "Amazon Bedrock AgentCore와 Strands Agents를 활용하여 NLP 기반 AI 대시보드 자동화 에이전트를 구축하고 운영하는 안전하고 확장 가능한 지능형 시스템을 소개하며, 비즈니스 통찰력 도출을 강조합니다."
+            },
+            {
+                "title": "Multimodal evaluators: MLLM-as-a-judge for image-to-text tasks in Strands Evals",
+                "description": "If you’re building visual shopping, image or document understanding, or chart analysis, you need a way to verify whether your model’s response is actually grounded in the source image. A text-only evaluator cannot tell you whether a caption faithfully describes an image, whether an extracted invoice total matches the document, or whether a screen summary […]",
+                "link": "https://aws.amazon.com/blogs/machine-learning/multimodal-evaluators-mllm-as-a-judge-for-image-to-text-tasks-in-strands-evals/",
+                "pubDate": "Wed, 20 May 2026 18:01:29 +0000",
+                "score": 95,
+                "is_main": true,
+                "translated_title": "멀티모달 평가기: Strands Evals에서 이미지-텍스트 작업을 위한 MLLM-as-a-judge",
+                "translated_desc": "시각적 쇼핑, 이미지 이해 등 이미지-텍스트 작업에서 모델 응답의 정확성을 검증하기 위해 Strands Evals의 MLLM-as-a-judge와 같은 멀티모달 평가기의 필요성과 중요성을 설명합니다."
+            },
+            {
+                "title": "Building multi-tenant agents with Amazon Bedrock AgentCore",
+                "description": "This post explores&nbsp;design considerations for architecting multi-tenant agentic applications and the framework needed to address SaaS architecture challenges with Amazon Bedrock AgentCore.",
+                "link": "https://aws.amazon.com/blogs/machine-learning/building-multi-tenant-agents-with-amazon-bedrock-agentcore/",
+                "pubDate": "Thu, 21 May 2026 16:16:09 +0000",
+                "score": 90,
+                "is_main": true,
+                "translated_title": "Amazon Bedrock AgentCore를 활용한 멀티테넌트 에이전트 구축",
+                "translated_desc": "Amazon Bedrock AgentCore를 이용한 멀티테넌트 에이전트형 애플리케이션 구축 시 설계 고려 사항과 SaaS 아키텍처 과제 해결을 위한 프레임워크를 심층적으로 다룹니다."
+            },
+            {
+                "title": "Build AI agents for business intelligence with Amazon Bedrock AgentCore",
+                "description": "In this post, we show you how OPLOG developed three AI agents using the Strands Agents SDK, deployed them to Amazon Bedrock AgentCore, and integrated Amazon Bedrock with Anthropic’s Claude Sonnet and Amazon Bedrock Knowledge Bases for Retrieval Augmented Generation (RAG).",
+                "link": "https://aws.amazon.com/blogs/machine-learning/build-ai-agents-for-business-intelligence-with-amazon-bedrock-agentcore/",
+                "pubDate": "Thu, 21 May 2026 16:04:17 +0000",
+                "score": 90,
+                "is_main": true,
+                "translated_title": "Amazon Bedrock AgentCore로 비즈니스 인텔리전스 AI 에이전트 구축",
+                "translated_desc": "OPLOG가 Strands Agents SDK를 활용하여 AI 에이전트를 개발하고 Amazon Bedrock AgentCore에 배포하며, RAG를 위해 Amazon Bedrock을 Claude Sonnet 및 Bedrock 지식 기반과 통합하는 과정을 통해 비즈니스 인텔리전스를 위한 에이전트 구축 방법을 설명합니다."
+            },
+            {
+                "title": "Announcing OpenAI-compatible API support for Amazon SageMaker AI endpoints",
+                "description": "Today, Amazon SageMaker AI introduces OpenAI-compatible API support for real-time inference endpoints. If you use the OpenAI SDK, LangChain, or Strands Agents, you can now invoke models on SageMaker AI by changing only your endpoint URL. You don’t need a custom client, a SigV4 wrapper, or code rewrites. Overview With this launch, SageMaker AI endpoints […]",
+                "link": "https://aws.amazon.com/blogs/machine-learning/announcing-openai-compatible-api-support-for-amazon-sagemaker-ai-endpoints/",
+                "pubDate": "Wed, 20 May 2026 23:59:57 +0000",
+                "score": 90,
+                "is_main": true,
+                "translated_title": "Amazon SageMaker AI 엔드포인트의 OpenAI 호환 API 지원 발표",
+                "translated_desc": "Amazon SageMaker AI가 실시간 추론 엔드포인트에 OpenAI 호환 API 지원을 추가하여, OpenAI SDK, LangChain, Strands Agents 사용자가 간편하게 SageMaker AI 모델을 호출할 수 있게 되어 LLMOps 및 에이전트 개발 효율성을 높였습니다."
+            },
+            {
+                "title": "Intelligent radiology workflow optimization with AI agents",
+                "description": "Many healthcare organizations report that traditional worklist systems rely on rigid rules that ignore critical context, radiologist specialization, current workload, fatigue levels, and case complexity. This creates a persistent challenge: radiologists cherry-pick easier, higher-value cases while avoiding complex studies, leading to diagnostic delays and increased costs. Research across 62 hospitals analyzing 2.2 million studies found […]",
+                "link": "https://aws.amazon.com/blogs/machine-learning/intelligent-radiology-workflow-optimization-with-ai-agents-2/",
+                "pubDate": "Thu, 21 May 2026 19:11:09 +0000",
+                "score": 80,
+                "is_main": true,
+                "translated_title": "AI 에이전트를 활용한 지능형 방사선과 워크플로우 최적화",
+                "translated_desc": "AI 에이전트를 활용하여 방사선과 워크플로우의 고질적인 문제를 해결하고, 방사선 전문의의 업무 부담을 줄여 진단 지연 및 비용 증가를 막을 수 있는 방안을 제시합니다."
+            },
+            {
+                "title": "What ClickUp’s mass layoff tells us about the future of work",
+                "description": "The nine-year-old startup is replacing hundreds of employees with thousands of AI agents.",
+                "link": "https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/",
+                "pubDate": "Mon, 25 May 2026 16:00:00 +0000",
+                "score": 75,
+                "is_main": true,
+                "translated_title": "ClickUp의 대규모 정리해고가 우리에게 말해주는 미래 업무의 모습",
+                "translated_desc": "ClickUp의 대규모 정리해고를 통해 수많은 AI 에이전트가 인력을 대체하며 미래 업무 환경에 미치는 AI 에이전트의 광범위한 영향과 중요성을 조명합니다."
+            },
+            {
+                "title": "Amazon Nova Act is now HIPAA eligible",
+                "description": "In this post, you will learn what Nova Act offers, how HIPAA eligibility applies to agentic AI, and how to get started.",
+                "link": "https://aws.amazon.com/blogs/machine-learning/amazon-nova-act-is-now-hipaa-eligible/",
+                "pubDate": "Thu, 21 May 2026 22:22:28 +0000",
+                "score": 70,
+                "is_main": true,
+                "translated_title": "Amazon Nova Act, 이제 HIPAA 규정 준수 가능",
+                "translated_desc": "Nova Act가 HIPAA 규정을 준수하게 됨에 따라, 에이전트형 AI가 의료 분야에서 활용될 때의 규제 적용 및 시작 방법에 대해 설명합니다."
+            },
+            {
+                "title": "Build an AI-powered recruitment assistant using Amazon Bedrock",
+                "description": "In this post, we demonstrate how to build an AI-powered recruitment assistant using Amazon Bedrock that brings efficiencies to candidate evaluation, generates personalized interview questions, and provides data-driven insights for human hiring decisions. This post presents a reference architecture for learning purposes — not a production-ready solution. Amazon Bedrock and the AWS services used here are general-purpose tools that customers can combine to support a wide variety of use cases, inclu",
+                "link": "https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-recruitment-assistant-using-amazon-bedrock/",
+                "pubDate": "Thu, 21 May 2026 16:00:30 +0000",
+                "score": 65,
+                "is_main": true,
+                "translated_title": "Amazon Bedrock을 활용한 AI 기반 채용 어시스턴트 구축",
+                "translated_desc": "Amazon Bedrock을 활용하여 지원자 평가, 맞춤 면접 질문 생성, 데이터 기반 채용 통찰력 제공 등을 수행하는 AI 기반 채용 어시스턴트 구축을 위한 참조 아키텍처를 제시합니다."
+            }
+        ],
+        "insight": "이 기사 제목들은 Amazon Bedrock AgentCore가 기업의 비즈니스 프로세스 자동화 및 효율성 극대화를 위해, 기존 시스템과 원활하게 통합되고 컨텍스트 한계를 극복하며 확장 가능한 AI 에이전트를 구축하는 데 핵심적인 기술 솔루션임을 시사합니다. 이를 통해 기업은 보다 복잡하고 지능적인 AI 기반 서비스를 신속하게 개발하고 배포할 수 있습니다."
     },
     "ax_news": {
         "data": [
             {
-                "title": "한화생명 'AI보험사' 전환 속도낸다",
-                "description": "신사업 발굴할 AX전략실 출범 &quot;AI기술 통해 보험미래 설계&quot; 저출생 고령화로 국내 생명보험 시장이 포화 상태에 이른 가운데, 한화생명이 인공지능 전환(AX)을 총괄하는 전담조직을 신설하는 등 '인공지능(AI) 보험사... ",
-                "link": "https://n.news.naver.com/mnews/article/009/0005684642?sid=101",
-                "pubDate": "Mon, 25 May 2026 17:08:00 +0900",
+                "title": "SK AX, 오픈AI와 파트너십…엔터프라이즈 AI 사업 협력",
+                "description": "SK AX는 '챗GPT 엔터프라이즈'를 기업별 업무 환경과 보안 요건에 맞게 제공할 방침이다. 김완종 SK AX 사장은 &quot;AI의 단순 도입이 아닌 AI 접목을 통해 기업 내부의 구조, 업무 프로세스와 일하는 방식, 거버넌스 등을... ",
+                "link": "https://n.news.naver.com/mnews/article/029/0003026567?sid=105",
+                "pubDate": "Thu, 14 May 2026 09:27:00 +0900",
                 "score": 95,
                 "is_main": true
             },
             {
-                "title": "AWS 손잡은 미래에셋, 금융 AX 핵심은 데이터 구조화 [테크체인저]",
-                "description": "는 최근 서울 강남구 코엑스에서 이우람 미래에셋증권 수석매니저와 만나 미래에셋증권의 인공지능 전환(AX) 전략과 AWS와의 협력 성과 등에 대해 들었다. 그래프RAG, 상품 간 '관계'까지 읽는다 다수의 증권사들은 최근... ",
-                "link": "https://n.news.naver.com/mnews/article/293/0000085213?sid=105",
-                "pubDate": "Sun, 24 May 2026 16:00:00 +0900",
+                "title": "가스공사, 사내 전용 AI모델 '업무 메이트' 공개",
+                "description": "가스공사는 11일 사내 업무 환경에 특화된 전용 AI모델 '업무 메이트' 사용 개시를 알렸다. 지난해 12월... 가스공사는 고유의 지식기반을 RAG하는데 머물지 않고 외부와 차단된 사이버 공간에 다운로드 받은... ",
+                "link": "https://daily.hankooki.com/news/articleView.html?idxno=1365913",
+                "pubDate": "Mon, 11 May 2026 20:54:00 +0900",
                 "score": 95,
                 "is_main": true
             },
             {
-                "title": "교황 &quot;AI가 인간 지배 못하게 무장해제해야&quot;…첫 회칙 발표",
-                "description": "발표…'AI 무장해제' 역설 디지털 경제의 노동력 착취도 경고…&quot;새 노예제 규탄&quot; &quot;보편적 재화에 기술·정보 포함해야&quot;…'정당한 전쟁' 이론 거듭 비판 '산업혁명 노동권' 레오 13세 회칙 135주년 맞아 AI 위험성 경고 (바티칸... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016098007?sid=104",
-                "pubDate": "Mon, 25 May 2026 19:09:00 +0900",
+                "title": "“단어만 찾는 사서는 가라”…미래에셋증권이 AI에 ‘맥락’을 심은 방...",
+                "description": "검색증강생성(RAG) 기반 금융상품 DB 구축 프로젝트를 소개했다. 직원이 ETF, 공모펀드, 채권 같은 금융상품을... 체계와 사내 용어집을 층층이 쌓아 ETF 전용 온톨로지 맵을 만들었다. ‘자산운용사는 ETF를 운용하고, ETF는... ",
+                "link": "https://n.news.naver.com/mnews/article/138/0002228675?sid=105",
+                "pubDate": "Fri, 22 May 2026 05:28:00 +0900",
                 "score": 95,
                 "is_main": true
             },
             {
-                "title": "AI가 끌어올린 낸드 매출…삼전·SK하닉 웃었다",
-                "description": "인공지능(AI) 인프라 구축 확대로 기업용SSD 수요가 폭증하며 올해 1분기 글로벌 5대 낸드플래시... AI 관련 수요 폭등에 따른 낸드플래시 시장 수급 불균형은 올해까지 이어질 전망이다. 트렌드포스는 &quot;메모리 원가... ",
-                "link": "https://n.news.naver.com/mnews/article/215/0001253242?sid=101",
-                "pubDate": "Mon, 25 May 2026 17:29:00 +0900",
-                "score": 95,
-                "is_main": true
-            },
-            {
-                "title": "'메타 AI 글라스' 국내 출시",
-                "description": "메타의 스마트 안경 '인공지능(AI) 글라스'가 국내에 출시된 25일 서울 중구 신세계백화점 선글라스 매장에서 시민들이 제품을 살펴보고 있다. 메타는 오늘부터 1200만 화소의 초광각 카메라, 오픈 이어 오디오 기능... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016097626?sid=105",
-                "pubDate": "Mon, 25 May 2026 14:37:00 +0900",
-                "score": 95,
-                "is_main": true
-            },
-            {
-                "title": "앤트로픽 &quot;미토스 AI가 보안 취약점 1만건 넘게 찾았다&quot;",
-                "description": "미국 인공지능(AI) 기업 앤트로픽이 AI 모델을 활용해 세계 주요 소프트웨어에서 고위험·치명적 보안 취약점 1만건 이상을 찾았다고 밝혔다. 25일 업계에 따르면 앤트로픽은 지난 22일 자사 연구 블로그에서 '프로젝트... ",
-                "link": "https://n.news.naver.com/mnews/article/421/0008964708?sid=105",
-                "pubDate": "Mon, 25 May 2026 15:34:00 +0900",
-                "score": 95,
-                "is_main": true
-            },
-            {
-                "title": "SK텔레콤 사내 AI 해커톤 AX 챌린지",
-                "description": "SKT가 전사 AX(AI 전환) 가속화를 목표로 개최한 사내 AI 해커톤 'AX 챌린지'가 성공적으로 막을 내렸다고 22일 밝혔다. 사진은 우수 4팀이 정재헌 SKT CEO와 기념 촬영하는 모습. 2026.5.22 [SKT 제공. 재판매 및... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016093801?sid=105",
-                "pubDate": "Fri, 22 May 2026 11:13:00 +0900",
+                "title": "삼성전자 DX직원 '외부 AI' 쓴다…내달 공식 도입",
+                "description": "기존 자체 개발 생성형 AI 모델인 '삼성 가우스'에 외부 생성형 AI를 더해 시너지를 극대화하겠다는 전략이다. 앞서 삼성전자는 임직원 선호도와 현장 의견을 반영한 안정적인 운영 체계 구축을 위해 지난달부터... ",
+                "link": "https://n.news.naver.com/mnews/article/008/0005362741?sid=101",
+                "pubDate": "Tue, 26 May 2026 12:03:00 +0900",
                 "score": 90,
                 "is_main": true
             },
             {
-                "title": "한화오션, 거제사업장 'AX 전환' 가속…시운전 선박에 ‘스타링크’ 적...",
-                "description": "고령화와 인력난 속에서 숙련자가 퇴직하더라도 현장의 판단 기준과 업무 방식이 사라지지 않도록 하겠다는 취지다.권순도 한화오션 AX사업부 생산운영지능화팀장은 &quot;AX 전환은 인력 감축이 목적이 아닌, 자연스럽게... ",
-                "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260525010007089",
-                "pubDate": "Mon, 25 May 2026 15:24:00 +0900",
-                "score": 90,
-                "is_main": true
-            },
-            {
-                "title": "서울시, 글로벌 AI 기업 '코그나이트' 유치…제조업 AI 전환 가속화",
-                "description": "서울시가 글로벌 산업용 인공지능(AI) 플랫폼 기업인 ‘코그나이트(Cognite)’를 유치해 제조업 AI 전환(AX) 생태계 확대에 나선다. 서울시청 전경(사진=이데일리 DB) 서울시는 지난 22일(미국 현지시간) 미국 애리조나... ",
-                "link": "https://n.news.naver.com/mnews/article/018/0006289539?sid=100",
-                "pubDate": "Sun, 24 May 2026 11:16:00 +0900",
-                "score": 85,
-                "is_main": true
-            },
-            {
-                "title": "스타트업 넘어 군·학계까지…민간 주도 '국방 AX 컨트롤타워' 출격",
-                "description": "방산 분야 혁신 기업들이 단순 스타트업 연대를 넘어 군·학계·전통 방산을 아우르는 민간 주도 국방 인공지능(AI) 전환(AX) 거버넌스 구축에 나섰다. 현대전의 승패가 전차·전투기 등 재래식 화력에서 AI·드론 등... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002424037?sid=105",
-                "pubDate": "Mon, 25 May 2026 11:34:00 +0900",
-                "score": 80,
-                "is_main": true
-            },
-            {
-                "title": "KIAT, 'MIT·프라운호퍼' 손잡고 국내 제조현장 AI 전환 가속화한다",
-                "description": "전윤종 KIAT 원장은 &quot;국제기술협력으로 제조 현장의 데이터, 공정, 설비를 인공지능으로 연결함으로써 국내 제조업의 생산성 혁신을 촉진하고 성공적인 제조 인공지능전환(M.AX)의 사례를 만들겠다&quot;고 강조했다. 이번... ",
-                "link": "http://www.metroseoul.co.kr/article/20260525500109",
-                "pubDate": "Mon, 25 May 2026 12:52:00 +0900",
-                "score": 80,
-                "is_main": true
-            },
-            {
-                "title": "KAIST AI대학 218명 &quot;글로벌 AI허브 유치는 UN과 AI 방향 만들어 갈 전환...",
-                "description": "중요한 전환점”으로 평가했다. KAIST 정문.(사진=KAIST) 이들은 또 “앞으로 AI 강국 기준은 더 큰 모델과... 현재 AI와 관련한 학과와 교원수(전임+겸임)는 ▲AI컴퓨팅학과 5+25명 ▲AI시스템학과(7+39명) ▲AX학과(5+140명)... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002424026?sid=105",
-                "pubDate": "Mon, 25 May 2026 09:16:00 +0900",
-                "score": 80,
-                "is_main": true
-            },
-            {
-                "title": "역대 최대 1.1조 출자 '산업성장펀드' 출범…제조 AI 전환",
-                "description": "해당 펀드는 제조 AI 전환(M.AX), 균형발전, 신성장동력 발굴 등 주요 산업정책 분야에 집중적으로 투자한다. 특히 1호 펀드인 'M.AX 산업대전환 혁신펀드'는 휴머노이드, AI 팩토리, 미래 모빌리티, 자율운항선박 등... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016083584?sid=101",
-                "pubDate": "Mon, 18 May 2026 14:00:00 +0900",
-                "score": 80,
-                "is_main": true
-            },
-            {
-                "title": "금융 망분리 규제 푼다…AI 보안체계 구축 속도",
-                "description": "보안목적 AI·보안 SaaS 활용 규제 완화 자산 10조·직원 1000명 이상 49개사 대상 금융 분야 망분리 규제가 고성능 인공지능(AI) 보안 위협 대응을 위해 완화 절차에 들어간다. 금융회사가 AI로 취약점을 점검하고 보안... ",
-                "link": "https://n.news.naver.com/mnews/article/030/0003430783?sid=101",
-                "pubDate": "Sun, 24 May 2026 13:01:00 +0900",
-                "score": 80,
-                "is_main": true
-            },
-            {
-                "title": "권대영 “AI 공격은 AI로 막아야”…금융권 보안습관 전환 주문",
-                "description": "권 부위원장은 금융권에 AX 전환과 보안역량 강화를 함께 주문했다. 그는 “과거 방식으로는 생산적 서비스도 안전한 보안도 담보할 수 없다”며 “정부의 망분리 규제 완화 조치를 기회 삼아 선도적이고 혁신적인... ",
-                "link": "https://n.news.naver.com/mnews/article/138/0002228825?sid=101",
-                "pubDate": "Sun, 24 May 2026 14:35:00 +0900",
+                "title": "[현장 쏙] NHN클라우드, AX 선도기업 도약 나선다..풀스택 브랜드 ‘팩토...",
+                "description": "고객사의 AX(AI 전환) 전 과정을 책임지는 풀스택 역량을 갖추겠다는 것이다. 장기적으로는 회사 전체... 서비스 레이어와 관련해 안성민 NHN엔터프라이즈 대표는 AI 에이전트 실행 서비스 ‘프로젝트 X’를 공개했다.... ",
+                "link": "https://kpenews.com/View.aspx?No=4089790",
+                "pubDate": "Tue, 26 May 2026 11:10:00 +0900",
                 "score": 75,
                 "is_main": true
             },
             {
-                "title": "AI 경쟁축 '실행하는 AI'로 전환...플랫폼 경쟁 본격화",
-                "description": "KT는 마이크로소프트(MS)와 손잡고 금융·제조·유통 분야 기업 AI전환(B2B AX)용 인프라 구축에 집중하고 있다. 네이버는 최근 대화형 AI 서비스 '클로바X'를 축소하고 네이버의 최고 강점인 검색 중심 AI 구조 강화에... ",
-                "link": "https://n.news.naver.com/mnews/article/014/0005525939?sid=105",
-                "pubDate": "Mon, 25 May 2026 14:28:00 +0900",
-                "score": 75,
-                "is_main": true
-            },
-            {
-                "title": "공공SW 발주 AI 에이전트가 지원…조달청, 공공조달 AX 본격화",
-                "description": "제안요청서(RFP) 작성부터 법·제도 위반 여부 검토, 산출내역서 작성, 과업심의 지원까지 AI가 보조하면서 공공조달 분야 인공지능 전환(AX)이 속도를 낼 전망이다. 25일 업계에 따르면 조달청과... ",
-                "link": "https://n.news.naver.com/mnews/article/030/0003430879?sid=105",
-                "pubDate": "Mon, 25 May 2026 12:01:00 +0900",
-                "score": 75,
-                "is_main": true
-            },
-            {
-                "title": "코스콤, 핀테크 기업 핑거와 '금융투자업권 AX사업' MOU 체결",
-                "description": "코스콤은 핀테크 기업 핑거와 금융투자업권의 인공지능 전환(AX) 사업 추진을 위한 전략적 업무협약(MOU)을 체결했다고 22일 밝혔다. 코스콤의 원장(元帳) 및 투자정보 인프라와 핑거의 AI 기술을 결합해 금융투자업권... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016093985?sid=101",
-                "pubDate": "Fri, 22 May 2026 12:17:00 +0900",
-                "score": 75,
-                "is_main": true
-            },
-            {
-                "title": "금융권 AI 전환 본격화! 금융분야 망분리 규제 완화해 '혁신은 넓게, 보...",
-                "description": "아울러 현재도 '금융분야 망분리 규제개선 로드맵'에 따라 단계적으로 규제완화가 이루어지고 있지만, AX 전환기에 금융회사가 생산적·혁신적인 AI 기술로 무장하기 위해서는 보다 속도감 있는 규제 개선이 필요하다는... ",
-                "link": "http://www.intn.co.kr/news/articleView.html?idxno=2050909",
-                "pubDate": "Sun, 24 May 2026 20:00:00 +0900",
-                "score": 75,
-                "is_main": true
-            },
-            {
-                "title": "재경부, 국제기구와 화성 AI 정수장 방문…개발협력 지속",
-                "description": "재정경제부는 지난 22일 국제기구 관계자들과 한국수자원공사 화성 인공지능(AI) 정수장을 방문해 한국의 AI 기반 공공인프라 운영 사례를 공유했다고 25일 밝혔다. 이번 현장 방문은 지난 21일 글로벌 AI 허브 비전... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016097544?sid=101",
-                "pubDate": "Mon, 25 May 2026 14:00:00 +0900",
-                "score": 75,
-                "is_main": true
-            },
-            {
-                "title": "아르헨, AI기반 국가정책 예측시스템 추진…&quot;국민감시 우려&quot;논란",
-                "description": "인공지능(AI)을 활용해 사회 문제와 정책 효과를 예측·분석하는 '사회 디지털트윈(Gemelo Digital Social)' 구축 계획을 공개하면서 논란이 확산하고 있다. 아르헨티나 인적자원부는 최근 AI 기반 공공정책 플랫폼인 '사회... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016096989?sid=104",
-                "pubDate": "Mon, 25 May 2026 01:00:00 +0900",
-                "score": 75,
-                "is_main": true
-            },
-            {
-                "title": "DX·AX 지원으로 혁신성장 뒷받침한다…대구시, 신규 스타기업 모집",
-                "description": "대구시는 올해부터는 선정된 기업에는 디지털전환(DX)과 인공지능전환(AX) 지원 프로그램을 새롭게 도입해 미래산업 구조 전환과 혁신성장을 적극 뒷받침하기로 했다. 대구시와 대구테크노파크, 대구지역산업진흥원은... ",
-                "link": "https://n.news.naver.com/mnews/article/021/0002793330?sid=102",
-                "pubDate": "Mon, 25 May 2026 13:06:00 +0900",
+                "title": "&quot;PoC만 하다 끝난 AI는 가라&quot;...베스핀글로벌, 진짜 돈 되는 'AX 전략' 공...",
+                "description": "자사의 엔터프라이즈 AI 통합 플랫폼 '헬프나우 AI 파운드리(HelpNow AI Foundry)'와 AI 도입 방법론인... 중심의 AX(인공지능 전환) 로드맵을 제시해 업계의 주목을 받았다. 베스핀글로벌의 장형화 이사가 '헬프나우 AI... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002423780?sid=105",
+                "pubDate": "Thu, 21 May 2026 15:41:00 +0900",
                 "score": 70,
                 "is_main": true
             },
             {
-                "title": "신약개발 AX는 필수, 데이터 구슬 얼마나 잘 꿰느냐 관건",
-                "description": "제약바이오 산업의 인공지능 전환, 이른바 'AX(AI 트랜스포메이션)' 경쟁이 본격화하고 있다. 신약 후보물질 발굴부터 임상 설계, 제조 및 품질관리까지 AI의 활용 범위가 산업 전주기로 넓어지면서다. 하지만 AX... ",
-                "link": "https://n.news.naver.com/mnews/article/648/0000047416?sid=101",
-                "pubDate": "Mon, 25 May 2026 10:00:00 +0900",
+                "title": "와이즈넛, 1분기 매출 72억…AI 에이전트 매출 비중 43%까 확대",
+                "description": "이는 그간 시장에서 검토 및 도입 단계에 머물렀던 AI 에이전트 사업이 실제 매출로 전환되고, 과거 레거시 사업군이 AI 에이전트 영역으로 흡수 및 전환되는 과정에서 매출 구조의 선순환이 이루어진 것이란... ",
+                "link": "https://n.news.naver.com/mnews/article/030/0003428510?sid=105",
+                "pubDate": "Mon, 18 May 2026 10:19:00 +0900",
                 "score": 70,
                 "is_main": true
             },
             {
-                "title": "심평원 “AI·클라우드 동시 드라이브”…전략적 평가기관 전환 총력",
-                "description": "건강보험심사평가원이 올해 '인공지능(AI) 통합플랫폼'을 구축하며 보건의료 AI 전환(AX)에 속도를 낸다. 개별 운영해온 21개 정보시스템을 클라우드 기반으로 전환하고 그 위에 AI 서비스를 탑재해 심사·평가 체계를... ",
-                "link": "https://n.news.naver.com/mnews/article/030/0003430926?sid=102",
-                "pubDate": "Mon, 25 May 2026 15:01:00 +0900",
+                "title": "[Tech &amp; Now] 최은수 인텔리빅스 대표, 남동발전서 '지능형 자율발전소'...",
+                "description": "아울러 은퇴를 앞둔 전문가들의 암묵지와 축적된 도면을 사내 생성형 AI 및 검색증강생성(RAG) 기술로 학습시켜 전사적 지식 자산으로 전환할 필요성도 언급했다. 국가 기반 시설의 특성을 고려한 보안 체계의 중요성도... ",
+                "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1709401",
+                "pubDate": "Tue, 19 May 2026 16:02:00 +0900",
                 "score": 70,
                 "is_main": true
             },
             {
-                "title": "&quot;AI로 전 세계 메탄 배출 더 빠르고 정확하게 감시한다&quot;",
-                "description": "UNIST, 초분광 위성 데이터 활용한 메탄 탐지 기술 개발 울산과학기술원(UNIST) 연구진이 인공지능(AI)을... 탐지하는 AI 기술을 개발하고 활용 기준을 제시했다고 25일 밝혔다. 초분광 위성 데이터는 지표면에서 반사된 빛을... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016097936?sid=105",
-                "pubDate": "Mon, 25 May 2026 17:26:00 +0900",
-                "score": 70,
-                "is_main": true
-            },
-            {
-                "title": "AI 열풍에 종전 기대감에…또 사상 최고치 찍었다",
-                "description": "인공지능(AI) 열풍과 미국·이란 협상 진전에 따른 중동 긴장 완화 기대감이 맞물리며 대만 증시 자취안... 이날 대만 증시 강세는 글로벌 AI 반도체 공급망 수요 확대, 미국과 이란의 협상 진전 등에 대한 기대감이... ",
-                "link": "https://n.news.naver.com/mnews/article/215/0001253238?sid=101",
-                "pubDate": "Mon, 25 May 2026 16:56:00 +0900",
-                "score": 70,
-                "is_main": true
-            },
-            {
-                "title": "&quot;가계는 최악인데 증시는 달나라&quot;…AI 기대에 美 주가, 닷컴버블급 과열",
-                "description": "인공지능(AI) 기대감이 기업 이익 전망을 밀어올리는 사이, 소비자들은 고물가와 고용 불안, 이란전쟁... 2000년대 초 인터넷은 세계를 연결하고 삶을 개선할 기술이라는 낙관론을 키웠지만, 지금의 AI는 생산성 향상... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0013966093?sid=104",
-                "pubDate": "Mon, 25 May 2026 16:03:00 +0900",
-                "score": 70,
-                "is_main": true
-            },
-            {
-                "title": "‘퇴근 없는 직원’ AI 로봇…200시간 택배 분류 작업 미션 성공",
-                "description": "미국 휴머노이드(인간형) 로봇 기업 피겨AI가 유튜브를 통해 생중계했던 자사 로봇 ‘피겨03’의 택배... 피겨AI는 이달 13일(현지 시간) 10시에 시작한 피겨03의 연속 작업 업무를 200시간 달성 끝에 종료했다. 당초... ",
-                "link": "https://n.news.naver.com/mnews/article/020/0003721998?sid=104",
-                "pubDate": "Mon, 25 May 2026 09:53:00 +0900",
-                "score": 70,
-                "is_main": true
-            },
-            {
-                "title": "스타벅스 '탱크데이' AI 밈 확산…'조롱성' AI 생성물 처벌 경계는",
-                "description": "스타벅스코리아의 '탱크데이' 마케팅 논란 이후 생성형 인공지능(AI)으로 만든 조롱성 이미지와 영상이 확산하면서 AI 콘텐츠의 법적 책임과 플랫폼 대응 기준이 쟁점으로 떠올랐다. 일부 게시물은 스타벅스 로고와 전차... ",
-                "link": "https://n.news.naver.com/mnews/article/421/0008964489?sid=105",
-                "pubDate": "Mon, 25 May 2026 13:48:00 +0900",
-                "score": 70,
-                "is_main": true
-            },
-            {
-                "title": "대구·경북, 정부 AX실증산단 공모 재도전 나선다",
-                "description": "정부의 'AX(인공지능전환)실증산단 구축사업' 공모에서 대구(성서산업단지)·경북도(구미) 후보지가 모두 탈락(경북일보 2026년 2월 19일자 2면 보도)되면서, 대구경북을 홀대하고 있다는 비판이 제기됐다. 이에 따라... ",
-                "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4073709",
-                "pubDate": "Mon, 25 May 2026 16:18:00 +0900",
-                "score": 65,
-                "is_main": true
-            },
-            {
-                "title": "'AX 사업' 공약 경쟁 이슈로..적정성 검토 결과는 언제쯤",
-                "description": "정부는 수성 알파시티를 중심으로 인공지능 전환, AX 혁신기술개발 사업을 추진 중인데요, 대구시장 후보마다 차질 없는 사업 추진을 약속하고 나선 가운데 예산 반영을 위한 적정성 검토는 차일피일 미뤄지고 있습니다.... ",
-                "link": "https://www.tbc.co.kr/news/view?pno=20260508110116AE09517&id=206734",
-                "pubDate": "Mon, 25 May 2026 09:04:00 +0900",
-                "score": 65,
-                "is_main": true
-            },
-            {
-                "title": "대학 평생학습 온라인강좌 활성화…AX·로봇 인재양성 지원",
-                "description": "산업 현장에서 요구되는 인공지능 전환(AX), 로봇 등 첨단 기술 역량을 겸비한 융합형 실무 인재 양성 지원을 강화한다. 대학·공공기관 등이 제작한 우수한 강좌를 온라인으로 제공하는 한국형 온라인 공개강좌(K-MOOC... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0013953742?sid=102",
-                "pubDate": "Tue, 19 May 2026 12:00:00 +0900",
-                "score": 65,
-                "is_main": true
-            },
-            {
-                "title": "&quot;국민이 바라는 청렴한 중진공&quot;…AI숏폼 공모전",
-                "description": "중소벤처기업진흥공단(중진공)은 오는 26일부터 한 달간 '청렴한 중진공 인공지능(AI)+ 숏폼 공모전'을 개최한다고 25일 밝혔다. 이번 공모전은 부패 경험 '제로(0)' 달성을 위한 캠페인의 일환으로, 생성형 AI 기술로... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0013965685?sid=101",
-                "pubDate": "Mon, 25 May 2026 12:00:00 +0900",
+                "title": "'AI 공격 AI가 막는다'...KB·신한, 보안 대응 강화 나서",
+                "description": "체계를 운영하고 있다. 보안 모니터링 업무에도 AI를 적용했다. KB금융은 AI 에이전트와 로봇프로세스자동화... 제로트러스트 보안 모델도 그룹 차원으로 확대하고 있다. 신한금융은 신한은행이 참여한 제로트러스트... ",
+                "link": "https://n.news.naver.com/mnews/article/014/0005526323?sid=101",
+                "pubDate": "Tue, 26 May 2026 11:26:00 +0900",
                 "score": 60,
                 "is_main": true
             },
             {
-                "title": "&quot;AI로 눌림목 발굴…반도체·로봇 모멘텀 주목&quot; [인터뷰+]",
-                "description": "&quot;한경유레카에서 '나인어클락'은 인공지능(AI) 투자 알고리즘을 활용해 단기 눌림목 매매를 선호하는... 이 대표는 주도 테마로 '반도체 밸류체인(가치사슬)'과 '피지컬 AI'를 꼽았다. 나인어클락, '단기 눌림목' 종목 발굴... ",
-                "link": "https://n.news.naver.com/mnews/article/015/0005290725?sid=101",
-                "pubDate": "Mon, 25 May 2026 14:56:00 +0900",
+                "title": "AI 정부 '인프라' 깐다…오케스트로, 공공 클라우드 전환 주도",
+                "description": "최근 공공 분야에서는 AI 활용 확대와 재해복구(DR) 체계 고도화 수요가 커지면서 클라우드 네이티브 전환이 빠르게 확산되고 있다. 기존 레거시 시스템 기반 운영만으로는 안정성과 서비스 연속성 확보에 한계가 있다는... ",
+                "link": "https://n.news.naver.com/mnews/article/008/0005360453?sid=101",
+                "pubDate": "Wed, 20 May 2026 12:00:00 +0900",
                 "score": 60,
                 "is_main": true
             },
             {
-                "title": "이노에이엑스, 보험 AX 성과 본격화…매출 확대 동인 보니",
-                "description": "인공지능전환(AX) 전문기업 이노에이엑스가 자회사 편입 효과와 보험업계 AX 수요 확대에 힘입어 1분기 매출 성장을 이끌었다. 기존 보험 솔루션 사업을 바탕으로 인공지능(AI) 기반 자동화 사업이 본격적으로... ",
-                "link": "https://n.news.naver.com/mnews/article/293/0000085231?sid=101",
-                "pubDate": "Mon, 25 May 2026 15:30:00 +0900",
-                "score": 55,
-                "is_main": true
-            },
-            {
-                "title": "설립 2달만에 30년 벤처도 러브콜…'오마카세식 AX 교육' 뭐길래",
-                "description": "유캔랩스의 비즈니스 모델은 단순 강의를 넘어 전사 AX(인공지능 전환) 교육, 업무 자동화 컨설팅, 개발 외주 등을 아우른다. 프랜차이즈 식당이 아닌 '오마카세' 방식을 지향한다는 점에서 차별화 포인트를 만들었다고... ",
-                "link": "https://n.news.naver.com/mnews/article/008/0005362249?sid=101",
-                "pubDate": "Mon, 25 May 2026 06:00:00 +0900",
-                "score": 55,
-                "is_main": true
-            },
-            {
-                "title": "[서울교육감 8파전] ① 사교육비 경감·AI·교권회복 내세워 '구애'",
-                "description": "교육감 직선제 도입 이후 역대 최다인 8명의 후보는 공교육 강화와 사교육비 경감, 교권 보호, 인공지능(AI)... 그는 학교에서 정기적인 'AI 학력진단'을 실시하고 가정에서 언제든지 'AI 자가역량평가'를 할 수 있도록... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016097014?sid=102",
-                "pubDate": "Mon, 25 May 2026 05:59:00 +0900",
+                "title": "KT, 부산대와 지역 AX 생태계 확산···&quot;전방위 협력&quot;",
+                "description": "성원제 KT 엔터프라이즈부문 동부법인고객본부장 상무는 &quot;KT의 AX 플랫폼 컴퍼니 역량을 바탕으로 부산대학교를 비롯한 지역사회와 함께 AX 생태계를 지속 확대해 나갈 것&quot;이라며 &quot;앞으로도 학생과 지역 주민이 AI... ",
+                "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2432671",
+                "pubDate": "Tue, 26 May 2026 09:33:00 +0900",
                 "score": 50,
+                "is_main": true
+            },
+            {
+                "title": "두루이디에스, '엑스팩AI' 선보여…RAG 기술 결합, 소스코드 및 오픈소스...",
+                "description": "두루이디에스가 '2026 국제인공지능대전(AI EXPO KOREA)'에 참가해 검색증강생성(RAG) 기술을 결합한 차세대... 플랫폼의 진단 프로세스는 크게 3단계로, 데이터 수집 단계에서는 소스코드뿐만 아니라 사내 보안... ",
+                "link": "http://www.itdaily.kr/news/articleView.html?idxno=239210",
+                "pubDate": "Thu, 07 May 2026 15:38:00 +0900",
+                "score": 50,
+                "is_main": true
+            },
+            {
+                "title": "이비소프트, 기업 AI '도입' 넘어 '실행' 강조… 오케스트레이터 플랫폼...",
+                "description": "예컨대 특정 승인 API나 프로젝트 현황처럼 사내 자산과 시점 의존성이 강한 질문은 RAG가 필요하고, 일반적인 기술 설명은 일반 응답으로 처리하는 구조다. 성 대표는 이런 분기 로직이 있어야 AI가 불필요한 내부... ",
+                "link": "https://n.news.naver.com/mnews/article/030/0003423386?sid=105",
+                "pubDate": "Thu, 30 Apr 2026 11:22:00 +0900",
+                "score": 50,
+                "is_main": true
+            },
+            {
+                "title": "디노티시아, 국제인공지능대전서 '기업용 AI 에이전트' 플랫폼 시연",
+                "description": "검색증강생성(RAG) 방식으로 사내 데이터를 근거로 삼기 때문에 AI의 환각 문제를 최소화할 수 있고, 찾은 정보를 바탕으로 MCP(Model Context Protocol) 표준을 통해 외부 시스템과 연동해 후속 업무까지 처리하는 AI... ",
+                "link": "https://www.datanet.co.kr/news/articleView.html?idxno=211492",
+                "pubDate": "Fri, 08 May 2026 15:50:00 +0900",
+                "score": 50,
+                "is_main": true
+            },
+            {
+                "title": "AWS &quot;한국은 AI 핵심 거점&quot;… 에이전트·피지컬 AI 전략 공개",
+                "description": "AWS는 오래된 레거시 시스템 현대화 사례도 소개했다. 제이슨 펜크 부사장은 &quot;일부 고객사는 AWS의 AI 기반 현대화 서비스를 통해 6주 만에 시스템 전환을 완료했고 운영 비용을 50% 절감했다&quot;며 &quot;AI 에이전트는 기업이 더... ",
+                "link": "https://it.chosun.com/news/articleView.html?idxno=2023092162475",
+                "pubDate": "Wed, 20 May 2026 15:24:00 +0900",
+                "score": 45,
+                "is_main": true
+            },
+            {
+                "title": "안부전화, 일상·건강살핌도 AI가 척척…구미 온케어 사업",
+                "description": "개선모델 사업' 공모에 선정돼 추진된다. 4000만원의 사업비가 투입된다. 대상은 상시 안부 확인이 필요한 고립 위험가구 350여세대다. '구미 AI 온(溫)케어'는 지난해까지 운영된 '구미 AI살피미 사업'을 확대·고도화한... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0013966922?sid=102",
+                "pubDate": "Tue, 26 May 2026 10:43:00 +0900",
+                "score": 40,
+                "is_main": true
+            },
+            {
+                "title": "AI로 확대되는 공격 표면...SECaaS Summit 2026, 대응 전략 집중 조명",
+                "description": "현대화: AI 시대의 Secure Migration 전략'을 발표한다. 레거시 취약점 정제, 업무 중단 없는 안전한 현대화... 장성민 아카마이 테크놀로지스 상무는 'AI 전환 성공을 위한 API 보안 체크포인트'를 발표한다. AI 프로젝트... ",
+                "link": "https://n.news.naver.com/mnews/article/030/0003431014?sid=105",
+                "pubDate": "Tue, 26 May 2026 09:07:00 +0900",
+                "score": 40,
+                "is_main": true
+            },
+            {
+                "title": "&quot;AI, 도입 넘어 성과로&quot;…‘CIS 2026’ 컨퍼런스 열린다",
+                "description": "문제는 대부분의 기업이 이 전환 단계에서 어려움을 겪고 있다는 점이다. 데이터 파편화, 거버넌스 부재, AI의 부서간 고립된 운영, 레거시 시스템과의 통합 복잡성 등 기술을 도입해도 조직 전체의 성과로... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002424133?sid=105",
+                "pubDate": "Tue, 26 May 2026 11:44:00 +0900",
+                "score": 40,
+                "is_main": true
+            },
+            {
+                "title": "[전화성의 스타트업 모닝커피 1316회] 주식회사 룸821",
+                "description": "있던 RAG 전 과정을 하나의 통합 제품으로 묶어 전문 개발 인력이 부족한 기업도 API 연동만으로 고성능 사내 지식 검색 에이전트를 즉시 구축할 수 있도록 돕는다. 3. 전화성의 원 포인트 코멘트 주식회사 룸821은... ",
+                "link": "https://platum.kr/archives/287063",
+                "pubDate": "Mon, 18 May 2026 10:48:00 +0900",
+                "score": 40,
                 "is_main": true
             }
         ],
-        "insight": "제시된 기사 제목들은 AI가 기업의 핵심 비즈니스 모델 혁신과 산업 성장을 견인하며 새로운 제품 출시를 촉진하는 핵심 동력임을 보여줍니다. 동시에 기술 윤리 및 사회적 통제에 대한 중요성이 부각되고 있어, 비즈니스 성공을 위해 책임감 있는 AI 개발과 사회적 합의가 필수적임을 시사합니다."
+        "insight": "이 기사들은 전 산업 분야에 걸쳐 기업들이 AI를 단순한 도구를 넘어 비즈니스 혁신 및 경쟁력 강화를 위한 핵심 동력으로 인식하고 있으며, 이를 위해 내부 개발, 외부 솔루션 도입, 전략적 파트너링 등 다각적인 AI 전환(AX) 전략을 추진하고 있음을 시사합니다."
     },
     "vn_jobs": {
         "data": []
@@ -462,13 +305,6 @@
                 "is_main": true
             },
             {
-                "title": "[쿠팡] 카탈로그 Taxonomy 및 데이터 분석 PM",
-                "company": "쿠팡",
-                "link": "https://www.wanted.co.kr/wd/361876",
-                "score": 95,
-                "is_main": true
-            },
-            {
                 "title": "[AX본부] 검색추천파트 데이터사이언티스트 3년 이상",
                 "company": "지에스리테일(GS리테일)",
                 "link": "https://www.wanted.co.kr/wd/362892",
@@ -479,90 +315,69 @@
                 "title": "[ESTsecurity] AX 프로젝트 매니저 (Project Manager)",
                 "company": "이스트소프트(ESTsoft)",
                 "link": "https://www.wanted.co.kr/wd/352772",
-                "score": 85,
+                "score": 90,
                 "is_main": true
             },
             {
                 "title": "AX 엔지니어(AI, Agent, Platform 외)",
                 "company": "디비아이엔씨(DB Inc)",
                 "link": "https://www.wanted.co.kr/wd/346330",
-                "score": 85,
+                "score": 90,
                 "is_main": true
             },
             {
-                "title": "[채널톡] AX Consultant (Junior)",
-                "company": "채널코퍼레이션",
-                "link": "https://www.wanted.co.kr/wd/348488",
-                "score": 78,
-                "is_main": true
-            },
-            {
-                "title": "[ECS AX사업부문] X2BEE/XGEN 마케터",
-                "company": "플래티어",
-                "link": "https://www.wanted.co.kr/wd/359748",
-                "score": 75,
+                "title": "[ESTsoft] AX 공공 사업기획 매니저 ",
+                "company": "이스트소프트(ESTsoft)",
+                "link": "https://www.wanted.co.kr/wd/345758",
+                "score": 90,
                 "is_main": true
             },
             {
                 "title": "AX 팀 개발자",
                 "company": "코인원(coinone)",
                 "link": "https://www.wanted.co.kr/wd/358678",
-                "score": 75,
-                "is_main": true
-            },
-            {
-                "title": "[Gopax]Data Engineer",
-                "company": "스트리미(Streami)",
-                "link": "https://www.wanted.co.kr/wd/358221",
-                "score": 75,
+                "score": 88,
                 "is_main": true
             },
             {
                 "title": "AX 기획 업무 담당자",
                 "company": "와이즈버즈(wisebirds)",
                 "link": "https://www.wanted.co.kr/wd/363604",
-                "score": 70,
+                "score": 85,
                 "is_main": true
             },
             {
-                "title": "재무 자동화(AX) 매니저",
-                "company": "힐링페이퍼(강남언니)",
-                "link": "https://www.wanted.co.kr/wd/346855",
-                "score": 70,
+                "title": "[ECS AX사업부문] X2BEE/XGEN 마케터",
+                "company": "플래티어",
+                "link": "https://www.wanted.co.kr/wd/359748",
+                "score": 85,
+                "is_main": true
+            },
+            {
+                "title": "AX 전환용 개발자 (사내 자동화/AI 활용) 5년 이상",
+                "company": "쿤텍",
+                "link": "https://www.wanted.co.kr/wd/354351",
+                "score": 80,
                 "is_main": true
             },
             {
                 "title": "Public AX Model Production-Product Engineering",
                 "company": "업스테이지",
                 "link": "https://www.wanted.co.kr/wd/362082",
-                "score": 59,
+                "score": 58,
                 "is_main": true
             },
             {
                 "title": "Public AX Manager",
                 "company": "업스테이지",
                 "link": "https://www.wanted.co.kr/wd/362074",
-                "score": 59,
-                "is_main": true
-            },
-            {
-                "title": "AX Consultant",
-                "company": "올거나이즈코리아(Allganize Korea)",
-                "link": "https://www.wanted.co.kr/wd/355566",
                 "score": 58,
                 "is_main": true
             },
             {
-                "title": "AX Lead (팀장급, AX 리딩)",
-                "company": "인터엑스",
-                "link": "https://www.wanted.co.kr/wd/360063",
-                "score": 55,
-                "is_main": true
-            },
-            {
-                "title": "IT(AX)전략 담당자 대리~본부장급(팀 세팅 중)",
-                "company": "인터엑스",
-                "link": "https://www.wanted.co.kr/wd/348606",
+                "title": "[AX AgentX] 데이터 엔지니어(RAG/LLM Pipeline)",
+                "company": "콕스웨이브",
+                "link": "https://www.wanted.co.kr/wd/363889",
                 "score": 55,
                 "is_main": true
             },
@@ -570,56 +385,49 @@
                 "title": "[AX AgentX]  소프트웨어 엔지니어(프론트엔드)",
                 "company": "콕스웨이브",
                 "link": "https://www.wanted.co.kr/wd/363735",
-                "score": 50,
+                "score": 55,
                 "is_main": true
             },
             {
                 "title": "[AX] 인플루언서 마케팅 AI Native",
                 "company": "피처링(FeaturingCorp.)",
                 "link": "https://www.wanted.co.kr/wd/362092",
-                "score": 50,
-                "is_main": true
-            },
-            {
-                "title": "AX Engineer",
-                "company": "에어스메디컬",
-                "link": "https://www.wanted.co.kr/wd/361768",
-                "score": 50,
+                "score": 55,
                 "is_main": true
             },
             {
                 "title": "[AX] AI 리서치 엔지니어",
                 "company": "콕스웨이브",
                 "link": "https://www.wanted.co.kr/wd/359979",
-                "score": 50,
+                "score": 55,
                 "is_main": true
             },
             {
                 "title": "[AX] AI 프로덕트 디자이너",
                 "company": "콕스웨이브",
                 "link": "https://www.wanted.co.kr/wd/359975",
-                "score": 50,
+                "score": 55,
                 "is_main": true
             },
             {
                 "title": "[AX Workflow Builder] 백엔드 엔지니어",
                 "company": "콕스웨이브",
                 "link": "https://www.wanted.co.kr/wd/359970",
-                "score": 50,
+                "score": 55,
                 "is_main": true
             },
             {
-                "title": "[AX Workflow Builder] 백엔드 엔지니어(시니어)",
-                "company": "콕스웨이브",
-                "link": "https://www.wanted.co.kr/wd/359962",
-                "score": 50,
+                "title": "[채널톡] AX Consultant (Junior)",
+                "company": "채널코퍼레이션",
+                "link": "https://www.wanted.co.kr/wd/348488",
+                "score": 55,
                 "is_main": true
             },
             {
-                "title": "[AX AgentX] 데이터 엔지니어(RAG/LLM Pipeline)",
-                "company": "콕스웨이브",
-                "link": "https://www.wanted.co.kr/wd/359944",
-                "score": 50,
+                "title": "재무 자동화(AX) 매니저",
+                "company": "힐링페이퍼(강남언니)",
+                "link": "https://www.wanted.co.kr/wd/346855",
+                "score": 55,
                 "is_main": true
             },
             {
@@ -644,45 +452,38 @@
                 "is_main": true
             },
             {
-                "title": "[스탠드오일] AX팀 풀스택 개발자 Junior",
-                "company": "코자",
-                "link": "https://www.wanted.co.kr/wd/360349",
-                "score": 45,
-                "is_main": true
-            },
-            {
-                "title": "AX팀 Backend Engineer (Nest.js) / 2년~5년",
-                "company": "써밋츠",
-                "link": "https://www.wanted.co.kr/wd/350188",
-                "score": 45,
-                "is_main": true
-            },
-            {
-                "title": "Forward Deployed Engineer (AX 엔지니어)",
-                "company": "데이시스(Dasis AI)",
-                "link": "https://www.wanted.co.kr/wd/349376",
-                "score": 45,
-                "is_main": true
-            },
-            {
                 "title": "[AX연구팀] 영상분석 플랫폼 백엔드 개발자",
                 "company": "칸코드",
                 "link": "https://www.wanted.co.kr/wd/362473",
-                "score": 40,
+                "score": 45,
                 "is_main": true
             },
             {
                 "title": "[AX연구팀] 영상분석 플랫폼 AI 엔지니어",
                 "company": "칸코드",
                 "link": "https://www.wanted.co.kr/wd/362472",
-                "score": 40,
+                "score": 45,
                 "is_main": true
             },
             {
-                "title": "[underdogs] 사내 AX/DX 컨설턴트",
-                "company": "유디임팩트",
-                "link": "https://www.wanted.co.kr/wd/361932",
-                "score": 40,
+                "title": "AX Engineer",
+                "company": "에어스메디컬",
+                "link": "https://www.wanted.co.kr/wd/361768",
+                "score": 45,
+                "is_main": true
+            },
+            {
+                "title": "AX Lead (팀장급, AX 리딩)",
+                "company": "인터엑스",
+                "link": "https://www.wanted.co.kr/wd/360063",
+                "score": 45,
+                "is_main": true
+            },
+            {
+                "title": "IT(AX)전략 담당자 대리~본부장급(팀 세팅 중)",
+                "company": "인터엑스",
+                "link": "https://www.wanted.co.kr/wd/348606",
+                "score": 45,
                 "is_main": true
             },
             {
@@ -693,72 +494,9 @@
                 "is_main": true
             },
             {
-                "title": "[CARE ID팀/경영지원] 패션 AX 솔루션(1~3년차)",
-                "company": "윤회",
-                "link": "https://www.wanted.co.kr/wd/360216",
-                "score": 40,
-                "is_main": true
-            },
-            {
-                "title": "AX & IT Operation manager",
-                "company": "에스알파테라퓨틱스",
-                "link": "https://www.wanted.co.kr/wd/359882",
-                "score": 40,
-                "is_main": true
-            },
-            {
-                "title": "[AX Team] AX Business Specialist",
-                "company": "뷰티셀렉션",
-                "link": "https://www.wanted.co.kr/wd/358786",
-                "score": 40,
-                "is_main": true
-            },
-            {
-                "title": "[에고이즘] AX Creator",
-                "company": "에고이즘",
-                "link": "https://www.wanted.co.kr/wd/357984",
-                "score": 40,
-                "is_main": true
-            },
-            {
-                "title": "DevOps & AX Engineer",
-                "company": "로아이",
-                "link": "https://www.wanted.co.kr/wd/356682",
-                "score": 40,
-                "is_main": true
-            },
-            {
-                "title": "AX Manager",
-                "company": "유니브",
-                "link": "https://www.wanted.co.kr/wd/354472",
-                "score": 40,
-                "is_main": true
-            },
-            {
-                "title": "AX 전환용 개발자 (사내 자동화/AI 활용) 5년 이상",
-                "company": "쿤텍",
-                "link": "https://www.wanted.co.kr/wd/354351",
-                "score": 40,
-                "is_main": true
-            },
-            {
-                "title": "AI FDE(Forward Deployed Engineer, AX 매니저)",
-                "company": "와이큐",
-                "link": "https://www.wanted.co.kr/wd/354048",
-                "score": 40,
-                "is_main": true
-            },
-            {
-                "title": "[에고이즘] AX Engineer",
-                "company": "에고이즘",
-                "link": "https://www.wanted.co.kr/wd/350984",
-                "score": 40,
-                "is_main": true
-            },
-            {
-                "title": "AX PM (오산)",
-                "company": "아이제라",
-                "link": "https://www.wanted.co.kr/wd/346200",
+                "title": "강사 [AX 교육]",
+                "company": "코드잇(codeit)",
+                "link": "https://www.wanted.co.kr/wd/345100",
                 "score": 40,
                 "is_main": true
             }
