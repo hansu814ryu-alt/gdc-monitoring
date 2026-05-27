@@ -33,7 +33,7 @@ jobs:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
-        RECEIVER_EMAIL: cloud_exec@samsung.com,yh0721.chung@samsung.com
+        RECEIVER_EMAIL: cloud_exec@samsung.com, yh0721.chung@samsung.com
         
          
       run: python crawler.py
