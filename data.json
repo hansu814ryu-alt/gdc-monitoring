@@ -8,12 +8,40 @@
                 "pubDate": "Mon, 04 May 2026 07:34:00 +0900",
                 "score": 95,
                 "is_main": true
+            },
+            {
+                "title": "[컨콜 일문일답] LG CNS &quot;데이터센터 공급 부족 지속&quot;…AI 중심 사업 확...",
+                "description": "금융 부문에서는 단순 SI를 넘어 솔루션 중심 사업으로 전환하고, 베트남·인도네시아 등 글로벌 딜리버리 거점을 CoE(우수센터)로 육성 중이다. 싱가포르 등지에서는 현지 전문가를 영입하고, 인도네시아 시나르마스... ",
+                "link": "https://www.ajunews.com/view/20260430111113479",
+                "pubDate": "Thu, 30 Apr 2026 11:34:00 +0900",
+                "score": 90,
+                "is_main": true
             }
         ],
-        "insight": "금융권이 AI 및 데이터센터를 중심으로 하는 차세대 IT 시스템 전환에 다시 박차를 가하면서, 관련 기술 및 서비스 제공 기업들에게 상당한 비즈니스 기회가 창출되고 있다."
+        "insight": "현재 비즈니스 환경은 금융권을 포함한 전반적인 산업에서 차세대 IT 시스템 및 AI 데이터센터에 대한 강력한 수요를 보이며, 특히 AI 확산으로 인한 데이터센터 공급 부족이 심화되고 있습니다. 이에 LG CNS와 같은 기업들은 AI 중심의 인프라 사업 확장을 통해 이러한 시장 기회를 적극적으로 포착하고 있습니다."
     },
     "overseas": {
         "data": [
+            {
+                "title": "OpenRouter more than doubles valuation to $1.3B in a year",
+                "description": "OpenRouter has raised a $113 million Series B led by CapitalG. Its 5x growth in usage over six months indicates the multi-AI-model future is here.",
+                "link": "https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/",
+                "pubDate": "Tue, 26 May 2026 18:33:01 +0000",
+                "score": 95,
+                "is_main": true,
+                "translated_title": "오픈라우터(OpenRouter), 1년 만에 기업 가치 13억 달러 돌파하며 두 배 이상 성장",
+                "translated_desc": "오픈라우터는 CapitalG 주도의 시리즈 B 투자로 1억 1,300만 달러를 유치했으며, 6개월 만에 사용량이 5배 증가하는 등 멀티 AI 모델 통합 및 운영(LLMOps)의 중요성을 강조하며 AI 아키텍처의 미래 트렌드를 보여준다."
+            },
+            {
+                "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
+                "description": "Google overhauled Search at I/O 2026, replacing blue links with AI agents. The backlash has been swift. DuckDuckGo app installs spiked 30% as users seek a way out.",
+                "link": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
+                "pubDate": "Tue, 26 May 2026 22:32:56 +0000",
+                "score": 90,
+                "is_main": true,
+                "translated_title": "덕덕고(DuckDuckGo), 구글 AI 검색 '강요'에 사용자 반발하며 설치 30% 급증",
+                "translated_desc": "구글이 I/O 2026에서 검색 서비스를 AI 에이전트로 전면 개편하자 사용자들의 반발이 거세져, 대안을 찾는 이들이 덕덕고 앱을 30% 더 많이 설치했다. 이는 AI 에이전트 기반 검색 아키텍처의 도입과 사용자 경험 변화에 대한 트렌드를 반영한다."
+            },
             {
                 "title": "What ClickUp’s mass layoff tells us about the future of work",
                 "description": "The nine-year-old startup is replacing hundreds of employees with thousands of AI agents.",
@@ -21,41 +49,21 @@
                 "pubDate": "Mon, 25 May 2026 16:00:00 +0000",
                 "score": 90,
                 "is_main": true,
-                "translated_title": "클릭업의 대량 해고가 시사하는 미래 업무의 변화",
-                "translated_desc": "9년차 스타트업 클릭업이 수백 명의 직원을 수천 명의 AI 에이전트로 대체하고 있으며, 이는 Agentic Foundation Model 기반의 AI 에이전트 기술이 미래 업무 환경 및 조직 구조에 미칠 혁신적인 영향을 직접적으로 보여줍니다."
-            },
-            {
-                "title": "OpenRouter more than doubles valuation to $1.3B in a year",
-                "description": "OpenRouter has raised a $113 million Series B led by CapitalG. Its 5x growth in usage over six months indicates the multi-AI-model future is here.",
-                "link": "https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/",
-                "pubDate": "Tue, 26 May 2026 18:33:01 +0000",
-                "score": 85,
-                "is_main": true,
-                "translated_title": "오픈라우터, 1년 만에 기업 가치 13억 달러 돌파",
-                "translated_desc": "OpenRouter가 CapitalG 주도로 1억 1,300만 달러 규모의 시리즈 B 투자를 유치하며 기업 가치가 13억 달러로 급증했습니다. 6개월 만에 사용량이 5배 증가한 것은 멀티 AI 모델 생태계 및 플랫폼의 중요성을 시사하며, AI 원천 기술 활용 아키텍처 트렌드와 부합합니다."
-            },
-            {
-                "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
-                "description": "Google overhauled Search at I/O 2026, replacing blue links with AI agents. The backlash has been swift. DuckDuckGo app installs spiked 30% as users seek a way out.",
-                "link": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
-                "pubDate": "Tue, 26 May 2026 22:32:56 +0000",
-                "score": 75,
-                "is_main": true,
-                "translated_title": "사용자들이 구글의 AI 검색에 반발하면서 덕덕고 설치가 30% 증가",
-                "translated_desc": "구글이 I/O 2026에서 검색 서비스를 AI 에이전트로 전면 개편했으나, 사용자들은 이에 반발하며 대안을 찾아 덕덕고 앱 설치가 30% 급증했습니다. 이는 AI 에이전트 기술의 실제 적용과 시장 반응 트렌드를 보여줍니다."
+                "translated_title": "클릭업(ClickUp)의 대규모 정리 해고가 시사하는 미래 업무의 모습",
+                "translated_desc": "9년차 스타트업 클릭업이 수백 명의 직원을 수천 명의 AI 에이전트로 대체하는 것은, Agentic Foundation Model의 실질적 도입을 통한 업무 자동화 및 생산성 향상 트렌드를 보여준다."
             },
             {
                 "title": "Everyone is navigating AI security in real time — even Google",
                 "description": "We're in the transition period -- all of us.",
                 "link": "https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/",
                 "pubDate": "Sun, 24 May 2026 21:39:21 +0000",
-                "score": 60,
+                "score": 75,
                 "is_main": true,
-                "translated_title": "구글을 포함한 모두가 실시간으로 AI 보안에 대응하고 있다",
-                "translated_desc": "현재 우리는 AI 전환기에 있으며, 구글을 비롯한 모든 주체가 실시간으로 AI 보안 문제에 직면하고 이를 해결하기 위해 노력하고 있습니다. 이는 AI 시스템의 안정적인 운영과 LLMOps의 중요한 구성 요소로서 AI 보안 아키텍처의 중요성을 강조합니다."
+                "translated_title": "구글을 포함한 모두가 실시간으로 AI 보안 문제를 해결하고 있다",
+                "translated_desc": "현재 AI 시스템의 전환기에 있으며, 구글을 포함한 모든 기업이 AI 보안 문제를 실시간으로 해결하는 데 집중하고 있어, 이는 AI 모델의 책임감 있는 배포 및 운영(LLMOps)에 있어 보안이 핵심 요소임을 시사한다."
             }
         ],
-        "insight": "인공지능이 비즈니스 환경을 급변시키며 막대한 성장 기회를 창출하는 동시에, 사용자 경험과 신뢰 확보, 그리고 AI 보안 강화가 기업의 생존과 성공을 좌우하는 핵심 과제로 부상하고 있습니다. 이는 빠른 혁신 속에서 사용자 중심 접근과 철저한 리스크 관리가 필수적임을 시사합니다."
+        "insight": "AI 기술의 급격한 발전은 시장의 폭발적인 성장과 높은 기업 가치를 견인하고 있지만, 동시에 강제적인 기술 통합에 대한 사용자 저항, 업무 방식 변화에 따른 대규모 인력 구조조정, 그리고 실시간 보안 위협 해결이라는 복합적인 비즈니스 도전 과제를 야기하고 있습니다."
     },
     "ax_news": {
         "data": [
@@ -76,27 +84,11 @@
                 "is_main": true
             },
             {
-                "title": "&quot;현대차, 레거시 완성차 아닌 '피지컬 AI 선두주자' 재평가&quot; NH투자證",
-                "description": "글로벌 레거시 업체들과 비교하면 현대차의 피지컬 AI 전환 속도는 앞서 있다&quot;고 설명했다. 현대차그룹은 자율주행 부문에서 다각적인 전략을 가동하고 있다. 세계 최고 수준의 자율주행 기술을 보유한 웨이모와 EV... ",
-                "link": "https://n.news.naver.com/mnews/article/014/0005526737?sid=101",
-                "pubDate": "Wed, 27 May 2026 06:00:00 +0900",
-                "score": 95,
-                "is_main": true
-            },
-            {
                 "title": "가스공사, 사내 전용 AI모델 '업무 메이트' 공개",
                 "description": "가스공사는 11일 사내 업무 환경에 특화된 전용 AI모델 '업무 메이트' 사용 개시를 알렸다. 지난해 12월... 가스공사는 고유의 지식기반을 RAG하는데 머물지 않고 외부와 차단된 사이버 공간에 다운로드 받은... ",
                 "link": "https://daily.hankooki.com/news/articleView.html?idxno=1365913",
                 "pubDate": "Mon, 11 May 2026 20:54:00 +0900",
                 "score": 95,
-                "is_main": true
-            },
-            {
-                "title": "&quot;AX 앞장&quot; NHN클라우드, AI 풀스택 '팩토리X' 출범",
-                "description": "NHN클라우드가 차세대 AI(인공지능) 풀스택 브랜드 '팩토리X'(FactoryX)를 선보이며 대한민국 AX(AI 전환)를... 안성민 NHN엔터프라이즈 CEO(최고경영자)는 이날 기업의 실제 업무 전반에 AI 적용을 돕는 AI에이전트... ",
-                "link": "https://n.news.naver.com/mnews/article/008/0005363112?sid=105",
-                "pubDate": "Wed, 27 May 2026 04:00:00 +0900",
-                "score": 90,
                 "is_main": true
             },
             {
@@ -108,10 +100,18 @@
                 "is_main": true
             },
             {
-                "title": "오픈AI, '신뢰기반 최신 AI 접근국'에 한국 포함…과기정통부와 협력",
-                "description": "대응, AI 안전·신뢰 확보 등 협력방안을 모색했다며 이같이 밝혔다. 과기정통부는 오픈AI가 운영 중인... GTAC 프로그램에 참여하는 기관은 오픈AI 최신 AI 모델에 대한 접근권한을 갖게 된다. 실무적으로... ",
-                "link": "https://n.news.naver.com/mnews/article/030/0003431572?sid=105",
-                "pubDate": "Wed, 27 May 2026 10:01:00 +0900",
+                "title": "&quot;신약개발부터 사무까지&quot;…제약바이오 AI도입 바람",
+                "description": "JW중외제약은 유전체 및 화합물 데이터베이스, 자체 AI 모델을 통합한 'JWave' 플랫폼을 구축했다. 기존... 상황에서 기업은 AI 적용 가능 업무를 선제적으로 식별하고 운영 워크플로우를 재설계할 필요가 있다&quot;고 말했다．",
+                "link": "https://n.news.naver.com/mnews/article/003/0013969683?sid=102",
+                "pubDate": "Wed, 27 May 2026 10:48:00 +0900",
+                "score": 90,
+                "is_main": true
+            },
+            {
+                "title": "&quot;현대차, 레거시 완성차 아닌 '피지컬 AI 선두주자' 재평가&quot; NH투자證",
+                "description": "글로벌 레거시 업체들과 비교하면 현대차의 피지컬 AI 전환 속도는 앞서 있다&quot;고 설명했다. 현대차그룹은 자율주행 부문에서 다각적인 전략을 가동하고 있다. 세계 최고 수준의 자율주행 기술을 보유한 웨이모와 EV... ",
+                "link": "https://n.news.naver.com/mnews/article/014/0005526737?sid=101",
+                "pubDate": "Wed, 27 May 2026 06:00:00 +0900",
                 "score": 90,
                 "is_main": true
             },
@@ -132,27 +132,11 @@
                 "is_main": true
             },
             {
-                "title": "KT, 부산대 AI 체험전 참여…&quot;지역 AX 생태계 확대&quot;",
-                "description": "성원제 KT 엔터프라이즈 부문 동부법인고객본부장 성원제 상무는 &quot;KT의 AX 플랫폼 기업 역량을 바탕으로 부산대학교를 비롯한 지역사회와 함께 AX 생태계를 지속 확대해 나갈 것&quot;이라며 &quot;앞으로도 학생과 지역 주민이... ",
-                "link": "https://n.news.naver.com/mnews/article/629/0000502233?sid=101",
-                "pubDate": "Tue, 26 May 2026 14:43:00 +0900",
-                "score": 80,
-                "is_main": true
-            },
-            {
-                "title": "&quot;신약개발부터 사무까지&quot;…제약바이오 AI도입 바람",
-                "description": "JW중외제약은 유전체 및 화합물 데이터베이스, 자체 AI 모델을 통합한 'JWave' 플랫폼을 구축했다. 기존... 상황에서 기업은 AI 적용 가능 업무를 선제적으로 식별하고 운영 워크플로우를 재설계할 필요가 있다&quot;고 말했다．",
-                "link": "https://n.news.naver.com/mnews/article/003/0013969683?sid=102",
-                "pubDate": "Wed, 27 May 2026 10:48:00 +0900",
-                "score": 80,
-                "is_main": true
-            },
-            {
                 "title": "NH농협캐피탈, 생성형 AI 업무 활용 확대",
                 "description": "이를 위해 사내망 기반 생성형 AI 지식 검색 시스템을 구축하고, 검색증강생성(RAG) 기반의 부서별 맞춤형 지식베이스를 제공하는 방안을 추진한다. RAG는 생성형 AI가 외부 또는 내부 문서를 검색한 뒤 해당 정보를... ",
                 "link": "https://www.sentv.co.kr/article/view/sentv202605270023",
                 "pubDate": "Wed, 27 May 2026 09:26:00 +0900",
-                "score": 70,
+                "score": 90,
                 "is_main": true
             },
             {
@@ -160,7 +144,23 @@
                 "description": "은퇴 예정 전문가들의 암묵지와 수십 년간 축적된 도면·매뉴얼을 검색증강생성(RAG) 기반 사내 AI 시스템에 학습시켜 조직 전체의 디지털 자산으로 전환해야 한다는... ",
                 "link": "https://www.venturesquare.net/1083271/",
                 "pubDate": "Tue, 19 May 2026 19:04:00 +0900",
-                "score": 70,
+                "score": 80,
+                "is_main": true
+            },
+            {
+                "title": "KT, 부산대 AI 체험전 참여…&quot;지역 AX 생태계 확대&quot;",
+                "description": "성원제 KT 엔터프라이즈 부문 동부법인고객본부장 성원제 상무는 &quot;KT의 AX 플랫폼 기업 역량을 바탕으로 부산대학교를 비롯한 지역사회와 함께 AX 생태계를 지속 확대해 나갈 것&quot;이라며 &quot;앞으로도 학생과 지역 주민이... ",
+                "link": "https://n.news.naver.com/mnews/article/629/0000502233?sid=101",
+                "pubDate": "Tue, 26 May 2026 14:43:00 +0900",
+                "score": 65,
+                "is_main": true
+            },
+            {
+                "title": "&quot;AX 앞장&quot; NHN클라우드, AI 풀스택 '팩토리X' 출범",
+                "description": "NHN클라우드가 차세대 AI(인공지능) 풀스택 브랜드 '팩토리X'(FactoryX)를 선보이며 대한민국 AX(AI 전환)를... 안성민 NHN엔터프라이즈 CEO(최고경영자)는 이날 기업의 실제 업무 전반에 AI 적용을 돕는 AI에이전트... ",
+                "link": "https://n.news.naver.com/mnews/article/008/0005363112?sid=105",
+                "pubDate": "Wed, 27 May 2026 04:00:00 +0900",
+                "score": 60,
                 "is_main": true
             },
             {
@@ -172,15 +172,47 @@
                 "is_main": true
             },
             {
+                "title": "로이드케이, AI 검색 구조화 특허 확보…&quot;RAG 넘어 에이전틱 AI 데이터 기...",
+                "description": "김대훈 로이드케이 대표는 &quot;기업용 AI 성패는 내부 데이터를 AI가 정확히 이해하고 활용할 수 있는 구조를 만드는 데 달려 있다&quot;며 &quot;사내 문서를 데이터 활용 중심의 AI 네이티브 구조로 전환하고 에이전틱 RAG 기반 자율... ",
+                "link": "https://www.epnc.co.kr/news/articleView.html?idxno=402203",
+                "pubDate": "Tue, 26 May 2026 14:04:00 +0900",
+                "score": 60,
+                "is_main": true
+            },
+            {
+                "title": "[AI픽] 오픈AI, 한국에 보안 AI 개방…사이버 협력 본격화",
+                "description": "정부·공공기관에 첨단 사이버 AI 모델 접근 확대 물관리·기술금융까지 공공 AI 협력 전방위 확대 오픈AI가... 특히 국내 챗GPT 코덱스 요청의 절반 이상이 코딩이 아닌 문서 작성과 분석, 리서치, 운영 등 비개발... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016101495?sid=105",
+                "pubDate": "Wed, 27 May 2026 11:00:00 +0900",
+                "score": 50,
+                "is_main": true
+            },
+            {
                 "title": "두루이디에스, '엑스팩AI' 선보여…RAG 기술 결합, 소스코드 및 오픈소스...",
                 "description": "두루이디에스가 '2026 국제인공지능대전(AI EXPO KOREA)'에 참가해 검색증강생성(RAG) 기술을 결합한 차세대... 플랫폼의 진단 프로세스는 크게 3단계로, 데이터 수집 단계에서는 소스코드뿐만 아니라 사내 보안... ",
                 "link": "http://www.itdaily.kr/news/articleView.html?idxno=239210",
                 "pubDate": "Thu, 07 May 2026 15:38:00 +0900",
-                "score": 60,
+                "score": 40,
+                "is_main": true
+            },
+            {
+                "title": "이비소프트, 기업 AI '도입' 넘어 '실행' 강조… 오케스트레이터 플랫폼...",
+                "description": "예컨대 특정 승인 API나 프로젝트 현황처럼 사내 자산과 시점 의존성이 강한 질문은 RAG가 필요하고, 일반적인 기술 설명은 일반 응답으로 처리하는 구조다. 성 대표는 이런 분기 로직이 있어야 AI가 불필요한 내부... ",
+                "link": "https://n.news.naver.com/mnews/article/030/0003423386?sid=105",
+                "pubDate": "Thu, 30 Apr 2026 11:22:00 +0900",
+                "score": 40,
+                "is_main": true
+            },
+            {
+                "title": "디노티시아, 국제인공지능대전서 '기업용 AI 에이전트' 플랫폼 시연",
+                "description": "검색증강생성(RAG) 방식으로 사내 데이터를 근거로 삼기 때문에 AI의 환각 문제를 최소화할 수 있고, 찾은 정보를 바탕으로 MCP(Model Context Protocol) 표준을 통해 외부 시스템과 연동해 후속 업무까지 처리하는 AI... ",
+                "link": "https://www.datanet.co.kr/news/articleView.html?idxno=211492",
+                "pubDate": "Fri, 08 May 2026 15:50:00 +0900",
+                "score": 40,
                 "is_main": true
             }
         ],
-        "insight": "이 기사 제목들은 전통 제조업, 공기업, IT 서비스 등 다양한 산업군에서 인공지능(AI)이 핵심 비즈니스 혁신 동력으로 자리 잡았음을 보여줍니다. 기업들은 AI를 통해 비용 절감, 생산성 향상, 운영 효율화는 물론, 새로운 비즈니스 모델로의 전환을 적극적으로 추진하고 있습니다."
+        "insight": "제조, 공공기관, IT, 제약바이오 등 다양한 산업 분야에서 AI를 적극적으로 도입하여 업무 효율성 증대, 비용 절감, 핵심 사업 혁신 등 실질적인 비즈니스 가치를 전방위적으로 창출하고 있습니다. 기업들은 내외부 AI 모델을 활용해 생산성을 높이고 새로운 성장 동력을 모색하며 전사적인 디지털 전환을 가속화하는 추세입니다."
     },
     "vn_jobs": {
         "data": []
@@ -191,14 +223,14 @@
                 "title": "정보보호 AX 운영 담당자",
                 "company": "두나무(업비트/증권플러스)",
                 "link": "https://www.wanted.co.kr/wd/363626",
-                "score": 90,
+                "score": 95,
                 "is_main": true
             },
             {
-                "title": "[AX본부] 검색추천파트 데이터사이언티스트 3년 이상",
-                "company": "지에스리테일(GS리테일)",
-                "link": "https://www.wanted.co.kr/wd/362892",
-                "score": 88,
+                "title": "[쿠팡] 카탈로그 Taxonomy 및 데이터 분석 PM",
+                "company": "쿠팡",
+                "link": "https://www.wanted.co.kr/wd/361876",
+                "score": 95,
                 "is_main": true
             },
             {
@@ -209,16 +241,9 @@
                 "is_main": true
             },
             {
-                "title": "AX 팀 개발자",
-                "company": "코인원(coinone)",
-                "link": "https://www.wanted.co.kr/wd/358678",
-                "score": 85,
-                "is_main": true
-            },
-            {
-                "title": "[ESTsecurity] AX 프로젝트 매니저 (Project Manager)",
-                "company": "이스트소프트(ESTsoft)",
-                "link": "https://www.wanted.co.kr/wd/352772",
+                "title": "[AX본부] 검색추천파트 데이터사이언티스트 3년 이상",
+                "company": "지에스리테일(GS리테일)",
+                "link": "https://www.wanted.co.kr/wd/362892",
                 "score": 85,
                 "is_main": true
             },
@@ -230,143 +255,171 @@
                 "is_main": true
             },
             {
-                "title": "[ECS AX사업부문] X2BEE/XGEN 마케터",
-                "company": "플래티어",
-                "link": "https://www.wanted.co.kr/wd/359748",
-                "score": 80,
-                "is_main": true
-            },
-            {
                 "title": "Public AX Model Production-Product Engineering",
                 "company": "업스테이지",
                 "link": "https://www.wanted.co.kr/wd/362082",
-                "score": 55,
+                "score": 80,
                 "is_main": true
             },
             {
                 "title": "Public AX Manager",
                 "company": "업스테이지",
                 "link": "https://www.wanted.co.kr/wd/362074",
-                "score": 55,
+                "score": 80,
                 "is_main": true
             },
             {
-                "title": "AX Product Manager (Ontology)",
-                "company": "뤼튼테크놀로지스",
-                "link": "https://www.wanted.co.kr/wd/364182",
-                "score": 50,
+                "title": "[ESTsecurity] AX 프로젝트 매니저 (Project Manager)",
+                "company": "이스트소프트(ESTsoft)",
+                "link": "https://www.wanted.co.kr/wd/352772",
+                "score": 80,
+                "is_main": true
+            },
+            {
+                "title": "AX 팀 개발자",
+                "company": "코인원(coinone)",
+                "link": "https://www.wanted.co.kr/wd/358678",
+                "score": 75,
+                "is_main": true
+            },
+            {
+                "title": "[Gopax]Data Engineer",
+                "company": "스트리미(Streami)",
+                "link": "https://www.wanted.co.kr/wd/358221",
+                "score": 75,
                 "is_main": true
             },
             {
                 "title": "AX 기획 업무 담당자",
                 "company": "와이즈버즈(wisebirds)",
                 "link": "https://www.wanted.co.kr/wd/363604",
-                "score": 50,
+                "score": 70,
                 "is_main": true
             },
             {
-                "title": "AX Lead (팀장급, AX 리딩)",
-                "company": "인터엑스",
-                "link": "https://www.wanted.co.kr/wd/360063",
-                "score": 50,
-                "is_main": true
-            },
-            {
-                "title": "AX 전환용 개발자 (사내 자동화/AI 활용) 5년 이상",
-                "company": "쿤텍",
-                "link": "https://www.wanted.co.kr/wd/354351",
-                "score": 50,
+                "title": "[ECS AX사업부문] X2BEE/XGEN 마케터",
+                "company": "플래티어",
+                "link": "https://www.wanted.co.kr/wd/359748",
+                "score": 70,
                 "is_main": true
             },
             {
                 "title": "AX Engineer (Internal)",
                 "company": "라이너(Liner)",
                 "link": "https://www.wanted.co.kr/wd/353689",
-                "score": 50,
+                "score": 70,
                 "is_main": true
             },
             {
                 "title": "AX Engineer (Enterprise)",
                 "company": "라이너(Liner)",
                 "link": "https://www.wanted.co.kr/wd/351750",
-                "score": 50,
-                "is_main": true
-            },
-            {
-                "title": "IT(AX)전략 담당자 대리~본부장급(팀 세팅 중)",
-                "company": "인터엑스",
-                "link": "https://www.wanted.co.kr/wd/348606",
-                "score": 50,
-                "is_main": true
-            },
-            {
-                "title": "[AX Workflow Builder] 백엔드 엔지니어",
-                "company": "콕스웨이브",
-                "link": "https://www.wanted.co.kr/wd/363962",
-                "score": 45,
-                "is_main": true
-            },
-            {
-                "title": "[AX] AI 프로덕트 디자이너",
-                "company": "콕스웨이브",
-                "link": "https://www.wanted.co.kr/wd/363959",
-                "score": 45,
-                "is_main": true
-            },
-            {
-                "title": "[AX] AI 리서치 엔지니어",
-                "company": "콕스웨이브",
-                "link": "https://www.wanted.co.kr/wd/363955",
-                "score": 45,
-                "is_main": true
-            },
-            {
-                "title": "[AX AgentX] 데이터 엔지니어(RAG/LLM Pipeline)",
-                "company": "콕스웨이브",
-                "link": "https://www.wanted.co.kr/wd/363889",
-                "score": 45,
-                "is_main": true
-            },
-            {
-                "title": "[AX AgentX]  소프트웨어 엔지니어(프론트엔드)",
-                "company": "콕스웨이브",
-                "link": "https://www.wanted.co.kr/wd/363735",
-                "score": 45,
-                "is_main": true
-            },
-            {
-                "title": "[AX] Product Engineer",
-                "company": "인티그레이션(메디스트림)",
-                "link": "https://www.wanted.co.kr/wd/363150",
-                "score": 45,
-                "is_main": true
-            },
-            {
-                "title": "[AX] 백엔드 개발자",
-                "company": "인티그레이션(메디스트림)",
-                "link": "https://www.wanted.co.kr/wd/363071",
-                "score": 45,
-                "is_main": true
-            },
-            {
-                "title": "[AX] 프론트엔드 개발자",
-                "company": "인티그레이션(메디스트림)",
-                "link": "https://www.wanted.co.kr/wd/363007",
-                "score": 45,
-                "is_main": true
-            },
-            {
-                "title": "[AX] 인플루언서 마케팅 AI Native",
-                "company": "피처링(FeaturingCorp.)",
-                "link": "https://www.wanted.co.kr/wd/362092",
-                "score": 45,
+                "score": 70,
                 "is_main": true
             },
             {
                 "title": "재무 자동화(AX) 매니저",
                 "company": "힐링페이퍼(강남언니)",
                 "link": "https://www.wanted.co.kr/wd/346855",
-                "score": 45,
+                "score": 70,
+                "is_main": true
+            },
+            {
+                "title": "AX Product Manager (Ontology)",
+                "company": "뤼튼테크놀로지스",
+                "link": "https://www.wanted.co.kr/wd/364182",
+                "score": 65,
+                "is_main": true
+            },
+            {
+                "title": "[AX Workflow Builder] 백엔드 엔지니어",
+                "company": "콕스웨이브",
+                "link": "https://www.wanted.co.kr/wd/363962",
+                "score": 65,
+                "is_main": true
+            },
+            {
+                "title": "[AX] AI 프로덕트 디자이너",
+                "company": "콕스웨이브",
+                "link": "https://www.wanted.co.kr/wd/363959",
+                "score": 65,
+                "is_main": true
+            },
+            {
+                "title": "[AX] AI 리서치 엔지니어",
+                "company": "콕스웨이브",
+                "link": "https://www.wanted.co.kr/wd/363955",
+                "score": 65,
+                "is_main": true
+            },
+            {
+                "title": "[AX AgentX] 데이터 엔지니어(RAG/LLM Pipeline)",
+                "company": "콕스웨이브",
+                "link": "https://www.wanted.co.kr/wd/363889",
+                "score": 65,
+                "is_main": true
+            },
+            {
+                "title": "[AX AgentX]  소프트웨어 엔지니어(프론트엔드)",
+                "company": "콕스웨이브",
+                "link": "https://www.wanted.co.kr/wd/363735",
+                "score": 65,
+                "is_main": true
+            },
+            {
+                "title": "AX Engineer",
+                "company": "에어스메디컬",
+                "link": "https://www.wanted.co.kr/wd/361768",
+                "score": 60,
+                "is_main": true
+            },
+            {
+                "title": "AX Lead (팀장급, AX 리딩)",
+                "company": "인터엑스",
+                "link": "https://www.wanted.co.kr/wd/360063",
+                "score": 60,
+                "is_main": true
+            },
+            {
+                "title": "AX 전환용 개발자 (사내 자동화/AI 활용) 5년 이상",
+                "company": "쿤텍",
+                "link": "https://www.wanted.co.kr/wd/354351",
+                "score": 60,
+                "is_main": true
+            },
+            {
+                "title": "IT(AX)전략 담당자 대리~본부장급(팀 세팅 중)",
+                "company": "인터엑스",
+                "link": "https://www.wanted.co.kr/wd/348606",
+                "score": 60,
+                "is_main": true
+            },
+            {
+                "title": "[AX] Product Engineer",
+                "company": "인티그레이션(메디스트림)",
+                "link": "https://www.wanted.co.kr/wd/363150",
+                "score": 50,
+                "is_main": true
+            },
+            {
+                "title": "[AX] 백엔드 개발자",
+                "company": "인티그레이션(메디스트림)",
+                "link": "https://www.wanted.co.kr/wd/363071",
+                "score": 50,
+                "is_main": true
+            },
+            {
+                "title": "[AX] 프론트엔드 개발자",
+                "company": "인티그레이션(메디스트림)",
+                "link": "https://www.wanted.co.kr/wd/363007",
+                "score": 50,
+                "is_main": true
+            },
+            {
+                "title": "[AX] 인플루언서 마케팅 AI Native",
+                "company": "피처링(FeaturingCorp.)",
+                "link": "https://www.wanted.co.kr/wd/362092",
+                "score": 50,
                 "is_main": true
             },
             {
@@ -391,9 +444,9 @@
                 "is_main": true
             },
             {
-                "title": "AX Engineer",
-                "company": "에어스메디컬",
-                "link": "https://www.wanted.co.kr/wd/361768",
+                "title": "크리에이티브 아트디렉터",
+                "company": "액시즈(AXIS)",
+                "link": "https://www.wanted.co.kr/wd/361635",
                 "score": 40,
                 "is_main": true
             },
@@ -478,6 +531,13 @@
                 "title": "Forward Deployed Engineer (AX 엔지니어)",
                 "company": "데이시스(Dasis AI)",
                 "link": "https://www.wanted.co.kr/wd/349376",
+                "score": 40,
+                "is_main": true
+            },
+            {
+                "title": "Engineering Sales/Marketing Lead Manager",
+                "company": "컨트로맥스(Contromax)",
+                "link": "https://www.wanted.co.kr/wd/346349",
                 "score": 40,
                 "is_main": true
             },
