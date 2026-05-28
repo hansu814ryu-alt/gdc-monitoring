@@ -112,7 +112,6 @@ def process_data_with_ai_batch(data_list, data_type, api_key):
     
     try:
         genai.configure(api_key=api_key)
-        # ✅ [오류 해결] gemini-2.5-flash 로 변경
         model = genai.GenerativeModel('gemini-2.5-flash')
         
         input_data = [{"id": i, "title": d["title"], "company": d.get("company", ""), "description": d.get("description", "")} for i, d in enumerate(data_list)]
@@ -141,7 +140,7 @@ def process_data_with_ai_batch(data_list, data_type, api_key):
         [평가 규칙]
         1. 내용 중복 배제: 기사들을 하나하나 분석하여 내용이 중복되는 기사가 여러 개 있다면 가장 정보가 풍부한 대표 기사 1개만 남기고 나머지는 배제하세요 (score = 0, is_main = false).
         {custom_rule}
-        3. 점수가 40점 이상이면 'is_main': true 로 설정하세요.
+        3. 🚨 컷오프: 점수가 85점을 초과(86점 이상)하면 'is_main': true, 85점 이하면 false로 설정하세요.
         4. is_main이 true인 경우 해당 기사의 'summary'(1줄 요약)와 'editor_view'(에디터 시선)를 반드시 작성하세요.
 
         [출력 형식]
@@ -168,7 +167,6 @@ def process_data_with_ai_batch(data_list, data_type, api_key):
                     item["score"] = 0
                     item["is_main"] = False
                     
-            # ✅ [요청 반영] 0점 이하 배제 및 score 기반 내림차순 정렬 (높은 우선순위 우선 배치)
             filtered_data = [item for item in data_list if item.get("is_main")]
             return sorted(filtered_data, key=lambda x: x.get('score', 0), reverse=True)
             
@@ -181,7 +179,6 @@ def process_overseas_with_ai_translation(data_list, api_key):
     if not api_key or not data_list: return data_list
     try:
         genai.configure(api_key=api_key)
-        # ✅ [오류 해결] gemini-2.5-flash 로 변경
         model = genai.GenerativeModel('gemini-2.5-flash')
         input_data = [{"id": i, "title": d["title"], "description": d.get("description", "")} for i, d in enumerate(data_list)]
         
@@ -191,7 +188,7 @@ def process_overseas_with_ai_translation(data_list, api_key):
 
         1. 중복 판별: 내용이 중복되는 기사가 있다면 대표 기사 1개만 점수를 주고 나머지는 0점(is_main: false) 처리하세요.
         2. 평가 및 분류: 기사가 'Agentic Foundation Model, Multimodal, MCP 등 해외 AI 원천 기술 트렌드'에 부합하는지 분석하여 점수(0~100점)를 부여하세요.
-        3. 한글 번역 및 요약: 점수가 50점 이상이라면(is_main: true), 기사의 영문 제목과 요약문을 자연스러운 한글로 번역(translated_title)하고, 핵심 요약(summary) 및 에디터 시선(editor_view)을 함께 작성하세요.
+        3. 🚨 컷오프 및 번역: 점수가 85점을 초과한다면(is_main: true), 기사의 영문 제목과 요약문을 자연스러운 한글로 번역(translated_title)하고, 핵심 요약(summary) 및 에디터 시선(editor_view)을 함께 작성하세요. 85점 이하는 is_main을 false로 처리.
 
         [출력 형식] (JSON 배열만 출력)
         [ {{"id": 0, "score": 90, "is_main": true, "translated_title": "번역제목", "summary": "요약...", "editor_view": "시선..."}} ]
@@ -227,7 +224,6 @@ def get_ai_insight(news_list, api_key, is_translated=False):
     if not api_key or not news_list: return ""
     try:
         genai.configure(api_key=api_key)
-        # ✅ [오류 해결] gemini-2.5-flash 로 변경
         model = genai.GenerativeModel('gemini-2.5-flash')
         titles = [news.get('translated_title', news['title']) if is_translated else news['title'] for news in news_list[:5]]
         prompt = f"다음 기사 제목들을 분석하여 비즈니스 측면에서 전체적인 시사점을 딱 1~2문장으로 요약하세요.\n{titles}"
@@ -245,17 +241,18 @@ def build_email_section(title, insight, data_list, more_link, is_job=False, is_o
     if insight: 
         html += f"<div style='margin-bottom:15px; padding:10px; background-color:#eef2f5; border-radius:5px;'>💡 <b>[전체 시사점]</b> {insight}</div>"
         
-    display_list = [item for item in data_list if item.get('is_main', True)]
+    # 85점 초과 필터링 이중 안전장치
+    display_list = [item for item in data_list if item.get('is_main', True) and item.get('score', 0) > 85]
     
     if not display_list:
-        html += "<p>📌 수집된 유효 데이터가 없습니다.</p>"
+        html += "<p>📌 85점 이상의 기준에 부합하는 프리미엄 데이터가 없습니다.</p>"
     else:
-        # ✅ [요청 반영] 상위 5개만 노출
         for item in display_list[:5]: 
             if is_job:
                 html += f"""
                 <div style="padding:10px 0; border-bottom:1px dashed #ccc;">
                     <a href='{item['link']}' target='_blank' style="color:#0056b3; font-weight:bold; text-decoration:none;">[{item.get('company', '')}] {item['title']}</a>
+                    <span style="font-size:12px; color:#e74c3c; margin-left:8px;">[Score: {item.get('score', 0)}]</span>
                 </div>
                 """
             else:
@@ -276,7 +273,6 @@ def build_email_section(title, insight, data_list, more_link, is_job=False, is_o
                 </div>
                 """
                 
-    # ✅ [요청 반영] 5개 이후 나머지는 전체보기로 안내하는 링크
     if more_link:
         html += f"""
         <div style='margin-top:15px; text-align:right;'>
@@ -298,7 +294,7 @@ def send_email(data, pages_url):
     <div style="font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; background-color: #fcfcfc; padding: 20px;">
         <div style="background-color: #1a2b4c; color: white; padding: 20px; border-radius: 8px 8px 0 0; text-align: center;">
             <h1 style="margin: 0; font-size: 24px;">📊 MSP Daily Brief & 기술 동향 리포트</h1>
-            <p style="margin: 5px 0 0 0; font-size: 13px; color: #a0aec0;">자동화 수집 및 AI 분석 리포트</p>
+            <p style="margin: 5px 0 0 0; font-size: 13px; color: #a0aec0;">Premium Insights (Score 85점 이상 선별)</p>
         </div>
     """
     
@@ -309,8 +305,8 @@ def send_email(data, pages_url):
     
     html_content += """
         <div style="margin-top: 40px; padding: 20px; background-color: #e9ecef; border-radius: 8px; text-align: center; color: #555; font-size: 14px;">
-            <b>오늘의 리포트는 여기까지입니다! 🚀</b><br>
-            해당 리포트는 AI에 의해 중복 배제 및 우선순위가 정렬되어 자동 생성되었습니다.
+            <b>오늘의 프리미엄 리포트는 여기까지입니다! 🚀</b><br>
+            해당 리포트는 AI에 의해 85점 이상 유효한 고품질 데이터만 선별 및 정렬되어 자동 생성되었습니다.
         </div>
     </div>
     """
@@ -372,8 +368,9 @@ if __name__ == "__main__":
         "vn_jobs": {"data": sorted_vn_jobs}
     }
     
+    # 들여쓰기 에러 완벽 수정 구간
     with open('data.json', 'w', encoding='utf-8') as f:
-    json.dump(result, f, ensure_ascii=False, indent=4)
+        json.dump(result, f, ensure_ascii=False, indent=4)
 
     print("✅ data.json 저장 완료.")
     
