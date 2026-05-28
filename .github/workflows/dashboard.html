@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>GDC Crawler Pipeline Dashboard</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; }
+        .header { background-color: #1a2b4c; color: white; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; }
+        .logic-flow { display: flex; justify-content: space-between; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .step { flex: 1; text-align: center; padding: 10px; border-right: 2px dashed #ddd; }
+        .step:last-child { border-right: none; }
+        .step-title { font-weight: bold; color: #3498db; font-size: 14px; }
+        .step-desc { font-size: 12px; color: #666; margin-top: 5px; }
+        
+        .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
+        .section-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .section-title { font-size: 18px; color: #2c3e50; border-bottom: 2px solid #e1e4e8; padding-bottom: 10px; margin-top: 0; }
+        
+        .data-item { border: 1px solid #eee; padding: 15px; margin-top: 15px; border-radius: 6px; background-color: #fafbfc; position: relative; }
+        .score-badge { position: absolute; top: 15px; right: 15px; background: #e74c3c; color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; font-weight: bold; }
+        .item-title { font-size: 15px; font-weight: bold; color: #0366d6; margin: 0 40px 10px 0; }
+        .item-insight { font-size: 13px; color: #444; background: #f1f8ff; padding: 10px; border-left: 3px solid #0366d6; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1 style="margin:0;">⚙️ GDC Pipeline Logic Dashboard</h1>
+        <p style="margin:5px 0 0 0; font-size:13px; color:#a0aec0;">내부 평가 및 스코어링 로직 모니터링 전용 페이지</p>
+    </div>
+
+    <!-- 파이프라인 로직 시각화 -->
+    <div class="logic-flow">
+        <div class="step">
+            <div class="step-title">1. Raw Data 수집</div>
+            <div class="step-desc">Naver API / Wanted API / RSS</div>
+        </div>
+        <div class="step">
+            <div class="step-title">2. AI Deduplication</div>
+            <div class="step-desc">중복 문서 탐지 및 대표 기사 선정</div>
+        </div>
+        <div class="step">
+            <div class="step-title">3. AI Context Scoring</div>
+            <div class="step-desc">우선순위 0~100점 부여 (내림차순 정렬)</div>
+        </div>
+        <div class="step">
+            <div class="step-title">4. Limit & Export</div>
+            <div class="step-desc">상위 5개 추출 및 data.json 저장</div>
+        </div>
+    </div>
+
+    <div class="dashboard-grid" id="dashboard-content">
+        <!-- JS를 통해 data.json 데이터가 여기에 렌더링 됩니다. -->
+    </div>
+
+    <script>
+        // data.json 파일을 불러와서 대시보드에 뿌려주는 로직
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('dashboard-content');
+                
+                const renderSection = (key, title, isJob=False) => {
+                    const sectionData = data[key];
+                    if(!sectionData) return '';
+                    
+                    let html = `<div class="section-card"><h2 class="section-title">${title}</h2>`;
+                    
+                    if(sectionData.insight) {
+                        html += `<div style="font-size:13px; color:#555; margin-bottom:15px;"><b>💡 [전체 시사점 요약]:</b> ${sectionData.insight}</div>`;
+                    }
+
+                    // 상위 5개만 모니터링
+                    const topItems = sectionData.data.slice(0, 5);
+                    
+                    topItems.forEach(item => {
+                        const displayTitle = item.translated_title || item.title;
+                        const score = item.score !== undefined ? item.score : 'N/A';
+                        
+                        html += `
+                            <div class="data-item">
+                                <div class="score-badge">Score: ${score}</div>
+                                <div class="item-title">${displayTitle}</div>`;
+                        
+                        if(!isJob) {
+                            html += `<div style="font-size:12px; color:#666;"><b>[핵심 요약]</b> ${item.summary || '없음'}</div>`;
+                            html += `<div class="item-insight"><b>[에디터 뷰]</b> ${item.editor_view || '없음'}</div>`;
+                        } else {
+                            html += `<div style="font-size:12px; color:#666;"><b>[기업명]</b> ${item.company || '없음'}</div>`;
+                        }
+                        
+                        html += `</div>`;
+                    });
+                    
+                    html += `</div>`;
+                    return html;
+                };
+
+                let dashboardHTML = '';
+                dashboardHTML += renderSection('gdc', '📊 GDC 오프쇼어링 (MSP 위탁)');
+                dashboardHTML += renderSection('overseas', '🌍 해외 AI 원천기술 및 아키텍처');
+                dashboardHTML += renderSection('ax_news', '🏢 국내 기업 Enterprise AX');
+                dashboardHTML += renderSection('vn_jobs', '💼 베트남 온사이트인력 채용', true);
+                
+                container.innerHTML = dashboardHTML;
+            })
+            .catch(error => {
+                document.getElementById('dashboard-content').innerHTML = 
+                    `<p style="color:red; text-align:center;">data.json 파일을 불러올 수 없습니다. 크롤러를 먼저 실행해주세요.<br>(${error})</p>`;
+            });
+    </script>
+</body>
+</html>
