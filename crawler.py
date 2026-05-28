@@ -167,7 +167,6 @@ def process_data_with_ai_batch(data_list, data_type, api_key):
                     item["score"] = 0
                     item["is_main"] = False
                     
-            filtered_data = [item for item in data_list if item.get("is_main")]
             return sorted(filtered_data, key=lambda x: x.get('score', 0), reverse=True)
             
     except Exception as e:
