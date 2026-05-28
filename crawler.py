@@ -120,7 +120,7 @@ def process_data_with_ai_batch(data_list, data_type, api_key):
         if data_type == 'GDC 동향 뉴스':
             custom_rule = """
         2. 이 기사가 기업의 MSP를 활용한 ITO운영하거나, 기존 레거시 시스템을 위탁 운영 및 관제(MSP)하는 사업 동향을 다루고 있는지 분석하세요.
-           - 국내가 아닌 해외의 IT 인력을 활용하여 원격으로 개발 및 유지보수를 수행하는 딜리버리 센터(GDC) 운영, 인건비 절감 관련 시 90점 이상.
+           - 국내가 아닌 해외의 IT 인력을 활용하여 원격으로 개발 및 유지보수를 수행하는 딜리버리 센터(GDC) 운영, 인건비 절감, AX 전환 관련 시 가점부여.
            - 단순 웹/앱 외주 개발은 50점. 글로벌 게임 컨퍼런스(GDC)는 0점 처리.
             """
         elif data_type == 'AX 근황 뉴스':
@@ -182,7 +182,7 @@ def process_overseas_with_ai_translation(data_list, api_key):
         input_data = [{"id": i, "title": d["title"], "description": d.get("description", "")} for i, d in enumerate(data_list)]
         
         prompt = f"""
-        당신은 글로벌 IT 기술 번역가이자 수석 평가자입니다.
+        당신은 글로벌 IT 평가자이자 GDC(Global development center)사업담당자입니다.
         아래 [영문 뉴스 데이터]를 읽고 다음 규칙에 따라 처리하세요.
 
         1. 중복 판별: 내용이 중복되는 기사가 있다면 대표 기사 1개만 점수를 주고 나머지는 0점(is_main: false) 처리하세요.
