@@ -8,8 +8,8 @@
                 "pubDate": "Mon, 04 May 2026 07:34:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "LG CNS는 해외 개발 인력 1200명 규모의 글로벌 딜리버리 센터(GDC) 운영을 통해 금융권 차세대 전산망 및 AI 클라우드 부문 성장을 견인하고 있습니다.",
-                "editor_view": "해외 IT 인력을 활용한 GDC 운영은 국내 기업의 인건비 절감과 글로벌 IT 서비스 확장 전략의 핵심으로, MSP를 통한 ITO 운영 동향과 정확히 부합합니다."
+                "summary": "LG CNS는 1200명 규모의 해외 글로벌 딜리버리 센터(GDC) 운영과 AI 코딩 플랫폼을 통해 수익성을 개선했다고 밝히며, 해외 IT 인력 활용 통한 IT 운영 효율화 및 비용 절감 추세에 부합함을 시사한다.",
+                "editor_view": "기업들이 IT 서비스 운영에서 해외 인력 및 거점 활용을 통해 비용 효율성을 높이고 경쟁력을 확보하는 전략이 중요해지고 있음을 보여준다. 특히 대규모 GDC 운영은 MSP 시장의 주요 동향으로 평가될 수 있다."
             },
             {
                 "title": "[컨콜 일문일답] LG CNS &quot;데이터센터 공급 부족 지속&quot;…AI 중심 사업 확...",
@@ -18,111 +18,11 @@
                 "pubDate": "Thu, 30 Apr 2026 11:34:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "LG CNS는 금융 부문의 솔루션 중심 사업 전환과 함께 베트남, 인도네시아 등 글로벌 딜리버리 거점을 CoE(우수센터)로 육성하며 AI 중심 사업을 확대하고 있습니다.",
-                "editor_view": "LG CNS가 글로벌 딜리버리 거점을 CoE로 육성하는 전략은 해외 IT 인력을 활용한 원격 개발 및 유지보수 역량 강화로, 기업의 IT 운영 효율성 및 경쟁력 향상에 기여하는 중요한 동향입니다."
-            },
-            {
-                "title": "허철회 STT GDC 대표 , &quot;한국 AI 인프라 도입 넘어 확장 단계&quot;",
-                "description": "STT GDC(ST Telemedia Global Data Centres)는 27일 여의도 사옥에서 기자간담회를 열고 이번에 발간한 '격차 해소: AI 인프라 준비 불균형의 가교 마련' 연구 보고서 내용을 바탕으로 한국 조사 결과를 발표했다. 이번 연구는 STT GDC... ",
-                "link": "https://www.epnc.co.kr/news/articleView.html?idxno=402290",
-                "pubDate": "Wed, 27 May 2026 16:34:00 +0900",
-                "score": 70,
-                "is_main": true,
-                "summary": "STT GDC는 한국의 AI 인프라 도입 속도는 빠르나 대규모 확장 단계에서는 병목 현상이 있다고 분석하며, GPU보다 운영 역량이 중요하다고 강조했습니다.",
-                "editor_view": "AI 시대에 데이터센터 인프라 및 운영 역량의 중요성을 다루고 있으며, 이는 기업의 IT 인프라 운영 및 관리 동향과 밀접하게 연관되지만, 해외 IT 인력을 활용한 GDC 운영과는 관점이 다릅니다."
-            },
-            {
-                "title": "인도, 디지털 공공 인프라(DPI)로 글로벌 디지털 질서 재편 주도",
-                "description": "구축 원격 의료 플랫폼 eSanjeevani 원격 의료 및 비대면 진료 플랫폼 2026년 3월 기준 4억 5천만 명 진료... 그러나 일부 지역에서는 기존 IT 인프라와의 통합 문제로 시스템 운영에 어려움이 발생하고 있다. 이와... ",
-                "link": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=180&CONTENTS_NO=1&bbsGbn=243&bbsSn=243&pNttSn=241296",
-                "pubDate": "Mon, 18 May 2026 14:00:00 +0900",
-                "score": 65,
-                "is_main": true,
-                "summary": "인도는 디지털 공공 인프라(DPI)를 통해 원격 의료 플랫폼을 성공적으로 운영하고 있으나, 기존 IT 인프라 통합에 어려움을 겪고 있습니다.",
-                "editor_view": "원격 의료 서비스 및 디지털 공공 인프라 구축과 운영에 대한 뉴스로, IT 시스템 운영 및 원격 서비스의 중요성을 보여주지만, 특정 기업의 MSP나 GDC 운영과는 거리가 있습니다."
-            },
-            {
-                "title": "태니엄, AI 시대 IT·보안 운영 혁신 위한 '태니엄 아틀라스' 공개",
-                "description": "이를 통해 IT 운영 팀과 보안 팀은 데이터의 사각지대 없이 전체 IT 인프라를 한눈에 파악할 수 있다.... 또한, 태니엄 아틀라스는 클라우드 네이티브 환경뿐만 아니라 온프레미스, 원격 근무 환경까지 아우르는 통합... ",
-                "link": "https://www.datanet.co.kr/news/articleView.html?idxno=211622",
-                "pubDate": "Thu, 14 May 2026 10:20:00 +0900",
-                "score": 65,
-                "is_main": true,
-                "summary": "태니엄은 AI 시대에 IT 및 보안 운영 혁신을 위한 '태니엄 아틀라스'를 공개하며, 클라우드, 온프레미스, 원격 근무 환경 전반의 통합 IT 인프라 관리를 제공합니다.",
-                "editor_view": "IT 및 보안 운영 관리 솔루션으로, 특히 원격 근무 환경까지 아우르는 통합 관리 역량이 기업의 IT 운영 효율성 및 보안 강화에 기여하는 중요한 동향입니다."
-            },
-            {
-                "title": "중국 해킹조직 솔트 타이푼, IBM 자회사 해킹 공격...이탈리아 공공 인프...",
-                "description": "공공기관과 주요 산업 고객의 시스템 운영, 인프라 관리, IT 서비스 제공을 담당해왔다. 이 때문에 회사의... 공급업체나 운영사를 먼저 침해한다. 이후 인증 정보, 원격 접속 경로, 관리 시스템을 이용해 더 넓은... ",
-                "link": "https://www.dailysecu.com/news/articleView.html?idxno=206578",
-                "pubDate": "Mon, 04 May 2026 16:44:00 +0900",
-                "score": 65,
-                "is_main": true,
-                "summary": "중국 해킹조직 솔트 타이푼이 IBM 자회사 해킹을 통해 이탈리아 공공 인프라를 공격했으며, 이는 공급업체를 통한 침해 후 원격 접속 경로를 활용하는 수법을 보여줍니다.",
-                "editor_view": "IT 서비스 공급업체 및 인프라 관리 기업에 대한 사이버 공격 사례로, 시스템 운영 및 원격 접속 관리의 보안 취약성과 MSP 활용 시 보안의 중요성을 강조합니다."
-            },
-            {
-                "title": "[OT보안 착각-②] OT 랜섬웨어만의 문제?…공정 중단 시작은 'IT 침해'",
-                "description": "IT인프라와 연결되면서 공격 위험성이 높아졌음에도 불구하고 IT와 OT를 연결하는 구간에서의 보안 체계를 제대로 구축하지 못한 기업들이 많다는 점이다. 한 업계 관계자는 &quot;대기업과 달리 중소기업의 경우 원격접속... ",
-                "link": "https://www.epnc.co.kr/news/articleView.html?idxno=401478",
-                "pubDate": "Thu, 07 May 2026 14:24:00 +0900",
-                "score": 55,
-                "is_main": true,
-                "summary": "OT 시스템과 IT 인프라의 연결로 인해 랜섬웨어 공격 위험성이 증가하고 있으며, 특히 중소기업에서 원격 접속 보안 체계 구축의 필요성이 부각됩니다.",
-                "editor_view": "OT/IT 융합 환경에서의 보안 취약성과 원격 접속 보안의 중요성을 다루는 기사로, 기업의 IT 시스템 운영 및 관제(MSP) 시 보안 측면의 중요성을 시사합니다."
-            },
-            {
-                "title": "[POP!IT] LG TV, ESG 관련 3개 인증 연이어 획득 外",
-                "description": "추가해 원격 관리와 운영 효율성을 함께 높였다. NHN의 주차 솔루션 계열사 아이파킹이 클라우드 기반 무인... 이번 활동은 HD현대1%나눔재단이 지원하는 마스터피스 제작소에 NHN의 IT 인프라를 결합한 협력 사례이기도... ",
-                "link": "http://www.popcornnews.net/news/articleView.html?idxno=119660",
-                "pubDate": "Tue, 28 Apr 2026 17:34:00 +0900",
-                "score": 55,
-                "is_main": true,
-                "summary": "NHN의 아이파킹은 클라우드 기반 무인 주차 솔루션에 원격 관리 기능을 추가하여 운영 효율성을 높였으며, 이는 HD현대1%나눔재단과의 IT 인프라 협력 사례이기도 합니다.",
-                "editor_view": "클라우드 기반 시스템의 원격 관리 및 IT 인프라 협력을 통한 운영 효율성 증대 사례로, IT 시스템 운영 및 관제 동향의 중요성을 보여줍니다."
-            },
-            {
-                "title": "토크아이티, 공간을 이해하는 AI로 진화하는 산업 인프라 디지털 전환 ...",
-                "description": "공간 컴퓨팅과 AR, 디지털 트윈 세 기술의 결합은 산업 현장의 설계·시공·운영·유지보수 전 과정에 걸쳐... 조 부대표는 디지털 트윈과 스마트 제조, 가상 센서, 산업 메타버스, 인공지능, XR/3D, IT 인프라, 보안... ",
-                "link": "https://www.hellot.net/news/article.html?no=112467",
-                "pubDate": "Sat, 09 May 2026 15:24:00 +0900",
-                "score": 50,
-                "is_main": true,
-                "summary": "토크아이티는 공간 컴퓨팅, AR, 디지털 트윈 기술을 결합하여 산업 현장의 설계, 시공, 운영, 유지보수 전 과정의 디지털 전환을 추진합니다.",
-                "editor_view": "산업 현장의 디지털 전환과 IT 인프라 활용에 대한 기사로, IT 운영 전반의 효율성 증대에 기여하는 기술 동향을 보여주지만, 해외 인력 GDC 또는 MSP 운영과는 직접적인 관련이 적습니다."
-            },
-            {
-                "title": "[DTW 2026] 삼성전자, 반도체 제조 'AI 팩토리'로 전환…델 인프라 도입",
-                "description": "글로벌 IT·제조 인프라 전반에 적용된다. 삼성전자는 이를 기반으로 디지털 트윈, 실시간 분석, AI 에이전트를 반도체 제조 과정에 적용한다. 잠재 리스크를 예측하고 운영 정밀도와 수율, 품질을 개선하는 방식이다.... ",
-                "link": "https://n.news.naver.com/mnews/article/030/0003428958?sid=105",
-                "pubDate": "Tue, 19 May 2026 10:23:00 +0900",
-                "score": 50,
-                "is_main": true,
-                "summary": "삼성전자는 반도체 제조 공정을 'AI 팩토리'로 전환하기 위해 글로벌 IT 및 제조 인프라에 델 기술을 도입하며 운영 정밀도와 수율 개선을 목표합니다.",
-                "editor_view": "대기업의 AI 기반 제조 인프라 전환 및 IT 인프라 운영 최적화 동향을 보여주는 기사로, 산업 전반의 IT 운영 효율성 증대에 기여하지만 MSP/GDC의 핵심 초점과는 거리가 있습니다."
-            },
-            {
-                "title": "[IT산업 20년 전] 취약점 공개인가 폭로인가…2006년 보안 리서치가 남긴...",
-                "description": "이를 통해 핵심 IT 인프라를 운영하는 조직을 보호하고 있었다. 리치필드는 그해 1월 5일 '인시큐어(Insecure.... ISS 연구원이 그해 4월 감염된 시스템을 제어하고 원격 코드 실행(RCE)이 가능한 취약점을 찾아냈다. 그런데... ",
-                "link": "http://www.itdaily.kr/news/articleView.html?idxno=239163",
-                "pubDate": "Fri, 01 May 2026 18:00:00 +0900",
-                "score": 40,
-                "is_main": true,
-                "summary": "2006년 보안 리서치 회사들이 핵심 IT 인프라 운영 조직을 보호하던 중, 원격 코드 실행(RCE)이 가능한 취약점을 발견하며 보안 이슈를 제기했던 역사를 다룹니다.",
-                "editor_view": "과거 IT 보안 취약점과 원격 코드 실행 이슈를 다룬 기사로, IT 시스템의 운영 및 관리, 특히 원격 관리의 보안 중요성을 역사적 관점에서 보여줍니다."
-            },
-            {
-                "title": "'AI·사람의 공감' 결합한 기업들, '우수 콜센터'는 어디?",
-                "description": "이와 함께 30년 이상 장기 이용 고객을 위한 전담 상담사 제도를 운영하고 상담 가이드를 표준화하는 등... 등 IT 상담 인프라를 확대하고 있다. 사진=삼성전자서비스 상담사가 고객 상담을 진행하는 모습 한편 가전제품... ",
-                "link": "http://www.dailypop.kr/news/articleView.html?idxno=99175",
-                "pubDate": "Wed, 27 May 2026 16:30:00 +0900",
-                "score": 40,
-                "is_main": true,
-                "summary": "'우수 콜센터'는 AI와 상담사 역량을 결합하고, 모바일 앱 상담 및 IT 상담 인프라를 확대하여 30년 이상 장기 이용 고객을 위한 전담 상담사 제도를 운영합니다.",
-                "editor_view": "고객 서비스 분야에서 AI와 IT 인프라를 활용한 운영 효율성 증대 및 고객 경험 개선 동향을 보여주지만, MSP/GDC 핵심 영역과는 다소 거리가 있습니다."
+                "summary": "LG CNS는 금융 부문에서 솔루션 중심 사업으로 전환하고 베트남, 인도네시아 등 글로벌 딜리버리 거점을 CoE로 육성하며 AI 데이터센터 사업을 확장하는 전략을 발표했다.",
+                "editor_view": "LG CNS가 국내외 IT 인력을 활용한 글로벌 딜리버리 역량을 강화하는 것은 금융 DX와 AI 데이터센터 사업 확장의 핵심 전략이며, 이는 해외 IT 아웃소싱 및 관리 서비스 시장의 성장 가능성을 시사한다."
             }
         ],
-        "insight": "AI 기술 발전이 전 산업 분야의 디지털 전환 및 인프라 확장을 가속화하며, 특히 데이터센터, 차세대 IT 시스템 및 보안 솔루션 시장에 막대한 성장 기회와 공급 부족이라는 중요한 비즈니스 시사점을 제공하고 있습니다."
+        "insight": "AI 기반의 차세대 IT 인프라 및 데이터센터 시장은 금융권의 시스템 전환 수요와 맞물려 공급 부족 현상 속에서 급격히 성장하고 있으며, 이는 AI 중심의 솔루션 및 서비스 제공 기업들에게 주요한 사업 기회를 의미합니다."
     },
     "overseas": {
         "data": [
@@ -131,116 +31,48 @@
                 "description": "ElevenLabs' new model will let users regenerate a section of a song without affecting the rest of the track.",
                 "link": "https://techcrunch.com/2026/05/27/elevenlabss-new-music-generation-model-can-switch-genres-mid-track/",
                 "pubDate": "Wed, 27 May 2026 14:14:10 +0000",
-                "score": 90,
+                "score": 93,
                 "is_main": true,
-                "translated_title": "일레븐랩스, 곡 중간에 장르를 전환할 수 있는 새로운 음악 생성 모델 발표",
-                "summary": "음성 AI 기술로 잘 알려진 일레븐랩스(ElevenLabs)가 곡 중간에 장르를 전환할 수 있는 새로운 음악 생성 모델을 공개했습니다. 이 모델을 통해 사용자는 곡의 특정 섹션만 재구성할 수 있으며, 나머지 부분에는 영향을 미주지 않습니다. 이는 고급 생성 AI 및 멀티모달 기술의 발전을 보여주는 사례로, 음악 창작의 새로운 가능성을 열어줄 것으로 기대됩니다.",
-                "editor_view": "일레븐랩스의 음악 생성 모델은 멀티모달 AI의 발전이 창작 영역에 어떤 혁신을 가져올 수 있는지 보여주는 인상적인 예시입니다. 특정 부분만 수정하면서도 전체적인 일관성을 유지하는 능력은 파운데이션 모델의 정교함과 제어 가능성이 크게 향상되었음을 의미합니다. 이는 단순한 음악 생성을 넘어, 개인 맞춤형 미디어 콘텐츠 제작, 게임 및 메타버스 환경에서의 동적 오디오 생성 등 다양한 분야에 적용될 잠재력을 가집니다."
-            },
-            {
-                "title": "AI coding startup Cognition raises $1B at $25B pre-money valuation",
-                "description": "As Cognition reaches $492 million in annualized revenue run rate, it more than doubled its valuation in eight months, it says.",
-                "link": "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
-                "pubDate": "Wed, 27 May 2026 16:00:00 +0000",
-                "score": 85,
-                "is_main": true,
-                "translated_title": "AI 코딩 스타트업 코그니션, 250억 달러 사전 기업가치로 10억 달러 유치",
-                "summary": "AI 코딩 스타트업 코그니션(Cognition)이 10억 달러의 투자를 유치하며 사전 기업가치가 250억 달러에 달했다고 발표했습니다. 연간 매출액이 4억 9,200만 달러에 이르는 등 빠르게 성장하고 있으며, 8개월 만에 기업가치를 두 배 이상 높였습니다. 이는 소프트웨어 개발 영역에서 에이전트 기반 AI의 잠재력과 시장의 기대가 매우 높음을 보여줍니다.",
-                "editor_view": "코딩 영역에서 AI의 역할은 단순한 보조 도구를 넘어, 자율적인 에이전트 형태로 발전하고 있습니다. 코그니션의 폭발적인 성장과 대규모 투자는 소프트웨어 개발 패러다임이 AI 에이전트 중심으로 빠르게 재편되고 있음을 시사합니다. 이러한 AI 코딩 에이전트는 향후 개발 생산성을 혁신하고, 인간 개발자의 역할을 고차원적인 문제 해결로 전환시키는 핵심 동력이 될 것입니다."
+                "translated_title": "ElevenLabs, 트랙 도중 장르 변경 가능한 새로운 음악 생성 모델 공개",
+                "summary": "음성 AI 분야로 잘 알려진 ElevenLabs가 새로운 음악 생성 모델을 선보였습니다. 이 모델은 사용자가 곡의 중간에 특정 섹션의 장르를 변경하거나 재구성할 수 있도록 하여, 다른 트랙 부분에는 영향을 주지 않고 유연한 음악 편집 및 생성을 가능하게 합니다.",
+                "editor_view": "ElevenLabs의 새로운 음악 생성 모델은 멀티모달(텍스트/명령어로 음악 생성 및 수정) 및 생성형 AI 기술의 진보를 명확하게 보여줍니다. 단순히 음악을 생성하는 것을 넘어, 곡의 특정 부분을 정교하게 제어하고 장르를 전환하는 능력은 파운데이션 모델의 '조건부 생성(Conditional Generation)' 능력이 얼마나 정교해지고 있는지를 나타냅니다. 이는 예술 창작 영역에서 AI의 활용 가능성을 확장하며, 차세대 멀티모달 AI의 잠재력을 엿볼 수 있는 중요한 기술 트렌드입니다."
             },
             {
                 "title": "Your SEO strategy is optimized for a search engine that no longer exists.",
                 "description": "Google I/O made it official: AI-generated answers are now front and&#160;center&#160;in search, and most brands have almost no visibility into how AI is describing them to their customers.&#160;For anyone who has spent years building a strategy around 10 blue links, the rules just changed in a pretty significant way.&#160; On this episode of TechCrunch&#8217;s Equity podcast, Rebecca [&#8230;]",
                 "link": "https://techcrunch.com/podcast/your-seo-strategy-is-optimized-for-a-search-engine-that-no-longer-exists/",
                 "pubDate": "Wed, 27 May 2026 18:39:17 +0000",
-                "score": 80,
+                "score": 92,
                 "is_main": true,
-                "translated_title": "당신의 SEO 전략은 더 이상 존재하지 않는 검색 엔진에 최적화되어 있습니다.",
-                "summary": "구글 I/O에서 AI 생성 답변이 검색 결과의 최전선에 등장하며, 기존의 '10개 파란 링크' 기반 SEO 전략이 무의미해졌음을 선언했습니다. 이제 AI가 고객에게 브랜드를 어떻게 설명하는지에 대한 가시성이 부족해지면서, 기업들은 AI 시대에 맞는 새로운 검색 전략 수립이 시급해졌습니다. 이는 파운데이션 모델의 대규모 적용이 가져온 검색 환경의 근본적인 변화를 의미합니다. ",
-                "editor_view": "검색 시장에서 AI 기반 답변의 전면 등장은 파운데이션 모델이 실제 사용자 경험과 비즈니스 전략에 미치는 영향력을 여실히 보여줍니다. 이는 단순한 기능 개선을 넘어, 정보 습득 방식과 콘텐츠 소비 행태 전반을 재편하는 변화의 시작입니다. 기업들은 AI가 정보를 처리하고 요약하는 방식에 대한 깊은 이해를 바탕으로 새로운 AI 시대의 SEO 전략, 즉 'AI 옵티마이제이션(AIO)'으로의 전환을 서둘러야 할 것입니다."
-            },
-            {
-                "title": "In more good news for Amazon, Snowflake signs $6B deal with AWS for AI CPU chips",
-                "description": "Snowflake has signed a new, enormous five-year deal with Amazon to secure chips for AI usage. Nvidia is once again being put on notice.",
-                "link": "https://techcrunch.com/2026/05/27/in-more-good-news-for-amazon-snowflake-signs-6b-deal-with-aws-for-ai-cpu-chips/",
-                "pubDate": "Wed, 27 May 2026 20:10:00 +0000",
-                "score": 75,
-                "is_main": true,
-                "translated_title": "아마존에 희소식: 스노우플레이크, AWS와 AI CPU 칩 공급 60억 달러 계약 체결",
-                "summary": "클라우드 데이터 웨어하우스 기업 스노우플레이크가 아마존 AWS와 5년간 60억 달러 규모의 AI CPU 칩 공급 계약을 체결했습니다. 이는 AI 워크로드 처리에 필요한 컴퓨팅 자원을 대규모로 확보하기 위한 전략적 움직임으로, 엔비디아 중심의 AI 칩 시장에 새로운 경쟁 구도를 예고하며 AI 인프라 확장에 대한 강력한 투자 추세를 보여줍니다.",
-                "editor_view": "AI 기술 발전의 핵심은 결국 이를 구동할 수 있는 강력한 컴퓨팅 자원에 있습니다. 스노우플레이크의 이번 대규모 계약은 AI 파운데이션 모델 및 관련 서비스 개발을 위한 인프라 확보 경쟁이 얼마나 치열한지를 단적으로 보여줍니다. AWS의 AI 칩 공급 역량이 확장되면서, AI 기술의 상용화 및 확산에 필수적인 하드웨어 생태계가 더욱 다변화될 것으로 예상됩니다."
-            },
-            {
-                "title": "Meta launches Instagram, Facebook, and WhatsApp subscriptions, with more to come, including AI plans",
-                "description": "Meta is rolling out paid subscription plans for Instagram, Facebook, and WhatsApp worldwide, while also testing new AI, creator, and business-focused offerings under its broader “Meta One” subscription brand.",
-                "link": "https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/",
-                "pubDate": "Wed, 27 May 2026 18:00:00 +0000",
-                "score": 45,
-                "is_main": true,
-                "translated_title": "Meta launches Instagram, Facebook, and WhatsApp subscriptions, with more to come, including AI plans",
-                "summary": "",
-                "editor_view": ""
-            },
-            {
-                "title": "Why Google’s AI can’t spell Google (or anything else)",
-                "description": "Google is embarrassing itself, again.",
-                "link": "https://techcrunch.com/2026/05/27/why-googles-ai-cant-spell-google-or-anything-else/",
-                "pubDate": "Thu, 28 May 2026 00:17:41 +0000",
-                "score": 30,
-                "is_main": true,
-                "translated_title": "Why Google’s AI can’t spell Google (or anything else)",
-                "summary": "",
-                "editor_view": ""
-            },
-            {
-                "title": "Payroll startup Remote says it grew revenue 50% per employee without adding headcount",
-                "description": "Payroll service provider Remote recently surpassed $300 million in annual recurring revenue (ARR) and became cash-flow positive, thanks to a 50% increase in revenue per employee resulting from AI adoption.",
-                "link": "https://techcrunch.com/2026/05/27/payroll-startup-remote-says-it-grew-revenue-50-per-employee-without-adding-headcount/",
-                "pubDate": "Wed, 27 May 2026 19:39:45 +0000",
-                "score": 20,
-                "is_main": true,
-                "translated_title": "Payroll startup Remote says it grew revenue 50% per employee without adding headcount",
-                "summary": "",
-                "editor_view": ""
-            },
-            {
-                "title": "SOND, a sleep tech startup from Bose’s former head of sleep, exits stealth with $7M",
-                "description": "SOND introduced its debut product: Dreambuds, a closed-loop, in-ear system that captures 12 physiological signals from the wearer, then acts on them in real time to help consumers get better sleep.",
-                "link": "https://techcrunch.com/2026/05/27/sond-a-sleep-tech-startup-from-boses-former-head-of-sleep-exits-stealth-with-7m/",
-                "pubDate": "Wed, 27 May 2026 14:00:00 +0000",
-                "score": 10,
-                "is_main": true,
-                "translated_title": "SOND, a sleep tech startup from Bose’s former head of sleep, exits stealth with $7M",
-                "summary": "",
-                "editor_view": ""
-            },
-            {
-                "title": "Startup Battlefield 200 applications close today: Nominate a founder or submit your startup",
-                "description": "Today is the final day to apply or nominate a startup for Startup Battlefield 200. Once the clock strikes 11:59 p.m. PT, the window closes on your chance to compete for $100,000 in equity-free funding, gain global visibility, connect directly with investors, and launch on the TechCrunch Disrupt stage.",
-                "link": "https://techcrunch.com/2026/05/27/startup-battlefield-200-applications-close-today-nominate-a-founder-or-submit-your-startup/",
-                "pubDate": "Wed, 27 May 2026 14:15:00 +0000",
-                "score": 0,
-                "is_main": true,
-                "translated_title": "Startup Battlefield 200 applications close today: Nominate a founder or submit your startup",
-                "summary": "",
-                "editor_view": ""
-            },
-            {
-                "title": "TechCrunch Disrupt 2026 Early Bird ticket savings end in 3 days",
-                "description": "There are only 3 days left to save up to $410 on your ticket to TechCrunch Disrupt 2026. Early Bird pricing ends May 29 at 11:59 p.m. PT, and once the deadline passes, ticket prices increase. If you plan to attend one of the most influential gatherings in tech this year, now is the time to lock in your pass before rates go up again.",
-                "link": "https://techcrunch.com/2026/05/27/techcrunch-disrupt-2026-early-bird-ticket-savings-end-in-3-days/",
-                "pubDate": "Wed, 27 May 2026 14:00:00 +0000",
-                "score": 0,
-                "is_main": true,
-                "translated_title": "TechCrunch Disrupt 2026 Early Bird ticket savings end in 3 days",
-                "summary": "",
-                "editor_view": ""
+                "translated_title": "더 이상 존재하지 않는 검색 엔진에 최적화된 당신의 SEO 전략",
+                "summary": "Google I/O에서 공식화된 바와 같이, AI가 생성한 답변이 이제 검색 결과의 중심이 되었으며, 이는 기존의 '10개의 파란색 링크' 기반 SEO 전략을 무의미하게 만듭니다. 브랜드들은 AI가 고객에게 자신들을 어떻게 설명하는지에 대한 가시성이 거의 없어, 검색 엔진 최적화의 규칙이 근본적으로 변화했음을 시사합니다.",
+                "editor_view": "이 기사는 AI 기반 파운데이션 모델이 검색 엔진의 핵심 기능을 어떻게 재편하고 기존의 웹 접근 방식과 비즈니스 전략(SEO)을 근본적으로 변화시키는지 명확히 보여줍니다. AI가 단순히 정보를 제공하는 것을 넘어, 콘텐츠를 생성하고 사용자에게 직접적인 답변을 제공하는 'Agentic' 특성이 강화되면서, 기업들은 고객에게 도달하는 방식에 대한 새로운 접근이 시급해졌습니다. 이는 해외 AI 원천 기술의 실제적인 시장 파급력을 보여주는 중요한 사례입니다."
             }
         ],
-        "insight": "이 기사들은 AI가 전 산업군에서 전례 없는 투자와 혁신을 이끌며 전통적인 비즈니스 전략을 재편하고 새로운 수익 모델을 창출하고 있음을 보여줍니다. 기업들은 이러한 AI 기술 변화에 대한 신속한 적응과 전략적 투자를 통해 경쟁력을 확보해야 합니다."
+        "insight": "이 기사들은 **기술 혁신에 대한 지속적인 적응과 투자의 중요성**을 강조합니다. 최첨단 AI로 새로운 가치를 창출하는 동시에, 변화하는 시장에서 과거 전략에 갇히는 것이 얼마나 위험한지 대비시켜 보여줍니다."
     },
     "ax_news": {
         "data": [
+            {
+                "title": "LG화학, 사무직 인원 절반 AX 교육 완료…사원도 AI 비서 활용",
+                "description": "에이전트’ 모델을 중심으로 구성됐다. AI를 업무 방식의 재설계를 위한 핵심 수단으로 삼겠다는... LG화학은 생성형 AI의 직무별 실무 활용과 AI 기반 업무 자동화 설계 등 심화 과정을 확대 운영한다고 설명했다.... ",
+                "link": "https://n.news.naver.com/mnews/article/011/0004625322?sid=101",
+                "pubDate": "Thu, 28 May 2026 10:55:00 +0900",
+                "score": 98,
+                "is_main": true,
+                "summary": "LG화학이 사무직 인원의 절반 이상을 대상으로 AX 교육을 완료하고 AI 에이전트 모델을 도입, 구성원들이 AI 비서를 활용해 업무 방식을 재설계하고 자동화할 수 있도록 지원하며 전사적 AI 전환을 가속화하고 있다.",
+                "editor_view": "국내 굴지의 대기업이 전사적 차원에서 AI 인재 양성과 AI 에이전트 도입을 통해 실제 업무 프로세스 혁신을 추진하는 모범 사례다. 이는 단순히 기술 도입을 넘어 조직 문화와 일하는 방식의 근본적인 변화를 이끌어내는 AX의 핵심을 보여준다."
+            },
+            {
+                "title": "한전, AI활용 전력망 혁신…연간 전력구입비 1100억 절감",
+                "description": "전력망 운영 효율과 안정성을 높였다고 27일 밝혔다. 한전은 전력망 수요 분석 모델을 AI를 활용해 전면 개선했다. 기존 모델은 서울·경기·부산 소재 지역의 데이터 159개를 활용해 만들었지만, 신규 모델은 전국에서... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0013969125?sid=101",
+                "pubDate": "Wed, 27 May 2026 08:23:00 +0900",
+                "score": 98,
+                "is_main": true,
+                "summary": "한국전력이 AI를 활용하여 전력망 수요 분석 모델을 전면 개선함으로써 전력망 운영 효율성과 안정성을 크게 높이고 연간 1100억 원의 전력구입비를 절감하는 혁신적인 AI 전환 사례를 발표했다.",
+                "editor_view": "국내 핵심 공공기관이 AI를 통해 국가 기간 시설인 전력망 운영 시스템을 혁신하고 구체적인 비용 절감 효과까지 입증한 것은, 공공 부문 AX의 성공적인 청사진을 제시하는 대표적인 사례다."
+            },
             {
                 "title": "한국앤컴퍼니그룹 '엔터프라이즈 AI 서울'서 AX 전략 공개…&quot;생산·물류...",
                 "description": "한국앤컴퍼니그룹이 제조·연구개발(R&amp;D) 현장 중심의 AI 전환(AX) 전략 강화에 나섰다. 단순 업무 자동화를... 최근에는 구글 클라우드와 협력해 '제미나이 엔터프라이즈(Gemini Enterprise)'도 도입했다. 그룹 내부 업무... ",
@@ -248,8 +80,8 @@
                 "pubDate": "Wed, 27 May 2026 17:00:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "한국앤컴퍼니그룹이 '엔터프라이즈 AI 서울 2026'에서 구글 클라우드와 협력하여 제조·R&D 현장 중심의 AI 전환 전략을 발표하고 제미나이 엔터프라이즈를 도입했다.",
-                "editor_view": "국내 대기업이 구체적인 산업 현장(제조, R&D)에 AI를 적용하며 글로벌 클라우드 기업과 협력하는 모범적인 AX 전환 사례로, 실제 운영 모델 도입의 좋은 예시이다."
+                "summary": "한국앤컴퍼니그룹이 '엔터프라이즈 AI 서울 2026'에서 구글 클라우드와 협력해 제미나이 엔터프라이즈를 도입, 제조·R&D 현장 중심의 AI 전환(AX) 전략을 강화한다고 발표했다.",
+                "editor_view": "국내 대기업이 구글 클라우드와의 협력을 통해 특정 업무 영역(제조, R&D)에 AI를 실제 도입하고 전환하는 구체적인 사례를 제시하며, 전사적 AX 운영 모델 수립 의지를 보여주는 중요한 동향이다."
             },
             {
                 "title": "&quot;6월부터 챗GPT 써라&quot;…삼성전자, '외부 AI' 전격 도입",
@@ -258,28 +90,58 @@
                 "pubDate": "Tue, 26 May 2026 14:44:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "삼성전자가 자체 생성형 AI '삼성 가우스'를 고도화하면서 챗GPT 등 외부 AI를 함께 활용하는 '투트랙' 체계를 6월부터 전격 도입하여 AI 활용을 확대한다.",
-                "editor_view": "국내 초일류 대기업이 자체 AI와 외부 AI를 병행하여 활용하는 실질적인 AX 전략을 공개한 사례로, 기업의 보안과 최신 기술 도입 간의 균형을 모색하는 현실적인 접근 방식을 보여준다."
+                "summary": "삼성전자가 자체 AI 모델 '삼성 가우스' 고도화와 함께 챗GPT 등 외부 생성형 AI를 업무에 전격 도입하는 투트랙 전략을 통해 전사적 AX 전환을 가속화하며 임직원들의 AI 활용도를 높인다.",
+                "editor_view": "국내 최대 대기업인 삼성전자가 내부 보안과 외부 AI 활용의 균형을 맞춘 '투트랙' AX 전략을 실행하는 것은, 다른 기업들에게도 AI 도입 및 운영 거버넌스 수립의 중요한 참고 사례가 될 것이다."
             },
             {
-                "title": "한전, AI활용 전력망 혁신…연간 전력구입비 1100억 절감",
-                "description": "전력망 운영 효율과 안정성을 높였다고 27일 밝혔다. 한전은 전력망 수요 분석 모델을 AI를 활용해 전면 개선했다. 기존 모델은 서울·경기·부산 소재 지역의 데이터 159개를 활용해 만들었지만, 신규 모델은 전국에서... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0013969125?sid=101",
-                "pubDate": "Wed, 27 May 2026 08:23:00 +0900",
+                "title": "한전KDN, 사내 생성형 AI ‘KDN GPT’ 본격 운영",
+                "description": "검색증강생성(RAG, Retrieval-Augmented Generation) 기반의 사내 문서와 업무 정보를 학습하고 15종 이상의 다양한 서비스를 제공하는 등 생성형 인공지능의 품질과 활용성을 크게 높였다. 한전KDN 관계자는 “이번 KDN... ",
+                "link": "https://www.smarttoday.co.kr/ko-kr/articles/107895",
+                "pubDate": "Thu, 28 May 2026 11:26:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "한국전력공사가 AI를 활용해 전력망 수요 분석 모델을 전면 개선하여 운영 효율성과 안정성을 높이고 연간 1100억 원의 전력구입비 절감을 달성했다.",
-                "editor_view": "국내 대표 공공기관인 한전이 AI를 통해 국가 핵심 인프라인 전력망 운영을 혁신하고 실질적인 비용 절감 효과를 창출한 매우 성공적인 AX 사례로 평가된다."
+                "summary": "한전KDN이 검색증강생성(RAG) 기반의 사내 생성형 AI 'KDN GPT'를 본격 운영하며, 사내 문서와 업무 정보를 학습시켜 15종 이상의 다양한 서비스를 제공함으로써 AI 활용성과 업무 생산성을 크게 향상시켰다.",
+                "editor_view": "국내 공공기관이 자체적으로 RAG 기반의 생성형 AI 시스템을 구축하고 실제 업무에 적용하는 사례는, 공공 부문의 AI 전환이 단순한 논의를 넘어 실질적인 운영 단계로 진입했음을 보여주는 중요한 진전이다."
             },
             {
-                "title": "LG화학, 사무직 인원 절반 AX 교육 완료…사원도 AI 비서 활용",
-                "description": "에이전트’ 모델을 중심으로 구성됐다. AI를 업무 방식의 재설계를 위한 핵심 수단으로 삼겠다는... LG화학은 생성형 AI의 직무별 실무 활용과 AI 기반 업무 자동화 설계 등 심화 과정을 확대 운영한다고 설명했다.... ",
-                "link": "https://n.news.naver.com/mnews/article/011/0004625322?sid=101",
-                "pubDate": "Thu, 28 May 2026 10:55:00 +0900",
+                "title": "가스공사, 사내 전용 AI모델 '업무 메이트' 공개",
+                "description": "가스공사는 11일 사내 업무 환경에 특화된 전용 AI모델 '업무 메이트' 사용 개시를 알렸다. 지난해 12월... 가스공사는 고유의 지식기반을 RAG하는데 머물지 않고 외부와 차단된 사이버 공간에 다운로드 받은... ",
+                "link": "https://daily.hankooki.com/news/articleView.html?idxno=1365913",
+                "pubDate": "Mon, 11 May 2026 20:54:00 +0900",
+                "score": 95,
+                "is_main": true,
+                "summary": "한국가스공사가 사내 업무 환경에 특화된 전용 AI 모델 '업무 메이트'를 공개하고, 고유의 지식 기반을 활용한 RAG 기술로 외부와 차단된 보안 환경에서 AI를 적극 활용하여 업무 효율성을 높이고 있다.",
+                "editor_view": "국내 주요 공공기관이 보안이 강화된 내부망 환경에서 자체 AI 모델과 RAG 기술을 활용하여 업무 효율을 높이는 것은, 공공 부문의 AI 전환 시 보안과 활용성 두 마리 토끼를 잡으려는 모범적인 노력으로 평가된다."
+            },
+            {
+                "title": "&quot;현대차, 레거시 완성차 아닌 '피지컬 AI 선두주자' 재평가&quot; NH투자證",
+                "description": "글로벌 레거시 업체들과 비교하면 현대차의 피지컬 AI 전환 속도는 앞서 있다&quot;고 설명했다. 현대차그룹은 자율주행 부문에서 다각적인 전략을 가동하고 있다. 세계 최고 수준의 자율주행 기술을 보유한 웨이모와 EV... ",
+                "link": "https://n.news.naver.com/mnews/article/014/0005526737?sid=101",
+                "pubDate": "Wed, 27 May 2026 06:00:00 +0900",
+                "score": 93,
+                "is_main": true,
+                "summary": "NH투자증권이 현대차그룹을 레거시 완성차 기업이 아닌 '피지컬 AI 선두주자'로 재평가하며, 현대차가 자율주행 등 첨단 AI 분야에서 빠른 전환 속도를 보이고 있다고 분석했다.",
+                "editor_view": "국내 대표 대기업인 현대차그룹이 단순한 자동차 제조업을 넘어 피지컬 AI 분야의 선두주자로 자리매김하고 있다는 평가는, 전통 산업이 AI를 통해 사업 모델과 정체성을 어떻게 혁신하는지 보여주는 상징적인 사례다."
+            },
+            {
+                "title": "&quot;신약개발부터 사무까지&quot;…제약바이오 AI도입 바람",
+                "description": "JW중외제약은 유전체 및 화합물 데이터베이스, 자체 AI 모델을 통합한 'JWave' 플랫폼을 구축했다. 기존... 상황에서 기업은 AI 적용 가능 업무를 선제적으로 식별하고 운영 워크플로우를 재설계할 필요가 있다&quot;고 말했다．",
+                "link": "https://n.news.naver.com/mnews/article/003/0013969683?sid=102",
+                "pubDate": "Wed, 27 May 2026 10:48:00 +0900",
+                "score": 92,
+                "is_main": true,
+                "summary": "JW중외제약이 유전체 및 화합물 데이터베이스를 활용한 자체 AI 모델 'JWave' 플랫폼을 구축하여 신약 개발부터 사무 업무까지 AI 도입을 확대하며 전사적 AI 전환을 추진하고 있다.",
+                "editor_view": "제약바이오 분야에서 국내 기업이 자체 AI 플랫폼을 구축하고 신약 개발과 같은 핵심 업무에 적용하는 사례는, 전문 분야의 레거시 현대화 및 AI 전환의 성공 가능성을 높게 보여준다."
+            },
+            {
+                "title": "[유미's 픽] &quot;독파모 잊었다&quot;…NC AI, 국방·산업·콘텐츠로 특화 AI 승부...",
+                "description": "NC AI는 신한금융그룹과 월드모델, 시각언어행동(VLA), 디지털 트윈 기술을 오프라인 영업점 공간 분석과 운영 효율화에 적용하는 실증을 진행 중인 것으로 알려졌다. 또 강원 춘천시 AI 특화 시범도시 사업에도... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002424394?sid=105",
+                "pubDate": "Thu, 28 May 2026 08:11:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "LG화학이 사무직 인원의 절반에게 AX 교육을 완료하고 AI 에이전트 모델을 중심으로 AI 비서 활용을 독려하며 전사적 AI 전환을 가속화하고 있다.",
-                "editor_view": "국내 대표 대기업이 전사적 차원에서 AI 교육과 AI 에이전트 도입을 통해 업무 방식의 재설계를 추진하는 실제 사례로, AI 거버넌스 및 활용 확산의 모범적인 접근 방식이다."
+                "summary": "NC AI가 신한금융그룹과의 협력을 통해 월드모델, VLA, 디지털 트윈 기술을 오프라인 영업점 공간 분석 및 운영 효율화에 적용하는 실증 프로젝트를 진행하며 국내 금융권의 AI 전환을 선도하고 있다.",
+                "editor_view": "국내 금융 대기업인 신한금융그룹이 영업점 운영 효율화를 위해 NC AI의 첨단 AI 기술을 도입하여 실제 운영 모델을 구축하는 사례는, 금융권의 레거시 현대화 및 AI 전환 트렌드를 명확히 보여준다."
             },
             {
                 "title": "KB금융·리벨리온, AI 인프라 강화 맞손",
@@ -288,28 +150,28 @@
                 "pubDate": "Thu, 28 May 2026 00:18:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "KB금융그룹이 국산 AI 반도체 기업 리벨리온과 협력하여 AI 인프라를 강화하고, 주권(소버린) AI 시대에 걸맞은 한국형 AI 전환을 가속화한다.",
-                "editor_view": "국내 대표 금융 기업이 국산 AI 반도체 스타트업과 손잡고 AI 인프라를 고도화하는 사례로, 금융 산업의 AI 전환과 국내 AI 기술 생태계 발전에 중요한 의미를 가진다."
+                "summary": "KB금융그룹이 국내 AI 반도체 기업 리벨리온과 협력하여 국산 AI 반도체 기반의 추론 인프라를 구축하고 금융 AI 서비스 개발을 지원함으로써 AI 전환(AX)을 가속화한다.",
+                "editor_view": "국내 금융 대기업이 AI 기술 내재화를 넘어 국산 AI 반도체 인프라를 직접 구축하려는 시도는, 단순한 AI 도입을 넘어 장기적인 AI 주권 확보 및 효율적인 AX 운영 모델을 위한 전략적 투자로 평가할 수 있다."
             },
             {
-                "title": "&quot;신약개발부터 사무까지&quot;…제약바이오 AI도입 바람",
-                "description": "JW중외제약은 유전체 및 화합물 데이터베이스, 자체 AI 모델을 통합한 'JWave' 플랫폼을 구축했다. 기존... 상황에서 기업은 AI 적용 가능 업무를 선제적으로 식별하고 운영 워크플로우를 재설계할 필요가 있다&quot;고 말했다．",
-                "link": "https://n.news.naver.com/mnews/article/003/0013969683?sid=102",
-                "pubDate": "Wed, 27 May 2026 10:48:00 +0900",
+                "title": "‘지분 0% 후계자’ 이규호, 코오롱 군살 빼고 AI·우주에 베팅",
+                "description": "1조원 이상 투입한 아라미드 사업이 최근 흑자전환에 성공하며 실적 개선세를 뒷받침하고 있다. 그룹... 과거 방식의 레거시 사업을 줄이고 첨단 화학 소재 분야에 자원을 집중하기 위한 것이다. 코오롱스페이스웍스에... ",
+                "link": "https://n.news.naver.com/mnews/article/050/0000106597?sid=101",
+                "pubDate": "Wed, 27 May 2026 05:02:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "JW중외제약이 유전체 및 화합물 데이터베이스와 자체 AI 모델을 통합한 'JWave' 플랫폼을 구축하며 신약 개발부터 사무 자동화까지 제약바이오 분야의 AI 도입을 선도하고 있다.",
-                "editor_view": "국내 제약바이오 기업이 자체 AI 플랫폼을 구축하여 핵심 비즈니스인 신약 개발에 AI를 접목하고 업무 전반에 걸쳐 AI를 활용하는 명확한 AX 사례이다."
+                "summary": "코오롱그룹이 이규호 사장의 주도 하에 과거 레거시 사업을 축소하고 AI 및 우주 산업과 같은 첨단 기술 분야에 집중 투자하며 그룹의 장기적인 AI 전환(AX) 전략을 추진하고 있다.",
+                "editor_view": "국내 대기업이 미래 성장 동력 확보를 위해 AI와 우주 산업에 전략적으로 베팅하고, 기존 레거시 사업을 과감히 재편하는 모습은, 전통 산업의 혁신적인 AX 성공 모델을 기대하게 한다."
             },
             {
-                "title": "&quot;현대차, 레거시 완성차 아닌 '피지컬 AI 선두주자' 재평가&quot; NH투자證",
-                "description": "글로벌 레거시 업체들과 비교하면 현대차의 피지컬 AI 전환 속도는 앞서 있다&quot;고 설명했다. 현대차그룹은 자율주행 부문에서 다각적인 전략을 가동하고 있다. 세계 최고 수준의 자율주행 기술을 보유한 웨이모와 EV... ",
-                "link": "https://n.news.naver.com/mnews/article/014/0005526737?sid=101",
-                "pubDate": "Wed, 27 May 2026 06:00:00 +0900",
+                "title": "NH농협캐피탈, 사내 AI 활용 환경 고도화... DX·AX 추진력 강화",
+                "description": "향후 사내 업무 환경에서도 AI 활용 범위를 단계적으로 확대할 계획이다. 이를 위해 사내망 기반 생성형 AI 지식 검색 시스템을 구축하고, RAG(검색증강생성) 기반의 부서별 맞춤형 지식베이스도 제공할 예정이다.",
+                "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=200082",
+                "pubDate": "Wed, 27 May 2026 17:02:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "NH투자증권이 현대차그룹을 레거시 완성차 기업이 아닌 '피지컬 AI 선두주자'로 재평가하며, 자율주행 부문에서 글로벌 업체들보다 앞선 AI 전환 속도를 보인다고 분석했다.",
-                "editor_view": "국내 대기업인 현대차그룹이 단순한 자동차 제조사를 넘어 피지컬 AI 분야의 선두주자로 자리매김하고 있음을 보여주는 평가로, 전통 산업의 AI 전환 모델을 제시한다."
+                "summary": "NH농협캐피탈이 사내 AI 활용 환경 고도화를 위해 사내망 기반 생성형 AI 지식 검색 시스템을 구축하고, RAG 기반의 부서별 맞춤형 지식베이스를 제공하여 전사적 DX 및 AX 추진력을 강화할 계획이다.",
+                "editor_view": "국내 금융권 중견 기업이 사내 RAG 기반 지식 시스템을 구축하여 내부 업무 효율성과 지식 활용도를 높이는 사례는, 금융 분야의 AI 전환이 실제 운영 모델로 구체화되고 있음을 보여준다."
             },
             {
                 "title": "AWS 손잡은 미래에셋, 금융 AX 핵심은 데이터 구조화 [테크체인저]",
@@ -318,131 +180,21 @@
                 "pubDate": "Sun, 24 May 2026 16:00:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "미래에셋이 AWS와 협력하여 금융 AX의 핵심인 데이터 구조화에 집중하고 있으며, 특히 자산관리 데이터에 특화된 그래프RAG 기술을 도입하여 사내 문서 활용도를 높이고 있다.",
-                "editor_view": "국내 대형 금융 그룹이 글로벌 클라우드 기업과 협력하여 RAG 기술을 금융 데이터에 최적화하는 구체적인 AX 사례로, 복잡한 금융 데이터를 AI로 활용하는 심도 깊은 접근 방식을 보여준다."
-            },
-            {
-                "title": "가스공사, 사내 전용 AI모델 '업무 메이트' 공개",
-                "description": "가스공사는 11일 사내 업무 환경에 특화된 전용 AI모델 '업무 메이트' 사용 개시를 알렸다. 지난해 12월... 가스공사는 고유의 지식기반을 RAG하는데 머물지 않고 외부와 차단된 사이버 공간에 다운로드 받은... ",
-                "link": "https://daily.hankooki.com/news/articleView.html?idxno=1365913",
-                "pubDate": "Mon, 11 May 2026 20:54:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "한국가스공사가 사내 업무 환경에 특화된 전용 AI 모델 '업무 메이트'를 공개하고, 고유의 지식기반을 RAG하고 외부와 차단된 사이버 공간에서 활용하여 내부 업무 효율성을 높인다.",
-                "editor_view": "국내 주요 공공기관이 사내 지식 기반의 AI 모델을 구축하고 RAG 기술을 적용하여 내부 업무 효율성을 극대화하는 사례로, 공공 부문의 성공적인 AX 전환 모델을 제시한다."
-            },
-            {
-                "title": "LG CNS “AI 미래 아닌 현실”…기업 AX 실행 전략 공개",
-                "description": "열린 'AX 페어 2026'에서 환영 영상을 통해 이같이 말했다. 이날 행사는 '이제 실행할 때(Now in action)'를... 바꾸는 엔터프라이즈 AI'를 주제로 발표했다. 진요한 센터장은 AI 시장의 그는 “클라우드가 소프트웨어 시장을... ",
-                "link": "https://n.news.naver.com/mnews/article/030/0003431809?sid=105",
-                "pubDate": "Wed, 27 May 2026 14:59:00 +0900",
-                "score": 85,
-                "is_main": true,
-                "summary": "LG CNS가 'AX 페어 2026'에서 '이제 실행할 때'를 강조하며 기업 AX 실행 전략을 공개했고, 엔터프라이즈 AI 시대를 위한 핵심 키워드를 제시했다.",
-                "editor_view": "국내 주요 IT 서비스 기업이 기업의 AI 전환을 촉진하기 위한 전략을 제시한 사례로, AX 시장의 방향성과 핵심 과제를 엿볼 수 있다."
+                "summary": "미래에셋이 AWS와 협력하여 금융 AX의 핵심으로 데이터 구조화를 강조하며, 기존 RAG를 넘어 상품 간 관계까지 파악하는 그래프RAG 기술을 도입하여 사내 문서 활용도를 높이는 방안을 모색하고 있다.",
+                "editor_view": "국내 금융 대기업이 AI 전환의 성공 요인으로 데이터 구조화의 중요성을 인식하고, 차세대 RAG 기술을 도입하여 금융 특화 AI 시스템을 고도화하려는 시도는, 복잡한 금융 데이터를 다루는 AX의 선진 모델을 제시한다."
             },
             {
                 "title": "AI가 굽는 성심당 튀김소보로…산업부, M.AX 확산 총력",
                 "description": "AX 도입으로 현장 직원들의 업무 고충을 크게 경감시킬 수 있게 됐다”며 “이번에 도입한 AI 모델과 로봇을... 시범 운영에 들어갔다. 이를 통해 전통주의 품질을 균일화하고 작업자의 피로를 낮출 전망이다. 또 불량육... ",
                 "link": "https://n.news.naver.com/mnews/article/030/0003431744?sid=101",
                 "pubDate": "Wed, 27 May 2026 14:01:00 +0900",
-                "score": 85,
+                "score": 88,
                 "is_main": true,
-                "summary": "성심당이 AI 모델과 로봇을 활용하여 튀김소보로 생산 공정을 현대화하고 있으며, 산업부가 제조 AI(M.AX) 확산을 위해 노력하고 있다.",
-                "editor_view": "국내 유명 중견 기업인 성심당이 AI와 로봇을 활용해 전통 제조 공정의 효율성과 품질을 높인 사례로, 제조 분야의 AX 성공 가능성을 보여주는 고무적인 시도이다."
-            },
-            {
-                "title": "[유미's 픽] &quot;독파모 잊었다&quot;…NC AI, 국방·산업·콘텐츠로 특화 AI 승부...",
-                "description": "NC AI는 신한금융그룹과 월드모델, 시각언어행동(VLA), 디지털 트윈 기술을 오프라인 영업점 공간 분석과 운영 효율화에 적용하는 실증을 진행 중인 것으로 알려졌다. 또 강원 춘천시 AI 특화 시범도시 사업에도... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002424394?sid=105",
-                "pubDate": "Thu, 28 May 2026 08:11:00 +0900",
-                "score": 80,
-                "is_main": true,
-                "summary": "NC AI가 신한금융그룹과 협력하여 월드모델 및 디지털 트윈 기술을 오프라인 영업점 공간 분석과 운영 효율화에 적용하는 실증을 진행하며 국방, 산업, 콘텐츠 분야로 AI 사업을 확대한다.",
-                "editor_view": "국내 주요 게임사의 AI 기술이 금융 분야에 적용되어 실제 영업점 운영 효율화를 도모하는 사례로, AI 기술이 다양한 산업의 레거시 환경을 혁신할 수 있음을 보여준다."
-            },
-            {
-                "title": "NHN클라우드, AI 풀스택 브랜드 ‘팩토리X’ 공개…인프라부터 에이전트...",
-                "description": "이러한 전환점 속에서 NHN클라우드는 2026년 5월 26일 오전 서울 중구 더 플라자 호텔 서울에서... 아니라, AI 에이전트가 단순한 정보 응답용 가상 챗봇 수준을 극복하고 회사 내부 레거시 시스템 기밀망에 중단 없이... ",
-                "link": "https://kbench.com/?q=node/279046",
-                "pubDate": "Wed, 27 May 2026 14:22:00 +0900",
-                "score": 80,
-                "is_main": true,
-                "summary": "NHN클라우드가 AI 풀스택 브랜드 '팩토리X'를 출시하며 인프라부터 AI 에이전트까지 제공하고, AI 에이전트가 기업 내부 레거시 시스템과 통합되어 업무를 수행하도록 지원한다.",
-                "editor_view": "국내 클라우드 기업이 AI 에이전트와 레거시 시스템 연동을 강조한 풀스택 AI 브랜드를 선보이며 국내 기업의 실질적인 AX 전환을 지원하겠다는 의지를 보여주는 사례이다."
-            },
-            {
-                "title": "NH농협캐피탈, 사내 AI 활용 환경 고도화... DX·AX 추진력 강화",
-                "description": "향후 사내 업무 환경에서도 AI 활용 범위를 단계적으로 확대할 계획이다. 이를 위해 사내망 기반 생성형 AI 지식 검색 시스템을 구축하고, RAG(검색증강생성) 기반의 부서별 맞춤형 지식베이스도 제공할 예정이다.",
-                "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=200082",
-                "pubDate": "Wed, 27 May 2026 17:02:00 +0900",
-                "score": 75,
-                "is_main": true,
-                "summary": "NH농협캐피탈이 사내망 기반 생성형 AI 지식 검색 시스템을 구축하고 RAG 기반의 부서별 맞춤형 지식베이스를 제공할 예정이며, 사내 AI 활용 환경을 고도화하여 DX·AX를 강화한다.",
-                "editor_view": "국내 중견 금융사가 RAG 기술을 활용하여 사내 지식 기반 AI 시스템을 구축하는 구체적인 AX 사례로, 내부 업무 효율성 향상과 지식 자산화를 목표로 하는 모범적인 시도이다."
-            },
-            {
-                "title": "‘지분 0% 후계자’ 이규호, 코오롱 군살 빼고 AI·우주에 베팅",
-                "description": "1조원 이상 투입한 아라미드 사업이 최근 흑자전환에 성공하며 실적 개선세를 뒷받침하고 있다. 그룹... 과거 방식의 레거시 사업을 줄이고 첨단 화학 소재 분야에 자원을 집중하기 위한 것이다. 코오롱스페이스웍스에... ",
-                "link": "https://n.news.naver.com/mnews/article/050/0000106597?sid=101",
-                "pubDate": "Wed, 27 May 2026 05:02:00 +0900",
-                "score": 70,
-                "is_main": true,
-                "summary": "코오롱그룹이 과거 방식의 레거시 사업을 줄이고 AI 및 우주 산업에 자원을 집중하며 그룹의 사업 포트폴리오를 첨단화하는 전략적 전환을 추진한다.",
-                "editor_view": "국내 대기업이 레거시 사업을 축소하고 AI 등 미래 신기술 분야로 사업 포트폴리오를 재편하는 사례로, 전통 산업 기업의 AI 시대 생존 전략을 엿볼 수 있다."
-            },
-            {
-                "title": "포티투마루, 대한상의·포브스 사회공헌대상 ESG 경영 대상 수상…‘신...",
-                "description": "측면에서 사내 AI 윤리위원회를 운영하며 데이터 보안, 개인정보 보호, AI 편향... 회사는 검색증강생성(RAG42), AI 독해(MRC42), 도메인 특화 경량화 모델(LLM42) 등을... ",
-                "link": "https://www.venturesquare.net/1085986/",
-                "pubDate": "Thu, 28 May 2026 08:16:00 +0900",
-                "score": 70,
-                "is_main": true,
-                "summary": "포티투마루가 사내 AI 윤리위원회 운영 및 ESG 경영 노력을 인정받아 대상을 수상했으며, 검색증강생성(RAG42) 및 도메인 특화 경량화 모델(LLM42) 등 AI 기술을 활용하여 기업 AI를 선도하고 있다.",
-                "editor_view": "국내 AI 전문 기업이 자체적인 AI 윤리 거버넌스를 수립하고 RAG 및 LLM 기술을 실제 서비스에 적용하며, 기업 AI의 윤리적 측면과 기술적 혁신을 동시에 추구하는 모범 사례이다."
-            },
-            {
-                "title": "네이버, 콘텐츠 생태계에 1조 투자…AI 창작자 키운다",
-                "description": "연결되는 AI 통합 에이전트 구현을 위한 핵심 기술 자산도 공개했다. 네이버는 서비스 시나리오에 최적화된 프로덕트 네이티브 LLM(거대언어모델), 100억 건에 달하는 데이터와 API 툴, 안정적인 운영을 위한 하네스... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016103825?sid=105",
-                "pubDate": "Thu, 28 May 2026 10:30:00 +0900",
-                "score": 65,
-                "is_main": true,
-                "summary": "네이버가 AI 창작자 생태계 활성화를 위해 1조 원을 투자하고, 서비스 시나리오에 최적화된 프로덕트 네이티브 LLM 및 AI 통합 에이전트 구현을 위한 핵심 기술 자산을 공개했다.",
-                "editor_view": "국내 대표 IT 기업이 AI 기술을 활용해 창작자 생태계를 확장하고 새로운 가치를 창출하려는 노력을 보여주며, LLM 및 AI 에이전트 기술의 실제 적용 가능성을 시사한다."
-            },
-            {
-                "title": "&quot;오픈AI 특급 보안 기술 쓴다&quot;…韓 정부, 'GTAC' 합류한다",
-                "description": "국내 실무 운영은 한국인터넷진흥원(KISA)이 맡는다. 과기정통부와 오픈AI는 이번 협력을 계기로 고도화된 AI 모델이 사이버 해킹을 방어하는 데 얼마나 효과가 있는지 연구를 이어가기로 했다. 美 백악관 견제 뚫은... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0013969463?sid=105",
-                "pubDate": "Wed, 27 May 2026 10:00:00 +0900",
-                "score": 60,
-                "is_main": true,
-                "summary": "대한민국 정부(과기정통부, KISA)가 오픈AI의 특급 보안 기술 협력체인 'GTAC'에 합류하여 고도화된 AI 모델의 사이버 해킹 방어 효과를 연구한다.",
-                "editor_view": "국내 공공기관이 글로벌 선두 AI 기업과 협력하여 사이버 보안 분야에 AI를 적용하는 사례로, 국가 안보 차원에서 AI 활용의 중요성을 보여준다."
-            },
-            {
-                "title": "아크릴, 충북 AI컴퓨팅 센터 운영...충북과학기술혁신원과 협약",
-                "description": "회사는 이번 협약을 통해 충북 산업구조에 적합한 AI 컴퓨팅 운영 모델을 구축하고, 바이오·헬스케어를 비롯한 지역 주력산업의 AI 활용 확산에 기여할 방침이다. 충북과학기술혁신원은 “이번 협약은 충북 AI인프라를... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002424419?sid=105",
-                "pubDate": "Thu, 28 May 2026 09:44:00 +0900",
-                "score": 60,
-                "is_main": true,
-                "summary": "아크릴이 충북과학기술혁신원과 협약하여 충북 AI 컴퓨팅 센터를 운영하고, 지역 주력산업에 적합한 AI 컴퓨팅 운영 모델 구축 및 AI 활용 확산을 추진한다.",
-                "editor_view": "국내 기업과 공공기관이 협력하여 지역 산업의 AI 전환을 위한 인프라를 구축하고 활용 모델을 개발하는 사례로, 지역 경제 활성화에 기여할 수 있는 AX의 한 형태이다."
-            },
-            {
-                "title": "브라이트 패턴, LG CNS와 금융권 컨택센터 AX '유연성' 확보",
-                "description": "금융권은 다루는 데이터의 특성상 개인정보나 내부 데이터를 외부로 넘기기 어렵기 때문에 사내 정보를 활용한 검색증강생성(RAG)이나 모델 튜닝 과정에 그간 어려움을 호소해왔다. 또 사용량 기반 과금 구조에 따른... ",
-                "link": "https://www.techm.kr/news/articleView.html?idxno=152175",
-                "pubDate": "Wed, 27 May 2026 18:04:00 +0900",
-                "score": 60,
-                "is_main": true,
-                "summary": "브라이트 패턴이 LG CNS와 협력하여 금융권 컨택센터의 AX 유연성을 확보하고 있으며, 금융권의 민감한 사내 데이터를 활용한 RAG 및 모델 튜닝의 어려움을 해소하는 방안을 모색한다.",
-                "editor_view": "금융권 특유의 보안 및 데이터 제약 속에서 RAG 기반 컨택센터 AX를 구현하기 위한 국내 IT 서비스 기업과 벤더의 협력 사례로, 금융 분야의 AI 전환 과정에서 발생할 수 있는 현실적인 문제점과 해결 노력을 보여준다."
+                "summary": "산업부가 제조 현장의 AI 전환(M.AX) 확산을 위해 성심당에 AI 로봇을 도입하여 튀김소보로 생산 공정을 자동화하고 품질을 균일화하는 등 실제 운영 효율성을 높이는 사례를 선보였다.",
+                "editor_view": "전통 제조업 분야에서 AI와 로봇 도입을 통해 생산성 향상 및 작업자 고충 경감을 달성하는 성심당의 사례는 국내 산업 전반의 AX 확산 가능성을 보여주는 중요한 이정표가 될 수 있다."
             }
         ],
-        "insight": "제시된 기사 제목들은 기업들이 생산성 향상, 비용 절감, 운영 효율성 최적화를 위해 AI를 전방위적으로 도입하고 있음을 보여줍니다. 동시에 전사적인 AX(AI Transformation) 전략을 수립하고 직원 교육 및 외부 솔루션 협력을 통해 디지털 경쟁 우위를 확보하려는 움직임이 뚜렷합니다."
+        "insight": "주요 한국 기업들은 사무, 생산, 물류, 전력망 등 전 사업 영역에서 AI 및 생성형 AI 도입을 가속화하고 있습니다. 이는 업무 효율성 증대와 비용 절감은 물론, 전반적인 비즈니스 혁신을 위한 전략적 투자 및 디지털 전환의 흐름을 명확히 보여줍니다."
     },
     "vn_jobs": {
         "data": []
