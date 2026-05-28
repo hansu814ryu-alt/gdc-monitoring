@@ -2,112 +2,240 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>GDC Crawler Pipeline Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDC & AX 트렌드 크롤링 대시보드</title>
     <style>
-        body { font-family: 'Malgun Gothic', sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; }
-        .header { background-color: #1a2b4c; color: white; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; }
-        .logic-flow { display: flex; justify-content: space-between; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        .step { flex: 1; text-align: center; padding: 10px; border-right: 2px dashed #ddd; }
-        .step:last-child { border-right: none; }
-        .step-title { font-weight: bold; color: #3498db; font-size: 14px; }
-        .step-desc { font-size: 12px; color: #666; margin-top: 5px; }
-        
-        .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
-        .section-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .section-title { font-size: 18px; color: #2c3e50; border-bottom: 2px solid #e1e4e8; padding-bottom: 10px; margin-top: 0; }
-        
-        .data-item { border: 1px solid #eee; padding: 15px; margin-top: 15px; border-radius: 6px; background-color: #fafbfc; position: relative; }
-        .score-badge { position: absolute; top: 15px; right: 15px; background: #e74c3c; color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; font-weight: bold; }
-        .item-title { font-size: 15px; font-weight: bold; color: #0366d6; margin: 0 40px 10px 0; }
-        .item-insight { font-size: 13px; color: #444; background: #f1f8ff; padding: 10px; border-left: 3px solid #0366d6; margin-top: 10px; }
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --border-color: #e1e8ed;
+        }
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .insight-box {
+            background-color: #e8f4fd;
+            border-left: 4px solid var(--secondary-color);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            font-weight: bold;
+            color: #1a5f8e;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+            line-height: 1.4;
+        }
+        .card-title a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        .card-title a:hover {
+            text-decoration: underline;
+        }
+        .score-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #e74c3c;
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .card-meta {
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .empty-msg {
+            color: #999;
+            font-style: italic;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
+<div class="container">
     <div class="header">
-        <h1 style="margin:0;">⚙️ GDC Pipeline Logic Dashboard</h1>
-        <p style="margin:5px 0 0 0; font-size:13px; color:#a0aec0;">내부 평가 및 스코어링 로직 모니터링 전용 페이지</p>
+        <h1>📊 GDC & AX 크롤링 파이프라인 모니터링 대시보드</h1>
+        <p style="margin: 10px 0 0 0; font-size: 14px; color: #cbd5e1;">수집된 기사 및 공고의 AI 평가 점수(Score)와 우선순위를 한눈에 확인합니다.</p>
     </div>
 
-    <!-- 파이프라인 로직 시각화 -->
-    <div class="logic-flow">
-        <div class="step">
-            <div class="step-title">1. Raw Data 수집</div>
-            <div class="step-desc">Naver API / Wanted API / RSS</div>
-        </div>
-        <div class="step">
-            <div class="step-title">2. AI Deduplication</div>
-            <div class="step-desc">중복 문서 탐지 및 대표 기사 선정</div>
-        </div>
-        <div class="step">
-            <div class="step-title">3. AI Context Scoring</div>
-            <div class="step-desc">우선순위 0~100점 부여 (내림차순 정렬)</div>
-        </div>
-        <div class="step">
-            <div class="step-title">4. Limit & Export</div>
-            <div class="step-desc">상위 5개 추출 및 data.json 저장</div>
+    <div id="dashboard-content">
+        <div style="text-align: center; padding: 50px;">
+            <h3 style="color: #666;">데이터를 불러오는 중입니다...</h3>
         </div>
     </div>
+</div>
 
-    <div class="dashboard-grid" id="dashboard-content">
-        <!-- JS를 통해 data.json 데이터가 여기에 렌더링 됩니다. -->
-    </div>
-
-    <script>
-        // data.json 파일을 불러와서 대시보드에 뿌려주는 로직
+<script>
+    // JSON.parse 에러를 방지하기 위해 데이터를 정제하는 방어적 로직 적용
+    function loadData() {
         fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('dashboard-content');
+            .then(response => response.text()) // 먼저 텍스트 날것으로 읽어옴
+            .then(text => {
+                // 파이썬의 True, False, None 문자가 섞여 있다면 자바스크립트 포맷으로 강제 변환
+                let cleanedText = text.replace(/:\s*False/g, ': false')
+                                      .replace(/:\s*True/g, ': true')
+                                      .replace(/:\s*None/g, ': null')
+                                      .replace(/'/g, '"'); // 혹시 모를 홑따옴표 치환
                 
-                const renderSection = (key, title, isJob=False) => {
-                    const sectionData = data[key];
-                    if(!sectionData) return '';
-                    
-                    let html = `<div class="section-card"><h2 class="section-title">${title}</h2>`;
-                    
-                    if(sectionData.insight) {
-                        html += `<div style="font-size:13px; color:#555; margin-bottom:15px;"><b>💡 [전체 시사점 요약]:</b> ${sectionData.insight}</div>`;
-                    }
-
-                    // 상위 5개만 모니터링
-                    const topItems = sectionData.data.slice(0, 5);
-                    
-                    topItems.forEach(item => {
-                        const displayTitle = item.translated_title || item.title;
-                        const score = item.score !== undefined ? item.score : 'N/A';
-                        
-                        html += `
-                            <div class="data-item">
-                                <div class="score-badge">Score: ${score}</div>
-                                <div class="item-title">${displayTitle}</div>`;
-                        
-                        if(!isJob) {
-                            html += `<div style="font-size:12px; color:#666;"><b>[핵심 요약]</b> ${item.summary || '없음'}</div>`;
-                            html += `<div class="item-insight"><b>[에디터 뷰]</b> ${item.editor_view || '없음'}</div>`;
-                        } else {
-                            html += `<div style="font-size:12px; color:#666;"><b>[기업명]</b> ${item.company || '없음'}</div>`;
-                        }
-                        
-                        html += `</div>`;
-                    });
-                    
-                    html += `</div>`;
-                    return html;
-                };
-
-                let dashboardHTML = '';
-                dashboardHTML += renderSection('gdc', '📊 GDC 오프쇼어링 (MSP 위탁)');
-                dashboardHTML += renderSection('overseas', '🌍 해외 AI 원천기술 및 아키텍처');
-                dashboardHTML += renderSection('ax_news', '🏢 국내 기업 Enterprise AX');
-                dashboardHTML += renderSection('vn_jobs', '💼 베트남 온사이트인력 채용', true);
-                
-                container.innerHTML = dashboardHTML;
+                // 정제된 텍스트를 JSON 객체로 안전하게 파싱
+                const data = JSON.parse(cleanedText);
+                renderDashboard(data);
             })
             .catch(error => {
-                document.getElementById('dashboard-content').innerHTML = 
-                    `<p style="color:red; text-align:center;">data.json 파일을 불러올 수 없습니다. 크롤러를 먼저 실행해주세요.<br>(${error})</p>`;
+                console.error("데이터 로드 실패:", error);
+                document.getElementById('dashboard-content').innerHTML = `
+                    <div class="empty-msg" style="color: #e74c3c;">
+                        <h3>❌ 데이터를 불러오지 못했습니다.</h3>
+                        <p>크롤러(crawler.py)가 실행되어 data.json 파일이 같은 폴더에 생성되어 있는지 확인해주세요.</p>
+                        <p style="font-size: 12px; color: #666;">에러 내용: ${error.message}</p>
+                    </div>
+                `;
             });
-    </script>
+    }
+
+    function createSection(title, dataObj, isJob = false, isOverseas = false) {
+        if (!dataObj) return '';
+        
+        const insight = dataObj.insight || '';
+        // score 기준으로 이미 정렬되어 있다고 가정하지만, 대시보드에서 한번 더 정렬
+        const items = (dataObj.data || []).sort((a, b) => (b.score || 0) - (a.score || 0));
+
+        let html = `<h2 class="section-title">${title}</h2>`;
+        
+        if (insight) {
+            html += `<div class="insight-box">💡 [AI 시사점] ${insight}</div>`;
+        }
+
+        if (items.length === 0) {
+            html += `<div class="empty-msg">수집된 유효 데이터가 없습니다.</div>`;
+            return html;
+        }
+
+        html += `<div class="grid-container">`;
+        
+        items.forEach(item => {
+            const score = item.score || 0;
+            const link = item.link || '#';
+            
+            let displayTitle = item.title;
+            let metaInfo = '';
+            let desc = item.description || '';
+
+            if (isJob) {
+                displayTitle = `[${item.company || '기업명 미상'}] ${item.title}`;
+            } else if (isOverseas) {
+                displayTitle = `🌍 ${item.translated_title || item.title}`;
+                desc = item.translated_desc || desc;
+                metaInfo = item.pubDate ? `발행일: ${item.pubDate}` : '';
+            } else {
+                metaInfo = item.pubDate ? `발행일: ${item.pubDate}` : '';
+            }
+
+            html += `
+                <div class="card" style="${score === 0 ? 'opacity: 0.6;' : ''}">
+                    ${score > 0 ? `<div class="score-badge">${score}점</div>` : `<div class="score-badge" style="background:#95a5a6;">0점</div>`}
+                    <h3 class="card-title">
+                        <a href="${link}" target="_blank">${displayTitle}</a>
+                    </h3>
+                    ${metaInfo ? `<div class="card-meta">${metaInfo}</div>` : ''}
+                    <div class="card-desc">${desc}</div>
+                </div>
+            `;
+        });
+        
+        html += `</div>`;
+        return html;
+    }
+
+    function renderDashboard(data) {
+        const contentDiv = document.getElementById('dashboard-content');
+        let html = '';
+
+        html += createSection("📊 GDC 시장 및 경쟁사 동향", data.gdc);
+        html += createSection("🌍 해외 AI 원천기술 및 아키텍처", data.overseas, false, true);
+        html += createSection("📰 국내 기업 Enterprise AX 동향", data.ax_news);
+        html += createSection("💼 베트남 현지 IT 채용 공고", data.vn_jobs, true);
+        html += createSection("💼 국내 AX 전담 인력 채용 공고", data.ax_jobs, true);
+
+        contentDiv.innerHTML = html;
+    }
+
+    // 페이지 로드 시 데이터 패치 실행
+    window.onload = loadData;
+</script>
+
 </body>
 </html>
