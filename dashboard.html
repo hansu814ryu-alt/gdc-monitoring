@@ -99,6 +99,10 @@
             font-size: 14px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
+        /* 85점 이하 뱃지 스타일 */
+        .score-badge.low-score {
+            background-color: #95a5a6;
+        }
         .card-meta {
             font-size: 13px;
             color: #7f8c8d;
@@ -127,8 +131,8 @@
 
 <div class="container">
     <div class="header">
-        <h1>📊 GDC & AX 크롤링 파이프라인 모니터링 대시보드</h1>
-        <p style="margin: 10px 0 0 0; font-size: 14px; color: #cbd5e1;">수집된 기사 및 공고의 AI 평가 점수(Score)와 우선순위를 한눈에 확인합니다.</p>
+        <h1>📊 GDC & AX 전체 데이터 모니터링 대시보드</h1>
+        <p style="margin: 10px 0 0 0; font-size: 14px; color: #cbd5e1;">수집된 전체 기사 및 공고의 AI 평가 점수를 확인합니다. (85점 이하 회색 처리)</p>
     </div>
 
     <div id="dashboard-content">
@@ -139,14 +143,13 @@
 </div>
 
 <script>
-    // JSON.parse 에러를 방지하기 위해 데이터를 정제하는 방어적 로직 적용
     function loadData() {
         fetch('data.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                return response.json(); // 텍스트 치환 없이 표준 JSON으로 바로 파싱
+                return response.json(); 
             })
             .then(data => {
                 renderDashboard(data);
@@ -162,22 +165,22 @@
                 `;
             });
     }
-    
+
     function createSection(title, dataObj, isJob = false, isOverseas = false) {
         if (!dataObj) return '';
         
         const insight = dataObj.insight || '';
-        // score 기준으로 이미 정렬되어 있다고 가정하지만, 대시보드에서 한번 더 정렬
+        // 필터링 없이 전체 데이터를 점수 기준으로 내림차순 정렬
         const items = (dataObj.data || []).sort((a, b) => (b.score || 0) - (a.score || 0));
 
-        let html = `<h2 class="section-title">${title}</h2>`;
+        let html = `<h2 class="section-title">${title} <span style="font-size:14px; color:#7f8c8d; font-weight:normal;">(총 ${items.length}건)</span></h2>`;
         
         if (insight) {
             html += `<div class="insight-box">💡 [AI 시사점] ${insight}</div>`;
         }
 
         if (items.length === 0) {
-            html += `<div class="empty-msg">수집된 유효 데이터가 없습니다.</div>`;
+            html += `<div class="empty-msg">수집된 데이터가 없습니다.</div>`;
             return html;
         }
 
@@ -186,6 +189,7 @@
         items.forEach(item => {
             const score = item.score || 0;
             const link = item.link || '#';
+            const isHighScore = score > 85;
             
             let displayTitle = item.title;
             let metaInfo = '';
@@ -195,15 +199,16 @@
                 displayTitle = `[${item.company || '기업명 미상'}] ${item.title}`;
             } else if (isOverseas) {
                 displayTitle = `🌍 ${item.translated_title || item.title}`;
-                desc = item.translated_desc || desc;
+                desc = item.translated_desc || item.summary || desc;
                 metaInfo = item.pubDate ? `발행일: ${item.pubDate}` : '';
             } else {
                 metaInfo = item.pubDate ? `발행일: ${item.pubDate}` : '';
             }
 
+            // 85점 이하 기사는 투명도 0.5 및 회색 뱃지 적용
             html += `
-                <div class="card" style="${score === 0 ? 'opacity: 0.6;' : ''}">
-                    ${score > 0 ? `<div class="score-badge">${score}점</div>` : `<div class="score-badge" style="background:#95a5a6;">0점</div>`}
+                <div class="card" style="${!isHighScore ? 'opacity: 0.5;' : ''}">
+                    <div class="score-badge ${!isHighScore ? 'low-score' : ''}">${score}점</div>
                     <h3 class="card-title">
                         <a href="${link}" target="_blank">${displayTitle}</a>
                     </h3>
@@ -221,11 +226,11 @@
         const contentDiv = document.getElementById('dashboard-content');
         let html = '';
 
-        html += createSection("📊 GDC 시장 및 경쟁사 동향", data.gdc);
+        html += createSection("📊 GDC 오프쇼어링 (MSP/ITO 위탁) 동향", data.gdc);
         html += createSection("🌍 해외 AI 원천기술 및 아키텍처", data.overseas, false, true);
-        html += createSection("📰 국내 기업 Enterprise AX 동향", data.ax_news);
-        html += createSection("💼 베트남 현지 IT 채용 공고", data.vn_jobs, true);
-        html += createSection("💼 국내 AX 전담 인력 채용 공고", data.ax_jobs, true);
+        html += createSection("🏢 국내 기업 Enterprise AX (운영모델 전환)", data.ax_news);
+        html += createSection("💼 베트남 온사이트 인력 채용", data.vn_jobs, true);
+        html += createSection("💼 AX 전담 인력 채용", data.ax_jobs, true);
 
         contentDiv.innerHTML = html;
     }
