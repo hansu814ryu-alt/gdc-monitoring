@@ -373,7 +373,8 @@ if __name__ == "__main__":
     }
     
     with open('data.json', 'w', encoding='utf-8') as f:
-        json.dump(result, f, ensure_ascii=False, indent=4)
+    json.dump(result, f, ensure_ascii=False, indent=4)
+
     print("✅ data.json 저장 완료.")
     
     send_email(result, GITHUB_PAGES_URL)
