@@ -33,8 +33,8 @@ jobs:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
-        RECEIVER_EMAIL: hansu814.ryu@samsung.com,jihoon33.kim@samsung.com,glassman@samsung.comm,chaneast.kim@samsung.com,bangz0@samsung.com,tjsong@samsung.com,hj71.song@samsung.com,yoonsj@samsung.com,heeseon.yoon@samsung.com,laguna@samsung.com,th.jeong@samsung.com,jackie.chung@samsung.com,ally.chae@samsung.com,yoonseok@samsung.com,eunji0313.choi@samsung.com
-        # RECEIVER_EMAIL: hansu814.ryu@samsung.com
+        # RECEIVER_EMAIL: hansu814.ryu@samsung.com,jihoon33.kim@samsung.com,glassman@samsung.comm,chaneast.kim@samsung.com,bangz0@samsung.com,tjsong@samsung.com,hj71.song@samsung.com,yoonsj@samsung.com,heeseon.yoon@samsung.com,laguna@samsung.com,th.jeong@samsung.com,jackie.chung@samsung.com,ally.chae@samsung.com,yoonseok@samsung.com,eunji0313.choi@samsung.com
+        RECEIVER_EMAIL: hansu814.ryu@samsung.com
         
          
       run: python crawler.py
