@@ -142,16 +142,13 @@
     // JSON.parse 에러를 방지하기 위해 데이터를 정제하는 방어적 로직 적용
     function loadData() {
         fetch('data.json')
-            .then(response => response.text()) // 먼저 텍스트 날것으로 읽어옴
-            .then(text => {
-                // 파이썬의 True, False, None 문자가 섞여 있다면 자바스크립트 포맷으로 강제 변환
-                let cleanedText = text.replace(/:\s*False/g, ': false')
-                                      .replace(/:\s*True/g, ': true')
-                                      .replace(/:\s*None/g, ': null')
-                                      .replace(/'/g, '"'); // 혹시 모를 홑따옴표 치환
-                
-                // 정제된 텍스트를 JSON 객체로 안전하게 파싱
-                const data = JSON.parse(cleanedText);
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json(); // 텍스트 치환 없이 표준 JSON으로 바로 파싱
+            })
+            .then(data => {
                 renderDashboard(data);
             })
             .catch(error => {
@@ -165,7 +162,7 @@
                 `;
             });
     }
-
+    
     function createSection(title, dataObj, isJob = false, isOverseas = false) {
         if (!dataObj) return '';
         
