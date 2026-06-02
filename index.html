@@ -14,47 +14,31 @@
         .section h2 { color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold; }
         .insight-box { background-color: #f8fafc; border-left: 5px solid #003366; padding: 15px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; color: #1a5f8e; font-size: 15px; }
         
-        /* 2x2 행렬 (Grid) 레이아웃 설정 */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 15px;
-        }
+        /* 1. 2x2 트렌드 매트릭스 전용 스타일 */
+        .matrix-table { width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; background-color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .matrix-table th, .matrix-table td { border: 1px solid #e1e8ed; padding: 15px; vertical-align: top; }
+        .matrix-table th { background-color: #f8fafc; color: #003366; font-weight: bold; text-align: center; font-size: 15px; }
+        .matrix-table th:first-child { width: 15%; }
+        .matrix-table th:nth-child(2), .matrix-table th:nth-child(3) { width: 42.5%; text-align: left; padding-left: 20px; }
+        .matrix-table .row-header { background-color: #fcfcfc; text-align: center; vertical-align: middle; font-weight: bold; color: #1a1a1a; font-size: 14px; }
+        .matrix-table .sub-text { font-size: 11px; color: #888; font-weight: normal; display: block; margin-top: 4px; }
+        .matrix-list { list-style-type: disc; padding-left: 20px; margin: 0; }
+        .matrix-list li { padding: 6px 0; border-bottom: none; font-size: 13px; color: #333; line-height: 1.5; }
+        .matrix-list li::marker { color: #3498db; }
+        .matrix-list a { color: #1a1a1a; text-decoration: none; transition: color 0.2s; }
+        .matrix-list a:hover { color: #3498db; text-decoration: underline; }
 
-        /* 개별 기사 카드 디자인 */
-        .card {
-            background-color: #ffffff;
-            border: 1px solid #e1e8ed;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-        }
-        .card-header {
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        /* 2. 카드형 2x2 행렬 (Grid) 레이아웃 스타일 */
+        .grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 15px; }
+        .card { background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.04); padding: 20px; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .card-header { font-size: 13px; font-weight: bold; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
         .score { color: #e74c3c; }
         .card-title { font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px; }
         .card-title:hover { color: #3498db; }
-        
-        /* AI 요약 박스 */
         .card-summary-box { background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px; flex-grow: 1; }
         .card-summary-text { font-size: 13px; color: #4a5568; margin: 0 0 8px 0; }
         .card-summary-text:last-child { margin: 0; }
-        
-        /* 카드 하단 메타 정보 */
         .card-meta { font-size: 12px; color: #a0aec0; text-align: right; margin-top: auto; border-top: 1px dashed #edf2f7; padding-top: 10px; }
         
         /* 채용 분류 뱃지 */
@@ -69,9 +53,10 @@
         .more-link:hover { text-decoration: underline; }
         .footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #7f8c8d; font-size: 13px; }
 
-        /* 모바일 최적화 (1열로 변경) */
+        /* 모바일 최적화 (카드 그리드 1열) */
         @media (max-width: 768px) {
             .grid-container { grid-template-columns: 1fr; }
+            .matrix-table th, .matrix-table td { padding: 10px; font-size: 12px; }
         }
     </style>
 </head>
@@ -80,7 +65,7 @@
 <div class="container">
     <div class="header">
         <h1>📊 GDC & AX 일일 트렌드 리포트</h1>
-        <p style="color:#7f8c8d; margin-top:-10px;">Premium Insights </p>
+        <p style="color:#7f8c8d; margin-top:-10px;">Daily Insights & Competitor Matrix</p>
     </div>
 
     <div id="content">
@@ -88,6 +73,7 @@
     </div>
 
     <div class="footer">
+        <p>※ 상세 기사 및 채용 리스트는 AI 분석을 통해 고품질 데이터만 선별하여 제공됩니다.</p>
         <p>생성일: <span id="date-placeholder"></span></p>
     </div>
 </div>
@@ -95,17 +81,59 @@
 <script>
     document.getElementById('date-placeholder').textContent = new Date().toLocaleDateString('ko-KR');
 
-    // 2x2 행렬 레이아웃 렌더링 함수
+    // 1. [신규 추가] 2x2 매트릭스 렌더링 함수 (점수 필터링 미적용, 요약본 역할)
+    function buildMatrixSection(gdcData, overseasData, axData) {
+        if (!gdcData || !overseasData || !axData) return '';
+
+        let domesticMarket = (axData.data || []).slice(0, 3);
+        let domesticCompetitor = (gdcData.data || []).slice(0, 3);
+        let globalMarket = (overseasData.data || []).slice(0, 2);
+        let globalCompetitor = (overseasData.data || []).slice(2, 4);
+
+        const toListHtml = (items) => {
+            if (items.length === 0) return '<ul class="matrix-list"><li>수집된 데이터가 없습니다.</li></ul>';
+            return '<ul class="matrix-list">' + items.map(item => 
+                `<li><a href="${item.link}" target="_blank">${item.translated_title || item.title}</a></li>`
+            ).join('') + '</ul>';
+        };
+
+        return `
+        <div class="section">
+            <h2>💡 GDC & ITO 트렌드 매트릭스 (요약)</h2>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>🇰🇷 국내 시장 (Domestic)</th>
+                        <th>🌍 글로벌 시장 (International)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="row-header">시장 전반<br><span class="sub-text">(Market & IT)</span></td>
+                        <td>${toListHtml(domesticMarket)}</td>
+                        <td>${toListHtml(globalMarket)}</td>
+                    </tr>
+                    <tr>
+                        <td class="row-header">경쟁사 동향<br><span class="sub-text">(Competitors)</span></td>
+                        <td>${toListHtml(domesticCompetitor)}</td>
+                        <td>${toListHtml(globalCompetitor)}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr style="border: 0; border-top: 1px solid #e1e8ed; margin: 40px 0;">
+        `;
+    }
+
+    // 2. [기존 유지] 상세 카드 리스트 렌더링 함수 (85점 이상 필터링 적용)
     function buildHtmlSection(title, dataObj, moreType, isJob = false, isOverseas = false) {
         if (!dataObj) return '';
         
         const insight = dataObj.insight || '';
-        // 85점 초과만 필터링 & 내림차순 정렬
         let items = (dataObj.data || []).filter(item => (item.score || 0) > 85);
         items = items.sort((a, b) => (b.score || 0) - (a.score || 0));
-        
-        // 2x2 행렬 구성을 위해 상위 4개만 슬라이싱
-        const displayItems = items.slice(0, 4);
+        const displayItems = items.slice(0, 4); // 2x2 행렬 구성을 위해 상위 4개 노출
 
         let html = `<div class="section"><h2>${title}</h2>`;
         
@@ -114,25 +142,21 @@
         }
 
         if (displayItems.length === 0) {
-            html += `<div class="empty-msg">📌 기준에 부합하는 프리미엄 데이터가 없습니다. (전체보기에서 확인 가능)</div>`;
+            html += `<div class="empty-msg">📌 기준에 부합하는 데이터가 없습니다. (전체보기에서 확인 가능)</div>`;
         } else {
             html += `<div class="grid-container">`;
             
             displayItems.forEach(item => {
                 const scoreHtml = `<span class="score">[${item.score || 0}점]</span>`;
+                let displayTitle = isOverseas ? (item.translated_title || item.title) : item.title;
                 
-                let displayTitle = item.title;
-                if (isOverseas) displayTitle = item.translated_title || item.title;
-                
-                // 채용 공고일 경우 카테고리 세분화 뱃지 표시 로직
                 let badgeHtml = scoreHtml; 
                 let sourceText = item.company || '기업명 미상';
 
+                // 채용 공고 카테고리 세분화 로직
                 if (isJob && moreType === 'vn') {
                     let badgeClass = 'badge-default';
                     let badgeText = 'GDC 채용';
-                    
-                    // AI가 할당한 category_code 기반 매칭 (또는 회사명/제목 기반 임시 매칭)
                     let category = item.category_code || '';
                     let titleStr = item.title.toUpperCase();
                     let compStr = sourceText.toUpperCase();
@@ -147,28 +171,22 @@
                     badgeHtml = `<span class="badge ${badgeClass}">${badgeText}</span> ${scoreHtml}`;
                 }
 
-                // AI 요약 및 에디터 시선 데이터 매핑
                 let summaryText = item.summary || item.translated_desc || item.description || 'AI 핵심 요약 정보가 없습니다.';
                 let editorViewHtml = item.editor_view ? `<p class="card-summary-text"><strong>👁️ 에디터 시선:</strong> ${item.editor_view}</p>` : '';
 
                 html += `
                     <div class="card">
                         <div>
-                            <div class="card-header">
-                                ${badgeHtml}
-                            </div>
+                            <div class="card-header">${badgeHtml}</div>
                             <a href="${item.link}" target="_blank" class="card-title">${displayTitle}</a>
                             <div class="card-summary-box">
                                 <p class="card-summary-text"><strong>💡 핵심 요약:</strong> ${summaryText}</p>
                                 ${editorViewHtml}
                             </div>
                         </div>
-                        <div class="card-meta">
-                            ${isJob ? sourceText : (item.pubDate || item.date || '날짜 미상')}
-                        </div>
+                        <div class="card-meta">${isJob ? sourceText : (item.pubDate || item.date || '날짜 미상')}</div>
                     </div>`;
             });
-            
             html += `</div>`;
         }
         
@@ -180,7 +198,7 @@
         return html;
     }
 
-    // JSON 데이터 안전한 Fetch (.json() 방식 적용)
+    // 데이터 로드 및 조립
     fetch('data.json')
         .then(response => {
             if (!response.ok) throw new Error("네트워크 응답이 정상이 아닙니다.");
@@ -190,7 +208,10 @@
             const contentDiv = document.getElementById('content');
             let html = '';
             
-            // 각 섹션 렌더링 (요청하신 채용 이름 변경 반영)
+            // 1. 요약 매트릭스 최상단 배치
+            html += buildMatrixSection(data.gdc, data.overseas, data.ax_news);
+            
+            // 2. 상세 카드 리스트 하단 배치
             html += buildHtmlSection("📊 GDC 오프쇼어링 (MSP/ITO 위탁) 동향", data.gdc, "gdc");
             html += buildHtmlSection("🌍 해외 AI 원천기술 및 아키텍처", data.overseas, "overseas", false, true);
             html += buildHtmlSection("🏢 국내 기업 Enterprise AX (운영모델 전환)", data.ax_news, "ax");
