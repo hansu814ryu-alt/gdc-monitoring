@@ -3,204 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전체 보기 - MSP Daily Brief</title>
+    <title>GDC & AX 전체 기사 리스트</title>
     <style>
-        :root {
-            --primary-blue: #1e4eb8;
-            --text-dark: #0f172a;
-            --text-muted: #64748b;
-            --bg-light: #f8fafc;
-            --border-color: #e2e8f0;
-        }
-
-        body {
-            font-family: 'Malgun Gothic', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        .sub-header {
-            background-color: var(--primary-blue);
-            color: #ffffff;
-            padding: 25px 20px;
-        }
-
-        .header-container {
-            max-width: 750px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 0;
-        }
-
-        .back-btn {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 14px;
-            background-color: rgba(255,255,255,0.15);
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-
-        .back-btn:hover {
-            background-color: rgba(255,255,255,0.25);
-        }
-
-        .content-container {
-            max-width: 750px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .category-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 25px;
-            color: var(--text-dark);
-            border-left: 5px solid var(--primary-blue);
-            padding-left: 12px;
-        }
-
-        .news-card {
-            background-color: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 25px 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
-        }
-
-        .news-title {
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 19px;
-            color: var(--text-dark);
-            line-height: 1.4;
-            font-weight: bold;
-        }
-
-        .news-meta {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 18px;
-        }
-
-        .summary-box {
-            margin-bottom: 20px;
-        }
-
-        .summary-box h4, .editor-box h4 {
-            margin: 0 0 8px 0;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .summary-box h4 { color: #1e293b; }
-
-        .summary-list {
-            margin: 0;
-            padding-left: 20px;
-            color: #334155;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .summary-list li { margin-bottom: 5px; }
-
-        .editor-box {
-            background-color: #f8fafc;
-            border-left: 4px solid var(--primary-blue);
-            padding: 15px 20px;
-            margin-bottom: 18px;
-            border-radius: 0 4px 4px 0;
-        }
-
-        .editor-box h4 { color: var(--primary-blue); margin-bottom: 6px; }
-
-        .editor-text { margin: 0; color: #334155; font-size: 14px; line-height: 1.6; white-space: pre-line; }
-
-        .news-link { color: #2563eb; text-decoration: none; font-size: 13px; font-weight: bold; }
+        body { font-family: 'Malgun Gothic', sans-serif; padding: 40px; background-color: #f4f7f6; line-height: 1.6; }
+        .container { background-color: #fff; padding: 30px; border-radius: 12px; max-width: 800px; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h1 { color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 10px; font-size: 24px; }
+        ul { list-style-type: none; padding: 0; }
+        li { padding: 15px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start; }
+        .score { color: #e74c3c; font-weight: bold; margin-right: 15px; font-size: 14px; white-space: nowrap; }
+        a { color: #1a1a1a; text-decoration: none; font-size: 16px; word-break: keep-all; }
+        a:hover { color: #3498db; text-decoration: underline; }
     </style>
 </head>
 <body>
-
-    <header class="sub-header">
-        <div class="header-container">
-            <h1 class="header-title">📁 아카이브 전체 브리핑 보기</h1>
-            <a href="index.html" class="back-btn">&larr; 메인으로 돌아가기</a>
-        </div>
-    </header>
-
-    <main class="content-container">
-        <h2 class="category-title" id="page-category-title">로딩 중...</h2>
-        <div id="all-list-section"></div>
-    </main>
+    <div class="container">
+        <h1 id="page-title">전체 기사 리스트</h1>
+        <ul id="list-container">
+            <li>데이터를 분석하여 불러오는 중입니다...</li>
+        </ul>
+    </div>
 
     <script>
-        // URL 파라미터 맵핑 파싱 로직
         const urlParams = new URLSearchParams(window.location.search);
-        const type = urlParams.get('type') || 'gdc';
-
-        const titleMap = {
-            'gdc': '📊 GDC 시장 및 경쟁사 동향 전체 데이터',
-            'overseas': '🌍 해외 AI 원천기술 및 아키텍처 전체 데이터',
-            'ax': '📰 국내 기업 Enterprise AX 사례 전체 데이터',
-            'vn': '💼 원티드 베트남 채용 공고 전체 데이터'
+        const type = urlParams.get('type');
+        
+        const titles = {
+            'gdc': '📊 GDC 오프쇼어링 (MSP/ITO 위탁) 동향',
+            'overseas': '🌍 해외 AI 원천기술 및 아키텍처',
+            'ax': '🏢 국내 기업 Enterprise AX',
+            'msp_jobs': '💼 채용: MSP Player',
+            'gdc_jobs': '💼 채용: 베트남 GDC 업체',
+            'vet_jobs': '💼 채용: 외국인 IT 인력'
         };
         
-        document.getElementById('page-category-title').innerText = titleMap[type] || '전체 목록';
+        document.getElementById('page-title').textContent = titles[type] || '전체 기사 리스트';
 
-        function createCardHtml(item) {
-            return `
-                <div class="news-card">
-                    <h3 class="news-title">${item.title || '제목 없음'}</h3>
-                    <div class="news-meta">원문 출처: ${item.source || '원천 소스'} &nbsp;|&nbsp; 발행 시각: ${item.pub_time || item.pubDate || ''}</div>
-                    <div class="summary-box">
-                        <h4>핵심 요약</h4>
-                        <ul class="summary-list">
-                            <li>${item.summary_1 || '요약 가이드라인을 분석하고 있습니다.'}</li>
-                            <li>${item.summary_2 || '상세 정보는 본문 바로가기를 참조하세요.'}</li>
-                        </ul>
-                    </div>
-                    <div class="editor-box">
-                        <h4>💡 에디터의 시선</h4>
-                        <p class="editor-text">${item.editor_view || '인프라 관점의 세부 트렌드 추적이 진행 중입니다.'}</p>
-                    </div>
-                    <div style="margin-top: 12px;">
-                        <a href="${item.link || '#'}" target="_blank" class="news-link">기사 원문 바로가기 &rarr;</a>
-                    </div>
-                </div>
-            `;
-        }
-
-        // 데이터 Fetch 및 가중치 정렬 출력
         fetch('data.json')
             .then(res => res.json())
             .then(data => {
-                let targetList = [];
-                if (type === 'gdc') targetList = data.gdc?.data || [];
-                else if (type === 'overseas') targetList = data.overseas?.data || [];
-                else if (type === 'ax') targetList = data.ax_news?.data || [];
-                else if (type === 'vn') targetList = data.vn_jobs?.data || [];
+                let items = [];
+                if (type === 'gdc') items = data.gdc?.data || [];
+                else if (type === 'overseas') items = data.overseas?.data || [];
+                else if (type === 'ax') items = data.ax_news?.data || [];
+                else if (type === 'msp_jobs') items = (data.vn_jobs?.data || []).filter(j => j.category_code === 'MSP_PLAYER');
+                else if (type === 'gdc_jobs') items = (data.vn_jobs?.data || []).filter(j => j.category_code === 'VET_GDC_FIRM');
+                else if (type === 'vet_jobs') items = (data.vn_jobs?.data || []).filter(j => j.category_code === 'DOMESTIC_VET_IT');
 
-                const targetDiv = document.getElementById('all-list-section');
-                if (targetList.length === 0) {
-                    targetDiv.innerHTML = '<div class="news-card" style="text-align:center; color:#64748b;">데이터가 존재하지 않습니다.</div>';
-                } else {
-                    targetDiv.innerHTML = targetList.map(createCardHtml).join('');
+                const container = document.getElementById('list-container');
+                container.innerHTML = '';
+                
+                if (items.length === 0) {
+                    container.innerHTML = '<li style="color:#888;">📌 해당 카테고리에 수집된 데이터가 없습니다.</li>';
+                    return;
                 }
+
+                items.forEach(item => {
+                    const li = document.createElement('li');
+                    const title = item.translated_title || item.title;
+                    const company = item.company ? `[${item.company}] ` : '';
+                    li.innerHTML = `
+                        <span class="score">[${item.score || 0}점]</span> 
+                        <a href="${item.link}" target="_blank">${company}${title}</a>
+                    `;
+                    container.appendChild(li);
+                });
             })
-            .catch(err => console.error('전체 목록 바인딩 실패:', err));
+            .catch(err => {
+                document.getElementById('list-container').innerHTML = '<li style="color:red;">❌ 데이터를 불러오는 데 실패했습니다.</li>';
+            });
     </script>
 </body>
 </html>
