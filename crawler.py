@@ -22,7 +22,7 @@ def is_recent_enough(pub_date_str):
         return True
 
 ### ==========================================
-### 💾 [신규] 히스토리 데이터 로드 및 저장 함수
+### 💾 2. 히스토리 데이터 로드 및 저장 함수 (중복 배제용)
 ### ==========================================
 def load_yesterday_context(filepath='history.json'):
     if os.path.exists(filepath):
@@ -46,7 +46,7 @@ def save_today_history(data, filepath='history.json'):
         print(f"히스토리 저장 실패: {e}")
 
 ### ==========================================
-### 📰 2. 뉴스 및 채용 데이터 수집
+### 📰 3. 뉴스 및 채용 데이터 수집
 ### ==========================================
 def get_naver_news(client_id, client_secret, query, display=30):
     url = "https://openapi.naver.com/v1/search/news.json"
@@ -129,7 +129,7 @@ def get_overseas_rss_news():
     return filtered_news
 
 ### ==========================================
-### 🧠 3. AI 기반 맥락 평가 및 번역 (LLM-as-a-Judge)
+### 🧠 4. AI 기반 맥락 평가 및 번역 (LLM-as-a-Judge)
 ### ==========================================
 def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=""):
     if not api_key or not data_list: return data_list
@@ -153,9 +153,9 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
             """
         elif data_type == '베트남 IT 채용 공고':
             custom_rule = """
-        2. 기업 규모나 영향력을 추론하여 점수를 부여하세요 (대기업: 80~100점, 스타트업: 30~59점). 베트남 파견/주재원 등 배제 조건 시 0점.
-        3. 🚨 채용 공고를 분석하여 다음 3가지 카테고리 중 하나로 분류하고 'category_code' 속성에 추가하세요.
-           - MSP_PLAYER: 국내 대기업 MSP(LG CNS, 삼성SDS, SK 등)의 GDC 관련 직무 (PM, 아키텍트)
+        2. 기업 규모나 영향력을 추론하여 점수를 부여하세요 (대기업: 80~100점, 스타트업: 30~59점).
+        3. 🚨 채용 공고를 분석하여 다음 3가지 카테고리 중 하나로 정확히 분류하고 'category_code' 속성에 추가하세요.
+           - MSP_PLAYER: 국내 대형 SI/MSP 업체(LG CNS, 삼성SDS, SK 등)의 '클라우드 및 MSP 사업' 관련 채용. (GDC 키워드가 없어도 무방함. 단, 삼성SDS의 '물류사업' 등 IT/클라우드 MSP 본연의 사업과 무관한 직무는 0점 처리 및 배제할 것)
            - VET_GDC_FIRM: 한국에 진출한 베트남계 GDC 기업(FPT, CMC, Sotatek, VTI 등) 채용 (BSE, 기술영업)
            - DOMESTIC_VET_IT: 국내 기업이 외국인 IT 엔지니어를 직접 채용하거나 원격 계약하는 공고
             """
@@ -173,7 +173,7 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
         1. 내용 중복 배제: (오늘 데이터 내 중복) 가장 정보가 풍부한 대표 기사 1개만 남기고 나머지는 배제.
         1-1. (어제 뉴스 철저 배제) 제공된 '어제 주요 뉴스 맥락'과 비교하여 주요 사건, 팩트가 80% 이상 일치하는 기사(단순 재탕 기사)는 철저히 0점 처리하고 is_main을 false로 설정하세요.
         {custom_rule}
-        4. 🚨 컷오프: 점수가 80점을 초과(86점 이상)하면 'is_main': true, 80점 이하면 false로 설정하세요.
+        4. 🚨 컷오프: 점수가 80점을 초과(81점 이상)하면 'is_main': true, 80점 이하면 false로 설정하세요.
         5. is_main이 true인 경우 해당 기사의 'summary'(1줄 요약)와 'editor_view'(에디터 시선)를 반드시 작성하세요.
 
         [출력 형식]
@@ -222,7 +222,7 @@ def process_overseas_with_ai_translation(data_list, api_key):
 
         1. 중복 판별: 내용이 중복되는 기사가 있다면 대표 기사 1개만 점수를 주고 나머지는 0점(is_main: false) 처리하세요.
         2. 평가 및 분류: 기사가 'Agentic Foundation Model, Multimodal, MCP 등 해외 AI 원천 기술 트렌드'에 부합하는지 분석하여 점수(0~100점)를 부여하세요.
-        3. 🚨 컷오프 및 번역: 점수가 80점을 초과한다면(is_main: true), 기사의 영문 제목과 요약문을 자연스러운 한글로 번역(translated_title)하고, 핵심 요약(summary) 및 에디터 시선(editor_view)을 함께 작성하세요. 80점 이하는 is_main을 false로 처리.
+        3. 🚨 컷오프 및 번역: 점수가 80점을 초과한다면(is_main: true), 기사의 영문 제목과 요약문을 자연스러운 한글로 번역(translated_title)하고, 핵심 요약(summary) 및 에디터 시선(editor_view)을 함께 작성하세요. 85점 이하는 is_main을 false로 처리.
 
         [출력 형식] (JSON 배열만 출력)
         [ {{"id": 0, "score": 90, "is_main": true, "translated_title": "번역제목", "summary": "요약...", "editor_view": "시선..."}} ]
@@ -268,7 +268,7 @@ def get_ai_insight(news_list, api_key, is_translated=False):
     return ""
 
 ### ==========================================
-### 📧 4. 이메일 템플릿 및 발송
+### 📧 5. 이메일 템플릿 및 발송
 ### ==========================================
 def build_email_section(title, insight, data_list, more_link, is_job=False, is_overseas=False):
     html = f"<h2 style='color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 30px;'>{title}</h2>"
@@ -278,11 +278,11 @@ def build_email_section(title, insight, data_list, more_link, is_job=False, is_o
     display_list = [item for item in data_list if item.get('is_main', True) and item.get('score', 0) > 85]
     
     if not display_list:
-        html += "<p>📌 85점 이상의 기준에 부합하는 프리미엄 데이터가 없습니다.</p>"
+        html += "<p>📌 기준에 부합하는 프리미엄 데이터가 없습니다.</p>"
     else:
         for item in display_list[:5]: 
             if is_job:
-                # 이메일용 뱃지 스타일 적용
+                # 이메일용 채용 카테고리 뱃지 적용
                 badge = ""
                 category = item.get('category_code', '')
                 comp_str = item.get('company', '').upper()
@@ -330,17 +330,36 @@ def build_email_section(title, insight, data_list, more_link, is_job=False, is_o
 def send_email(data, pages_url):
     sender_email = os.environ.get("SENDER_EMAIL")
     sender_password = os.environ.get("SENDER_PASSWORD")
-    receiver_env = os.environ.get("RECEIVER_EMAIL", "")
     
-    if not sender_email or not sender_password or not receiver_env: return
+    # 💡 수신자 이메일 하드코딩 적용
+    receiver_emails = [
+        "hansu814.ryu@samsung.com",
+        "th.jeong@samsung.com",
+        "jihoon33.kim@samsung.com",
+        "glassman@samsung.com",
+        "chaneast.kim@samsung.com",
+        "bangz0@samsung.com",
+        "tjsong@samsung.com",
+        "hj71.song@samsung.com",
+        "yoonsj@samsung.com",
+        "heeseon.yoon@samsung.com",
+        "laguna@samsung.com",
+        "jackie.chung@samsung.com",
+        "ally.chae@samsung.com",
+        "yoonseok@samsung.com",
+        "eunji0313.choi@samsung.com"
 
-    receiver_emails = [email.strip() for email in receiver_env.split(',') if email.strip()]
+    ]
     
+    if not sender_email or not sender_password: 
+        print("⚠️ 발신자 이메일 정보(SENDER_EMAIL, SENDER_PASSWORD)가 누락되었습니다.")
+        return
+
     html_content = """
     <div style="font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; background-color: #fcfcfc; padding: 20px;">
         <div style="background-color: #1a2b4c; color: white; padding: 20px; border-radius: 8px 8px 0 0; text-align: center;">
             <h1 style="margin: 0; font-size: 24px;">📊 MSP Daily Brief & 기술 동향 리포트</h1>
-            <p style="margin: 5px 0 0 0; font-size: 13px; color: #a0aec0;">Premium Insights (Score 85점 이상 선별)</p>
+            <p style="margin: 5px 0 0 0; font-size: 13px; color: #a0aec0;">Premium Insights</p>
         </div>
     """
     
@@ -354,7 +373,7 @@ def send_email(data, pages_url):
     html_content += """
         <div style="margin-top: 40px; padding: 20px; background-color: #e9ecef; border-radius: 8px; text-align: center; color: #555; font-size: 14px;">
             <b>오늘의 프리미엄 리포트는 여기까지입니다! 🚀</b><br>
-            해당 리포트는 AI에 의해 80점 이상 유효한 고품질 데이터만 선별 및 정렬되어 자동 생성되었습니다.
+            해당 리포트는 AI에 의해 고품질 데이터만 선별 및 정렬되어 자동 생성되었습니다.
         </div>
     </div>
     """
@@ -374,7 +393,7 @@ def send_email(data, pages_url):
         print(f"❌ 이메일 발송 실패: {e}")
 
 ### ==========================================
-### 🚀 5. 메인 실행부
+### 🚀 6. 메인 실행부
 ### ==========================================
 if __name__ == "__main__":
     GITHUB_PAGES_URL = "https://hansu814ryu-alt.github.io/gdc-monitoring"
@@ -408,6 +427,7 @@ if __name__ == "__main__":
     
     # 해외 뉴스와 채용 공고는 어제 국내 뉴스 맥락과는 무관하므로 컨텍스트 미포함
     sorted_overseas = process_overseas_with_ai_translation(raw_overseas, GEMINI_KEY)
+    # 💡 '베트남 IT 채용 공고' 프롬프트 내부에 물류 등 타사업 배제 로직 적용 완료
     sorted_vn_jobs = process_data_with_ai_batch(raw_vn_jobs, '베트남 IT 채용 공고', GEMINI_KEY)
     
     print("--- 💡 시사점 도출 중 ---")
