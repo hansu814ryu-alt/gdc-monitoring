@@ -5,40 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDC & AX 트렌드 리포트</title>
     <style>
-        body { font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
-        .container { background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        body { font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
+        .container { background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); }
         .header { text-align: center; margin-bottom: 40px; }
-        .header h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 15px; display: inline-block; }
-        .section { margin-bottom: 40px; }
-        .section h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 25px; font-size: 20px; }
-        .insight-box { background-color: #e8f4fd; border-left: 4px solid #3498db; padding: 12px 15px; margin-bottom: 15px; border-radius: 0 4px 4px 0; color: #1a5f8e; }
-        ul { list-style-type: none; padding: 0; margin: 0; }
-        li { padding: 12px 0; border-bottom: 1px dashed #eee; transition: background-color 0.2s; }
-        li:hover { background-color: #fcfcfc; }
-        a.item-link { color: #2c3e50; text-decoration: none; font-size: 15px; display: block; }
-        a.item-link:hover { color: #3498db; }
-        .score { color: #e74c3c; font-weight: bold; margin-right: 5px; }
-        .desc { font-size: 13px; color: #666; margin-top: 5px; padding-left: 45px; }
-        .empty-msg { color: #888; font-style: italic; padding: 10px 0; }
-        .more-link { display: inline-block; margin-top: 15px; color: #3498db; font-weight: bold; text-decoration: none; font-size: 14px; }
+        .header h1 { color: #003366; border-bottom: 3px solid #3498db; padding-bottom: 15px; display: inline-block; font-weight: 800; }
+        
+        .section { margin-bottom: 50px; }
+        .section h2 { color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold; }
+        .insight-box { background-color: #f8fafc; border-left: 5px solid #003366; padding: 15px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; color: #1a5f8e; font-size: 15px; }
+        
+        /* 2x2 행렬 (Grid) 레이아웃 설정 */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        /* 개별 기사 카드 디자인 */
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e1e8ed;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .score { color: #e74c3c; }
+        .card-title { font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px; }
+        .card-title:hover { color: #3498db; }
+        
+        /* AI 요약 박스 */
+        .card-summary-box { background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px; flex-grow: 1; }
+        .card-summary-text { font-size: 13px; color: #4a5568; margin: 0 0 8px 0; }
+        .card-summary-text:last-child { margin: 0; }
+        
+        /* 카드 하단 메타 정보 */
+        .card-meta { font-size: 12px; color: #a0aec0; text-align: right; margin-top: auto; border-top: 1px dashed #edf2f7; padding-top: 10px; }
+        
+        /* 채용 분류 뱃지 */
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+        .badge-msp { background-color: #e3f2fd; color: #1565c0; }
+        .badge-gdc { background-color: #e8f5e9; color: #2e7d32; }
+        .badge-vet { background-color: #fff3e0; color: #ef6c00; }
+        .badge-default { background-color: #f1f5f9; color: #475569; }
+
+        .empty-msg { color: #888; font-style: italic; padding: 15px 0; text-align: center; }
+        .more-link { display: inline-block; margin-top: 20px; color: #3498db; font-weight: bold; text-decoration: none; font-size: 15px; }
         .more-link:hover { text-decoration: underline; }
         .footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #7f8c8d; font-size: 13px; }
+
+        /* 모바일 최적화 (1열로 변경) */
+        @media (max-width: 768px) {
+            .grid-container { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header">
-        <h1>📊 일일 트렌드 및 기술 동향 리포트</h1>
-        <p>Premium Insights (Score 85점 이상 선별)</p>
+        <h1>📊 GDC & AX 일일 트렌드 리포트</h1>
+        <p style="color:#7f8c8d; margin-top:-10px;">Premium Insights </p>
     </div>
 
     <div id="content">
-        <p style="text-align: center; color: #888;">데이터를 불러오는 중입니다...</p>
+        <p style="text-align: center; color: #888; padding: 50px 0;">데이터를 분석하고 불러오는 중입니다...</p>
     </div>
 
     <div class="footer">
-        <p>※ 본 리포트는 AI 분석을 통해 85점 이상의 유효한 고품질 데이터만 선별하여 제공됩니다.</p>
         <p>생성일: <span id="date-placeholder"></span></p>
     </div>
 </div>
@@ -46,7 +95,7 @@
 <script>
     document.getElementById('date-placeholder').textContent = new Date().toLocaleDateString('ko-KR');
 
-    // 이메일(build_email_section)과 완벽히 동일한 구조로 렌더링하는 함수
+    // 2x2 행렬 레이아웃 렌더링 함수
     function buildHtmlSection(title, dataObj, moreType, isJob = false, isOverseas = false) {
         if (!dataObj) return '';
         
@@ -55,68 +104,108 @@
         let items = (dataObj.data || []).filter(item => (item.score || 0) > 85);
         items = items.sort((a, b) => (b.score || 0) - (a.score || 0));
         
-        // 상위 5개만 슬라이싱
-        const displayItems = items.slice(0, 5);
+        // 2x2 행렬 구성을 위해 상위 4개만 슬라이싱
+        const displayItems = items.slice(0, 4);
 
         let html = `<div class="section"><h2>${title}</h2>`;
         
         if (insight) {
-            html += `<div class="insight-box">💡 <b>[AI 시사점]</b> ${insight}</div>`;
+            html += `<div class="insight-box">💡 <b>[AI 시사점 요약]</b><br> ${insight}</div>`;
         }
 
         if (displayItems.length === 0) {
-            html += `<div class="empty-msg">📌 85점 이상의 기준에 부합하는 프리미엄 데이터가 없습니다. (전체보기에서 확인 가능)</div>`;
+            html += `<div class="empty-msg">📌 기준에 부합하는 프리미엄 데이터가 없습니다. (전체보기에서 확인 가능)</div>`;
         } else {
-            html += `<ul>`;
+            html += `<div class="grid-container">`;
+            
             displayItems.forEach(item => {
-                const scoreBadge = `<span class="score">[${item.score || 0}점]</span>`;
+                const scoreHtml = `<span class="score">[${item.score || 0}점]</span>`;
                 
-                if (isJob) {
-                    html += `<li><a href="${item.link}" target="_blank" class="item-link">${scoreBadge} <b>[${item.company || '기업명 미상'}]</b> ${item.title}</a></li>`;
-                } else if (isOverseas) {
-                    html += `<li>
-                                <a href="${item.link}" target="_blank" class="item-link">${scoreBadge} 🌍 ${item.translated_title || item.title}</a>
-                                ${item.translated_desc ? `<div class="desc">${item.translated_desc}</div>` : ''}
-                             </li>`;
-                } else {
-                    html += `<li><a href="${item.link}" target="_blank" class="item-link">${scoreBadge} ${item.title}</a></li>`;
+                let displayTitle = item.title;
+                if (isOverseas) displayTitle = item.translated_title || item.title;
+                
+                // 채용 공고일 경우 카테고리 세분화 뱃지 표시 로직
+                let badgeHtml = scoreHtml; 
+                let sourceText = item.company || '기업명 미상';
+
+                if (isJob && moreType === 'vn') {
+                    let badgeClass = 'badge-default';
+                    let badgeText = 'GDC 채용';
+                    
+                    // AI가 할당한 category_code 기반 매칭 (또는 회사명/제목 기반 임시 매칭)
+                    let category = item.category_code || '';
+                    let titleStr = item.title.toUpperCase();
+                    let compStr = sourceText.toUpperCase();
+                    
+                    if (category === 'MSP_PLAYER' || compStr.includes('CNS') || compStr.includes('SDS') || compStr.includes('SK')) {
+                        badgeClass = 'badge-msp'; badgeText = 'MSP 채용';
+                    } else if (category === 'VET_GDC_FIRM' || compStr.includes('FPT') || compStr.includes('CMC') || compStr.includes('VTI') || compStr.includes('SOTATEK')) {
+                        badgeClass = 'badge-gdc'; badgeText = 'GDC 전문업체';
+                    } else if (category === 'DOMESTIC_VET_IT' || titleStr.includes('외국인') || titleStr.includes('E-7')) {
+                        badgeClass = 'badge-vet'; badgeText = '국내 외국인 채용';
+                    }
+                    badgeHtml = `<span class="badge ${badgeClass}">${badgeText}</span> ${scoreHtml}`;
                 }
+
+                // AI 요약 및 에디터 시선 데이터 매핑
+                let summaryText = item.summary || item.translated_desc || item.description || 'AI 핵심 요약 정보가 없습니다.';
+                let editorViewHtml = item.editor_view ? `<p class="card-summary-text"><strong>👁️ 에디터 시선:</strong> ${item.editor_view}</p>` : '';
+
+                html += `
+                    <div class="card">
+                        <div>
+                            <div class="card-header">
+                                ${badgeHtml}
+                            </div>
+                            <a href="${item.link}" target="_blank" class="card-title">${displayTitle}</a>
+                            <div class="card-summary-box">
+                                <p class="card-summary-text"><strong>💡 핵심 요약:</strong> ${summaryText}</p>
+                                ${editorViewHtml}
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            ${isJob ? sourceText : (item.pubDate || item.date || '날짜 미상')}
+                        </div>
+                    </div>`;
             });
-            html += `</ul>`;
+            
+            html += `</div>`;
         }
         
         if (moreType) {
-            html += `<a href="more.html?type=${moreType}" class="more-link">🔗 [웹페이지에서 전체 보기]</a>`;
+            html += `<a href="more.html?type=${moreType}" class="more-link">🔗 [해당 카테고리 기사/공고 전체 보기]</a>`;
         }
         html += `</div>`;
         
         return html;
     }
 
-    // JSON 데이터 패치 및 렌더링
+    // JSON 데이터 안전한 Fetch (.json() 방식 적용)
     fetch('data.json')
-        .then(response => response.text())
-        .then(text => {
-            // 파이썬/JS 불리언 충돌 방지 정제 로직
-            let cleanedText = text.replace(/:\s*False/g, ': false')
-                                  .replace(/:\s*True/g, ': true')
-                                  .replace(/:\s*None/g, ': null');
-            
-            const data = JSON.parse(cleanedText);
+        .then(response => {
+            if (!response.ok) throw new Error("네트워크 응답이 정상이 아닙니다.");
+            return response.json();
+        })
+        .then(data => {
             const contentDiv = document.getElementById('content');
-            
             let html = '';
+            
+            // 각 섹션 렌더링 (요청하신 채용 이름 변경 반영)
             html += buildHtmlSection("📊 GDC 오프쇼어링 (MSP/ITO 위탁) 동향", data.gdc, "gdc");
             html += buildHtmlSection("🌍 해외 AI 원천기술 및 아키텍처", data.overseas, "overseas", false, true);
             html += buildHtmlSection("🏢 국내 기업 Enterprise AX (운영모델 전환)", data.ax_news, "ax");
-            html += buildHtmlSection("💼 베트남 온사이트 인력 채용", data.vn_jobs, "vn", true);
+            html += buildHtmlSection("💼 GDC 관련 채용 (MSP / 베트남 GDC / 외국인 IT)", data.vn_jobs, "vn", true);
             html += buildHtmlSection("💼 AX 전담 인력 채용", data.ax_jobs, "axjob", true);
             
             contentDiv.innerHTML = html;
         })
         .catch(error => {
             console.error("데이터 로드 실패:", error);
-            document.getElementById('content').innerHTML = `<div class="empty-msg" style="color:red;">❌ 데이터를 불러오지 못했습니다. 크롤러를 다시 실행해주세요.</div>`;
+            document.getElementById('content').innerHTML = `
+                <div class="empty-msg" style="color:#e74c3c; font-weight:bold; padding:40px;">
+                    ❌ 데이터를 불러오지 못했습니다.<br>
+                    크롤러(crawler.py)가 실행되어 data.json 파일이 정상적으로 생성되었는지 확인해주세요.
+                </div>`;
         });
 </script>
 
