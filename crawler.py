@@ -144,10 +144,11 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
         custom_rule = ""
         if data_type == 'GDC 동향 뉴스':
             custom_rule = """
-        2. 기사 평가 기준 (GDC & 오프쇼어링):
-           - 국내 동향: LG CNS, SK AX 등 대기업 자회사에서 활용하는 GDC 사례 또는 FPT Korea, CMC Korea, Sotatek, VTI 등 한국에서 GDC 사업을 전개하는 베트남 기업 동향 (90점 이상 부여).
-           - 해외 동향: Accenture, IBM 등 글로벌 IT기업이 인도/폴란드/멕시코 등에서 활용하는 오프쇼어링 및 해외 GDC 동향 (90점 이상 부여).
+        2. 기사 평가 및 분류 기준 (GDC & 오프쇼어링):
+           - 국내 동향 (DOMESTIC_GDC): LG CNS, SK AX 등 대기업 자회사에서 활용하는 GDC 사례 또는 FPT Korea, CMC Korea, Sotatek, VTI 등 한국에서 GDC 사업을 전개하는 베트남 기업 동향 (90점 이상 부여).
+           - 해외 동향 (GLOBAL_GDC): Accenture, IBM 등 글로벌 IT기업이 인도/폴란드/멕시코 등에서 활용하는 오프쇼어링 및 해외 GDC 동향 (90점 이상 부여).
            - 단순 웹/앱 외주 개발은 50점. 글로벌 게임 컨퍼런스(GDC)는 철저히 0점 처리.
+        3. 🚨 반드시 위 기준에 따라 'category_code' 속성에 'DOMESTIC_GDC' 또는 'GLOBAL_GDC'를 할당하세요.
             """
         elif data_type == 'AX 근황 뉴스':
             custom_rule = """
@@ -176,7 +177,7 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
            - (오늘 데이터 내 중복) 가장 정보가 풍부한 대표 기사 1개만 남기고 나머지는 배제.
            - (어제 뉴스 철저 배제) 제공된 '어제 주요 뉴스 맥락'과 비교하여 팩트나 맥락이 90% 이상 일치하는 기사(단순 재탕)는 철저히 0점 처리하고 is_main을 false로 설정하세요. (추가 등재 절대 금지)
         {custom_rule}
-        4. 🚨 컷오프: 점수가 85점을 초과(86점 이상)하면 'is_main': true, 85점 이하면 false로 설정하세요.
+        4. 🚨 컷오프: 점수가 80점을 초과(86점 이상)하면 'is_main': true, 80점 이하면 false로 설정하세요.
         5. is_main이 true인 경우 해당 기사의 'summary'(1줄 요약)를 반드시 작성하세요. (에디터의 시선은 작성하지 마세요)
 
         [출력 형식]
@@ -232,7 +233,7 @@ def process_overseas_with_ai_translation(data_list, api_key, yesterday_context="
            - (AI 원천기술) Google, Microsoft, Anthropic, OpenAI 등 빅테크의 AI 원천 기술 및 아키텍처를 다루는 사례.
            - (AI 활용) Physical AI, Agentic AI 등 최신 AI를 기업, 개인, 단체 등이 실제 활용하는 사례.
            - 위 기준에 부합할수록 높은 점수(0~100점)를 부여하세요.
-        3. 🚨 컷오프 및 번역: 점수가 85점을 초과한다면(is_main: true), 기사의 영문 제목과 요약문을 한글로 번역(translated_title)하고, 핵심 요약(summary)을 작성하세요. (에디터의 시선은 작성하지 않습니다).
+        3. 🚨 컷오프 및 번역: 점수가 80점을 초과한다면(is_main: true), 기사의 영문 제목과 요약문을 한글로 번역(translated_title)하고, 핵심 요약(summary)을 작성하세요. (에디터의 시선은 작성하지 않습니다).
 
         [출력 형식] (JSON 배열만 출력)
         [ {{"id": 0, "score": 90, "is_main": true, "translated_title": "번역제목", "summary": "요약..."}} ]
@@ -267,11 +268,12 @@ def process_overseas_with_ai_translation(data_list, api_key, yesterday_context="
 ### 📧 5. 이메일/웹 통합 HTML 빌드
 ### ==========================================
 
-def build_matrix_section(gdc_data, overseas_data, ax_data):
-    domestic_market = ax_data.get('data', [])[:3] if ax_data else []
-    domestic_competitor = gdc_data.get('data', [])[:3] if gdc_data else []
-    global_market = overseas_data.get('data', [])[:2] if overseas_data else []
-    global_competitor = overseas_data.get('data', [])[2:4] if overseas_data else []
+def build_matrix_section(gdc_domestic, gdc_global, overseas_data, ax_data):
+    # 매트릭스 데이터 분배 로직
+    domestic_market = ax_data[:3] if ax_data else []
+    global_market = overseas_data[:3] if overseas_data else []
+    domestic_competitor = gdc_domestic[:3] if gdc_domestic else []
+    global_competitor = gdc_global[:3] if gdc_global else []
 
     def to_list_html(items):
         if not items:
@@ -315,10 +317,10 @@ def build_matrix_section(gdc_data, overseas_data, ax_data):
 def build_email_section(title, data_list, more_link, is_job=False, is_overseas=False):
     html = f"<div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>{title}</h2>"
     
-    display_list = [item for item in data_list if item.get('is_main', True) and item.get('score', 0) > 85]
+    display_list = [item for item in data_list if item.get('is_main', True) and item.get('score', 0) > 80]
     
     if not display_list:
-        html += "<p style='color: #888; font-style: italic; padding: 15px 0; text-align: center;'>📌 85점 이상의 기준에 부합하는 프리미엄 데이터가 없습니다.</p>"
+        html += "<p style='color: #888; font-style: italic; padding: 15px 0; text-align: center;'>📌 80점 이상의 기준에 부합하는 프리미엄 데이터가 없습니다.</p>"
     else:
         # 최대 4개 구도 고정
         display_items = display_list[:4]
@@ -383,12 +385,24 @@ def generate_html_content(data, pages_url):
             </div>
     """
     
-    html_content += build_matrix_section(data.get('gdc'), data.get('overseas'), data.get('ax_news'))
-    html_content += build_email_section("📊 GDC 오프쇼어링 (MSP/ITO 위탁) 동향", data['gdc']['data'], f"{pages_url}/more.html?type=gdc")
-    html_content += build_email_section("🌍 해외 AI 원천기술 및 아키텍처", data['overseas']['data'], f"{pages_url}/more.html?type=overseas", is_overseas=True)
-    html_content += build_email_section("🏢 국내 기업 Enterprise AX (운영모델 전환)", data['ax_news']['data'], f"{pages_url}/more.html?type=ax")
+    # 데이터 세분화 및 추출
+    gdc_domestic = [item for item in data['gdc']['data'] if item.get('category_code') == 'DOMESTIC_GDC']
+    gdc_global = [item for item in data['gdc']['data'] if item.get('category_code') == 'GLOBAL_GDC']
+    overseas_news = data['overseas']['data']
+    ax_news = data['ax_news']['data']
     
-    # 채용 3개 세션 분리 적용
+    # 1. 요약 매트릭스 
+    html_content += build_matrix_section(gdc_domestic, gdc_global, overseas_news, ax_news)
+    
+    # 2. 경쟁사 동향 분리 (국내/해외)
+    html_content += build_email_section("📊 경쟁사 동향 1. 국내 GDC/오프쇼어링", gdc_domestic, f"{pages_url}/more.html?type=gdc_domestic")
+    html_content += build_email_section("📊 경쟁사 동향 2. 해외 글로벌 오프쇼어링", gdc_global, f"{pages_url}/more.html?type=gdc_global")
+    
+    # 3. AI 및 AX 기사
+    html_content += build_email_section("🌍 해외 AI 원천기술 및 아키텍처", overseas_news, f"{pages_url}/more.html?type=overseas", is_overseas=True)
+    html_content += build_email_section("🏢 국내 기업 Enterprise AX (운영모델 전환)", ax_news, f"{pages_url}/more.html?type=ax")
+    
+    # 4. 채용 3개 세션 분리
     msp_jobs = [j for j in data['vn_jobs']['data'] if j.get('category_code') == 'MSP_PLAYER']
     gdc_jobs = [j for j in data['vn_jobs']['data'] if j.get('category_code') == 'VET_GDC_FIRM']
     vet_jobs = [j for j in data['vn_jobs']['data'] if j.get('category_code') == 'DOMESTIC_VET_IT']
@@ -399,7 +413,7 @@ def generate_html_content(data, pages_url):
     
     html_content += """
             <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #7f8c8d; font-size: 13px;">
-                <p>※ 상세 기사 및 채용 리스트는 AI 분석을 통해 85점 이상의 고품질 데이터만 선별하여 제공됩니다.</p>
+                <p>※ 상세 기사 및 채용 리스트는 AI 분석을 통해 고품질 데이터만 선별하여 제공됩니다.</p>
                 <p>오늘의 프리미엄 리포트는 여기까지입니다! 🚀</p>
             </div>
         </div>
