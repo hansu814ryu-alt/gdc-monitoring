@@ -22,6 +22,30 @@ def is_recent_enough(pub_date_str):
         return True
 
 ### ==========================================
+### 💾 [신규] 히스토리 데이터 로드 및 저장 함수
+### ==========================================
+def load_yesterday_context(filepath='history.json'):
+    if os.path.exists(filepath):
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                history = json.load(f)
+                gdc_titles = [item.get('title', '') for item in history.get('gdc', {}).get('data', [])[:5]]
+                ax_titles = [item.get('title', '') for item in history.get('ax_news', {}).get('data', [])[:5]]
+                context = f"[어제 GDC 이슈]: {', '.join(gdc_titles)} / [어제 AX 이슈]: {', '.join(ax_titles)}"
+                return context
+        except Exception as e:
+            print(f"히스토리 로드 실패: {e}")
+            return ""
+    return ""
+
+def save_today_history(data, filepath='history.json'):
+    try:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
+    except Exception as e:
+        print(f"히스토리 저장 실패: {e}")
+
+### ==========================================
 ### 📰 2. 뉴스 및 채용 데이터 수집
 ### ==========================================
 def get_naver_news(client_id, client_secret, query, display=30):
@@ -107,7 +131,7 @@ def get_overseas_rss_news():
 ### ==========================================
 ### 🧠 3. AI 기반 맥락 평가 및 번역 (LLM-as-a-Judge)
 ### ==========================================
-def process_data_with_ai_batch(data_list, data_type, api_key):
+def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=""):
     if not api_key or not data_list: return data_list
     
     try:
@@ -127,9 +151,13 @@ def process_data_with_ai_batch(data_list, data_type, api_key):
             custom_rule = """
         2. 국내 기업/공공기관이 기존 레거시를 AI로 현대화하거나, 사내 RAG 구축, AI 거버넌스 수립 등 전사적 AX(AI 전환) 운영 모델을 도입한 실제 사례인지 평가하세요. (국내 대기업 90점 이상, 중견 70점 이상)
             """
-        else:
+        elif data_type == '베트남 IT 채용 공고':
             custom_rule = """
         2. 기업 규모나 영향력을 추론하여 점수를 부여하세요 (대기업: 80~100점, 스타트업: 30~59점). 베트남 파견/주재원 등 배제 조건 시 0점.
+        3. 🚨 채용 공고를 분석하여 다음 3가지 카테고리 중 하나로 분류하고 'category_code' 속성에 추가하세요.
+           - MSP_PLAYER: 국내 대기업 MSP(LG CNS, 삼성SDS, SK 등)의 GDC 관련 직무 (PM, 아키텍트)
+           - VET_GDC_FIRM: 한국에 진출한 베트남계 GDC 기업(FPT, CMC, Sotatek, VTI 등) 채용 (BSE, 기술영업)
+           - DOMESTIC_VET_IT: 국내 기업이 외국인 IT 엔지니어를 직접 채용하거나 원격 계약하는 공고
             """
 
         prompt = f"""
@@ -137,14 +165,19 @@ def process_data_with_ai_batch(data_list, data_type, api_key):
         아래 데이터를 분석하여 평가하고 JSON 배열 형태로만 반환하세요.
 
         [데이터 유형]: {data_type}
+        
+        [어제 주요 뉴스 맥락]
+        {yesterday_context if yesterday_context else '비교할 어제 데이터 없음'}
+
         [평가 규칙]
-        1. 내용 중복 배제: 기사들을 하나하나 분석하여 내용이 중복되는 기사가 여러 개 있다면 가장 정보가 풍부한 대표 기사 1개만 남기고 나머지는 배제하세요 (score = 0, is_main = false).
+        1. 내용 중복 배제: (오늘 데이터 내 중복) 가장 정보가 풍부한 대표 기사 1개만 남기고 나머지는 배제.
+        1-1. (어제 뉴스 철저 배제) 제공된 '어제 주요 뉴스 맥락'과 비교하여 주요 사건, 팩트가 80% 이상 일치하는 기사(단순 재탕 기사)는 철저히 0점 처리하고 is_main을 false로 설정하세요.
         {custom_rule}
-        3. 🚨 컷오프: 점수가 85점을 초과(86점 이상)하면 'is_main': true, 85점 이하면 false로 설정하세요.
-        4. is_main이 true인 경우 해당 기사의 'summary'(1줄 요약)와 'editor_view'(에디터 시선)를 반드시 작성하세요.
+        4. 🚨 컷오프: 점수가 80점을 초과(86점 이상)하면 'is_main': true, 80점 이하면 false로 설정하세요.
+        5. is_main이 true인 경우 해당 기사의 'summary'(1줄 요약)와 'editor_view'(에디터 시선)를 반드시 작성하세요.
 
         [출력 형식]
-        [ {{"id": 0, "score": 95, "is_main": true, "summary": "요약...", "editor_view": "시선..."}} ]
+        [ {{"id": 0, "score": 95, "is_main": true, "summary": "요약...", "editor_view": "시선...", "category_code": "VET_GDC_FIRM"}} ]
 
         [입력 데이터]
         {json.dumps(input_data, ensure_ascii=False)}
@@ -163,10 +196,12 @@ def process_data_with_ai_batch(data_list, data_type, api_key):
                     item["is_main"] = score_dict[i].get("is_main", False)
                     item["summary"] = score_dict[i].get("summary", "")
                     item["editor_view"] = score_dict[i].get("editor_view", "")
+                    item["category_code"] = score_dict[i].get("category_code", "DOMESTIC_VET_IT")
                 else:
                     item["score"] = 0
                     item["is_main"] = False
                     
+            filtered_data = [item for item in data_list if item.get("is_main")]
             return sorted(filtered_data, key=lambda x: x.get('score', 0), reverse=True)
             
     except Exception as e:
@@ -187,7 +222,7 @@ def process_overseas_with_ai_translation(data_list, api_key):
 
         1. 중복 판별: 내용이 중복되는 기사가 있다면 대표 기사 1개만 점수를 주고 나머지는 0점(is_main: false) 처리하세요.
         2. 평가 및 분류: 기사가 'Agentic Foundation Model, Multimodal, MCP 등 해외 AI 원천 기술 트렌드'에 부합하는지 분석하여 점수(0~100점)를 부여하세요.
-        3. 🚨 컷오프 및 번역: 점수가 85점을 초과한다면(is_main: true), 기사의 영문 제목과 요약문을 자연스러운 한글로 번역(translated_title)하고, 핵심 요약(summary) 및 에디터 시선(editor_view)을 함께 작성하세요. 85점 이하는 is_main을 false로 처리.
+        3. 🚨 컷오프 및 번역: 점수가 80점을 초과한다면(is_main: true), 기사의 영문 제목과 요약문을 자연스러운 한글로 번역(translated_title)하고, 핵심 요약(summary) 및 에디터 시선(editor_view)을 함께 작성하세요. 80점 이하는 is_main을 false로 처리.
 
         [출력 형식] (JSON 배열만 출력)
         [ {{"id": 0, "score": 90, "is_main": true, "translated_title": "번역제목", "summary": "요약...", "editor_view": "시선..."}} ]
@@ -240,7 +275,6 @@ def build_email_section(title, insight, data_list, more_link, is_job=False, is_o
     if insight: 
         html += f"<div style='margin-bottom:15px; padding:10px; background-color:#eef2f5; border-radius:5px;'>💡 <b>[전체 시사점]</b> {insight}</div>"
         
-    # 85점 초과 필터링 이중 안전장치
     display_list = [item for item in data_list if item.get('is_main', True) and item.get('score', 0) > 85]
     
     if not display_list:
@@ -248,8 +282,21 @@ def build_email_section(title, insight, data_list, more_link, is_job=False, is_o
     else:
         for item in display_list[:5]: 
             if is_job:
+                # 이메일용 뱃지 스타일 적용
+                badge = ""
+                category = item.get('category_code', '')
+                comp_str = item.get('company', '').upper()
+                
+                if category == 'MSP_PLAYER' or any(x in comp_str for x in ['CNS', 'SDS', 'SK']):
+                    badge = "<span style='background-color:#e3f2fd; color:#1565c0; padding:3px 6px; font-size:11px; border-radius:3px; margin-right:6px;'>MSP 채용</span>"
+                elif category == 'VET_GDC_FIRM' or any(x in comp_str for x in ['FPT', 'CMC', 'VTI', 'SOTATEK']):
+                    badge = "<span style='background-color:#e8f5e9; color:#2e7d32; padding:3px 6px; font-size:11px; border-radius:3px; margin-right:6px;'>GDC 전문업체</span>"
+                else:
+                    badge = "<span style='background-color:#fff3e0; color:#ef6c00; padding:3px 6px; font-size:11px; border-radius:3px; margin-right:6px;'>국내 외국인 채용</span>"
+
                 html += f"""
                 <div style="padding:10px 0; border-bottom:1px dashed #ccc;">
+                    {badge}
                     <a href='{item['link']}' target='_blank' style="color:#0056b3; font-weight:bold; text-decoration:none;">[{item.get('company', '')}] {item['title']}</a>
                     <span style="font-size:12px; color:#e74c3c; margin-left:8px;">[Score: {item.get('score', 0)}]</span>
                 </div>
@@ -300,12 +347,14 @@ def send_email(data, pages_url):
     html_content += build_email_section("📊 GDC 오프쇼어링 (MSP/ITO 위탁) 동향", data['gdc'].get('insight', ''), data['gdc']['data'], f"{pages_url}/more.html?type=gdc")
     html_content += build_email_section("🌍 해외 AI 원천기술 및 아키텍처", data['overseas'].get('insight', ''), data['overseas']['data'], f"{pages_url}/more.html?type=overseas", is_overseas=True)
     html_content += build_email_section("🏢 국내 기업 Enterprise AX (운영모델 전환)", data['ax_news'].get('insight', ''), data['ax_news']['data'], f"{pages_url}/more.html?type=ax")
-    html_content += build_email_section("💼 베트남 온사이트인력 채용", "", data['vn_jobs']['data'], f"{pages_url}/more.html?type=vn", is_job=True)
+    
+    # 이메일에서도 GDC 관련 채용으로 타이틀 변경 적용
+    html_content += build_email_section("💼 GDC 관련 채용 (MSP / 베트남 GDC / 외국인 IT)", "", data['vn_jobs']['data'], f"{pages_url}/more.html?type=vn", is_job=True)
     
     html_content += """
         <div style="margin-top: 40px; padding: 20px; background-color: #e9ecef; border-radius: 8px; text-align: center; color: #555; font-size: 14px;">
             <b>오늘의 프리미엄 리포트는 여기까지입니다! 🚀</b><br>
-            해당 리포트는 AI에 의해 85점 이상 유효한 고품질 데이터만 선별 및 정렬되어 자동 생성되었습니다.
+            해당 리포트는 AI에 의해 80점 이상 유효한 고품질 데이터만 선별 및 정렬되어 자동 생성되었습니다.
         </div>
     </div>
     """
@@ -335,6 +384,9 @@ if __name__ == "__main__":
     
     print("--- 🚀 데이터 크롤링 시작 ---")
     
+    # 💡 [신규] 크롤링 전, 어제 저장한 히스토리 맥락을 불러옴
+    yesterday_context = load_yesterday_context()
+    
     gdc_queries = ["GDC", "글로벌 딜리버리 센터", "오프쇼어", "MSP 오프쇼어링", "클라우드 딜리버리 센터", "IT 인프라 원격 운영"]
     raw_gdc = []
     for q in gdc_queries:
@@ -350,9 +402,12 @@ if __name__ == "__main__":
     raw_vn_jobs = get_wanted_postings("베트남", ['it', '개발', '소프트웨어', 'bse', '통역', '번역'])
     
     print("--- 🧠 AI 기반 맥락 평가 / 번역 및 정렬 중 ---")
-    sorted_gdc = process_data_with_ai_batch(raw_gdc, 'GDC 동향 뉴스', GEMINI_KEY)
+    # 💡 [신규] 뉴스 평가 시 yesterday_context 파라미터 전달 (중복 배제 적용)
+    sorted_gdc = process_data_with_ai_batch(raw_gdc, 'GDC 동향 뉴스', GEMINI_KEY, yesterday_context)
+    sorted_ax_news = process_data_with_ai_batch(raw_ax_news, 'AX 근황 뉴스', GEMINI_KEY, yesterday_context)
+    
+    # 해외 뉴스와 채용 공고는 어제 국내 뉴스 맥락과는 무관하므로 컨텍스트 미포함
     sorted_overseas = process_overseas_with_ai_translation(raw_overseas, GEMINI_KEY)
-    sorted_ax_news = process_data_with_ai_batch(raw_ax_news, 'AX 근황 뉴스', GEMINI_KEY)
     sorted_vn_jobs = process_data_with_ai_batch(raw_vn_jobs, '베트남 IT 채용 공고', GEMINI_KEY)
     
     print("--- 💡 시사점 도출 중 ---")
@@ -367,10 +422,12 @@ if __name__ == "__main__":
         "vn_jobs": {"data": sorted_vn_jobs}
     }
     
-    # 들여쓰기 에러 완벽 수정 구간
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=4)
 
     print("✅ data.json 저장 완료.")
+    
+    # 💡 [신규] 스크립트 종료 직전, 오늘의 결과물을 내일을 위해 저장
+    save_today_history(result)
     
     send_email(result, GITHUB_PAGES_URL)
