@@ -22,22 +22,39 @@ def is_recent_enough(pub_date_str):
         return True
 
 ### ==========================================
-### 💾 2. 히스토리 데이터 로드 및 저장 함수 (90% 중복 배제용)
+### 💾 2. 히스토리 데이터 로드 및 저장 함수 (90% 중복 배제용 + 하드 필터링용 데이터 반환)
 ### ==========================================
 def load_yesterday_context(filepath='history.json'):
+    context_str = ""
+    seen_links = set()
+    seen_titles = set()
+
     if os.path.exists(filepath):
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 history = json.load(f)
-                gdc_titles = [item.get('title', '') for item in history.get('gdc', {}).get('data', [])[:5]]
-                ax_titles = [item.get('title', '') for item in history.get('ax_news', {}).get('data', [])[:5]]
-                overseas_titles = [item.get('translated_title', item.get('title', '')) for item in history.get('overseas', {}).get('data', [])[:5]]
-                context = f"[어제 GDC 이슈]: {', '.join(gdc_titles)} / [어제 AX 이슈]: {', '.join(ax_titles)} / [어제 해외 이슈]: {', '.join(overseas_titles)}"
-                return context
+                
+                # 어제 수집된 모든 기사 데이터 풀
+                gdc_data = history.get('gdc', {}).get('data', [])
+                ax_data = history.get('ax_news', {}).get('data', [])
+                overseas_data = history.get('overseas', {}).get('data', [])
+                
+                # 1차 기계적 필터링을 위한 어제자 링크 및 제목 세팅 (전체 대상)
+                for item in gdc_data + ax_data + overseas_data:
+                    if 'link' in item: seen_links.add(item['link'])
+                    if 'title' in item: seen_titles.add(item['title'])
+                    if 'translated_title' in item: seen_titles.add(item['translated_title'])
+
+                # AI에게 줄 컨텍스트는 판단력을 높이기 위해 상위 10개로 확대
+                gdc_titles = [item.get('title', '') for item in gdc_data[:10]]
+                ax_titles = [item.get('title', '') for item in ax_data[:10]]
+                overseas_titles = [item.get('translated_title', item.get('title', '')) for item in overseas_data[:10]]
+                
+                context_str = f"[어제 GDC 이슈]: {', '.join(gdc_titles)} / [어제 AX 이슈]: {', '.join(ax_titles)} / [어제 해외 이슈]: {', '.join(overseas_titles)}"
         except Exception as e:
             print(f"히스토리 로드 실패: {e}")
-            return ""
-    return ""
+            
+    return context_str, seen_links, seen_titles
 
 def save_today_history(data, filepath='history.json'):
     try:
@@ -130,16 +147,28 @@ def get_overseas_rss_news():
     return filtered_news
 
 ### ==========================================
-### 🧠 4. AI 기반 맥락 평가 및 번역
+### 🧠 4. AI 기반 맥락 평가 및 번역 (LLM-as-a-Judge) + 1차 하드 필터링 적용
 ### ==========================================
-def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=""):
+def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context="", seen_links=None, seen_titles=None):
     if not api_key or not data_list: return data_list
+    
+    seen_links = seen_links or set()
+    seen_titles = seen_titles or set()
+    
+    # 💡 [핵심 추가] 1차 기계적 필터링: 어제와 URL이나 제목이 완전히 똑같으면 AI에게 보내지 않음
+    filtered_initial = []
+    for d in data_list:
+        if d['link'] in seen_links or d['title'] in seen_titles:
+            continue # 중복 기사이므로 가차없이 버림
+        filtered_initial.append(d)
+        
+    if not filtered_initial: return [] # 다 걸러졌으면 빈 리스트 반환
     
     try:
         genai.configure(api_key=api_key)
         model = genai.GenerativeModel('gemini-2.5-flash')
         
-        input_data = [{"id": i, "title": d["title"], "company": d.get("company", ""), "description": d.get("description", "")} for i, d in enumerate(data_list)]
+        input_data = [{"id": i, "title": d["title"], "company": d.get("company", ""), "description": d.get("description", "")} for i, d in enumerate(filtered_initial)]
         
         custom_rule = ""
         if data_type == 'GDC 동향 뉴스':
@@ -177,7 +206,7 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
            - (오늘 데이터 내 중복) 가장 정보가 풍부한 대표 기사 1개만 남기고 나머지는 배제.
            - (어제 뉴스 철저 배제) 제공된 '어제 주요 뉴스 맥락'과 비교하여 팩트나 맥락이 90% 이상 일치하는 기사(단순 재탕)는 철저히 0점 처리하고 is_main을 false로 설정하세요. (추가 등재 절대 금지)
         {custom_rule}
-        4. 🚨 컷오프: 점수가 80점을 초과(86점 이상)하면 'is_main': true, 80점 이하면 false로 설정하세요.
+        4. 🚨 컷오프: 점수가 80점을 초과(81점 이상)하면 'is_main': true, 80점 이하면 false로 설정하세요.
         5. is_main이 true인 경우 해당 기사의 'summary'(1줄 요약)를 반드시 작성하세요. (에디터의 시선은 작성하지 마세요)
 
         [출력 형식]
@@ -194,7 +223,7 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
         if json_match:
             ai_scores = json.loads(json_match.group(0))
             score_dict = {item["id"]: item for item in ai_scores}
-            for i, item in enumerate(data_list):
+            for i, item in enumerate(filtered_initial):
                 if i in score_dict:
                     item["score"] = score_dict[i].get("score", 0)
                     item["is_main"] = score_dict[i].get("is_main", False)
@@ -204,20 +233,32 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
                     item["score"] = 0
                     item["is_main"] = False
                     
-            filtered_data = [item for item in data_list if item.get("is_main")]
+            filtered_data = [item for item in filtered_initial if item.get("is_main")]
             return sorted(filtered_data, key=lambda x: x.get('score', 0), reverse=True)
             
     except Exception as e:
         print(f"⚠️ AI 평가 오류 ({data_type}): {e}")
-        for item in data_list: item['is_main'] = True
-        return data_list
+        for item in filtered_initial: item['is_main'] = True
+        return filtered_initial
 
-def process_overseas_with_ai_translation(data_list, api_key, yesterday_context=""):
+def process_overseas_with_ai_translation(data_list, api_key, yesterday_context="", seen_links=None, seen_titles=None):
     if not api_key or not data_list: return data_list
+    
+    seen_links = seen_links or set()
+    seen_titles = seen_titles or set()
+    
+    filtered_initial = []
+    for d in data_list:
+        if d['link'] in seen_links or d['title'] in seen_titles:
+            continue
+        filtered_initial.append(d)
+        
+    if not filtered_initial: return []
+
     try:
         genai.configure(api_key=api_key)
         model = genai.GenerativeModel('gemini-2.5-flash')
-        input_data = [{"id": i, "title": d["title"], "description": d.get("description", "")} for i, d in enumerate(data_list)]
+        input_data = [{"id": i, "title": d["title"], "description": d.get("description", "")} for i, d in enumerate(filtered_initial)]
         
         prompt = f"""
         당신은 글로벌 IT 평가자이자 GDC(Global development center)사업담당자입니다.
@@ -232,6 +273,7 @@ def process_overseas_with_ai_translation(data_list, api_key, yesterday_context="
         2. 평가 및 분류: 
            - (AI 원천기술) Google, Microsoft, Anthropic, OpenAI 등 빅테크의 AI 원천 기술 및 아키텍처를 다루는 사례.
            - (AI 활용) Physical AI, Agentic AI 등 최신 AI를 기업, 개인, 단체 등이 실제 활용하는 사례.
+           - 🚨 금지 규칙(엄격 적용): 'Anthropic 상장', '주가 및 실적 발표', '단순 투자금 유치', '경영진 인사' 등 기술/아키텍처/활용 사례와 무관한 단순 기업/금융/주식 뉴스는 철저히 0점 처리하세요.
            - 위 기준에 부합할수록 높은 점수(0~100점)를 부여하세요.
         3. 🚨 컷오프 및 번역: 점수가 80점을 초과한다면(is_main: true), 기사의 영문 제목과 요약문을 한글로 번역(translated_title)하고, 핵심 요약(summary)을 작성하세요. (에디터의 시선은 작성하지 않습니다).
 
@@ -248,7 +290,7 @@ def process_overseas_with_ai_translation(data_list, api_key, yesterday_context="
         if json_match:
             ai_evals = json.loads(json_match.group(0))
             score_dict = {item["id"]: item for item in ai_evals}
-            for i, item in enumerate(data_list):
+            for i, item in enumerate(filtered_initial):
                 if i in score_dict and score_dict[i].get("is_main", False):
                     item["score"] = score_dict[i].get("score", 0)
                     item["is_main"] = True
@@ -258,7 +300,7 @@ def process_overseas_with_ai_translation(data_list, api_key, yesterday_context="
                     item["score"] = 0
                     item["is_main"] = False
                     
-            filtered_data = [item for item in data_list if item.get("is_main")]
+            filtered_data = [item for item in filtered_initial if item.get("is_main")]
             return sorted(filtered_data, key=lambda x: x.get('score', 0), reverse=True)
     except Exception as e:
         print(f"⚠️ 해외 뉴스 번역/평가 오류: {e}")
@@ -454,7 +496,7 @@ if __name__ == "__main__":
     GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
     
     print("--- 🚀 데이터 크롤링 시작 ---")
-    yesterday_context = load_yesterday_context()
+    yesterday_context, seen_links, seen_titles = load_yesterday_context()
     
     gdc_queries = ["GDC", "글로벌 딜리버리 센터", "오프쇼어", "MSP 오프쇼어링", "클라우드 딜리버리 센터", "IT 인프라 원격 운영"]
     raw_gdc = []
@@ -471,10 +513,10 @@ if __name__ == "__main__":
     raw_vn_jobs = get_wanted_postings("베트남", ['it', '개발', '소프트웨어', 'bse', '통역', '번역'])
     
     print("--- 🧠 AI 기반 맥락 평가 / 번역 및 정렬 중 ---")
-    sorted_gdc = process_data_with_ai_batch(raw_gdc, 'GDC 동향 뉴스', GEMINI_KEY, yesterday_context)
-    sorted_ax_news = process_data_with_ai_batch(raw_ax_news, 'AX 근황 뉴스', GEMINI_KEY, yesterday_context)
-    sorted_overseas = process_overseas_with_ai_translation(raw_overseas, GEMINI_KEY, yesterday_context)
-    sorted_vn_jobs = process_data_with_ai_batch(raw_vn_jobs, '베트남 IT 채용 공고', GEMINI_KEY)
+    sorted_gdc = process_data_with_ai_batch(raw_gdc, 'GDC 동향 뉴스', GEMINI_KEY, yesterday_context, seen_links, seen_titles)
+    sorted_ax_news = process_data_with_ai_batch(raw_ax_news, 'AX 근황 뉴스', GEMINI_KEY, yesterday_context, seen_links, seen_titles)
+    sorted_overseas = process_overseas_with_ai_translation(raw_overseas, GEMINI_KEY, yesterday_context, seen_links, seen_titles)
+    sorted_vn_jobs = process_data_with_ai_batch(raw_vn_jobs, '베트남 IT 채용 공고', GEMINI_KEY, yesterday_context, seen_links, seen_titles)
     
     result = {
         "gdc": {"data": sorted_gdc},
