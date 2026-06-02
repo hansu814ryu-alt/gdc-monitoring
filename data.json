@@ -8,7 +8,7 @@
                 "pubDate": "Mon, 04 May 2026 07:34:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "LG CNS는 1200명 규모의 해외 개발 인력으로 구성된 글로벌 딜리버리 센터(GDC)와 AI 코딩 플랫폼 'AIND'를 통해 수익성 개선 및 AI 클라우드 사업 성장을 가속화하고 있다.",
+                "summary": "LG CNS는 해외 개발 인력 1200명 규모의 글로벌 딜리버리 센터(GDC)와 자체 AI 코딩 플랫폼 'AIND'를 통해 AI 클라우드 사업 성장을 가속화하고 수익성을 개선하고 있다.",
                 "category_code": "DOMESTIC_GDC"
             }
         ]
@@ -16,14 +16,14 @@
     "overseas": {
         "data": [
             {
-                "title": "Alphabet plans to raise $80B to pay for AI buildout",
-                "description": "\"The company is experiencing strong demand for its AI solutions and services from enterprises and consumers, at levels that are exceeding the company’s available supply,\" Alphabet said in its statement.",
-                "link": "https://techcrunch.com/2026/06/01/alphabet-plans-to-raise-80-billion-to-pay-for-ai-buildout/",
-                "pubDate": "Mon, 01 Jun 2026 22:55:09 +0000",
+                "title": "This AI weather startup is out-forecasting government agencies",
+                "description": "WindBorne benefits from its unique combination of model-building and data collection. The company now has about 400 balloons in flight gathering sensor readings at any given time, launched from 15 sites around the globe. The advances in its current model come from improvements in how the data collected by the balloons is fed into the models.",
+                "link": "https://techcrunch.com/2026/06/01/this-ai-weather-startup-is-out-forecasting-government-agencies/",
+                "pubDate": "Mon, 01 Jun 2026 16:00:00 +0000",
                 "score": 95,
                 "is_main": true,
-                "translated_title": "알파벳, AI 구축 비용 마련 위해 800억 달러 조달 계획",
-                "summary": "알파벳(구글)은 자사의 AI 솔루션 및 서비스에 대한 강력한 수요에 대응하기 위해 최대 800억 달러를 조달할 계획이다. 이는 기업 및 소비자로부터 AI 수요가 공급 능력을 초과하고 있음을 반영하며, AI 인프라 확장에 대한 막대한 투자를 시사한다."
+                "translated_title": "이 AI 기상 스타트업, 정부 기관 능가하는 기상 예측 선보여",
+                "summary": "WindBorne이라는 AI 기상 스타트업이 독자적인 모델 구축과 데이터 수집 방식을 통해 정부 기관보다 뛰어난 기상 예측 정확도를 보여주고 있다. 이 회사는 전 세계 15개 지점에서 약 400개의 풍선을 띄워 센서 데이터를 수집하고, 이 데이터를 모델에 통합하는 방식의 개선을 통해 예측 성능을 향상시키고 있다."
             },
             {
                 "title": "Nvidia chases $200B CPU market with AI agent PCs from Microsoft, Dell, and HP",
@@ -32,38 +32,8 @@
                 "pubDate": "Mon, 01 Jun 2026 21:35:00 +0000",
                 "score": 90,
                 "is_main": true,
-                "translated_title": "엔비디아, 마이크로소프트, 델, HP와 AI 에이전트 PC로 2천억 달러 CPU 시장 공략",
-                "summary": "엔비디아가 마이크로소프트, 델, HP와 협력하여 AI 에이전트 기능을 탑재한 PC를 통해 2천억 달러 규모의 CPU 시장을 목표로 하고 있다. 이는 AI 에이전트 기술을 대중에게 쉽고 유용하게 제공하려는 시도로, 광범위한 AI 활용의 확대를 의미한다."
-            },
-            {
-                "title": "Anthropic files to go public",
-                "description": "Anthropic, now an AI powerhouse that has landed top-tier enterprise customers, was once considered an underdog in the emerging world of large language models.",
-                "link": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
-                "pubDate": "Mon, 01 Jun 2026 16:36:55 +0000",
-                "score": 90,
-                "is_main": true,
-                "translated_title": "앤트로픽, 기업공개(IPO) 신청",
-                "summary": "대규모 언어 모델 분야의 주요 기업인 앤트로픽이 기업공개(IPO)를 신청했다. 이는 앤트로픽의 성장을 보여주며, AI 핵심 기술 개발을 위한 추가 자본 확보 및 시장의 AI 기술에 대한 높은 기대를 반영한다."
-            },
-            {
-                "title": "This AI weather startup is out-forecasting government agencies",
-                "description": "WindBorne benefits from its unique combination of model-building and data collection. The company now has about 400 balloons in flight gathering sensor readings at any given time, launched from 15 sites around the globe. The advances in its current model come from improvements in how the data collected by the balloons is fed into the models.",
-                "link": "https://techcrunch.com/2026/06/01/this-ai-weather-startup-is-out-forecasting-government-agencies/",
-                "pubDate": "Mon, 01 Jun 2026 16:00:00 +0000",
-                "score": 90,
-                "is_main": true,
-                "translated_title": "이 AI 날씨 스타트업, 정부 기관보다 정확하게 일기 예보",
-                "summary": "AI 기반 날씨 스타트업 윈드본(WindBorne)이 모델 구축과 데이터 수집의 독특한 조합을 통해 정부 기관보다 더 정확한 일기 예보를 제공하고 있다. 400개 이상의 기상 관측 풍선을 운영하며 수집된 데이터를 AI 모델에 통합하여 예측 정확도를 높였다."
-            },
-            {
-                "title": "SoftBank says it will invest up to €75B to build French data centers",
-                "description": "The goal, the firm said, is to develop and operate up to 5 gigawatts of additional data center capacity.",
-                "link": "https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/",
-                "pubDate": "Sat, 30 May 2026 21:45:00 +0000",
-                "score": 90,
-                "is_main": true,
-                "translated_title": "소프트뱅크, 프랑스 데이터센터 건설에 최대 750억 유로 투자 발표",
-                "summary": "소프트뱅크가 프랑스에 최대 5기가와트(GW)의 데이터센터 용량을 개발 및 운영하기 위해 최대 750억 유로를 투자할 계획이다. 이 대규모 투자는 AI 개발 및 배포에 필수적인 컴퓨팅 인프라 확장을 목표로 한다."
+                "translated_title": "Nvidia, Microsoft, Dell, HP와 함께 AI 에이전트 PC로 2천억 달러 규모 CPU 시장 추격",
+                "summary": "Nvidia는 마이크로소프트, Dell, HP 등과 협력하여 AI 에이전트를 탑재한 개인용 PC를 통해 2천억 달러 규모의 CPU 시장에 진출할 계획이다. 이 움직임은 AI 에이전트 기술을 대중에게 쉽고 안전하며 유용하게 제공하려는 목표를 가지고 있으며, AI 활용의 새로운 가능성을 열고 시장 확대를 추진할 것으로 기대된다."
             }
         ]
     },
@@ -76,7 +46,7 @@
                 "pubDate": "Fri, 29 May 2026 16:45:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "삼성SDS는 'AX 서밋'을 개최하고 데이터 연계 고도화, 에이전트 개발, 전사적 공유·관리 체계 등을 포함한 AI 네이티브 기업 전환을 위한 통합 AX 플랫폼 로드맵을 공개했다.",
+                "summary": "삼성SDS가 'AX 서밋'을 개최하고 데이터 연계 고도화 및 통합 AX 플랫폼을 통한 'AI 네이티브' 기업 전환 로드맵을 공개했다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
@@ -86,37 +56,27 @@
                 "pubDate": "Tue, 02 Jun 2026 11:25:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "네이버는 엔비디아와의 전략적 동맹을 통해 대규모 AI 인프라를 안정적으로 운영하는 'AI 팩토리'를 구축하며 풀스택 AI 시대로의 전환을 가속화한다.",
+                "summary": "네이버클라우드가 엔비디아와 'AI 팩토리'를 구축하며 대규모 인프라 운영 중심의 '풀스택 AI' 시대를 선도하기 위한 전략적 동맹을 강화한다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
-                "title": "한전KDN, 사내 생성형 AI 서비스 'KDN GPT' 구축 ··· 전사 AX 박차",
-                "description": "특히 고성능 LLM을 내부 환경에 적합하게 구축해 정보 유출 등의 보안 위험을 최소화하고 사내 정보보호 수준을 강화하고, 검색증강생성(RAG) 기반의 사내 문서와 업무 정보를 학습하고 15종 이상의 다양한 서비스를... ",
-                "link": "https://www.datanet.co.kr/news/articleView.html?idxno=212000",
-                "pubDate": "Thu, 28 May 2026 18:50:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "한전KDN은 정보 유출 보안 위험을 최소화하고 전사적 AX를 위해 고성능 LLM을 사내에 직접 구축하고 RAG 기반의 'KDN GPT' 서비스를 개시했다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "한국앤컴퍼니그룹 '엔터프라이즈 AI 서울'서 AX 전략 공개…&quot;생산·물류...",
-                "description": "한국앤컴퍼니그룹이 제조·연구개발(R&amp;D) 현장 중심의 AI 전환(AX) 전략 강화에 나섰다. 단순 업무 자동화를... 최근에는 구글 클라우드와 협력해 '제미나이 엔터프라이즈(Gemini Enterprise)'도 도입했다. 그룹 내부 업무... ",
-                "link": "https://www.getnews.co.kr/news/articleView.html?idxno=871042",
-                "pubDate": "Wed, 27 May 2026 17:00:00 +0900",
+                "title": "“AI가 미래”⋯ 한국앤컴퍼니, ‘엔터프라이즈 AI 서울 2026’서 AX 혁신...",
+                "description": "김 전무는 현재 한국앤컴퍼니 CDO&amp;CIO로서 전통적인 엔터프라이즈 IT와 DX/AX를 총괄하며 한국앤컴퍼니그룹의 AI 적용을 주도하고 있다. 오프닝 키노트에서는 ‘AI 전환의 현장: AX 조직 리더 3인이 말하는 성공적 혁신의... ",
+                "link": "https://www.viva100.com/article/20260527500278",
+                "pubDate": "Wed, 27 May 2026 10:06:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "한국앤컴퍼니그룹이 '엔터프라이즈 AI 서울'에서 제조·R&D 현장 중심의 AI 전환(AX) 전략을 공개하고 구글 클라우드와 협력해 제미나이 엔터프라이즈를 도입했다.",
+                "summary": "한국앤컴퍼니그룹이 '엔터프라이즈 AI 서울'에서 CDO&CIO 주도로 그룹의 AX(AI 전환) 비전과 AI 적용 전략을 공개했다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
-                "title": "EBS, 국내 방송사 최초 'AI콘텐츠 자문위원회' 출범",
-                "description": "이어 EBS는 &quot;공영방송이 먼저 공공성과 실험성이 조화된 AI 활용 모델을 정착시키고, 그 결과를 방송 생태계... 'AI콘텐츠 자문위원회'는 2027년 4월30일까지 1년간 운영되며 자문 범위는 콘텐츠 결과물에 대한 학술 및... ",
-                "link": "https://n.news.naver.com/mnews/article/006/0000136040?sid=102",
-                "pubDate": "Tue, 02 Jun 2026 12:08:00 +0900",
+                "title": "앤비디아 젠슨 황, 엔씨 김택진 만난다…'AI·게임' 협력 주목",
+                "description": "부스를 운영한 바 있다. 엔씨는 지난해 8월 독일 게임스컴에서도 엔비디아의 PC 게이밍 행사에 참여해... 엔씨의 AI 자회사 'NC AI'는 최근 자사 AI 모델 바르코·배키를 적용한 산업 특화 솔루션을 출시해 AI 사업 영역을... ",
+                "link": "https://n.news.naver.com/mnews/article/031/0001032451?sid=105",
+                "pubDate": "Tue, 02 Jun 2026 13:36:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "EBS가 국내 방송사 최초로 'AI 콘텐츠 자문위원회'를 출범하여 공영방송의 공공성과 실험성이 조화된 AI 활용 모델을 정착시키고 방송 생태계에 기여할 계획이다.",
+                "summary": "엔비디아 젠슨 황 CEO와 엔씨소프트 김택진 대표가 만나 AI와 게임 분야 협력을 논의했으며, 엔씨 AI 자회사는 AI 모델을 적용한 산업 특화 솔루션을 출시했다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
@@ -126,7 +86,7 @@
                 "pubDate": "Mon, 01 Jun 2026 15:32:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "SK텔레콤은 엔비디아 GTC 기조연설에서 피지컬 AI 협력사로 언급되며 제조 현장의 디지털 트윈 구축·운영 및 기업 전반의 AI 솔루션 개발에 기여하는 풀스택 AI 역량을 인정받았다.",
+                "summary": "SK텔레콤이 젠슨 황 엔비디아 CEO의 GTC 기조연설에서 '피지컬 AI 협력사'로 언급되며, 제조 현장 디지털 트윈 및 풀스택 AI 솔루션 역량을 입증했다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
@@ -136,7 +96,17 @@
                 "pubDate": "Fri, 29 May 2026 09:22:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "오픈AI가 국내 기업 리더 대상 서밋에서 크래프톤의 전사적 AI 전환 사례를 공유하며 코덱스를 활용한 레거시 코드 온보딩, 개발 문서화, 내부 자동화 도구 제작 등의 성과를 소개했다.",
+                "summary": "오픈AI가 국내 기업 리더 대상 서밋에서 크래프톤의 'AI 퍼스트' 전략과 코덱스를 활용한 레거시 코드 온보딩 등 전사적 AI 전환(AX) 사례를 공유했다.",
+                "category_code": "VET_GDC_FIRM"
+            },
+            {
+                "title": "한전KDN, 사내 생성형 AI 서비스 'KDN GPT' 구축 ··· 전사 AX 박차",
+                "description": "특히 고성능 LLM을 내부 환경에 적합하게 구축해 정보 유출 등의 보안 위험을 최소화하고 사내 정보보호 수준을 강화하고, 검색증강생성(RAG) 기반의 사내 문서와 업무 정보를 학습하고 15종 이상의 다양한 서비스를... ",
+                "link": "https://www.datanet.co.kr/news/articleView.html?idxno=212000",
+                "pubDate": "Thu, 28 May 2026 18:50:00 +0900",
+                "score": 90,
+                "is_main": true,
+                "summary": "한전KDN이 보안을 강화한 고성능 LLM을 사내에 직접 구축하고 RAG 기반 'KDN GPT'를 운영하며 전사적 AX(AI 전환)에 박차를 가한다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
@@ -146,7 +116,7 @@
                 "pubDate": "Sun, 24 May 2026 16:00:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "미래에셋이 AWS와 협력하여 금융 AX의 핵심으로 데이터 구조화를 강조하고, 사내 문서를 다루는 검색 증강 생성(RAG) 기술을 도입하여 자산관리 데이터의 효율적 활용을 추진한다.",
+                "summary": "미래에셋이 AWS와 협력하여 금융 AX의 핵심을 데이터 구조화로 꼽으며, 자산관리 데이터의 '관계'까지 읽는 '그래프RAG' 도입을 통한 혁신 전략을 논의했다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
@@ -156,7 +126,7 @@
                 "pubDate": "Mon, 11 May 2026 20:54:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "한국가스공사가 사내 업무 환경에 특화된 전용 AI 모델 '업무 메이트'를 공개하며 고유 지식기반을 활용한 RAG 및 외부 차단 환경 구축으로 보안성을 강화했다.",
+                "summary": "한국가스공사가 사내 업무 환경에 특화된 전용 AI 모델 '업무 메이트'를 공개하고, RAG 기반 지식기반을 구축하여 업무 효율성을 높인다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
@@ -166,7 +136,27 @@
                 "pubDate": "Mon, 01 Jun 2026 18:50:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "남동발전은 AI 전사 적용을 가속화하며 사내 축적된 문서를 학습하고 RAG 플랫폼을 통해 지식 자산 활용도를 극대화하는 스마트 워크 시스템을 구축한다.",
+                "summary": "남동발전이 AI 기반 스마트 워크 가속화를 위해 전자결재 문서를 AI 학습 형태로 전환하고, RAG 플랫폼을 구축해 사내 지식 자산 활용도를 극대화할 계획이다.",
+                "category_code": "VET_GDC_FIRM"
+            },
+            {
+                "title": "오픈AI, 최신 AI 모델 AWS 베드록 추가…&quot;韓 활용 접점 확대&quot;",
+                "description": "보안과 운영 환경도 기업 도입에 맞춰 제공된다. 아마존 베드록에서 오픈AI 모델은 베드록의 차세대 추론 엔진과 AWS 보안·거버넌스 체계 위에서 실행된다. AWS 나이트로 시스템 기반의 제로 오퍼레이터 액세스도... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002424995?sid=105",
+                "pubDate": "Tue, 02 Jun 2026 09:16:00 +0900",
+                "score": 85,
+                "is_main": true,
+                "summary": "오픈AI가 최신 AI 모델 GPT-5.5와 코덱스를 AWS 베드록에 추가하며 한국 고객의 엔터프라이즈 AI 활용 접점을 확대하고 보안 및 운영 환경을 강화한다.",
+                "category_code": "VET_GDC_FIRM"
+            },
+            {
+                "title": "NH농협캐피탈, 사내 AI 활용 환경 고도화... DX·AX 추진력 강화",
+                "description": "향후 사내 업무 환경에서도 AI 활용 범위를 단계적으로 확대할 계획이다. 이를 위해 사내망 기반 생성형 AI 지식 검색 시스템을 구축하고, RAG(검색증강생성) 기반의 부서별 맞춤형 지식베이스도 제공할 예정이다.",
+                "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=200082",
+                "pubDate": "Wed, 27 May 2026 17:02:00 +0900",
+                "score": 85,
+                "is_main": true,
+                "summary": "NH농협캐피탈이 사내망 기반 생성형 AI 지식 검색 시스템과 RAG 기반 맞춤형 지식베이스 구축을 통해 사내 AI 활용 환경을 고도화하고 AX 추진력을 강화한다.",
                 "category_code": "VET_GDC_FIRM"
             }
         ]
