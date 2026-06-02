@@ -144,7 +144,7 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
         if data_type == 'GDC 동향 뉴스':
             custom_rule = """
         2. 이 기사가 기업의 MSP를 활용한 ITO운영하거나, 기존 레거시 시스템을 위탁 운영 및 관제(MSP)하는 사업 동향을 다루고 있는지 분석하세요.
-           - 국내가 아닌 해외의 IT 인력을 활용하여 원격으로 개발 및 유지보수를 수행하는 딜리버리 센터(GDC) 운영, 인건비 절감, AX 전환 관련 시 가점부여.
+           - 국내가 아닌 해외의 IT 인력을 활용하여 원격으로 개발 및 유지보수를 수행하는 딜리버리 센터(GDC) 운영, 인건비 절감 관련 시 90점 이상.
            - 단순 웹/앱 외주 개발은 50점. 글로벌 게임 컨퍼런스(GDC)는 0점 처리.
             """
         elif data_type == 'AX 근황 뉴스':
@@ -155,8 +155,8 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
             custom_rule = """
         2. 기업 규모나 영향력을 추론하여 점수를 부여하세요 (대기업: 80~100점, 스타트업: 30~59점).
         3. 🚨 채용 공고를 분석하여 다음 3가지 카테고리 중 하나로 정확히 분류하고 'category_code' 속성에 추가하세요.
-           - MSP_PLAYER: 국내 대형 SI/MSP 업체(LG CNS, 삼성SDS, SK 등)의 '클라우드 및 MSP 사업' 관련 채용. (GDC 키워드가 없어도 무방함. 단, 삼성SDS의 '물류사업' 등 IT/클라우드 MSP 본연의 사업과 무관한 직무는 0점 처리 및 배제할 것)
-           - VET_GDC_FIRM: 한국에 진출한 베트남계 GDC 기업(FPT, CMC, Sotatek, VTI 등) 채용 (BSE, 기술영업)
+           - MSP_PLAYER: 국내 대형 SI/MSP 업체(LG CNS, 삼성SDS, SK 등)의 '클라우드 및 MSP 사업' 관련 채용. (단, 삼성SDS의 '물류사업' 등 비-MSP 사업은 0점 처리)
+           - VET_GDC_FIRM: 한국에 진출한 베트남계 GDC 기업(FPT, CMC, Sotatek, VTI 등) 채용
            - DOMESTIC_VET_IT: 국내 기업이 외국인 IT 엔지니어를 직접 채용하거나 원격 계약하는 공고
             """
 
@@ -171,9 +171,9 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
 
         [평가 규칙]
         1. 내용 중복 배제: (오늘 데이터 내 중복) 가장 정보가 풍부한 대표 기사 1개만 남기고 나머지는 배제.
-        1-1. (어제 뉴스 철저 배제) 제공된 '어제 주요 뉴스 맥락'과 비교하여 주요 사건, 팩트가 80% 이상 일치하는 기사(단순 재탕 기사)는 철저히 0점 처리하고 is_main을 false로 설정하세요.
+        1-1. (어제 뉴스 철저 배제) 제공된 '어제 주요 뉴스 맥락'과 비교하여 팩트가 80% 이상 일치하는 기사(단순 재탕 기사)는 철저히 0점 처리하고 is_main을 false로 설정하세요.
         {custom_rule}
-        4. 🚨 컷오프: 점수가 80점을 초과(81점 이상)하면 'is_main': true, 80점 이하면 false로 설정하세요.
+        4. 🚨 컷오프: 점수가 85점을 초과(86점 이상)하면 'is_main': true, 85점 이하면 false로 설정하세요.
         5. is_main이 true인 경우 해당 기사의 'summary'(1줄 요약)와 'editor_view'(에디터 시선)를 반드시 작성하세요.
 
         [출력 형식]
@@ -222,7 +222,7 @@ def process_overseas_with_ai_translation(data_list, api_key):
 
         1. 중복 판별: 내용이 중복되는 기사가 있다면 대표 기사 1개만 점수를 주고 나머지는 0점(is_main: false) 처리하세요.
         2. 평가 및 분류: 기사가 'Agentic Foundation Model, Multimodal, MCP 등 해외 AI 원천 기술 트렌드'에 부합하는지 분석하여 점수(0~100점)를 부여하세요.
-        3. 🚨 컷오프 및 번역: 점수가 80점을 초과한다면(is_main: true), 기사의 영문 제목과 요약문을 자연스러운 한글로 번역(translated_title)하고, 핵심 요약(summary) 및 에디터 시선(editor_view)을 함께 작성하세요. 85점 이하는 is_main을 false로 처리.
+        3. 🚨 컷오프 및 번역: 점수가 85점을 초과한다면(is_main: true), 기사의 영문 제목과 요약문을 자연스러운 한글로 번역(translated_title)하고, 핵심 요약(summary) 및 에디터 시선(editor_view)을 함께 작성하세요. 85점 이하는 is_main을 false로 처리.
 
         [출력 형식] (JSON 배열만 출력)
         [ {{"id": 0, "score": 90, "is_main": true, "translated_title": "번역제목", "summary": "요약...", "editor_view": "시선..."}} ]
@@ -254,84 +254,132 @@ def process_overseas_with_ai_translation(data_list, api_key):
         print(f"⚠️ 해외 뉴스 번역/평가 오류: {e}")
         return []
 
-def get_ai_insight(news_list, api_key, is_translated=False):
-    if not api_key or not news_list: return ""
-    try:
-        genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-2.5-flash')
-        titles = [news.get('translated_title', news['title']) if is_translated else news['title'] for news in news_list[:5]]
-        prompt = f"다음 기사 제목들을 분석하여 비즈니스 측면에서 전체적인 시사점을 딱 1~2문장으로 요약하세요.\n{titles}"
-        response = model.generate_content(prompt)
-        if response and response.text: return response.text.strip()
-    except Exception as e:
-        print(f"💡 [AI 시사점 오류] {e}")
-    return ""
+### ==========================================
+### 📧 5. 이메일 템플릿 HTML 빌드 (웹페이지 통일 버전)
+### ==========================================
 
-### ==========================================
-### 📧 5. 이메일 템플릿 및 발송
-### ==========================================
+def build_matrix_section(gdc_data, overseas_data, ax_data):
+    """2x2 트렌드 요약 매트릭스를 이메일 친화적 HTML 테이블로 생성"""
+    domestic_market = ax_data.get('data', [])[:3] if ax_data else []
+    domestic_competitor = gdc_data.get('data', [])[:3] if gdc_data else []
+    global_market = overseas_data.get('data', [])[:2] if overseas_data else []
+    global_competitor = overseas_data.get('data', [])[2:4] if overseas_data else []
+
+    def to_list_html(items):
+        if not items:
+            return '<ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;"><li style="padding: 6px 0;">수집된 데이터가 없습니다.</li></ul>'
+        html = '<ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;">'
+        for item in items:
+            title = item.get('translated_title', item['title'])
+            html += f'<li style="padding: 6px 0;"><a href="{item["link"]}" target="_blank" style="color: #1a1a1a; text-decoration: none;">{title}</a></li>'
+        html += '</ul>'
+        return html
+
+    html = f"""
+    <div style="margin-bottom: 50px;">
+        <h2 style="color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;">💡 GDC & ITO 트렌드 매트릭스 (요약)</h2>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; background-color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; font-weight: bold; text-align: center; font-size: 15px; width: 15%;">구분</th>
+                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; font-weight: bold; text-align: left; padding-left: 20px; font-size: 15px; width: 42.5%;">🇰🇷 국내 시장 (Domestic)</th>
+                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; font-weight: bold; text-align: left; padding-left: 20px; font-size: 15px; width: 42.5%;">🌍 글로벌 시장 (International)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; background-color: #fcfcfc; text-align: center; vertical-align: middle; font-weight: bold; color: #1a1a1a; font-size: 14px;">시장 전반<br><span style="font-size: 11px; color: #888; font-weight: normal; display: block; margin-top: 4px;">(Market & IT)</span></td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;">{to_list_html(domestic_market)}</td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;">{to_list_html(global_market)}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; background-color: #fcfcfc; text-align: center; vertical-align: middle; font-weight: bold; color: #1a1a1a; font-size: 14px;">경쟁사 동향<br><span style="font-size: 11px; color: #888; font-weight: normal; display: block; margin-top: 4px;">(Competitors)</span></td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;">{to_list_html(domestic_competitor)}</td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;">{to_list_html(global_competitor)}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr style="border: 0; border-top: 1px solid #e1e8ed; margin: 40px 0;">
+    """
+    return html
+
 def build_email_section(title, insight, data_list, more_link, is_job=False, is_overseas=False):
-    html = f"<h2 style='color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 30px;'>{title}</h2>"
+    """각 기사를 index.html의 카드 디자인과 동일한 2x2 테이블 그리드로 생성"""
+    html = f"<div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>{title}</h2>"
+    
     if insight: 
-        html += f"<div style='margin-bottom:15px; padding:10px; background-color:#eef2f5; border-radius:5px;'>💡 <b>[전체 시사점]</b> {insight}</div>"
+        html += f"<div style='background-color: #f8fafc; border-left: 5px solid #003366; padding: 15px 20px; margin-bottom: 20px; border-radius: 0 6px 6px 0; color: #1a5f8e; font-size: 15px;'>💡 <b>[AI 시사점 요약]</b><br> {insight}</div>"
         
     display_list = [item for item in data_list if item.get('is_main', True) and item.get('score', 0) > 85]
     
     if not display_list:
-        html += "<p>📌 기준에 부합하는 프리미엄 데이터가 없습니다.</p>"
+        html += "<p style='color: #888; font-style: italic; padding: 15px 0; text-align: center;'>📌 85점 이상의 기준에 부합하는 프리미엄 데이터가 없습니다.</p>"
     else:
-        for item in display_list[:5]: 
-            if is_job:
-                # 이메일용 채용 카테고리 뱃지 적용
-                badge = ""
-                category = item.get('category_code', '')
-                comp_str = item.get('company', '').upper()
+        # 최대 4개를 2x2 테이블 그리드로 변환 (이메일 클라이언트 호환성 확보)
+        display_items = display_list[:4]
+        html += '<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 15px; table-layout: fixed;">'
+        
+        for i in range(0, len(display_items), 2):
+            html += '<tr>'
+            for j in range(2):
+                if j == 1:
+                    html += '<td width="4%" style="width: 4%;"></td>' # 카드 간격(gap)
                 
-                if category == 'MSP_PLAYER' or any(x in comp_str for x in ['CNS', 'SDS', 'SK']):
-                    badge = "<span style='background-color:#e3f2fd; color:#1565c0; padding:3px 6px; font-size:11px; border-radius:3px; margin-right:6px;'>MSP 채용</span>"
-                elif category == 'VET_GDC_FIRM' or any(x in comp_str for x in ['FPT', 'CMC', 'VTI', 'SOTATEK']):
-                    badge = "<span style='background-color:#e8f5e9; color:#2e7d32; padding:3px 6px; font-size:11px; border-radius:3px; margin-right:6px;'>GDC 전문업체</span>"
-                else:
-                    badge = "<span style='background-color:#fff3e0; color:#ef6c00; padding:3px 6px; font-size:11px; border-radius:3px; margin-right:6px;'>국내 외국인 채용</span>"
+                if i + j < len(display_items):
+                    item = display_items[i + j]
+                    
+                    score_html = f"<span style='color: #e74c3c;'>[{item.get('score', 0)}점]</span>"
+                    display_title = item.get('translated_title', item['title']) if is_overseas else item['title']
+                    source_text = item.get('company', '기업명 미상')
+                    
+                    # 뱃지 로직
+                    badge_html = score_html
+                    if is_job:
+                        category = item.get('category_code', '')
+                        comp_str = source_text.upper()
+                        
+                        badge_style = "display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; margin-bottom: 10px;"
+                        if category == 'MSP_PLAYER' or any(x in comp_str for x in ['CNS', 'SDS', 'SK']):
+                            badge_html = f"<span style='{badge_style} background-color: #e3f2fd; color: #1565c0;'>MSP 채용</span> {score_html}"
+                        elif category == 'VET_GDC_FIRM' or any(x in comp_str for x in ['FPT', 'CMC', 'VTI', 'SOTATEK']):
+                            badge_html = f"<span style='{badge_style} background-color: #e8f5e9; color: #2e7d32;'>GDC 전문업체</span> {score_html}"
+                        else:
+                            badge_html = f"<span style='{badge_style} background-color: #fff3e0; color: #ef6c00;'>국내 외국인 채용</span> {score_html}"
 
-                html += f"""
-                <div style="padding:10px 0; border-bottom:1px dashed #ccc;">
-                    {badge}
-                    <a href='{item['link']}' target='_blank' style="color:#0056b3; font-weight:bold; text-decoration:none;">[{item.get('company', '')}] {item['title']}</a>
-                    <span style="font-size:12px; color:#e74c3c; margin-left:8px;">[Score: {item.get('score', 0)}]</span>
-                </div>
-                """
-            else:
-                display_title = item.get('translated_title', item['title']) if is_overseas else item['title']
-                html += f"""
-                <div style="border:1px solid #e1e4e8; border-radius:8px; padding:20px; margin-bottom:15px; background-color:#ffffff; box-shadow:0 2px 4px rgba(0,0,0,0.02);">
-                    <h3 style="margin-top:0; margin-bottom:12px; font-size:16px;">
-                        <a href="{item['link']}" target="_blank" style="color:#1a73e8; text-decoration:none;">{display_title}</a>
-                        <span style="font-size:12px; color:#e74c3c; margin-left:8px;">[Score: {item.get('score', 0)}]</span>
-                    </h3>
-                    <p style="font-size:14px; color:#444; margin-bottom:15px; line-height:1.5;">
-                        <b>✅ [핵심 요약]</b> {item.get('summary', '요약 정보가 없습니다.')}
-                    </p>
-                    <div style="border-left:4px solid #3498db; background-color:#f8f9fa; padding:12px 15px; font-size:13.5px; color:#333; border-radius:0 4px 4px 0;">
-                        <b style="color:#2c3e50;">💡 [에디터의 시선]</b><br>
-                        <span style="line-height:1.6;">{item.get('editor_view', '시선 분석이 없습니다.')}</span>
+                    summary_text = item.get('summary') or item.get('translated_desc') or item.get('description') or 'AI 핵심 요약 정보가 없습니다.'
+                    editor_view_html = f"<p style='font-size: 13px; color: #4a5568; margin: 0;'><strong>👁️ 에디터 시선:</strong> {item.get('editor_view')}</p>" if item.get('editor_view') else ""
+                    
+                    meta_text = source_text if is_job else item.get('pubDate', item.get('date', '날짜 미상'))
+                    
+                    # 개별 기사 카드 UI
+                    card_html = f"""
+                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">{badge_html}</div>
+                        <a href="{item['link']}" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">{display_title}</a>
+                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; color: #4a5568; margin: 0 0 8px 0;"><strong>💡 핵심 요약:</strong> {summary_text}</p>
+                            {editor_view_html}
+                        </div>
+                        <div style="font-size: 12px; color: #a0aec0; text-align: right; margin-top: 15px; border-top: 1px dashed #edf2f7; padding-top: 10px;">{meta_text}</div>
                     </div>
-                </div>
-                """
-                
+                    """
+                    html += f'<td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">{card_html}</td>'
+                else:
+                    html += '<td width="48%" style="width: 48%;"></td>'
+            html += '</tr>'
+        html += '</table>'
+            
     if more_link:
-        html += f"""
-        <div style='margin-top:15px; text-align:right;'>
-            <a href='{more_link}' target='_blank' style='color:#0056b3; font-weight:bold; text-decoration:none; background-color:#f1f3f5; padding:8px 12px; border-radius:4px;'>🔗 리스트 전체 보기 →</a>
-        </div>
-        """
+        html += f"<div style='margin-top: 20px;'><a href='{more_link}' target='_blank' style='color: #3498db; font-weight: bold; text-decoration: none; font-size: 15px;'>🔗 [해당 카테고리 기사/공고 전체 보기]</a></div>"
+    html += "</div>"
     return html
 
 def send_email(data, pages_url):
     sender_email = os.environ.get("SENDER_EMAIL")
     sender_password = os.environ.get("SENDER_PASSWORD")
     
-    # 💡 수신자 이메일 하드코딩 적용
+    # 💡 수신자 이메일 하드코딩 유지
     receiver_emails = [
         "hansu814.ryu@samsung.com",
         "th.jeong@samsung.com",
@@ -348,32 +396,37 @@ def send_email(data, pages_url):
         "ally.chae@samsung.com",
         "yoonseok@samsung.com",
         "eunji0313.choi@samsung.com"
-
     ]
     
     if not sender_email or not sender_password: 
         print("⚠️ 발신자 이메일 정보(SENDER_EMAIL, SENDER_PASSWORD)가 누락되었습니다.")
         return
 
+    # 메일 최상단 배너
     html_content = """
-    <div style="font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; background-color: #fcfcfc; padding: 20px;">
-        <div style="background-color: #1a2b4c; color: white; padding: 20px; border-radius: 8px 8px 0 0; text-align: center;">
-            <h1 style="margin: 0; font-size: 24px;">📊 MSP Daily Brief & 기술 동향 리포트</h1>
-            <p style="margin: 5px 0 0 0; font-size: 13px; color: #a0aec0;">Premium Insights</p>
-        </div>
+    <div style="font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; background-color: #f4f7f6; padding: 20px;">
+        <div style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h1 style="color: #003366; border-bottom: 3px solid #3498db; padding-bottom: 15px; display: inline-block; font-weight: 800; font-size: 24px;">📊 GDC & AX 일일 트렌드 리포트</h1>
+                <p style="color: #7f8c8d; margin-top: -10px;">Daily Insights & Competitor Matrix</p>
+            </div>
     """
     
+    # 1. 상단 2x2 매트릭스 (웹페이지와 통일)
+    html_content += build_matrix_section(data.get('gdc'), data.get('overseas'), data.get('ax_news'))
+    
+    # 2. 하단 2x2 카드 리스트 
     html_content += build_email_section("📊 GDC 오프쇼어링 (MSP/ITO 위탁) 동향", data['gdc'].get('insight', ''), data['gdc']['data'], f"{pages_url}/more.html?type=gdc")
     html_content += build_email_section("🌍 해외 AI 원천기술 및 아키텍처", data['overseas'].get('insight', ''), data['overseas']['data'], f"{pages_url}/more.html?type=overseas", is_overseas=True)
     html_content += build_email_section("🏢 국내 기업 Enterprise AX (운영모델 전환)", data['ax_news'].get('insight', ''), data['ax_news']['data'], f"{pages_url}/more.html?type=ax")
-    
-    # 이메일에서도 GDC 관련 채용으로 타이틀 변경 적용
     html_content += build_email_section("💼 GDC 관련 채용 (MSP / 베트남 GDC / 외국인 IT)", "", data['vn_jobs']['data'], f"{pages_url}/more.html?type=vn", is_job=True)
     
+    # 마무리 꼬리말
     html_content += """
-        <div style="margin-top: 40px; padding: 20px; background-color: #e9ecef; border-radius: 8px; text-align: center; color: #555; font-size: 14px;">
-            <b>오늘의 프리미엄 리포트는 여기까지입니다! 🚀</b><br>
-            해당 리포트는 AI에 의해 고품질 데이터만 선별 및 정렬되어 자동 생성되었습니다.
+            <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #7f8c8d; font-size: 13px;">
+                <p>※ 상세 기사 및 채용 리스트는 AI 분석을 통해 85점 이상의 고품질 데이터만 선별하여 제공됩니다.</p>
+                <p>오늘의 프리미엄 리포트는 여기까지입니다! 🚀</p>
+            </div>
         </div>
     </div>
     """
@@ -402,8 +455,6 @@ if __name__ == "__main__":
     GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
     
     print("--- 🚀 데이터 크롤링 시작 ---")
-    
-    # 💡 [신규] 크롤링 전, 어제 저장한 히스토리 맥락을 불러옴
     yesterday_context = load_yesterday_context()
     
     gdc_queries = ["GDC", "글로벌 딜리버리 센터", "오프쇼어", "MSP 오프쇼어링", "클라우드 딜리버리 센터", "IT 인프라 원격 운영"]
@@ -421,24 +472,21 @@ if __name__ == "__main__":
     raw_vn_jobs = get_wanted_postings("베트남", ['it', '개발', '소프트웨어', 'bse', '통역', '번역'])
     
     print("--- 🧠 AI 기반 맥락 평가 / 번역 및 정렬 중 ---")
-    # 💡 [신규] 뉴스 평가 시 yesterday_context 파라미터 전달 (중복 배제 적용)
     sorted_gdc = process_data_with_ai_batch(raw_gdc, 'GDC 동향 뉴스', GEMINI_KEY, yesterday_context)
     sorted_ax_news = process_data_with_ai_batch(raw_ax_news, 'AX 근황 뉴스', GEMINI_KEY, yesterday_context)
     
-    # 해외 뉴스와 채용 공고는 어제 국내 뉴스 맥락과는 무관하므로 컨텍스트 미포함
     sorted_overseas = process_overseas_with_ai_translation(raw_overseas, GEMINI_KEY)
-    # 💡 '베트남 IT 채용 공고' 프롬프트 내부에 물류 등 타사업 배제 로직 적용 완료
     sorted_vn_jobs = process_data_with_ai_batch(raw_vn_jobs, '베트남 IT 채용 공고', GEMINI_KEY)
     
     print("--- 💡 시사점 도출 중 ---")
-    gdc_insight = get_ai_insight(sorted_gdc, GEMINI_KEY)
-    overseas_insight = get_ai_insight(sorted_overseas, GEMINI_KEY, is_translated=True)
-    ax_insight = get_ai_insight(sorted_ax_news, GEMINI_KEY)
+    
+    # 더 이상 전체 시사점 함수(get_ai_insight)를 별도 사용하지 않고 None으로 처리하거나 통과시킴
+    # (개별 기사별 핵심 요약으로 대체되었음)
     
     result = {
-        "gdc": {"data": sorted_gdc, "insight": gdc_insight},
-        "overseas": {"data": sorted_overseas, "insight": overseas_insight},
-        "ax_news": {"data": sorted_ax_news, "insight": ax_insight},
+        "gdc": {"data": sorted_gdc, "insight": ""},
+        "overseas": {"data": sorted_overseas, "insight": ""},
+        "ax_news": {"data": sorted_ax_news, "insight": ""},
         "vn_jobs": {"data": sorted_vn_jobs}
     }
     
@@ -446,8 +494,6 @@ if __name__ == "__main__":
         json.dump(result, f, ensure_ascii=False, indent=4)
 
     print("✅ data.json 저장 완료.")
-    
-    # 💡 [신규] 스크립트 종료 직전, 오늘의 결과물을 내일을 위해 저장
     save_today_history(result)
     
     send_email(result, GITHUB_PAGES_URL)
