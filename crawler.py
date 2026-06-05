@@ -529,8 +529,8 @@ def generate_html_content(data, pages_url):
 def send_email(html_content):
     sender_email = os.environ.get("SENDER_EMAIL")
     sender_password = os.environ.get("SENDER_PASSWORD")
-    receiver_emails = ["hansu814.ryu@samsung.com"]
-    #receiver_emails = ["hansu814.ryu@samsung.com", "th.jeong@samsung.com","jihoon33.kim@samsung.com","glassman@samsung.com","chaneast.kim@samsung.com","bangz0@samsung.com","tjsong@samsung.com","hj71.song@samsung.com","yoonsj@samsung.com","heeseon.yoon@samsung.com","laguna@samsung.com","jackie.chung@samsung.com","ally.chae@samsung.com","yoonseok@samsung.com","eunji0313.choi@samsung.com","yh0721.chung@samsung.com"]
+    #receiver_emails = ["hansu814.ryu@samsung.com"]
+    receiver_emails = ["hansu814.ryu@samsung.com", "th.jeong@samsung.com","jihoon33.kim@samsung.com","glassman@samsung.com","chaneast.kim@samsung.com","bangz0@samsung.com","tjsong@samsung.com","hj71.song@samsung.com","yoonsj@samsung.com","heeseon.yoon@samsung.com","laguna@samsung.com","jackie.chung@samsung.com","ally.chae@samsung.com","yoonseok@samsung.com","eunji0313.choi@samsung.com","yh0721.chung@samsung.com"]
     
     if not sender_email or not sender_password: 
         print("⚠️ 발신자 정보 누락")
