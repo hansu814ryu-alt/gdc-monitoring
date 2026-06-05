@@ -147,7 +147,7 @@ def get_overseas_rss_news():
     return filtered_news
 
 ### ==========================================
-### 🧠 4. AI 기반 맥락 평가 및 번역 (LLM-as-a-Judge) + 1차 하드 필터링 적용
+### 🧠 4. AI 기반 맥락 평가 및 번역 (LLM-as-a-Judge)
 ### ==========================================
 def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context="", seen_links=None, seen_titles=None):
     if not api_key or not data_list: return data_list
@@ -155,14 +155,14 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
     seen_links = seen_links or set()
     seen_titles = seen_titles or set()
     
-    # 💡 [핵심 추가] 1차 기계적 필터링: 어제와 URL이나 제목이 완전히 똑같으면 AI에게 보내지 않음
+    # 1차 기계적 필터링: 어제와 URL이나 제목이 완전히 똑같으면 배제
     filtered_initial = []
     for d in data_list:
         if d['link'] in seen_links or d['title'] in seen_titles:
-            continue # 중복 기사이므로 가차없이 버림
+            continue
         filtered_initial.append(d)
         
-    if not filtered_initial: return [] # 다 걸러졌으면 빈 리스트 반환
+    if not filtered_initial: return []
     
     try:
         genai.configure(api_key=api_key)
@@ -306,8 +306,72 @@ def process_overseas_with_ai_translation(data_list, api_key, yesterday_context="
         print(f"⚠️ 해외 뉴스 번역/평가 오류: {e}")
         return []
 
+
 ### ==========================================
-### 📧 5. 이메일/웹 통합 HTML 빌드
+### 🧵 5. 쓰레드(Threads) 자동 포스팅 연동
+### ==========================================
+def format_for_threads(item, category_name):
+    """500자 제한을 고려한 쓰레드용 텍스트 포맷팅"""
+    title = item.get('translated_title', item.get('title', ''))
+    summary = item.get('summary', 'AI 요약이 제공되지 않았습니다.')
+    link = item.get('link', '')
+    
+    threads_text = f"💡 [오늘의 {category_name} 인사이트]\n\n"
+    threads_text += f"📌 {title}\n\n"
+    threads_text += f"✨ {summary}\n\n"
+    threads_text += f"🔗 전문 보기: {link}\n\n"
+    threads_text += "#GDC #AI동향 #AX전환 #IT트렌드"
+    
+    return threads_text
+
+def post_to_threads(text):
+    """Meta API를 통해 Threads에 퍼블리싱"""
+    THREADS_USER_ID = os.environ.get("THREADS_USER_ID")
+    THREADS_ACCESS_TOKEN = os.environ.get("THREADS_ACCESS_TOKEN")
+    
+    if not THREADS_USER_ID or not THREADS_ACCESS_TOKEN:
+        print("⚠️ 쓰레드 API 토큰이 없습니다. 포스팅을 건너뜁니다.")
+        return
+
+    # 1. 쓰레드 미디어 컨테이너 생성
+    create_url = f"https://graph.threads.net/v1.0/{THREADS_USER_ID}/threads"
+    create_payload = {"media_type": "TEXT", "text": text, "access_token": THREADS_ACCESS_TOKEN}
+    
+    try:
+        create_response = requests.post(create_url, data=create_payload)
+        container_id = create_response.json().get("id")
+        
+        if container_id:
+            # 2. 컨테이너 실제 발행
+            publish_url = f"https://graph.threads.net/v1.0/{THREADS_USER_ID}/threads_publish"
+            publish_payload = {"creation_id": container_id, "access_token": THREADS_ACCESS_TOKEN}
+            requests.post(publish_url, data=publish_payload)
+            print("✅ 쓰레드 업로드 성공!")
+    except Exception as e:
+        print(f"❌ 쓰레드 업로드 실패: {e}")
+
+def process_threads_posting(data_json):
+    """90점 이상 프리미엄 데이터 선별 및 포스팅"""
+    threads_candidates = []
+    
+    # GDC, 글로벌IT(overseas), AX뉴스 카테고리 순회
+    for category_key, category_name in [('gdc', 'GDC'), ('overseas', '글로벌 IT'), ('ax_news', 'AX')]:
+        if category_key in data_json:
+            for item in data_json[category_key].get('data', []):
+                # 90점 이상이고 메인 기사로 분류된 경우만 추출
+                if item.get('is_main') and item.get('score', 0) >= 90:
+                    threads_candidates.append((item, category_name))
+                    
+    # 우선순위(점수) 기준 내림차순 정렬 후 최상위 2개만 선택 (도배 방지용)
+    threads_candidates = sorted(threads_candidates, key=lambda x: x[0].get('score', 0), reverse=True)[:2]
+    
+    for item, cat_name in threads_candidates:
+        post_text = format_for_threads(item, cat_name)
+        post_to_threads(post_text)
+
+
+### ==========================================
+### 📧 6. 이메일/웹 통합 HTML 빌드
 ### ==========================================
 
 def build_matrix_section(gdc_domestic, gdc_global, overseas_data, ax_data):
@@ -395,7 +459,6 @@ def build_email_section(title, data_list, more_link, is_job=False, is_overseas=F
                     summary_text = item.get('summary') or item.get('translated_desc') or item.get('description') or 'AI 핵심 요약 정보가 없습니다.'
                     meta_text = source_text if is_job else item.get('pubDate', item.get('date', '날짜 미상'))
                     
-                    # 에디터의 시선 삭제 적용
                     card_html = f"""
                     <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
                         <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">{badge_html}</div>
@@ -466,7 +529,8 @@ def generate_html_content(data, pages_url):
 def send_email(html_content):
     sender_email = os.environ.get("SENDER_EMAIL")
     sender_password = os.environ.get("SENDER_PASSWORD")
-    receiver_emails = ["hansu814.ryu@samsung.com", "th.jeong@samsung.com","jihoon33.kim@samsung.com","glassman@samsung.com","chaneast.kim@samsung.com","bangz0@samsung.com","tjsong@samsung.com","hj71.song@samsung.com","yoonsj@samsung.com","heeseon.yoon@samsung.com","laguna@samsung.com","jackie.chung@samsung.com","ally.chae@samsung.com","yoonseok@samsung.com","eunji0313.choi@samsung.com","yh0721.chung@samsung.com"]
+    receiver_emails = ["hansu814.ryu@samsung.com"]
+    #receiver_emails = ["hansu814.ryu@samsung.com", "th.jeong@samsung.com","jihoon33.kim@samsung.com","glassman@samsung.com","chaneast.kim@samsung.com","bangz0@samsung.com","tjsong@samsung.com","hj71.song@samsung.com","yoonsj@samsung.com","heeseon.yoon@samsung.com","laguna@samsung.com","jackie.chung@samsung.com","ally.chae@samsung.com","yoonseok@samsung.com","eunji0313.choi@samsung.com","yh0721.chung@samsung.com"]
     
     if not sender_email or not sender_password: 
         print("⚠️ 발신자 정보 누락")
@@ -487,7 +551,7 @@ def send_email(html_content):
         print(f"❌ 이메일 발송 실패: {e}")
 
 ### ==========================================
-### 🚀 6. 메인 실행부
+### 🚀 7. 메인 실행부
 ### ==========================================
 if __name__ == "__main__":
     GITHUB_PAGES_URL = "https://hansu814ryu-alt.github.io/gdc-monitoring"
@@ -538,4 +602,11 @@ if __name__ == "__main__":
     print("✅ index.html 통일 웹페이지 저장 완료.")
         
     save_today_history(result)
+    
+    print("--- 📧 이메일 발송 중 ---")
     send_email(final_html)
+    
+    print("--- 🧵 쓰레드(Threads) 자동 포스팅 중 ---")
+    process_threads_posting(result)
+    
+    print("✅ 모든 파이프라인 완료!")
