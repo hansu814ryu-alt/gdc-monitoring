@@ -16,13 +16,6 @@
                 "is_main": true
             },
             {
-                "title": "'GAME AiCON Seoul 2026 성료'... 아시아 대표 글로벌 게임 B2B플랫폼으로...",
-                "description": "또한 “우리는 GAME AiCON Seoul을 장기적으로 아시아의 GDC(GDC of Asia)로 성장시키는 것을 목표로 하고 있다”며 “참가 국가 확대, 글로벌 퍼블리셔 및 투자사 참여 강화, 인디게임 쇼케이스 확대, AI 및 게임 전문... ",
-                "link": "https://www.thisisgame.com/articles/425464",
-                "pubDate": "Fri, 05 Jun 2026 19:06:00 +0900",
-                "is_main": true
-            },
-            {
                 "title": "“한국 기업 75% AI 가치 체감” STT GDC, 亞 AI 인프라 준비 지표 분석",
                 "description": "“전문 인력 부재·규제 대응 한계로 확장 단계 난항” STT GDC가 테크 시장조사기관 에코시스템과 함께... 허철회 STT GDC 코리아 대표는 &quot;시스템 복잡성이 가중되는 현시점 핵심 과제는 구축된 환경의 고도화와 리스크... ",
                 "link": "https://www.hellot.net/news/article.html?no=112878",
@@ -37,17 +30,17 @@
                 "is_main": true
             },
             {
-                "title": "[오늘의 CEO] 신영수號 CJ대한통운, 물량 확대·기술투자로 글로벌 수익...",
-                "description": "CJ대한통운은 지난 2월 사우디 GDC(글로벌 디스트리뷰션 센터)를 열고 운영을 시작했다. 사우디 GDC는 하루 최대 2만 상자 이상을 처리할 수 있는 중동 지역 권역형 풀필먼트센터다. CJ대한통운은 처리능력(Capa) 증설과... ",
-                "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457501",
-                "pubDate": "Fri, 05 Jun 2026 08:02:00 +0900",
-                "is_main": true
-            },
-            {
                 "title": "허철회 STT GDC 대표 , &quot;한국 AI 인프라 도입 넘어 확장 단계&quot;",
                 "description": "STT GDC(ST Telemedia Global Data Centres)는 27일 여의도 사옥에서 기자간담회를 열고 이번에 발간한 '격차 해소: AI 인프라 준비 불균형의 가교 마련' 연구 보고서 내용을 바탕으로 한국 조사 결과를 발표했다. 이번 연구는 STT GDC... ",
                 "link": "https://www.epnc.co.kr/news/articleView.html?idxno=402290",
                 "pubDate": "Wed, 27 May 2026 16:34:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "'GAME AiCON Seoul 2026 성료'... 아시아 대표 글로벌 게임 B2B플랫폼으로...",
+                "description": "또한 “우리는 GAME AiCON Seoul을 장기적으로 아시아의 GDC(GDC of Asia)로 성장시키는 것을 목표로 하고 있다”며 “참가 국가 확대, 글로벌 퍼블리셔 및 투자사 참여 강화, 인디게임 쇼케이스 확대, AI 및 게임 전문... ",
+                "link": "https://www.thisisgame.com/articles/425464",
+                "pubDate": "Fri, 05 Jun 2026 19:06:00 +0900",
                 "is_main": true
             },
             {
@@ -62,6 +55,13 @@
                 "description": "ST테레미디어 글로벌 데이터 센터(STT GDC)는 싱가포르 시장조사기관 에코시스템과 아시아태평양(APAC) 지역... 허철회 STT GDC 코리아 대표는 &quot;국내 기업들은 데이터 주권과 규제 컴플라이언스, 인프라를 최적화할 내부... ",
                 "link": "https://www.aitimes.com/news/articleView.html?idxno=211062",
                 "pubDate": "Fri, 29 May 2026 13:34:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[오늘의 CEO] 신영수號 CJ대한통운, 물량 확대·기술투자로 글로벌 수익...",
+                "description": "CJ대한통운은 지난 2월 사우디 GDC(글로벌 디스트리뷰션 센터)를 열고 운영을 시작했다. 사우디 GDC는 하루 최대 2만 상자 이상을 처리할 수 있는 중동 지역 권역형 풀필먼트센터다. CJ대한통운은 처리능력(Capa) 증설과... ",
+                "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=457501",
+                "pubDate": "Fri, 05 Jun 2026 08:02:00 +0900",
                 "is_main": true
             },
             {
@@ -135,13 +135,6 @@
                 "is_main": true
             },
             {
-                "title": "&quot;말로 지시하면 척척&quot;... 아마존, AI 달고 똑똑해진 물류 로봇 공개",
-                "description": "사진출처=아마존 글로벌 이커머스 기업 아마존(Amazon)이 인공지능(AI) 기술을 접목해 현장 직원과 소통... 아마존은 현지시각 5일 영국 런던에서 개최한 '딜리버리 더 퓨처(Delivering the Future)' 행사에서 생성형 AI 기술을... ",
-                "link": "https://www.klnews.co.kr/news/articleView.html?idxno=321394",
-                "pubDate": "Fri, 05 Jun 2026 18:48:00 +0900",
-                "is_main": true
-            },
-            {
                 "title": "깊이가 다른 글로벌 투자 정보 GAM - 맛보기편 (5/19)",
                 "description": "고품격 글로벌 투자 매체 GAM(Global Asset Management)이 5월19일 제공한 콘텐츠입니다. ⑤칩을 사도 전기를 댈... 우버, 딜리버리히어로 지분 확대…&quot;현재 인수 계획 없어&quot; 미국 펜실베이니아주 파올리에 있는 뱅가드... ",
                 "link": "https://www.newspim.com/news/view/20260519000840",
@@ -163,13 +156,6 @@
                 "is_main": true
             },
             {
-                "title": "LG씨엔에스, AX 솔루션으로 이익 고성장 '본격화'…경쟁력 높은 '엑사원...",
-                "description": "목표주가는 AI 클라우드 사업부문의 가파른 성장과 해외 시장 진출을 통한 외형 성장이 가시화되는 가운데, 해외 개발 인력 약 1200명 규모의 '글로벌 딜리버리 센터(GDC)'와 자체 AI 코딩 플랫폼인 'AIND'를 통한 수익성... ",
-                "link": "http://www.newsprime.co.kr/news/article.html?no=735013",
-                "pubDate": "Fri, 29 May 2026 07:32:00 +0900",
-                "is_main": true
-            },
-            {
                 "title": "SBM 오프쇼어(SBFFF), 지분 매각·FPSO 수주·자사주 매입 ‘삼각 드라이...",
                 "description": "해양 플랜트 기업 SBM 오프쇼어(SBFFF)가 자산 매각과 대형 프로젝트 수주, 자사주 매입을 동시에 추진하며 사업 포트폴리오 재편과 주주환원 전략을 강화하고 있다. 회사에 따르면 SBM 오프쇼어는 일본 해운사... ",
                 "link": "https://www.tokenpost.kr/news/economy/366376",
@@ -184,13 +170,6 @@
                 "is_main": true
             },
             {
-                "title": "운영·유지관리 중심으로 확대되는 브라질 FPSO 생태계… FPSO Expo 2026 참...",
-                "description": "전시품목 오프쇼어 플랫폼 운영 솔루션, 유지보수(MRO), 선박·플랫폼 정비, 디지털화 솔루션, 실시간... 및 오프쇼어 서비스 등 주최 Revista Digital Oil &amp; Gas Brasil 행사 성격 브라질 FPSO·오프쇼어 산업 전문 전시회... ",
-                "link": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=110&CONTENTS_NO=1&bbsGbn=245&bbsSn=245&pNttSn=241928",
-                "pubDate": "Thu, 04 Jun 2026 12:08:00 +0900",
-                "is_main": true
-            },
-            {
                 "title": "닥터오프쇼어, 현대백화점 비클린(B.CLEAN) 입점",
                 "description": "메디컬 광노화 더마 코스메틱 브랜드 닥터오프쇼어(DR.OFFSHORE)가 현대백화점 프리미엄 클린뷰티 큐레이션 플랫폼 비클린(B.CLEAN)에 입점하며 오프라인 유통 확대에 나선다고 밝혔다. 닥터오프쇼어는 성형외과·피부과... ",
                 "link": "https://www.enetnews.co.kr/news/articleView.html?idxno=50488",
@@ -202,6 +181,13 @@
                 "description": "한화오션이 싱가포르에 오프쇼어(해양) 법인을 신규 설립했다. 한화오션은 조선과 방산 이외에도... 15일 한화오션의 분기보고서에 따르면 회사는 올해 1분기 싱가포르에 한화오션 오프쇼어 홀딩스(Hanwha Ocean Offshore... ",
                 "link": "https://n.news.naver.com/mnews/article/293/0000084738?sid=101",
                 "pubDate": "Fri, 15 May 2026 16:33:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "운영·유지관리 중심으로 확대되는 브라질 FPSO 생태계… FPSO Expo 2026 참...",
+                "description": "전시품목 오프쇼어 플랫폼 운영 솔루션, 유지보수(MRO), 선박·플랫폼 정비, 디지털화 솔루션, 실시간... 및 오프쇼어 서비스 등 주최 Revista Digital Oil &amp; Gas Brasil 행사 성격 브라질 FPSO·오프쇼어 산업 전문 전시회... ",
+                "link": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=110&CONTENTS_NO=1&bbsGbn=245&bbsSn=245&pNttSn=241928",
+                "pubDate": "Thu, 04 Jun 2026 12:08:00 +0900",
                 "is_main": true
             },
             {
@@ -247,13 +233,6 @@
                 "is_main": true
             },
             {
-                "title": "네덜란드, H₂ CO₂ 파이프라인 네트워크 위한 토양조사",
-                "description": "오프쇼어에너지에 따르면 Fugro와 Sweco는 네덜란드의 세 산업 지역을 연결하고 지정된 해상 저장 장소로 수소와 직접 포집된 CO₂를 운송할 파이프라인 네트워크를 위한 토양 조사 현장 조사 작업을 수행하고 있다.... ",
-                "link": "https://www.gasnews.com/news/articleView.html?idxno=125234",
-                "pubDate": "Fri, 22 May 2026 07:08:00 +0900",
-                "is_main": true
-            },
-            {
                 "title": "[특징주] LG씨엔에스, AI 클라우드 성장 기대감에 강세… &quot;AX 솔루션 해외...",
                 "description": "AI 클라우드 사업의 고성장과 해외 시장 진출에 따른 외형 확대가 가시화되고 있다는 투자심리가 반영됐기 때문인 것으로 풀이된다. LG씨엔에스는 현재 해외 개발 인력 약 1200명 규모의 글로벌 딜리버리 센터(GDC)와... ",
                 "link": "https://www.bizwork.co.kr/news/articleView.html?idxno=416030",
@@ -268,17 +247,17 @@
                 "is_main": true
             },
             {
-                "title": "인도, 디지털 공공 인프라(DPI)로 글로벌 디지털 질서 재편 주도",
-                "description": "구축 원격 의료 플랫폼 eSanjeevani 원격 의료 및 비대면 진료 플랫폼 2026년 3월 기준 4억 5천만 명 진료... 그러나 일부 지역에서는 기존 IT 인프라와의 통합 문제로 시스템 운영에 어려움이 발생하고 있다. 이와... ",
-                "link": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=180&CONTENTS_NO=1&bbsGbn=243&bbsSn=243&pNttSn=241296",
-                "pubDate": "Mon, 18 May 2026 14:00:00 +0900",
-                "is_main": true
-            },
-            {
                 "title": "태니엄, AI 시대 IT·보안 운영 혁신 위한 '태니엄 아틀라스' 공개",
                 "description": "이를 통해 IT 운영 팀과 보안 팀은 데이터의 사각지대 없이 전체 IT 인프라를 한눈에 파악할 수 있다.... 또한, 태니엄 아틀라스는 클라우드 네이티브 환경뿐만 아니라 온프레미스, 원격 근무 환경까지 아우르는 통합... ",
                 "link": "https://www.datanet.co.kr/news/articleView.html?idxno=211622",
                 "pubDate": "Thu, 14 May 2026 10:20:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "인도, 디지털 공공 인프라(DPI)로 글로벌 디지털 질서 재편 주도",
+                "description": "구축 원격 의료 플랫폼 eSanjeevani 원격 의료 및 비대면 진료 플랫폼 2026년 3월 기준 4억 5천만 명 진료... 그러나 일부 지역에서는 기존 IT 인프라와의 통합 문제로 시스템 운영에 어려움이 발생하고 있다. 이와... ",
+                "link": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=180&CONTENTS_NO=1&bbsGbn=243&bbsSn=243&pNttSn=241296",
+                "pubDate": "Mon, 18 May 2026 14:00:00 +0900",
                 "is_main": true
             },
             {
@@ -317,13 +296,6 @@
                 "is_main": true
             },
             {
-                "title": "KX넥스지, 제로트러스트 기반 산업 제어시스템 보안 국책과제 참여",
-                "description": "이번 과제는 OT와 IT 인프라가 융합되면서 증가하는 공급망 공격과 APT 위협에 대응하기 위해 추진되는 정부 프로젝트다. 최근 스마트팩토리, 에너지, 물류, 공항 등 주요 운영기술 영역이 IT 네트워크와 연결되면서... ",
-                "link": "https://www.dailysecu.com/news/articleView.html?idxno=207056",
-                "pubDate": "Fri, 05 Jun 2026 12:32:00 +0900",
-                "is_main": true
-            },
-            {
                 "title": "공공 수요 중심으로 성장하는 캐나다 물리보안 시장",
                 "description": "서비스 부문은 최근 가장 빠른 성장세를 보이는 영역으로, 시스템 통합(SI), 원격 모니터링, 유지보수... 독립적인 운영 영역을 넘어 IT 인프라와의 통합 단계로 진입하고 있음을 보여준다. 이러한 변화는... ",
                 "link": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=180&CONTENTS_NO=1&bbsGbn=243&bbsSn=243&pNttSn=241955",
@@ -338,17 +310,10 @@
                 "is_main": true
             },
             {
-                "title": "KX넥스지, 산업보안 시장 확대 시동…제로트러스트 기반 OT 보안 국가사...",
-                "description": "이번 사업은 OT(Operational Technology)와 IT 인프라가 융합되는 환경에서 증가하는 공급망 공격과 APT 위협에... 중소 제조기업 및 공급망 운영기업을 대상으로 ZT-SASE 보안 서비스, 원격 OT 보안접속 서비스, 산업망... ",
-                "link": "https://www.epnc.co.kr/news/articleView.html?idxno=402657",
-                "pubDate": "Fri, 05 Jun 2026 09:00:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "그렙, 보안 안정성 글로벌 인증",
-                "description": "인증 범위는 그렙의 온라인 평가·원격 감독 서비스 제공 전 영역을 비롯해 관련 IT 시스템 및 인프라의 개발·운영·유지보수까지 아우른다. 특히 ISO/IEC 27701 인증을 통해 그렙이 개인정보 관리 주체(PII 컨트롤러)... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002425103?sid=105",
-                "pubDate": "Tue, 02 Jun 2026 15:40:00 +0900",
+                "title": "KX넥스지, 제로트러스트 기반 산업 제어시스템 보안 국책과제 참여",
+                "description": "이번 과제는 OT와 IT 인프라가 융합되면서 증가하는 공급망 공격과 APT 위협에 대응하기 위해 추진되는 정부 프로젝트다. 최근 스마트팩토리, 에너지, 물류, 공항 등 주요 운영기술 영역이 IT 네트워크와 연결되면서... ",
+                "link": "https://www.dailysecu.com/news/articleView.html?idxno=207056",
+                "pubDate": "Fri, 05 Jun 2026 12:32:00 +0900",
                 "is_main": true
             }
         ]
@@ -366,17 +331,17 @@
                 "is_main": true
             },
             {
+                "title": "김희배 EDB 지사장 “DX·AX 핵심은 '오픈소스 전환'… 실시간 데이터 즉...",
+                "description": "김희배 EDB 한국지사장은 7일 국내 엔터프라이즈 시장의 미래를 진단하며 “디지털(DX), AI(AX), 로보틱스(RX) 등 현대 산업의 거대한 기술 변형 중심에 이미 오픈소스 전환(OX)이 자리 잡고 있다”고 강조했다. 현재 DX의 80... ",
+                "link": "https://n.news.naver.com/mnews/article/030/0003435042?sid=105",
+                "pubDate": "Sun, 07 Jun 2026 15:01:00 +0900",
+                "is_main": true
+            },
+            {
                 "title": "KT, 금융 AX 파트너 선언…클린존·AI GPU로 맞춤 공략",
                 "description": "이날 행사에서는 글로벌 6G 기술 동향을 반영한 ‘KT 2026 네트워크 전략’과 금융권 AX 도입 사례가 공유됐다. 특히 KT 엔터프라이즈서비스본부는 안정성과 보안성을 강화한 인프라 플랫폼 전략과 실제 적용 사례를... ",
                 "link": "https://n.news.naver.com/mnews/article/009/0005689319?sid=105",
                 "pubDate": "Thu, 04 Jun 2026 15:05:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "KT, 금융업 최적화 AX 전략 공유",
-                "description": "4일 KT는 글로벌 6G 동향과 기술 패러다임 변화를 기반으로 한 'KT 2026 네트워크 전략'과 국내 금융사의 AX 트렌드 및 협력 사례 등을 소개했다. KT 엔터프라이즈부문 엔터프라이즈 서비스본부에서 주도한 인프라... ",
-                "link": "https://n.news.naver.com/mnews/article/030/0003434398?sid=105",
-                "pubDate": "Thu, 04 Jun 2026 14:19:00 +0900",
                 "is_main": true
             },
             {
@@ -401,6 +366,13 @@
                 "is_main": true
             },
             {
+                "title": "한국앤컴퍼니그룹, '엔터프라이즈 AI 서울'서 AX 비전 공개",
+                "description": "한국앤컴퍼니그룹은 지난 26일 양재 엘타워에서 열린 '엔터프라이즈 AI(인공지능) 서울 2026'에서 그룹의 AX(AI 전환) 비전을 공개했다고 27일 밝혔다. 'AX × 에이전틱 AI 시대의 전략'을 주제로 열린 행사는 기업 AI... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016101447?sid=101",
+                "pubDate": "Wed, 27 May 2026 10:52:00 +0900",
+                "is_main": true
+            },
+            {
                 "title": "KT, 금융 고객 대상 AX 혁신 전략 공개",
                 "description": "금융사의 AX 트렌드 및 협력 사례 등을 폭넓게 소개했다. KT 커뮤니케이션 서비스를 도입한 고객사의 실제 활용 사례를 발표해 참석자들의 공감을 이끌어냈다. KT 엔터프라이즈서비스본부에서 주도한 인프라... ",
                 "link": "http://www.metroseoul.co.kr/article/20260604500124",
@@ -422,10 +394,10 @@
                 "is_main": true
             },
             {
-                "title": "한국IBM, SDLC 전반 지원 '밥 솔루션'으로 한국 AX 시장 공략",
-                "description": "전환(AX) 시장 공략에 나섰다. 한국IBM은 엔터프라이즈 환경에 최적화된 밥 솔루션을 무기로 금융·공공 등 규제 요건이 높은 산업군도 적극적으로 겨냥한다. 한국IBM은 4일 오전 서울 여의도 사무실에서 간담회를 열고... ",
-                "link": "https://www.ajunews.com/view/20260604152018440",
-                "pubDate": "Thu, 04 Jun 2026 15:48:00 +0900",
+                "title": "KT, 금융업 최적화 AX 전략 공유",
+                "description": "4일 KT는 글로벌 6G 동향과 기술 패러다임 변화를 기반으로 한 'KT 2026 네트워크 전략'과 국내 금융사의 AX 트렌드 및 협력 사례 등을 소개했다. KT 엔터프라이즈부문 엔터프라이즈 서비스본부에서 주도한 인프라... ",
+                "link": "https://n.news.naver.com/mnews/article/030/0003434398?sid=105",
+                "pubDate": "Thu, 04 Jun 2026 14:19:00 +0900",
                 "is_main": true
             },
             {
@@ -436,6 +408,20 @@
                 "is_main": true
             },
             {
+                "title": "대동, 외부 전문가 영입…AX 컨트롤타워 구축·로보틱스 전환 가속",
+                "description": "KT 엔터프라이즈 전략본부장으로 B2B·B2G 사업을 총괄했고, KT클라우드와 KTDS 사외이사로 AI·클라우드 기반 사업 시너지 효과를 이끌었다. 최근에는 공공사업본부장을 맡아 공공 분야 AX 전환을 주도했다.... ",
+                "link": "https://n.news.naver.com/mnews/article/421/0008980193?sid=102",
+                "pubDate": "Tue, 02 Jun 2026 14:37:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "한국IBM, SDLC 전반 지원 '밥 솔루션'으로 한국 AX 시장 공략",
+                "description": "전환(AX) 시장 공략에 나섰다. 한국IBM은 엔터프라이즈 환경에 최적화된 밥 솔루션을 무기로 금융·공공 등 규제 요건이 높은 산업군도 적극적으로 겨냥한다. 한국IBM은 4일 오전 서울 여의도 사무실에서 간담회를 열고... ",
+                "link": "https://www.ajunews.com/view/20260604152018440",
+                "pubDate": "Thu, 04 Jun 2026 15:48:00 +0900",
+                "is_main": true
+            },
+            {
                 "title": "KT, 금융 고객 초청⋯ 보안 중심 AX 인프라 전략 제시",
                 "description": "4일 KT는 글로벌 6G 동향과 기술 패러다임 변화를 기반으로 한 ‘KT 2026 네트워크 전략’과 국내 금융사의 AX 트렌드 및 협력 사례 등을 폭넓게 소개했다. 특히, KT 엔터프라이즈부문 엔터프라이즈서비스본부에서 주도한... ",
                 "link": "https://www.viva100.com/article/20260604500664",
@@ -443,24 +429,45 @@
                 "is_main": true
             },
             {
-                "title": "베스핀글로벌, '스마트테크 코리아 2026' 참가…제조 AX 전략 제시",
-                "description": "등 다양한 과제에 직면하고 있다&quot;며 &quot;베스핀글로벌은 STK 2026에서 기업들이 AI를 실제 업무 환경에 안정적으로 적용하고 운영할 수 있도록 엔터프라이즈 AX 전략과 운영 경험을 선보일 것&quot;이라고 말했다.",
-                "link": "https://www.ajunews.com/view/20260604090008570",
-                "pubDate": "Thu, 04 Jun 2026 09:06:00 +0900",
+                "title": "[현장] 축구장 21배 'AI 요새' 짓는다…LGU+, 파주 AIDC로 5조 수주 '정조...",
+                "description": "안 그룹장은 &quot;외산 점유율이 높은 AI 인프라 시장에서 국산 장비의 경쟁력 확보에 기여할 것&quot;이라고 전했다. 운영 안정성을 높이기 위해 2가지 특화 로봇 모델도 투입된다. 정숙경 AIDC사업담당(상무)은 &quot;하나는 전산실... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0013990996?sid=105",
+                "pubDate": "Sun, 07 Jun 2026 09:00:00 +0900",
                 "is_main": true
             },
             {
-                "title": "KT, 금융 고객 초청해 보안 중심 AX 인프라 전략 제시",
-                "description": "금융사의 AX 트렌드 및 협력 사례 등을 폭넓게 소개했다. 또한 KT 커뮤니케이션 서비스를 도입한 고객사의 실제 사례 발표는 참석자들의 공감을 이끌어냈다. 특히 KT 엔터프라이즈부문 엔터프라이즈서비스본부에서... ",
-                "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2435699",
-                "pubDate": "Thu, 04 Jun 2026 10:02:00 +0900",
+                "title": "李대통령, AI·소상공인에 강점인 한성숙 ‘깜짝 발탁’",
+                "description": "여권 내에서는 한 후보자가 국내 최고 수준의 인공지능(AI) 기술력과 서비스를 보유한 네이버 최고경영자(CEO) 출신이라는 점에 주목했다. 중소벤처기업부 장관직을 수행하면서 국정 운영 능력이 검증됐다는 평가도... ",
+                "link": "https://n.news.naver.com/mnews/article/018/0006300117?sid=100",
+                "pubDate": "Sun, 07 Jun 2026 15:43:00 +0900",
                 "is_main": true
             },
             {
-                "title": "KT, 금융 고객 대상 보안 중심 AX 인프라 전략 제시",
-                "description": "KT는 이 자리에서 글로벌 6G 동향과 기술 패러다임 변화를 기반으로 한 'KT 2026 네트워크 전략'을 발표하고 국내 금융사의 AX 트렌드 및 협력 사례를 소개했다. 특히 KT 엔터프라이즈 서비스본부가 주도한 인프라... ",
-                "link": "http://www.ftoday.co.kr/news/articleView.html?idxno=359961",
-                "pubDate": "Thu, 04 Jun 2026 16:20:00 +0900",
+                "title": "축구장 21개 크기 데이터센터 … 2000만명 AI사용도 끄떡없어",
+                "description": "고객사가 보유한 AI 서버를 위한 전력과 냉각, 상면(서버 공간)을 제공하며 AI 인프라스트럭처 전반을 통합 운영하는 'AI 팩토리 오퍼레이터'로 사업 모델을 확장한다는 전략이다. 현재 공정률은 20% 수준이지만 내년... ",
+                "link": "https://n.news.naver.com/mnews/article/009/0005690356?sid=105",
+                "pubDate": "Sun, 07 Jun 2026 17:37:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "젠슨 황, 강남 PC방서 크래프톤·엔씨 연쇄 회동…게임 AI 협력 논의 전...",
+                "description": "지난 5일 방한 첫 일정으로 국내 e스포츠팀 T1이 운영하는 PC방을 찾은 데 이어 크래프톤·엔씨와도 PC방에서... 엔씨AI는 올해 초 삼성SDS 등과 컨소시엄을 구성해 로봇 파운데이션 모델(RFM) 개발에 착수했다. 엔씨AI는 오는... ",
+                "link": "https://n.news.naver.com/mnews/article/138/0002230090?sid=105",
+                "pubDate": "Sun, 07 Jun 2026 11:29:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "‘야후 vs 구글’ 경쟁 닮은 오픈AI와 앤트로픽의 AI 각축전",
+                "description": "앤트로픽이 단순히 좋은 AI 모델을 넘어 기업용 AI 운영체제까지 만들고 있다는 점에서 오픈AI의 강력한 경쟁자로 부상하고 있다. 미래 디지털 운영체제를 장악하기 위한 두 AI 전문 기업의 셈법과 파트너십이... ",
+                "link": "https://n.news.naver.com/mnews/article/037/0000038293?sid=101",
+                "pubDate": "Sun, 07 Jun 2026 07:02:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "오픈AI “챗봇 시대 끝”…‘슈퍼앱’ 변신 승부수",
+                "description": "오픈AI가 대대적으로 운영 방향을 전환하는 셈이다. 수익성 높은 기업 고객을 확보하는 것이 매출 증대의... 장기적으로는 모델이 사용자 의도를 자동 파악할 것으로 보고 해당 기능을 없앨 계획이다. 코덱스를 이끌다... ",
+                "link": "https://n.news.naver.com/mnews/article/011/0004628499?sid=104",
+                "pubDate": "Sun, 07 Jun 2026 20:59:00 +0900",
                 "is_main": true
             },
             {
@@ -471,38 +478,17 @@
                 "is_main": true
             },
             {
+                "title": "[르포] 축구장 21배 ‘AI 심장’ 파주 AI DC…LGU+ “5년 내 5조원 사업 ...",
+                "description": "매년 모델이 바뀌고 있다”며 “AI 토큰 사용량은 분기마다 2배씩 급증하는 만큼, 시간 차를 줄이는 것이... 기술·운영담당이 파주 AI 데이터센터 구축 기자 간담회에 참석해 발언하는 모습 [LG유플러스 제공] LG그룹... ",
+                "link": "https://n.news.naver.com/mnews/article/016/0002652914?sid=105",
+                "pubDate": "Sun, 07 Jun 2026 09:01:00 +0900",
+                "is_main": true
+            },
+            {
                 "title": "네이버, 軍 AI 시장에 꽂힌 이유",
                 "description": "NC AI 역시 현대로템과 국방 피지컬 AI 사업에 참여했으며, 포스코DX와 로봇 파운데이션 모델을 개발하고 있다. 이에 맞서는 네이버의 무기는 디지털 트윈 기술과 국내 최고 수준의 로봇 운영 기술이다. 네이버가 개발한... ",
                 "link": "https://n.news.naver.com/mnews/article/003/0013990491?sid=105",
                 "pubDate": "Sat, 06 Jun 2026 12:26:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "젠슨 황, 회장들과 소맥 만찬에 2차 치킨까지…홍대거리 달군 'AI 동맹'",
-                "description": "피지컬 AI 플랫폼인 코스모스를 활용해 서울의 공간 구조 등을 구현한 서울 월드 모델을 공개했다. 한편 황 CEO는 이날 만찬 회동 전에는 방한 첫 일정으로 프로게임단 T1이 운영 중인 서울 마포구의 한 PC방을 찾아... ",
-                "link": "https://n.news.naver.com/mnews/article/079/0004154916?sid=101",
-                "pubDate": "Sat, 06 Jun 2026 06:02:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "엔비디아, 한국 AI기술센터 설립 착수… 피지컬AI 채용 공고",
-                "description": "피지컬 AI와 관련된 다양한 프로젝트와 개념검증(PoC) 과제를 맡는다. 구체적으로는 한국의 대학·기업 연구진이 오픈USD 기반 엔비디아 옴니버스 플랫폼으로 가상 세계를 구축하고, 엔비디아 코스모스 모델로 합성... ",
-                "link": "https://n.news.naver.com/mnews/article/366/0001169792?sid=105",
-                "pubDate": "Fri, 05 Jun 2026 20:21:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "젠슨 황 &quot;한국 AI 연구센터 설립…엔지니어들 일하러 오라&quot;",
-                "description": "연구진이 엔비디아 옴니버스 플랫폼을 활용해 디지털 트윈을 구축하고, 코스모스 모델로 AI 학습용 합성... AI 원천기술을 개발하는 핵심 연구개발 거점입니다. 현재 싱가포르와 영국, 대만 등 일부 국가에서만 운영되고... ",
-                "link": "https://n.news.naver.com/mnews/article/437/0000494805?sid=101",
-                "pubDate": "Fri, 05 Jun 2026 21:48:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "엔비디아, 韓 AI기술센터 설립 착수…첫 채용 공고",
-                "description": "국가에서만 운영하는 거점으로, 한국 설립이 현실화되면 글로벌 기술 전략 요충지에 이름을 올리게 된다. 엔비디아는 지난해 10월 현대차그룹, 정부와 업무협약(MOU)을 맺고 그래픽처리장치(GPU) 5만장 공급과 AI... ",
-                "link": "https://n.news.naver.com/mnews/article/016/0002652752?sid=101",
-                "pubDate": "Fri, 05 Jun 2026 21:10:00 +0900",
                 "is_main": true
             },
             {
@@ -513,17 +499,10 @@
                 "is_main": true
             },
             {
-                "title": "韓에 선물 4개 가져왔다는 젠슨 황 “서울에 AI센터, 일하러 오라”",
-                "description": "국가에서만 운영하는 거점으로, 한국도 글로벌 기술 전략 요충지에 이름을 올릴 전망이다. 엔비디아는 지난해 10월 현대차그룹, 정부와 업무협약(MOU)을 맺고 그래픽처리장치(GPU) 5만장 공급과 AI 기술센터 설립을 약속한... ",
-                "link": "https://n.news.naver.com/mnews/article/025/0003528377?sid=101",
-                "pubDate": "Fri, 05 Jun 2026 22:11:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "엔비디아, 한국 AI기술센터 설립…젠슨 황 &quot;서울이 유력&quot;",
-                "description": "휴머노이드 AI 모델 개발 지원 등을 담당하게 된다. 관련 분야 박사 학위와 5년 이상 실무 경험이 요구된다.... 현재 싱가포르와 영국, 대만 등 일부 국가에서만 운영되고 있어 한국 설립이 현실화될 경우 글로벌 AI 연구... ",
-                "link": "https://n.news.naver.com/mnews/article/018/0006298964?sid=101",
-                "pubDate": "Fri, 05 Jun 2026 21:20:00 +0900",
+                "title": "PC방 뜬 젠슨 황, '택진이형' 샤라웃…'AI PC 전초기지' 한국 낙점?",
+                "description": "앞서 프로게임단 T1이 운영하는 베이스캠프 PC방을 방문해 스타게이머 '페이커'를 만나 팬심을 드러내기도 했다. 한국 'AI PC' 전초기지될까…성공한 B2C 모델 보유 업계는 이번 방문을 한국을 AI PC '테스트베드'로... ",
+                "link": "https://n.news.naver.com/mnews/article/008/0005368173?sid=105",
+                "pubDate": "Sun, 07 Jun 2026 16:53:00 +0900",
                 "is_main": true
             },
             {
@@ -534,38 +513,24 @@
                 "is_main": true
             },
             {
-                "title": "젠슨 황 &quot;서울에 AI 기술센터 세운다&quot;…8일 현대차·LG '로보틱스 주도'...",
-                "description": "LG그룹은 로봇 관련 하드웨어부터 AI 소프트웨어, 배터리, 운영 시스템까지 계열사별로 역할을 분담할 수 있는 구조를 갖추고 있다. LG전자는 로봇과 가전 하드웨어를 보유하고 있고, LG AI연구원은 자체 AI 모델 '엑사원... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0013990734?sid=101",
-                "pubDate": "Sat, 06 Jun 2026 18:20:00 +0900",
+                "title": "AI가 바꾸는 일자리…김영훈, ILO 총회서 한국형 노동전환 모델 제시",
+                "description": "제네바서 ‘사람 중심 AI 전환’ 정부대표 연설 독일 노사정 모델 점검…산업전환·사회적 대화 해법 모색... 찾아 AI·디지털 전환 과정에서의 사회적 대화 운영 방식과 공동결정제도, 산업전환 대응 사례 등을 살펴볼... ",
+                "link": "https://n.news.naver.com/mnews/article/016/0002652955?sid=101",
+                "pubDate": "Sun, 07 Jun 2026 12:01:00 +0900",
                 "is_main": true
             },
             {
-                "title": "&quot;월드컵 뛰는 심정으로&quot;…멕시코 향하는 K-의료AI",
-                "description": "살루드 디그나는 지난 2003년 설립돼 멕시코을 비롯 중남미 지역에 의료센터 230곳 이상을 운영하는... 특화된 AI 모델을 개발하고 제품 성능을 고도화에 나섰다. 쓰리빌리언은 멕시코 유전학회에 참가해 현지와... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0013990336?sid=102",
-                "pubDate": "Sat, 06 Jun 2026 09:01:00 +0900",
+                "title": "LG유플러스, 파주 AI 데이터센터 기반 인프라 전략 공개… &quot;2030년 누적 ...",
+                "description": "안형균 LG유플러스 엔터프라이즈AI사업그룹장은 &quot;AI 인프라는 단순한 데이터센터 경쟁이 아니라 국가 산업 경쟁력과 직결되는 영역&quot;이라며 &quot;파주 데이터센터를 기반으로 AI 인프라 운영 모델의 새로운 기준을... ",
+                "link": "https://www.koreaittimes.com/news/articleView.html?idxno=154260",
+                "pubDate": "Sun, 07 Jun 2026 11:20:00 +0900",
                 "is_main": true
             },
             {
-                "title": "젠슨 황, 내일 전세기로 방한…나흘간 한국서 광폭 행보(종합)",
-                "description": "별도로 운영된다&quot;고 밝혔다. SGBAC는 김포국제공항 국제선 청사에서 도보로 약 10분 거리에 자리한 비즈니스... 개방형 AI 모델 네모트론 등을 활용해 소버린 LLM 개발을 추진하고 있다. 황 CEO가 국내에서 로봇... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016119988?sid=101",
-                "pubDate": "Thu, 04 Jun 2026 14:41:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "[소셜＋] &quot;크기 보여주세요&quot;…AI시대 중고거래서 필수품 된 '자'",
-                "description": "중고거래 플랫폼 당근은 대형언어모델(LLM) 기반 분석을 통해 AI 생성 이미지가 의심될 경우 사기 신호 중 하나로 참고하고 있으며 전문 운영 인력 모니터링과 이용자 신고 시스템을 결합해 사기 게시글을 탐지하고... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016122745?sid=102",
-                "pubDate": "Sat, 06 Jun 2026 06:50:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "메타, AI모델 개발자용 도구 출시 지연…&quot;수익화 차질&quot;",
-                "description": "권영전 특파원 = 페이스북·인스타그램 운영사 메타의 새 인공지능(AI) 모델의 개발자 도구 출시가 늦어지고 있는 것으로 나타났다. 메타는 지난 4월 초 출시했던 AI 모델 '뮤즈 스파크'의 개발자용 도구 출시 계획을... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016120760?sid=104",
-                "pubDate": "Fri, 05 Jun 2026 02:55:00 +0900",
+                "title": "LGU+, 수도권 최대 AI데이터센터 구축…2030년 수주 5조 목표",
+                "description": "단순 서버 임대 사업자를 넘어 전력과 냉각, 그래픽처리장치(GPU) 자원 운영까지 통합 관리하는 'AI 팩토리 오퍼레이터(AI Factory Operator)'로 사업 모델을 확장하고 2030년까지 누적 수주 5조원을 달성하겠다는 목표를... ",
+                "link": "https://www.newspim.com/news/view/20260605000870",
+                "pubDate": "Sun, 07 Jun 2026 09:00:00 +0900",
                 "is_main": true
             },
             {
@@ -573,6 +538,20 @@
                 "description": "허베 팀싯 EDB CRO는 &quot;한국은 EDB에게 단순한 시장이 아니라 세계에서 가장 야심찬 데이터·AI 전환이 진행되고 있는 곳&quot;이라며 &quot;한국 기업이 레거시 환경에서 벗어나 오픈소스 기반 데이터 플랫폼을 구축하고 각자의... ",
                 "link": "https://n.news.naver.com/mnews/article/092/0002425472?sid=105",
                 "pubDate": "Fri, 05 Jun 2026 14:44:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[AI브리핑] 클로드 미토스가 바꾼 사이버戰…AI가 취약점 찾고 AI가 공격",
+                "description": "즉시 전환하지 않으면 기업 네트워크 마비는 시간문제라는 지적이다. 가트너는 최근 공개한 '클로드 미토스 인프라 사이버보안 위협 대응 플레이북'에서 클로드 미토스와 GPT-사이버(GPT-Cyber) 같은 차세대 AI 보안... ",
+                "link": "https://n.news.naver.com/mnews/article/031/0001033369?sid=105",
+                "pubDate": "Sun, 07 Jun 2026 12:10:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "아웃시스템즈, 기업용 에이전틱 AI 기능 공개",
+                "description": "AI 기반 자동화 기술을 활용해 코볼, 로터스 노츠(Lotus Notes) 등 기존 레거시 플랫폼을 아웃시스템즈 기반의 차세대 에이전틱 시스템으로 전환할 수 있도록 돕는다. AWS 에이전틱 개발 환경 '키로'와 네이티브 통합도... ",
+                "link": "https://www.itbiznews.com/news/articleView.html?idxno=215392",
+                "pubDate": "Sun, 07 Jun 2026 12:00:00 +0900",
                 "is_main": true
             },
             {
@@ -587,6 +566,13 @@
                 "description": "기자간담회에 참석한 허베 팀싯(Hervé Timsit) EDB CRO는 &quot;한국 기업 고객들이 오픈소스 전환을 통해 레거시 데이터베이스에서 벗어나고, AI와 분석이 실시간 데이터를 기반으로 동작할 수 있도록 지원할 것&quot;이라며... ",
                 "link": "https://www.thelec.kr/news/articleView.html?idxno=57696",
                 "pubDate": "Fri, 05 Jun 2026 18:24:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "오픈AI, 韓 기업 리더 대상 첫 서밋…&quot;AI는 이제 업무 인프라&quot;",
+                "description": "국내 기업 사례로는 크래프톤의 전사 AI 전환과 코덱스 활용 경험이 공유됐다. 크래프톤은 지난해 'AI 퍼스트... 입사자의 레거시 코드 온보딩, 개발 문서화, 회의록 및 액션아이템 정리, 내부 자동화 도구 제작 등에도... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0013974935?sid=105",
+                "pubDate": "Fri, 29 May 2026 09:22:00 +0900",
                 "is_main": true
             },
             {
@@ -618,10 +604,24 @@
                 "is_main": true
             },
             {
-                "title": "오픈AI, 韓 기업 리더 대상 첫 서밋…&quot;AI는 이제 업무 인프라&quot;",
-                "description": "국내 기업 사례로는 크래프톤의 전사 AI 전환과 코덱스 활용 경험이 공유됐다. 크래프톤은 지난해 'AI 퍼스트... 입사자의 레거시 코드 온보딩, 개발 문서화, 회의록 및 액션아이템 정리, 내부 자동화 도구 제작 등에도... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0013974935?sid=105",
-                "pubDate": "Fri, 29 May 2026 09:22:00 +0900",
+                "title": "아웃시스템즈-AWS, AI 협력 확대…베드록·키로·트랜스폼 통합",
+                "description": "이 기능은 AI 기반 자동화 기술을 활용해 코볼과 로터스 노츠 등 기존 레거시 플랫폼을 아웃시스템즈 기반 에이전틱 시스템으로 전환하도록 지원한다. AWS 에이전틱 개발 환경인 '키로' 네이티브 통합도 지원한다. AWS... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002425394?sid=105",
+                "pubDate": "Fri, 05 Jun 2026 09:05:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "아웃시스템즈, AWS와 협력해 에이전틱 AI 기능 강화",
+                "description": "아웃시스템즈에 따르면 자사의 AI 기반 자동화 기술을 활용해 코볼(COBOL), 로터스 노츠(Lotus Notes) 등 기존 레거시 플랫폼을 아웃시스템즈 기반의 차세대 에이전틱 시스템으로 전환할 수 있다. 또 AWS 키로와의... ",
+                "link": "https://www.thelec.kr/news/articleView.html?idxno=57703",
+                "pubDate": "Sun, 07 Jun 2026 15:36:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[현장] AI가 코딩해도 배포는 왜 늦을까…IBM, SW 전 과정 조율하는 'IBM...",
+                "description": "마이클 쿽 부사장은 IBM 밥의 강점으로 레거시 시스템 현대화를 꼽았다. 메인프레임과 자바 기반 시스템처럼 복잡한 의존성이 얽힌 환경에서 AI가 시스템 간 관계를 분석하고 전환 작업을 지원해 현대화 속도를 높일 수... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002425298?sid=105",
+                "pubDate": "Thu, 04 Jun 2026 14:04:00 +0900",
                 "is_main": true
             },
             {
@@ -636,41 +636,6 @@
                 "description": "이는 AI 기반 자동화 기술을 활용해 코볼, 로터스 노츠 등 기존 레거시 플랫폼을 아웃시스템즈 기반의 차세대 에이전틱 시스템으로 전환할 수 있도록 지원한다. 아웃시스템즈는 AWS 에이전틱 개발 환경인 키로(Kiro)와의... ",
                 "link": "https://www.it-b.co.kr/news/articleView.html?idxno=88503",
                 "pubDate": "Fri, 05 Jun 2026 13:06:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "아웃시스템즈-AWS, AI 협력 확대…베드록·키로·트랜스폼 통합",
-                "description": "이 기능은 AI 기반 자동화 기술을 활용해 코볼과 로터스 노츠 등 기존 레거시 플랫폼을 아웃시스템즈 기반 에이전틱 시스템으로 전환하도록 지원한다. AWS 에이전틱 개발 환경인 '키로' 네이티브 통합도 지원한다. AWS... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002425394?sid=105",
-                "pubDate": "Fri, 05 Jun 2026 09:05:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "[현장] AI가 코딩해도 배포는 왜 늦을까…IBM, SW 전 과정 조율하는 'IBM...",
-                "description": "마이클 쿽 부사장은 IBM 밥의 강점으로 레거시 시스템 현대화를 꼽았다. 메인프레임과 자바 기반 시스템처럼 복잡한 의존성이 얽힌 환경에서 AI가 시스템 간 관계를 분석하고 전환 작업을 지원해 현대화 속도를 높일 수... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002425298?sid=105",
-                "pubDate": "Thu, 04 Jun 2026 14:04:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "아웃시스템즈, AWS와 협력 확대...기업용 에이전틱 AI 기능 공개",
-                "description": "이번 협력은 AI 모델 파편화, 레거시 시스템에 따른 기술 부채, AI 네이티브 개발 거버넌스 등 기업이... 아웃시스템즈 CEO 우드슨 마틴(Woodson Martin)은 &quot;에이전틱 시스템으로의 전환은 기업 IT 아키텍처의 근본적인... ",
-                "link": "https://www.aitimes.kr/news/articleView.html?idxno=40349",
-                "pubDate": "Fri, 05 Jun 2026 08:44:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "[헬로즈업] IBM 'Bob' 국내 첫 공개 “AI 코딩 도구 넘어 SDLC 전과정 아...",
-                "description": "많았다&quot;며 &quot;AI는 맥락이 명확한 국소적 작업에는 효율을 발휘하지만 레거시 의존성과 보안 정책... 특히 레거시 시스템 현대화에 강점을 보이는데 기존에 수 주 이상 걸리던 메인프레임 및 자바 기반 전환 작업을... ",
-                "link": "https://www.hellot.net/news/article.html?no=113020",
-                "pubDate": "Fri, 05 Jun 2026 14:26:00 +0900",
-                "is_main": true
-            },
-            {
-                "title": "제18회 CPS보안워크숍 제주서 성황리 개최…AI 자율공격 시대 CPS 보안 해...",
-                "description": "나화진 올포랜드 상무는 자율운항선박 레거시·신규 운용 환경에서 제로트러스트 아키텍처를 적용하는... 방향으로 전환돼야 한다고 강조했다. 윤창범 한전KDN 과장은 '위협탐지를 위한 AI 활용 로그 분석 연구와 적용... ",
-                "link": "https://www.dailysecu.com/news/articleView.html?idxno=207057",
-                "pubDate": "Fri, 05 Jun 2026 14:52:00 +0900",
                 "is_main": true
             },
             {
