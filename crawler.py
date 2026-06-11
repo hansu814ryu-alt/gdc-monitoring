@@ -174,8 +174,8 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
         if data_type == 'GDC 동향 뉴스':
             custom_rule = """
         2. 기사 평가 및 분류 기준 (GDC & 오프쇼어링):
-           - 국내 동향 (DOMESTIC_GDC): LG CNS, SK AX 등 대기업 자회사에서 활용하는 GDC 사례 또는 FPT Korea, CMC Korea, Sotatek, VTI 등 한국에서 GDC 사업을 전개하는 베트남 기업 동향 (90점 이상 부여).
-           - 해외 동향 (GLOBAL_GDC): Accenture, IBM 등 글로벌 IT기업이 인도/폴란드/멕시코 등에서 활용하는 오프쇼어링 및 해외 GDC 동향 (90점 이상 부여).
+           - 국내 동향 (DOMESTIC_GDC): LG CNS, SK AX 등 대기업 자회사에서 활용하는 GDC 사례 또는 FPT Korea, CMC Korea, Sotatek, VTI 등 한국에서 GDC 사업을 전개하는 베트남 기업 동향 (80점 이상 부여).
+           - 해외 동향 (GLOBAL_GDC): Accenture, IBM 등 글로벌 IT기업이 인도/폴란드/멕시코 등에서 활용하는 오프쇼어링 및 해외 GDC 동향 (70점 이상 부여).
            - 단순 웹/앱 외주 개발은 50점. 글로벌 게임 컨퍼런스(GDC)는 철저히 0점 처리.
         3. 🚨 반드시 위 기준에 따라 'category_code' 속성에 'DOMESTIC_GDC' 또는 'GLOBAL_GDC'를 할당하세요.
             """
@@ -203,10 +203,10 @@ def process_data_with_ai_batch(data_list, data_type, api_key, yesterday_context=
 
         [평가 규칙]
         1. 🚨 동일 기사 및 중복 배제 (매우 엄격): 
-           - (오늘 데이터 내 중복) 가장 정보가 풍부한 대표 기사 1개만 남기고 나머지는 배제.
-           - (어제 뉴스 철저 배제) 제공된 '어제 주요 뉴스 맥락'과 비교하여 팩트나 맥락이 90% 이상 일치하는 기사(단순 재탕)는 철저히 0점 처리하고 is_main을 false로 설정하세요. (추가 등재 절대 금지)
+           - (오늘 데이터 내 중복) 가장 정보가 풍부한 대표 기사 4개만 남기고 나머지는 배제.
+           - (어제 뉴스 철저 배제) 제공된 '어제 주요 뉴스 맥락'과 비교하여 팩트나 맥락이 95% 이상 일치하는 기사(단순 재탕)는 철저히 0점 처리하고 is_main을 false로 설정하세요. (추가 등재 절대 금지)
         {custom_rule}
-        4. 🚨 컷오프: 점수가 80점을 초과(81점 이상)하면 'is_main': true, 80점 이하면 false로 설정하세요.
+        4. 🚨 컷오프: 점수가 70점을 초과(71점 이상)하면 'is_main': true, 70점 이하면 false로 설정하세요.
         5. is_main이 true인 경우 해당 기사의 'summary'(1줄 요약)를 반드시 작성하세요. (에디터의 시선은 작성하지 마세요)
 
         [출력 형식]
@@ -268,8 +268,8 @@ def process_overseas_with_ai_translation(data_list, api_key, yesterday_context="
         {yesterday_context if yesterday_context else '비교할 어제 데이터 없음'}
 
         1. 🚨 중복 판별 (엄격한 기준 적용):
-           - (오늘 데이터 내 중복) 가장 정보가 풍부한 대표 기사 1개만 점수를 주고 나머지는 0점 처리.
-           - (어제 뉴스 배제) 제공된 '어제 주요 뉴스 맥락'과 비교하여 팩트가 90% 이상 일치하는 기사는 철저히 0점 처리 (추가 등재 금지).
+           - (오늘 데이터 내 중복) 가장 정보가 풍부한 대표 기사 4개만 점수를 주고 나머지는 0점 처리.
+           - (어제 뉴스 배제) 제공된 '어제 주요 뉴스 맥락'과 비교하여 팩트가 80% 이상 일치하는 기사는 철저히 0점 처리 (추가 등재 금지).
         2. 평가 및 분류: 
            - (AI 원천기술) Google, Microsoft, Anthropic, OpenAI 등 빅테크의 AI 원천 기술 및 아키텍처를 다루는 사례.
            - (AI 활용) Physical AI, Agentic AI 등 최신 AI를 기업, 개인, 단체 등이 실제 활용하는 사례.
