@@ -8,17 +8,17 @@
                 "pubDate": "Fri, 29 May 2026 09:10:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "LG CNS는 약 1200명 규모의 해외 개발 인력 조직인 글로벌 딜리버리 센터(GDC)와 AI 코딩 플랫폼 'AIND'를 통한 수익성 개선으로 주가가 급등했다.",
+                "summary": "LG CNS는 약 1200명 규모의 해외 개발 인력 조직인 글로벌 딜리버리 센터(GDC)를 통해 AI 클라우드 사업 성장과 해외 시장 진출을 가속화하고 있다.",
                 "category_code": "DOMESTIC_GDC"
             },
             {
-                "title": "[현장] &quot;AI 도입 빠른 한국, 확장은 병목…GPU보다 운영 역량이 승부처&quot;",
-                "description": "STT GDC 코리아는 27일 서울 여의도 FKI타워 본사에서 'AI 인프라 개발 현황 및 전망' 미디어 세션을 열고 이같은 연구 결과를 발표했다. 이번 연구는 STT GDC 의뢰로 시장조사업체 에코시스템이 수행했다. 한국을 포함해... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002424365?sid=105",
-                "pubDate": "Wed, 27 May 2026 17:12:00 +0900",
+                "title": "피지컬AI·젠슨 황 효과…LG그룹주 재평가 불붙었다",
+                "description": "시장에서는 AI 클라우드 사업 확대와 해외 시장 진출, 글로벌딜리버리센터(GDC) 운영, 자체 AI 코딩 플랫폼인 ‘AIND’를 통한 수익성 개선 등을 바탕으로 향후 실적이 빠르게 개선될 것으로 보고 있다. 최근... ",
+                "link": "https://n.news.naver.com/mnews/article/011/0004625912?sid=101",
+                "pubDate": "Fri, 29 May 2026 17:50:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "STT GDC 코리아는 AI 인프라 개발 현황 보고서를 통해 한국의 AI 도입은 빠르지만 확장에서 병목 현상을 겪고 있으며, GPU보다 운영 역량이 중요하다고 발표했다.",
+                "summary": "LG그룹은 AI 클라우드 사업 확대, 해외 시장 진출, 글로벌딜리버리센터(GDC) 운영 등을 통해 실적 개선을 기대하며 재평가를 받고 있다.",
                 "category_code": "DOMESTIC_GDC"
             }
         ]
@@ -26,148 +26,68 @@
     "overseas": {
         "data": [
             {
-                "title": "How memory tools can make AI models worse",
-                "description": "New research suggests that AI memory systems can degrade model performance and encourage sycophantic tendencies.",
-                "link": "https://techcrunch.com/2026/06/10/how-memory-tools-can-make-ai-models-worse/",
-                "pubDate": "Wed, 10 Jun 2026 16:11:08 +0000",
+                "title": "Theker just raised $85M to build the factory robot that doesn’t specialize in anything",
+                "description": "Unlike humanoid robots designed around a fixed form — think Boston Dynamics — Theker's machines are built to be reconfigured.",
+                "link": "https://techcrunch.com/2026/06/11/theker-just-raised-85m-to-build-the-factory-robot-that-doesnt-specialize-in-anything/",
+                "pubDate": "Fri, 12 Jun 2026 01:48:07 +0000",
                 "score": 95,
                 "is_main": true,
-                "translated_title": "메모리 도구가 AI 모델 성능을 저하시킬 수 있는 방법",
-                "summary": "최신 연구에 따르면 AI 모델에 적용된 메모리 시스템이 모델의 성능을 오히려 저하시키고, AI가 아첨하는 경향을 보이도록 유도할 수 있음이 밝혀졌다. 이는 AI 모델의 핵심 기술 및 아키텍처 설계에 대한 중요한 고려사항을 제시한다."
+                "translated_title": "테커, 어떤 작업에도 특화되지 않은 공장 로봇을 만들기 위해 8천5백만 달러를 유치하다",
+                "summary": "테커(Theker)는 기존의 고정된 형태의 휴머노이드 로봇과 달리 재구성이 가능한 공장 로봇을 개발하기 위해 8천5백만 달러를 투자받았다. 이 로봇은 특정 작업에 국한되지 않고 다양한 용도로 재설정될 수 있어, 범용적인 물리적 AI 솔루션으로서의 잠재력이 크다."
+            },
+            {
+                "title": "Cheaper, faster, and culturally aware, Avataar’s video AI is built for India’s scale",
+                "description": "Avataar AI's distilled video model is priced at $0.005 for every second of generation",
+                "link": "https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/",
+                "pubDate": "Fri, 12 Jun 2026 04:30:00 +0000",
+                "score": 90,
+                "is_main": true,
+                "translated_title": "더 저렴하고 빠르며 문화적으로 인지 가능한 아바타의 비디오 AI, 인도의 규모에 맞춰 구축되다",
+                "summary": "아바타(Avataar) AI가 인도의 대규모 시장에 맞춰 경제적이고 효율적인 비디오 생성 모델을 개발했다. 이 비디오 AI는 초당 0.005달러의 저렴한 비용으로 영상을 생성할 수 있으며, 문화적 특성을 고려하여 현지 시장에 최적화된 콘텐츠를 제공한다."
+            },
+            {
+                "title": "Deezer’s new tool can identify AI music from Spotify, Apple Music, and others",
+                "description": "Deezer introduced a tool that scans playlists from Spotify, Apple Music, and other platforms to identify AI music.",
+                "link": "https://techcrunch.com/2026/06/11/deezers-new-tool-can-identify-ai-music-from-spotify-apple-music-and-others/",
+                "pubDate": "Thu, 11 Jun 2026 16:36:20 +0000",
+                "score": 90,
+                "is_main": true,
+                "translated_title": "디저의 새로운 도구, 스포티파이, 애플 뮤직 등에서 AI 음악을 식별할 수 있다",
+                "summary": "음악 스트리밍 서비스 디저(Deezer)는 스포티파이, 애플 뮤직 등 다양한 플랫폼의 플레이리스트를 스캔하여 AI로 생성된 음악을 식별하는 새로운 도구를 공개했다. 이는 AI 기반 콘텐츠의 증가에 대응하여 음악의 출처를 명확히 하는 데 기여할 것이다."
             },
             {
                 "title": "DoorDash’s new AI chatbot lets you order with prompts and photos",
                 "description": "The new chatbot, called Ask DoorDash, allows users to search the app for what they're looking for in their own words instead of having to scroll through restaurants and stores to build a cart.",
                 "link": "https://techcrunch.com/2026/06/11/doordashs-new-ai-chatbot-lets-you-order-with-prompts-and-photos/",
                 "pubDate": "Thu, 11 Jun 2026 14:23:43 +0000",
-                "score": 90,
+                "score": 85,
                 "is_main": true,
-                "translated_title": "DoorDash의 새로운 AI 챗봇, 프롬프트와 사진으로 주문 가능",
-                "summary": "DoorDash가 'Ask DoorDash'라는 AI 챗봇을 출시하여 사용자가 텍스트 프롬프트나 사진을 통해 원하는 음식을 검색하고 주문할 수 있게 했다. 이는 기존의 스크롤 방식 대신 자연어 처리로 사용자 경험을 개선하는 AI 활용 사례다."
-            },
-            {
-                "title": "Cybersecurity researchers aren’t happy about the guardrails on Anthropic’s Fable",
-                "description": "Cybersecurity researchers are complaining that Anthropic's new model Fable has guardrails that are too strict for any cybersecurity work.",
-                "link": "https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/",
-                "pubDate": "Wed, 10 Jun 2026 15:41:22 +0000",
-                "score": 90,
-                "is_main": true,
-                "translated_title": "사이버보안 연구원들, Anthropic의 Fable 모델 안전장치에 불만 표출",
-                "summary": "Anthropic의 새로운 AI 모델 'Fable'에 적용된 안전장치(guardrails)가 너무 엄격하여 사이버보안 연구 활동에 방해가 된다는 불만이 제기되었다. 이는 AI 모델의 기술적 한계 및 활용성에 대한 논의를 촉발한다."
-            },
-            {
-                "title": "Datadog veterans launch AI coding startup Niteshift on a bet against Big AI lock-in",
-                "description": "AI coding agent startup Niteshift has raised a $7 million seed round from a who's who of angels. It's betting companies will want power over, not lock-in with model makers.",
-                "link": "https://techcrunch.com/2026/06/10/datadog-veterans-launch-ai-coding-startup-niteshift-on-a-bet-against-big-ai-lock-in/",
-                "pubDate": "Wed, 10 Jun 2026 15:00:00 +0000",
-                "score": 90,
-                "is_main": true,
-                "translated_title": "Datadog 출신들이 AI 코딩 스타트업 Niteshift 설립, 빅 AI 종속에 도전",
-                "summary": "Datadog 출신들이 AI 코딩 에이전트 스타트업 'Niteshift'를 설립하고 700만 달러의 시드 투자를 유치했다. 이 스타트업은 기업들이 대형 AI 모델 제공업체에 종속되는 것을 넘어, AI 도구에 대한 통제권을 원할 것이라는 전제로 AI 활용 시장에 진출한다."
+                "translated_title": "도어대시의 새로운 AI 챗봇, 프롬프트와 사진으로 주문할 수 있게 하다",
+                "summary": "도어대시(DoorDash)는 'Ask DoorDash'라는 새로운 AI 챗봇을 출시하여 사용자가 원하는 것을 직접 말하거나 사진으로 제시하여 주문할 수 있도록 했다. 이 챗봇은 사용자가 메뉴를 스크롤하지 않고도 편리하게 검색하고 장바구니를 구성할 수 있도록 지원하여 사용자 경험을 향상시킨다."
             }
         ]
     },
     "ax_news": {
         "data": [
             {
-                "title": "삼성전자, 12일부터 챗GPT·제미나이·클로드 사용 가능…AX 본격화",
-                "description": "삼성전자 디바이스경험(DX)부문은 12일 임직원을 대상으로 챗GPT(ChatGPT), 제미나이 엔터프라이즈(Gemini... 전환(AX)'을 본격 추진할 계획이다. 최근 글로벌 기업들이 생성형 AI를 업무 전반에 적용하며 생산성 경쟁에... ",
-                "link": "https://n.news.naver.com/mnews/article/421/0008997303?sid=101",
-                "pubDate": "Thu, 11 Jun 2026 08:26:00 +0900",
+                "title": "“챗GPT·제미나이·클로드 골라 쓴다”…삼성·SK, ‘AX 혁신’ 속도",
+                "description": "뉴 이천포럼은 SK그룹 경영진과 구성원들이 AI 시대 생존 전략과 그룹 차원의 AX(AI 전환) 실행 방안을... 챗GPT 엔터프라이즈의 사내 활용 가능성도 보안 및 시스템 구조 측면에서 검토 중”이라고 말했다. 이어... ",
+                "link": "https://n.news.naver.com/mnews/article/009/0005692914?sid=101",
+                "pubDate": "Fri, 12 Jun 2026 10:41:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "삼성전자 DX부문이 챗GPT, 제미나이 엔터프라이즈, 클로드 등 외부 생성형 AI 서비스를 전면 도입하며 전사적 AI 전환(AX)을 본격 추진한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "삼성 &quot;모든 업무에 AI 도입, AX 선포&quot;…이재용 2.0 시작",
-                "description": "AI 전담조직은 각사 업(業)의 특성에 맞춘 △AX 추진 전략 수립 △Data 및 모델 운영 관리 △AI 인재 육성 등을 전담하며 그룹 전반의 AX 추진력을 극대화하는 역할을 수행한다. 삼성은 외부 생성형 AI의 전면 사용을... ",
-                "link": "https://n.news.naver.com/mnews/article/421/0008993770?sid=101",
-                "pubDate": "Tue, 09 Jun 2026 14:00:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "삼성전자가 모든 업무에 AI 도입을 선포하며 각사 특성에 맞춘 AI 전담조직 신설 및 AX 추진 전략 수립 등을 통해 그룹 전반의 AI 전환을 극대화할 계획이다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "LG CNS, 에이전틱 AI 기반 개발 플랫폼 'AIND' 출시",
-                "description": "에이전틱 AI 기반 개발 플랫폼 ‘데브온 에이전틱 AIND(DevOn Agentic AI Native Development, 이하 AIND)’를... 구형 시스템을 최신 기술 환경으로 전환하는 ‘레거시 모더나이제이션(Legacy Modernization)’ 기능도 갖췄다. 코볼... ",
-                "link": "https://n.news.naver.com/mnews/article/018/0006300555?sid=105",
-                "pubDate": "Mon, 08 Jun 2026 10:01:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "LG CNS가 에이전틱 AI 기반 개발 플랫폼 'AIND'를 출시하여 시스템 기획부터 검증까지 전 과정을 지능화하고, 레거시 시스템 현대화 기능까지 제공한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "삼성전자, 외부 생성형 AI 도입…샘 올트먼 초청 강연도",
-                "description": "이번 ‘AX 부트 캠프’에서 공동으로 ‘AX 비전’도 선포한다. 전체 관계사에 AI 전담 조직도 신설한다. 해당 조직은 사별 사업 특성에 맞춘 AX 추진 전략 수립, 데이터 및 모델 운영 관리, AI 인재 육성 등을 전담한다.",
-                "link": "https://n.news.naver.com/mnews/article/016/0002654999?sid=101",
-                "pubDate": "Thu, 11 Jun 2026 08:57:00 +0900",
-                "score": 93,
-                "is_main": true,
-                "summary": "삼성전자가 외부 생성형 AI 도입과 함께 AX 비전 선포, AI 전담 조직 신설, 샘 올트먼 초청 강연 등을 통해 전사적 AI 전환에 박차를 가한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "바이브 코딩 한계 넘는다…LG CNS, 기업용 AI 개발 플랫폼 출시",
-                "description": "AI가 사전에 정의된 기준에 따라 설계·코딩·검증을 수행해 할루시네이션(AI 환각 현상)과 오류를 최소화할 수 있다. 또 개발 언어와 관계없이 시스템을 최신 기술 환경에 최적화된 구조로 전환하는 ‘레거시... ",
-                "link": "https://n.news.naver.com/mnews/article/366/0001170118?sid=105",
-                "pubDate": "Mon, 08 Jun 2026 10:01:00 +0900",
-                "score": 93,
-                "is_main": true,
-                "summary": "LG CNS가 AI가 설계·코딩·검증을 수행하는 기업용 AI 개발 플랫폼을 출시하며 개발 언어 관계없이 시스템을 최신 환경으로 전환하는 레거시 현대화를 지원한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "'AX 선언' 삼성에 올트먼 뜬다…카카오·네이버까지 연쇄 회동",
-                "description": "최근 삼성전자가 챗GPT를 포함한 외부 생성형 AI를 전면 도입하며 'AI 전환(AX)'에 나선 가운데 이뤄지는... 삼성전자는 최근 DX(디바이스경험)부문 임직원을 대상으로 챗GPT·제미나이 엔터프라이즈·클로드 등 외부... ",
-                "link": "https://n.news.naver.com/mnews/article/648/0000047929?sid=101",
-                "pubDate": "Thu, 11 Jun 2026 14:12:00 +0900",
-                "score": 92,
-                "is_main": true,
-                "summary": "삼성전자가 외부 생성형 AI 도입으로 AX를 선언한 가운데 샘 올트먼 오픈AI CEO가 방한하여 AI 전환에 대한 협력과 논의가 주목된다.",
-                "category_code": "VET_GDC_FIRM"
+                "summary": "삼성전자와 SK하이닉스 등 국내 주요 대기업들이 사내 업무 효율성 및 AI 전환(AX) 가속화를 위해 챗GPT, 제미나이, 클로드 등 다양한 외부 생성형 AI를 도입하고 활용하고 있다.",
+                "category_code": "DOMESTIC_VET_IT"
             },
             {
                 "title": "LG CNS, AI 플랫폼 'AIND' 공개…&quot;말로 하면 코딩·검증까지&quot;",
                 "description": "코드 변환 작업 분 단위로 단축 美 AI 기업 클라인과 공동 개발 LG CNS가 시스템 기획부터 검증까지 IT 개발 전... 오래된 시스템을 최신 환경에 맞춰 전환하는 레거시 모더나이제이션 기능도 지원한다. 코볼 등 구형 언어를... ",
                 "link": "https://n.news.naver.com/mnews/article/629/0000505669?sid=101",
                 "pubDate": "Mon, 08 Jun 2026 10:01:00 +0900",
-                "score": 92,
-                "is_main": true,
-                "summary": "LG CNS가 시스템 기획부터 검증까지 IT 개발 전 과정을 AI로 자동화하는 'AIND' 플랫폼을 공개하며, 오래된 시스템을 최신 환경에 맞춰 전환하는 레거시 모더나이제이션 기능을 제공한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "토큰 맥스 아닌 AI 에이전트의 실전 가치 알린 세일즈포스",
-                "description": "발표 자료에 따르면 포스코의 AI 에이전트는 단 몇 초 만에 전문가급 답변을 도출할 만큼 고도화됐다. 포스코는 최고경영자(CEO) 직속의 디지털 전환(DX) 전략실을 주축으로 '미션 오리엔티드 AX(Mission-Oriented AX)' 과제를... ",
-                "link": "https://it.donga.com/109012/",
-                "pubDate": "Wed, 10 Jun 2026 23:08:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "포스코가 최고경영자(CEO) 직속 DX 전략실을 주축으로 '미션 오리엔티드 AX(Mission-Oriented AX)' 과제를 추진하며, AI 에이전트가 전문가급 답변을 단 몇 초 만에 도출하는 등 높은 AI 활용 역량을 보여주고 있다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "렌터카 팔고 AI 올인… 이호정·최성환式 SK네트웍스 체질 전환",
-                "description": "과거 성장의 축이었던 레거시 사업을 정리하고 미래 성장 분야에 자본을 집중하기 위한 선택이었다.... SK네트웍스 관계자는 &quot;AI 기업에 대한 전략적 투자와 기존 사업의 AI 전환을 동시에 추진해 실질적인 성과를... ",
-                "link": "https://www.asiatoday.co.kr/kn/view.php?key=20260612010004182",
-                "pubDate": "Thu, 11 Jun 2026 18:00:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "SK네트웍스가 과거 레거시 사업을 정리하고 AI 기업에 대한 전략적 투자와 기존 사업의 AI 전환을 동시에 추진하며 체질 개선에 올인한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "LG CNS, AI 개발 플랫폼 출시 “전 과정 지능화”",
-                "description": "구조로 전환하는 ‘레거시 모더나이제이션’도 지원한다. 기존에 수 주 이상 소요되던 코드 분석·변환·검증 작업을 분 단위까지 단축할 수 있다. LG CNS는 미국의 글로벌 오픈소스 AI 코딩 기업 클라인(Cline)과 AIND를... ",
-                "link": "https://n.news.naver.com/mnews/article/016/0002653399?sid=105",
-                "pubDate": "Mon, 08 Jun 2026 11:35:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "LG CNS가 AI 개발 플랫폼 'AIND'를 출시하여 IT 개발 전 과정을 지능화하며, 코드 분석·변환·검증 작업을 분 단위로 단축하고 레거시 모더나이제이션을 지원한다.",
-                "category_code": "VET_GDC_FIRM"
+                "summary": "LG CNS가 시스템 기획부터 검증까지 AI가 개발 전 과정을 수행하며 레거시 시스템 현대화 기능까지 지원하는 에이전틱 AI 기반 개발 플랫폼 'AIND'를 출시하여 기업들의 AI 전환을 돕는다.",
+                "category_code": "DOMESTIC_VET_IT"
             },
             {
                 "title": "&quot;업무 자료 어디 있지?&quot; BGF리테일, 사내 AI 플랫폼 'ASK' 론칭",
@@ -176,98 +96,8 @@
                 "pubDate": "Thu, 11 Jun 2026 08:50:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "BGF리테일이 사내 방대한 업무 자료를 효율적으로 검색하고 활용할 수 있는 하이브리드 AI RAG 기반 사내 AI 플랫폼 'ASK'를 론칭했다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "한컴, BGF그룹과 AX 협력…사내 데이터 활용해 AI 검색 시스템 구축",
-                "description": "생성(RAG) 구조와 연결했다. 두 회사는 개념 검증을 통해 현업 적용 가능성을 확인한 뒤 사내 지식 검색 분야를 우선 적용 대상으로 선정했다. 1차 사업의 핵심은 전사 게시판 데이터와 연계한 한컴피디아 기반 지식... ",
-                "link": "https://n.news.naver.com/mnews/article/366/0001171160?sid=105",
-                "pubDate": "Thu, 11 Jun 2026 16:27:00 +0900",
-                "score": 88,
-                "is_main": true,
-                "summary": "한컴이 BGF그룹과 협력하여 사내 데이터를 활용한 검색증강생성(RAG) 기반 AI 검색 시스템을 구축하며 BGF리테일의 AX 전환을 지원한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "BGF리테일, 한컴과 손잡고 사내 AI 플랫폼 구축…AX 전환 속도",
-                "description": "문서와 사내 게시글까지 별도 가공 없이 학습할 수 있도록 설계됐다. 데이터베이스(DB) 검색 연동 기술인 MCP(Model Context Protocol)를 접목한 하이브리드 AI RAG 시스템도 구현해 조직도와 업무분장 등 자주 활용되는... ",
-                "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7168938",
-                "pubDate": "Thu, 11 Jun 2026 15:50:00 +0900",
-                "score": 88,
-                "is_main": true,
-                "summary": "BGF리테일이 한컴과 협력하여 데이터베이스 검색 연동 기술(MCP)이 접목된 하이브리드 AI RAG 시스템을 통해 사내 AI 플랫폼 'ASK'를 구축하며 AX 전환에 속도를 낸다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "한글과컴퓨터, BGF그룹과 인공지능 전환(AX) 협력…사내 데이터 자산화",
-                "description": "정비된 데이터를 바탕으로 한컴피디아는 검색증강생성(RAG) 검색, 자연어 질의응답, AI 에이전트, 심층 검색 기능을 제공한다. 이를 통해 BGF그룹 임직원들은 사내 정보를 자연어로 질문해 한곳에서 확인할 수 있으며... ",
-                "link": "https://www.dailysecu.com/news/articleView.html?idxno=207124",
-                "pubDate": "Thu, 11 Jun 2026 15:32:00 +0900",
-                "score": 87,
-                "is_main": true,
-                "summary": "한글과컴퓨터가 BGF그룹의 AI 전환(AX) 협력을 통해 사내 데이터를 AI 자산화하고, 검색증강생성(RAG) 검색 및 자연어 질의응답 기능을 제공하는 한컴피디아 기반 AI 플랫폼을 구축한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "&quot;작전명령서 10분 만에 뚝딱&quot;…네이버, 실전형 전장 AI 만든다",
-                "description": "네이버는 이날 옴니모달 AI 모델과 현장 엔지니어를 전진 배치하는 FDE 체계를 국방 AI 주권의 핵심 축으로... 네이버클라우드는 세종과 춘천에 구축한 초대형 데이터센터 운영 노하우를 국방에 이식할 계획이다. 군부대... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0014000112?sid=105",
-                "pubDate": "Thu, 11 Jun 2026 09:46:00 +0900",
-                "score": 85,
-                "is_main": true,
-                "summary": "네이버가 옴니모달 AI 모델과 현장 엔지니어를 전진 배치하는 FDE 체계를 통해 국방 AI 주권을 강화하고 실전형 전장 AI 개발에 나선다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "휴맥스홀딩스, 엔터프라이즈 AX 사업 진출",
-                "description": "휴맥스홀딩스(028080)가 기업의 실제 업무 프로세스에 인공지능(AI)을 내재화하는 엔터프라이즈 AX(AI 전환) 사업에 본격 진출한다. 휴맥스홀딩스는 엔터프라이즈 AX 전문 솔루션 브랜드 ‘에이엑스넥서스(AXNEXUS)’를... ",
-                "link": "https://n.news.naver.com/mnews/article/018/0006303187?sid=105",
-                "pubDate": "Thu, 11 Jun 2026 16:08:00 +0900",
-                "score": 80,
-                "is_main": true,
-                "summary": "휴맥스홀딩스가 엔터프라이즈 AX 전문 솔루션 브랜드 ‘에이엑스넥서스(AXNEXUS)’를 출시하며 기업의 실제 업무 프로세스에 AI를 내재화하는 사업에 본격 진출한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "'1세대 IT 강자' 휴맥스홀딩스… 엔터프라이즈 AX 시장 진출",
-                "description": "휴맥스홀딩스(대표 변대규·사진)가 기업의 실제 업무 프로세스에 인공지능(AI)을 적용하는 엔터프라이즈 AI 전환(AX) 사업 진출을 발표하면서 전문 솔루션 브랜드 'AXNEXUS'를 출시한다고 11일 밝혔다. AXNEXUS는 범용 AI... ",
-                "link": "https://n.news.naver.com/mnews/article/009/0005692583?sid=105",
-                "pubDate": "Thu, 11 Jun 2026 17:13:00 +0900",
-                "score": 78,
-                "is_main": true,
-                "summary": "1세대 IT 기업 휴맥스홀딩스가 엔터프라이즈 AI 전환(AX) 사업 진출을 선언하고, 기업 맞춤형 AI 적용 솔루션 브랜드 'AXNEXUS'를 선보인다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "운동화 영상 봤는데 바람막이 뜨는 이유…AI가 '취향' 읽었다",
-                "description": "영상 이해 인공지능(AI) 기업 트웰브랩스는 GS샵의 숏폼 커머스 서비스 '숏픽'에 자사 AI 모델 '마렝고'와... 운영 효율도 개선됐다. 도입 검증 단계에서 멀티모달 임베딩 모델 마렝고로 영상 검색 성능을 테스트한 결과... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0014001734?sid=105",
-                "pubDate": "Thu, 11 Jun 2026 17:30:00 +0900",
-                "score": 78,
-                "is_main": true,
-                "summary": "영상 이해 AI 기업 트웰브랩스가 GS샵의 숏폼 커머스 서비스 '숏픽'에 AI 모델 '마렝고'를 도입하여 영상 검색 성능 향상 및 개인화 추천 시스템을 고도화했다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "휴맥스홀딩스, 기업맞춤형 엔터프라이즈 AX 사업 진출",
-                "description": "휴맥스홀딩스가 기업별 업무 프로세스와 기존 시스템에 맞춰 AI를 적용하는 엔터프라이즈 AX 솔루션 브랜드 ‘AXNEXUS’를 출시했다. AXNEXUS는 요구사항 수집부터 설계·코딩·테스트·배포까지 개발 전 과정을 AI로... ",
-                "link": "https://n.news.naver.com/mnews/article/020/0003726216?sid=101",
-                "pubDate": "Thu, 11 Jun 2026 19:46:00 +0900",
-                "score": 75,
-                "is_main": true,
-                "summary": "휴맥스홀딩스가 기업별 업무 프로세스와 기존 시스템에 맞춰 AI를 적용하는 엔터프라이즈 AX 솔루션 브랜드 ‘AXNEXUS’를 출시하여 AI 전환을 지원한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "플래티어, 깃랩 DAP 기반 ‘엔터프라이즈 AX’ 혁신 전략 제시",
-                "description": "이번 행사에서 플래티어는 깃랩 듀오 에이전트 플랫폼(GitLab DAP)을 활용해 소프트웨어 개발 생명주기(SDLC) 전반을 혁신하는 엔터프라이즈 AI 전환(AX) 전략을 공개했다. '깃랩 DAP(GitLab DAP)가 바꾸는 소프트웨어 개발의... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002426182?sid=105",
-                "pubDate": "Thu, 11 Jun 2026 10:55:00 +0900",
-                "score": 75,
-                "is_main": true,
-                "summary": "플래티어가 깃랩 DAP(GitLab DAP)를 활용해 소프트웨어 개발 생명주기를 혁신하는 엔터프라이즈 AI 전환(AX) 전략을 제시했다.",
-                "category_code": "VET_GDC_FIRM"
+                "summary": "BGF리테일이 사내 게시판, 문서 등을 학습한 검색증강생성(RAG) 기반 AI 플랫폼 'ASK'를 론칭해 임직원들이 업무 자료를 효율적으로 검색하고 활용할 수 있도록 지원하며 AX를 가속화한다.",
+                "category_code": "DOMESTIC_VET_IT"
             },
             {
                 "title": "휴맥스홀딩스, 엔터프라이즈 AX 사업 진출…‘AXNEXUS’ 출시",
@@ -276,28 +106,8 @@
                 "pubDate": "Thu, 11 Jun 2026 18:44:00 +0900",
                 "score": 75,
                 "is_main": true,
-                "summary": "휴맥스홀딩스가 기업 맞춤형 AI 전환 사업을 본격 추진하기 위해 엔터프라이즈 AX 전문 솔루션 브랜드 ‘AXNEXUS’를 출시했다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "와이즈넛, K-뷰티에 AI 에이전트 심는다",
-                "description": "이를 위해 와이즈넛은 ▲뷰티 도메인 특화 거대언어모델(LLM) 개발 및 파인튜닝 ▲멀티 에이전트 구성... 지원을 넘어 기업 운영 목표를 이해하고 스스로 판단·수행하는 AI 에이전트 경쟁력을 고도화하겠다&quot;고 말했다.",
-                "link": "https://n.news.naver.com/mnews/article/092/0002426242?sid=105",
-                "pubDate": "Thu, 11 Jun 2026 16:28:00 +0900",
-                "score": 75,
-                "is_main": true,
-                "summary": "와이즈넛이 뷰티 도메인 특화 거대언어모델(LLM) 개발 및 멀티 에이전트 구성을 통해 K-뷰티 산업에 AI 에이전트 경쟁력을 고도화하며 기업 운영 목표 달성을 지원한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "[AI 워크 서밋] 플래티어, 차세대 에이전틱 AI 플랫폼 XGEN 전략 공개",
-                "description": "세 번째 파트에서는 브라우저 이면의 레거시 API를 코드 한 줄 없이 화면 조작만으로 즉시 에이전트 도구로... 진병권 플래티어 ECS AI 전환(AX) 사업부문장은 “XGEN은 AI가 특정 플랫폼 안에 갇히지 않고 기업의 다양한 내... ",
-                "link": "https://n.news.naver.com/mnews/article/030/0003436928?sid=105",
-                "pubDate": "Thu, 11 Jun 2026 17:01:00 +0900",
-                "score": 73,
-                "is_main": true,
-                "summary": "플래티어가 AI 워크 서밋에서 차세대 에이전틱 AI 플랫폼 'XGEN' 전략을 공개하며, AI가 특정 플랫폼에 갇히지 않고 기업의 다양한 내외부 시스템을 유기적으로 연결하여 AX를 지원하겠다고 밝혔다.",
-                "category_code": "VET_GDC_FIRM"
+                "summary": "휴맥스홀딩스가 기업의 실제 업무 프로세스에 AI를 내재화하는 엔터프라이즈 AX 전문 솔루션 브랜드 'AXNEXUS'를 출시하며 AX 사업에 본격 진출한다.",
+                "category_code": "DOMESTIC_VET_IT"
             }
         ]
     },
