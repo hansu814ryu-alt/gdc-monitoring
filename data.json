@@ -2,103 +2,93 @@
     "gdc": {
         "data": [
             {
+                "title": "로지스밸리, LG전자 생산기술원과 차세대 지능형 인천공항 GDC 오픈",
+                "description": "배송센터(GDC, Global Distribution Center)를 오픈하고 글로벌 항공물류 시장 공략에 본격적으로 나선다고... 이번에 문을 여는 로지스밸리 인천공항 GDC는 지상 4층, 총면적 53,698㎡(16,244평) 규모다. 로지스밸리는 2030년까지... ",
+                "link": "https://www.klnews.co.kr/news/articleView.html?idxno=321368",
+                "pubDate": "Fri, 05 Jun 2026 09:34:00 +0900",
+                "score": 95,
+                "is_main": true,
+                "summary": "로지스밸리가 LG전자 생산기술원과 함께 인천공항에 차세대 지능형 글로벌 배송센터(GDC)를 오픈하며 글로벌 항공물류 시장 공략에 나섰다.",
+                "category_code": "DOMESTIC_GDC"
+            },
+            {
+                "title": "현대글로비스, 車 운반 회사서 현대차그룹 미래사업 전진기지로",
+                "description": "현대글로비스는 인천공항 글로벌 물류센터(GDC)를 기반으로 항공 물류 부문을 키우고, 보스턴다이나믹스... 현대글로비스는 지난 2023년 10월 인천공항 제2공항 물류단지 내 GDC 착공에 들어가 지난해 물류센터 건설을... ",
+                "link": "https://www.smarttoday.co.kr/ko-kr/articles/108214",
+                "pubDate": "Tue, 09 Jun 2026 14:46:00 +0900",
+                "score": 90,
+                "is_main": true,
+                "summary": "현대글로비스는 인천공항 글로벌 물류센터(GDC)를 기반으로 항공 물류 부문을 확대하며 현대차그룹의 미래 사업 전진기지 역할을 강화하고 있다.",
+                "category_code": "DOMESTIC_GDC"
+            },
+            {
                 "title": "[특징주] LG씨엔에스, AI 클라우드 성장 기대감에 강세… &quot;AX 솔루션 해외...",
                 "description": "AI 클라우드 사업의 고성장과 해외 시장 진출에 따른 외형 확대가 가시화되고 있다는 투자심리가 반영됐기 때문인 것으로 풀이된다. LG씨엔에스는 현재 해외 개발 인력 약 1200명 규모의 글로벌 딜리버리 센터(GDC)와... ",
                 "link": "https://www.bizwork.co.kr/news/articleView.html?idxno=416030",
                 "pubDate": "Fri, 29 May 2026 09:18:00 +0900",
-                "score": 95,
+                "score": 90,
                 "is_main": true,
-                "summary": "LG CNS가 1200명 규모의 해외 개발 인력을 보유한 글로벌 딜리버리 센터(GDC)를 통해 AI 클라우드 사업의 해외 확장을 가속화하며 성장 기대감을 높이고 있다.",
+                "summary": "LG CNS는 해외 개발 인력 1200명 규모의 글로벌 딜리버리 센터(GDC)를 통해 AI 클라우드 사업의 고성장과 해외 시장 진출을 가속화하고 있다.",
                 "category_code": "DOMESTIC_GDC"
             },
             {
-                "title": "[현장] &quot;AI 도입 빠른 한국, 확장은 병목…GPU보다 운영 역량이 승부처&quot;",
-                "description": "STT GDC 코리아는 27일 서울 여의도 FKI타워 본사에서 'AI 인프라 개발 현황 및 전망' 미디어 세션을 열고 이같은 연구 결과를 발표했다. 이번 연구는 STT GDC 의뢰로 시장조사업체 에코시스템이 수행했다. 한국을 포함해... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002424365?sid=105",
-                "pubDate": "Wed, 27 May 2026 17:12:00 +0900",
+                "title": "[Who Is ?] 신영수 CJ대한통운 대표이사",
+                "description": "△사우디GDC 운영 돌입, 글로벌 확장 속도 신영수가 사우디아라비아를 중동 공략의 거점으로 삼고 중동 시장 진출을 가속화한다. CJ대한통운은 2026년 2월12일 사우디아라비아 GDC 개소식을 열고, 2026년 2월19일 운영을... ",
+                "link": "https://www.businesspost.co.kr/BP?command=article_view&num=439223",
+                "pubDate": "Thu, 04 Jun 2026 08:26:00 +0900",
                 "score": 85,
                 "is_main": true,
-                "summary": "STT GDC 코리아는 아시아 지역 AI 인프라 보고서를 통해 한국의 AI 도입은 빠르지만 운영 역량과 인프라 확장에는 병목 현상이 있음을 발표했다.",
+                "summary": "CJ대한통운은 사우디아라비아에 GDC 개소 및 운영에 돌입하며 중동 시장 진출을 가속화하고 글로벌 확장에 박차를 가한다.",
                 "category_code": "GLOBAL_GDC"
-            },
-            {
-                "title": "STT GDC, 'STT 서울1' 데이터센터 티어 3 설계 인증 획득",
-                "description": "STT GDC의 'STT 서울(Seoul)1' 데이터센터가 티어 3 설계 인증을 획득했다. STT GDC(ST Telemedia Global Datacentres)는 STT 서울 1이 '업타임 인스티튜트 티어 3(Uptime Institute Tier III)' 설계인증(TCDD)을 획득했다고 19일... ",
-                "link": "https://www.epnc.co.kr/news/articleView.html?idxno=401946",
-                "pubDate": "Tue, 19 May 2026 10:26:00 +0900",
-                "score": 85,
-                "is_main": true,
-                "summary": "글로벌 데이터센터 기업 STT GDC의 'STT 서울1'이 안정성과 신뢰성을 인정하는 업타임 인스티튜트 티어 3 설계 인증을 획득했다.",
-                "category_code": "GLOBAL_GDC"
-            },
-            {
-                "title": "피지컬AI·젠슨 황 효과…LG그룹주 재평가 불붙었다",
-                "description": "시장에서는 AI 클라우드 사업 확대와 해외 시장 진출, 글로벌딜리버리센터(GDC) 운영, 자체 AI 코딩 플랫폼인 ‘AIND’를 통한 수익성 개선 등을 바탕으로 향후 실적이 빠르게 개선될 것으로 보고 있다. 최근... ",
-                "link": "https://n.news.naver.com/mnews/article/011/0004625912?sid=101",
-                "pubDate": "Fri, 29 May 2026 17:50:00 +0900",
-                "score": 80,
-                "is_main": true,
-                "summary": "LG그룹주가 피지컬 AI 및 젠슨 황 효과로 재평가되는 가운데, 글로벌딜리버리센터(GDC) 운영을 통한 AI 클라우드 사업 확대 및 해외 시장 진출이 긍정적인 요인으로 작용하고 있다.",
-                "category_code": "DOMESTIC_GDC"
             }
         ]
     },
     "overseas": {
         "data": [
             {
-                "title": "Anthropic’s safety warnings may have just backfired — the government has pulled the plug on its most powerful AI",
-                "description": "Anthropic isn't hiding its frustration. \"We disagree that the finding of a narrow potential jailbreak should be cause for recalling a commercial model deployed to hundreds of millions of people,\" the company wrote in a blog post.",
-                "link": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
-                "pubDate": "Sat, 13 Jun 2026 02:26:30 +0000",
-                "score": 98,
-                "is_main": true,
-                "translated_title": "Anthropic의 안전 경고가 역효과를 내다 — 정부가 가장 강력한 AI 모델에 대한 접근을 차단",
-                "summary": "Anthropic이 자사의 안전 경고가 오히려 역효과를 내어 정부가 가장 강력한 AI 모델의 사용을 중단시켰다고 밝혔다. Anthropic은 블로그 게시물에서 \"좁은 범위의 잠재적 탈옥(jailbreak) 가능성이 수억 명에게 배포된 상업 모델을 회수할 이유가 된다는 점에 동의하지 않는다\"고 밝히며, AI 개발사와 정부 간의 안전 기준 및 모델 배포에 대한 의견 차이를 드러낸다."
-            },
-            {
-                "title": "Amazon CEO reportedly raised Anthropic model concerns before government crackdown",
-                "description": "Amazon CEO Andy Jassy may have been the source of security concerns that led Anthropic to cut off worldwide access to two models on Friday.",
-                "link": "https://techcrunch.com/2026/06/13/amazon-ceo-reportedly-raised-anthropic-model-concerns-before-government-crackdown/",
-                "pubDate": "Sat, 13 Jun 2026 19:11:41 +0000",
+                "title": "Salesforce acquires AI customer service platform Fin for $3.6 billion",
+                "description": "Salesforce says it wants to use Fin's team and technology to improve Agentforce, its existing enterprise platform that businesses can use to build custom AI agents that automate tasks.",
+                "link": "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/",
+                "pubDate": "Mon, 15 Jun 2026 14:34:45 +0000",
                 "score": 95,
                 "is_main": true,
-                "translated_title": "아마존 CEO, 정부 조치 전 Anthropic 모델에 대한 우려 제기 보도",
-                "summary": "아마존 CEO 앤디 재시가 Anthropic의 두 가지 모델에 대한 보안 우려를 제기했으며, 이는 금요일 Anthropic이 해당 모델에 대한 전 세계적 접근을 중단하게 된 계기가 되었을 수 있다는 보도가 나왔다. 이 사건은 빅테크 기업 간의 AI 모델 안전성 및 규제 관련 논의의 중요성을 부각시킨다."
+                "translated_title": "세일즈포스, AI 고객 서비스 플랫폼 Fin을 36억 달러에 인수",
+                "summary": "세일즈포스가 36억 달러에 AI 고객 서비스 플랫폼 Fin을 인수했다. 세일즈포스는 Fin의 팀과 기술을 활용하여 기업이 맞춤형 AI 에이전트를 구축하고 작업을 자동화하는 데 사용하는 기존 기업 플랫폼인 Agentforce를 개선할 계획이다. 이는 Agentic AI의 실제 기업 활용 사례와 확장을 보여준다."
             },
             {
-                "title": "KPMG pulls report on AI usage due to apparent hallucinations",
-                "description": "Once again, AI proves to be an unreliable source of information about AI.",
-                "link": "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/",
-                "pubDate": "Sat, 13 Jun 2026 20:42:31 +0000",
-                "score": 90,
+                "title": "A satellite just learned to find things on its own — here’s what that means",
+                "description": "In April, for the first time ever, an Earth observation satellite found what it was looking for, all on its own.",
+                "link": "https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/",
+                "pubDate": "Mon, 15 Jun 2026 12:00:00 +0000",
+                "score": 95,
                 "is_main": true,
-                "translated_title": "KPMG, AI 환각 현상으로 AI 사용 보고서 철회",
-                "summary": "컨설팅 기업 KPMG가 AI를 활용해 작성한 보고서에서 환각(Hallucinations) 현상이 발견되어 해당 보고서를 철회했다. 이는 AI가 정보 생성에 있어 여전히 신뢰할 수 없는 원천임을 다시 한번 보여주는 사례로, AI의 실제 활용 과정에서 나타나는 한계를 명확히 드러낸다."
+                "translated_title": "위성이 스스로 물체를 찾는 법을 배웠다 — 이것이 의미하는 바는",
+                "summary": "지난 4월, 지구 관측 위성이 역사상 처음으로 스스로 탐색 대상을 찾아냈다. 이는 Physical AI 및 자율 시스템의 중요한 진전으로, AI가 외부 환경에서 독립적으로 인지하고 행동하는 능력을 보여준다."
             },
             {
-                "title": "Chinese cybercrime operation that used AI to scam ‘hundreds of thousands of victims’ sued by Google",
-                "description": "The tech giant said a group called \"Outsider Enterprise\" used AI to scam hundreds of thousands of victims, sending 2.5 million text messages over a span of two weeks.",
-                "link": "https://techcrunch.com/2026/06/12/chinese-cybercrime-operation-that-used-ai-to-scam-hundreds-of-thousands-of-victims-sued-by-google/",
-                "pubDate": "Fri, 12 Jun 2026 20:38:09 +0000",
+                "title": "Cybersecurity vets protest ‘dangerous’ US government ban on Anthropic’s most powerful models",
+                "description": "A group made up of dozens of cybersecurity experts urged the White House to remove export control restrictions on Anthropic’s models Fable and Mythos, arguing that the order is going to limit the ability of cybersecurity defenders to secure their software and products.",
+                "link": "https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/",
+                "pubDate": "Mon, 15 Jun 2026 15:29:51 +0000",
                 "score": 90,
                 "is_main": true,
-                "translated_title": "AI를 이용해 수십만 명을 사취한 중국 사이버 범죄 조직, Google에 의해 피소",
-                "summary": "Google이 '아웃사이더 엔터프라이즈'라는 중국 사이버 범죄 조직을 고소했다. 이 조직은 AI를 활용하여 단 2주 만에 250만 건의 문자 메시지를 보내 수십만 명의 피해자를 사취한 것으로 알려졌다. 이 사례는 AI 기술이 악용될 수 있는 심각한 위험성과 함께, AI 활용 범죄에 대한 강력한 대응의 필요성을 보여준다."
+                "translated_title": "사이버 보안 전문가들, 앤트로픽의 강력한 모델에 대한 미국 정부의 '위험한' 금지에 항의",
+                "summary": "수십 명의 사이버 보안 전문가들이 백악관에 앤트로픽의 Fable 및 Mythos 모델에 대한 수출 통제 규제 철회를 촉구했다. 이들은 해당 명령이 사이버 보안 방어자들이 소프트웨어 및 제품을 보호하는 능력을 제한할 것이라고 주장하며, AI 원천기술의 활용에 대한 정책적 제약이 실제 응용 분야에 미치는 영향을 강조했다."
+            },
+            {
+                "title": "As AI agents become employees, NewCore emerges with $66M to give them identities",
+                "description": "NewCore argues the next challenge in enterprise security will be managing AI agents, not people.",
+                "link": "https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/",
+                "pubDate": "Mon, 15 Jun 2026 13:00:00 +0000",
+                "score": 90,
+                "is_main": true,
+                "translated_title": "AI 에이전트가 직원이 됨에 따라 NewCore, 6,600만 달러 투자 유치하여 신원 부여 솔루션 출시",
+                "summary": "AI 에이전트가 기업 환경에서 직원처럼 기능하게 되면서, NewCore는 이들의 신원을 관리하는 데 초점을 맞춘 솔루션을 위해 6,600만 달러를 유치했다. NewCore는 기업 보안의 다음 과제가 사람 대신 AI 에이전트를 관리하는 것이라고 주장하며, Agentic AI의 등장과 함께 발생하는 새로운 보안 및 관리 요구사항을 제시한다."
             }
         ]
     },
     "ax_news": {
         "data": [
-            {
-                "title": "LG CNS, 전사에 앤트로픽 '클로드' 깐다…그룹·외부 AX도 가속",
-                "description": "LG CNS가 글로벌 인공지능(AI) 기업 앤트로픽과 기업용 AI 모델 '클로드 엔터프라이즈(Claude Enterprise)' 도입 계약을 체결하고 LG그룹 차원의 AX(AI 전환) 가속화에 나선다. 9일 LG CNS에 따르면 이번 계약은 LG그룹 전... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0013995213?sid=105",
-                "pubDate": "Tue, 09 Jun 2026 10:00:00 +0900",
-                "score": 96,
-                "is_main": true,
-                "summary": "LG CNS가 글로벌 AI 기업 앤트로픽과 '클로드 엔터프라이즈' 도입 계약을 체결하고, LG그룹 차원의 AX 가속화와 외부 기업 대상 AX 사업 확대를 추진한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
             {
                 "title": "최태원 “전속력으로 AX 돌입해야 할 때”… AX강조하는 총수들",
                 "description": "최태원 SK그룹 회장이 ‘1인 1에이전트’ 도입 등을 강조하며, 경영진과 구성원의 신속한 AX(인공지능 전환)... 앞으로 DX부문 임직원들은 사내에서 챗GPT, 제미나이 엔터프라이즈, 클로드를 모두 활용할 수 있게 된다.... ",
@@ -106,7 +96,7 @@
                 "pubDate": "Sun, 14 Jun 2026 15:24:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "SK그룹 최태원 회장이 '1인 1에이전트' 도입 등 전사적 AX 전환을 강조하며 DX부문 임직원 대상 챗GPT, 제미나이, 클로드 등 생성형 AI 활용을 공식 도입했다.",
+                "summary": "최태원 SK그룹 회장이 전 그룹사에 '1인 1에이전트' 도입과 외부 생성형 AI 활용을 통한 전사적 AX(인공지능 전환) 가속화를 강조했다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
@@ -116,17 +106,37 @@
                 "pubDate": "Thu, 11 Jun 2026 08:26:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "삼성전자 디바이스경험(DX) 부문이 12일부터 챗GPT, 제미나이 엔터프라이즈, 클로드 등 외부 생성형 AI 서비스의 임직원 사용을 허용하며 AX를 본격 추진할 계획이다.",
+                "summary": "삼성전자 디바이스경험(DX) 부문이 12일부터 임직원을 대상으로 챗GPT, 제미나이 엔터프라이즈, 클로드 등 외부 생성형 AI 서비스 사용을 공식 허용하며 AX(인공지능 전환)를 본격 추진한다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
-                "title": "LG CNS, 에이전틱 AI 개발 플랫폼 출시…&quot;시스템 구축 전 과정 자동화&quot;",
-                "description": "레거시 시스템 현대화 기능도 지원한다. AIND는 개발 언어와 관계없이 시스템을 최신 기술 환경에 맞게 전환할 수 있으며, 특히 코볼 기반 시스템을 자바로 자동 변환하거나 기존 자바 시스템을 최신 아키텍처에... ",
-                "link": "https://n.news.naver.com/mnews/article/008/0005368387?sid=105",
-                "pubDate": "Mon, 08 Jun 2026 10:00:00 +0900",
+                "title": "토큰 맥스 아닌 AI 에이전트의 실전 가치 알린 세일즈포스",
+                "description": "발표 자료에 따르면 포스코의 AI 에이전트는 단 몇 초 만에 전문가급 답변을 도출할 만큼 고도화됐다. 포스코는 최고경영자(CEO) 직속의 디지털 전환(DX) 전략실을 주축으로 '미션 오리엔티드 AX(Mission-Oriented AX)' 과제를... ",
+                "link": "https://it.donga.com/109012/",
+                "pubDate": "Wed, 10 Jun 2026 23:08:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "LG CNS가 대규모 IT 시스템 구축·운영 전 과정을 자동화하는 에이전틱 AI 기반 개발 플랫폼 'AIND'를 출시하며, 코볼 시스템 자바 자동 변환 등 레거시 현대화 기능을 지원한다.",
+                "summary": "포스코가 최고경영자(CEO) 직속의 디지털 전환(DX) 전략실 주축으로 '미션 오리엔티드 AX' 과제를 추진하며, AI 에이전트를 도입해 전문가급 답변을 도출하는 등 고도화된 AI 활용 사례를 선보였다.",
+                "category_code": "VET_GDC_FIRM"
+            },
+            {
+                "title": "LG CNS, AI 플랫폼 'AIND' 공개…&quot;말로 하면 코딩·검증까지&quot;",
+                "description": "코드 변환 작업 분 단위로 단축 美 AI 기업 클라인과 공동 개발 LG CNS가 시스템 기획부터 검증까지 IT 개발 전... 오래된 시스템을 최신 환경에 맞춰 전환하는 레거시 모더나이제이션 기능도 지원한다. 코볼 등 구형 언어를... ",
+                "link": "https://n.news.naver.com/mnews/article/629/0000505669?sid=101",
+                "pubDate": "Mon, 08 Jun 2026 10:01:00 +0900",
+                "score": 90,
+                "is_main": true,
+                "summary": "LG CNS가 AI 기반 개발 플랫폼 'AIND'를 공개하며 IT 시스템 개발 전 과정을 AI로 지원하고, 특히 오래된 시스템을 최신 환경으로 전환하는 레거시 모더나이제이션 기능을 제공한다.",
+                "category_code": "VET_GDC_FIRM"
+            },
+            {
+                "title": "&quot;업무 자료 어디 있지?&quot; BGF리테일, 사내 AI 플랫폼 'ASK' 론칭",
+                "description": "문서와 사내 게시글도 별도 가공 없이 학습할 수 있는 것이 특징이다. 데이터베이스(DB) 검색 연동 기술인 MCP(Model Context Protocol)를 적용한 하이브리드 AI RAG 시스템도 구축했다. 이를 통해 조직도와 업무분장 등... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0013999901?sid=101",
+                "pubDate": "Thu, 11 Jun 2026 08:50:00 +0900",
+                "score": 90,
+                "is_main": true,
+                "summary": "BGF리테일이 사내 게시판, 문서, DB 등을 통합 검색하는 하이브리드 AI RAG 기반 사내 AI 플랫폼 'ASK'를 론칭하여 임직원들의 업무 생산성을 높인다.",
                 "category_code": "VET_GDC_FIRM"
             }
         ]
