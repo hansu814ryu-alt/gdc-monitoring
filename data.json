@@ -2,43 +2,23 @@
     "gdc": {
         "data": [
             {
-                "title": "로지스밸리, LG전자 생산기술원과 차세대 지능형 인천공항 GDC 오픈",
-                "description": "배송센터(GDC, Global Distribution Center)를 오픈하고 글로벌 항공물류 시장 공략에 본격적으로 나선다고... 이번에 문을 여는 로지스밸리 인천공항 GDC는 지상 4층, 총면적 53,698㎡(16,244평) 규모다. 로지스밸리는 2030년까지... ",
-                "link": "https://www.klnews.co.kr/news/articleView.html?idxno=321368",
-                "pubDate": "Fri, 05 Jun 2026 09:34:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "로지스밸리가 LG전자 생산기술원과 함께 인천공항에 차세대 지능형 글로벌 배송센터(GDC)를 오픈하며 글로벌 항공물류 시장 공략에 나섰다.",
-                "category_code": "DOMESTIC_GDC"
-            },
-            {
-                "title": "현대글로비스, 車 운반 회사서 현대차그룹 미래사업 전진기지로",
-                "description": "현대글로비스는 인천공항 글로벌 물류센터(GDC)를 기반으로 항공 물류 부문을 키우고, 보스턴다이나믹스... 현대글로비스는 지난 2023년 10월 인천공항 제2공항 물류단지 내 GDC 착공에 들어가 지난해 물류센터 건설을... ",
-                "link": "https://www.smarttoday.co.kr/ko-kr/articles/108214",
-                "pubDate": "Tue, 09 Jun 2026 14:46:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "현대글로비스는 인천공항 글로벌 물류센터(GDC)를 기반으로 항공 물류 부문을 확대하며 현대차그룹의 미래 사업 전진기지 역할을 강화하고 있다.",
-                "category_code": "DOMESTIC_GDC"
-            },
-            {
                 "title": "[특징주] LG씨엔에스, AI 클라우드 성장 기대감에 강세… &quot;AX 솔루션 해외...",
                 "description": "AI 클라우드 사업의 고성장과 해외 시장 진출에 따른 외형 확대가 가시화되고 있다는 투자심리가 반영됐기 때문인 것으로 풀이된다. LG씨엔에스는 현재 해외 개발 인력 약 1200명 규모의 글로벌 딜리버리 센터(GDC)와... ",
                 "link": "https://www.bizwork.co.kr/news/articleView.html?idxno=416030",
                 "pubDate": "Fri, 29 May 2026 09:18:00 +0900",
-                "score": 90,
+                "score": 100,
                 "is_main": true,
-                "summary": "LG CNS는 해외 개발 인력 1200명 규모의 글로벌 딜리버리 센터(GDC)를 통해 AI 클라우드 사업의 고성장과 해외 시장 진출을 가속화하고 있다.",
+                "summary": "LG CNS가 해외 개발 인력 1200명 규모의 글로벌 딜리버리 센터(GDC)를 통해 AI 클라우드 사업 및 AX 솔루션 해외 확대를 가시화하며 성장 기대감을 높이고 있다.",
                 "category_code": "DOMESTIC_GDC"
             },
             {
-                "title": "[Who Is ?] 신영수 CJ대한통운 대표이사",
-                "description": "△사우디GDC 운영 돌입, 글로벌 확장 속도 신영수가 사우디아라비아를 중동 공략의 거점으로 삼고 중동 시장 진출을 가속화한다. CJ대한통운은 2026년 2월12일 사우디아라비아 GDC 개소식을 열고, 2026년 2월19일 운영을... ",
-                "link": "https://www.businesspost.co.kr/BP?command=article_view&num=439223",
-                "pubDate": "Thu, 04 Jun 2026 08:26:00 +0900",
-                "score": 85,
+                "title": "PMI, ' Global Summit Series Seoul' 성황리에 마쳐",
+                "description": "SW 센터장이 패널로 참여했다. 자리에서는 조선, 의료, 소비재 기술 등 서로 다른 산업에서의 AI 전환... 방식, 글로벌 딜리버리, PMO의 전략적 역할, 기업 민첩성 등 폭넓은 주제로 진행됐다. 행사의 둘째 날 마지막... ",
+                "link": "https://www.etoday.co.kr/news/view/2593676",
+                "pubDate": "Mon, 15 Jun 2026 14:02:00 +0900",
+                "score": 75,
                 "is_main": true,
-                "summary": "CJ대한통운은 사우디아라비아에 GDC 개소 및 운영에 돌입하며 중동 시장 진출을 가속화하고 글로벌 확장에 박차를 가한다.",
+                "summary": "PMI의 글로벌 서밋 서울에서 AI 전환, 글로벌 딜리버리 등 폭넓은 IT 및 프로젝트 관리 주제가 논의되며 관련 트렌드를 조망했다.",
                 "category_code": "GLOBAL_GDC"
             }
         ]
@@ -46,98 +26,448 @@
     "overseas": {
         "data": [
             {
-                "title": "Salesforce acquires AI customer service platform Fin for $3.6 billion",
-                "description": "Salesforce says it wants to use Fin's team and technology to improve Agentforce, its existing enterprise platform that businesses can use to build custom AI agents that automate tasks.",
-                "link": "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/",
-                "pubDate": "Mon, 15 Jun 2026 14:34:45 +0000",
-                "score": 95,
-                "is_main": true,
-                "translated_title": "세일즈포스, AI 고객 서비스 플랫폼 Fin을 36억 달러에 인수",
-                "summary": "세일즈포스가 36억 달러에 AI 고객 서비스 플랫폼 Fin을 인수했다. 세일즈포스는 Fin의 팀과 기술을 활용하여 기업이 맞춤형 AI 에이전트를 구축하고 작업을 자동화하는 데 사용하는 기존 기업 플랫폼인 Agentforce를 개선할 계획이다. 이는 Agentic AI의 실제 기업 활용 사례와 확장을 보여준다."
-            },
-            {
-                "title": "A satellite just learned to find things on its own — here’s what that means",
-                "description": "In April, for the first time ever, an Earth observation satellite found what it was looking for, all on its own.",
-                "link": "https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/",
-                "pubDate": "Mon, 15 Jun 2026 12:00:00 +0000",
-                "score": 95,
-                "is_main": true,
-                "translated_title": "위성이 스스로 물체를 찾는 법을 배웠다 — 이것이 의미하는 바는",
-                "summary": "지난 4월, 지구 관측 위성이 역사상 처음으로 스스로 탐색 대상을 찾아냈다. 이는 Physical AI 및 자율 시스템의 중요한 진전으로, AI가 외부 환경에서 독립적으로 인지하고 행동하는 능력을 보여준다."
-            },
-            {
-                "title": "Cybersecurity vets protest ‘dangerous’ US government ban on Anthropic’s most powerful models",
-                "description": "A group made up of dozens of cybersecurity experts urged the White House to remove export control restrictions on Anthropic’s models Fable and Mythos, arguing that the order is going to limit the ability of cybersecurity defenders to secure their software and products.",
-                "link": "https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/",
-                "pubDate": "Mon, 15 Jun 2026 15:29:51 +0000",
+                "title": "Probably raises $9M to build a more reliable kind of AI",
+                "description": "Probably wants to prevent hallucinations and factual errors from reaching users, and achieve accuracy on par with deterministic systems.",
+                "link": "https://techcrunch.com/2026/06/16/probably-raises-9m-to-build-a-more-reliable-kind-of-ai/",
+                "pubDate": "Tue, 16 Jun 2026 13:15:09 +0000",
                 "score": 90,
                 "is_main": true,
-                "translated_title": "사이버 보안 전문가들, 앤트로픽의 강력한 모델에 대한 미국 정부의 '위험한' 금지에 항의",
-                "summary": "수십 명의 사이버 보안 전문가들이 백악관에 앤트로픽의 Fable 및 Mythos 모델에 대한 수출 통제 규제 철회를 촉구했다. 이들은 해당 명령이 사이버 보안 방어자들이 소프트웨어 및 제품을 보호하는 능력을 제한할 것이라고 주장하며, AI 원천기술의 활용에 대한 정책적 제약이 실제 응용 분야에 미치는 영향을 강조했다."
+                "translated_title": "Probably, 신뢰성 높은 AI 개발 위해 900만 달러 유치",
+                "summary": "Probably는 환각 현상 및 사실 오류를 방지하고, 결정론적 시스템과 동등한 수준의 정확도를 달성하는 것을 목표로 하는 AI 기술 개발을 위해 900만 달러를 유치했다. 이는 AI의 근본적인 신뢰성을 향상시키려는 시도로, AI 원천 기술의 발전에 기여할 수 있는 사례이다."
             },
             {
-                "title": "As AI agents become employees, NewCore emerges with $66M to give them identities",
-                "description": "NewCore argues the next challenge in enterprise security will be managing AI agents, not people.",
-                "link": "https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/",
-                "pubDate": "Mon, 15 Jun 2026 13:00:00 +0000",
-                "score": 90,
+                "title": "The US government’s Anthropic models ban was never about an AI jailbreak",
+                "description": "The Trump administration's decision that forced Anthropic to pull its latest cybersecurity models could be reactionary, retaliatory, or both, but the message is clear: The AI industry isn't immune from U.S. government interference.",
+                "link": "https://techcrunch.com/2026/06/15/the-us-governments-anthropic-models-ban-was-never-about-an-ai-jailbreak/",
+                "pubDate": "Mon, 15 Jun 2026 21:50:21 +0000",
+                "score": 85,
                 "is_main": true,
-                "translated_title": "AI 에이전트가 직원이 됨에 따라 NewCore, 6,600만 달러 투자 유치하여 신원 부여 솔루션 출시",
-                "summary": "AI 에이전트가 기업 환경에서 직원처럼 기능하게 되면서, NewCore는 이들의 신원을 관리하는 데 초점을 맞춘 솔루션을 위해 6,600만 달러를 유치했다. NewCore는 기업 보안의 다음 과제가 사람 대신 AI 에이전트를 관리하는 것이라고 주장하며, Agentic AI의 등장과 함께 발생하는 새로운 보안 및 관리 요구사항을 제시한다."
+                "translated_title": "미국 정부의 Anthropic 모델 사용 금지, AI 탈옥과는 무관",
+                "summary": "미국 트럼프 행정부가 Anthropic의 최신 사이버 보안 모델 사용을 중단하도록 압력을 가한 결정은 AI 탈옥(jailbreak) 문제가 아닌 정부의 개입 의지를 보여주는 사례이다. 이는 빅테크의 AI 활용 사례에 대한 정부 규제 및 정책적 영향력을 보여주며, AI 산업이 정부 간섭으로부터 자유롭지 않음을 시사한다."
             }
         ]
     },
     "ax_news": {
         "data": [
             {
-                "title": "최태원 “전속력으로 AX 돌입해야 할 때”… AX강조하는 총수들",
-                "description": "최태원 SK그룹 회장이 ‘1인 1에이전트’ 도입 등을 강조하며, 경영진과 구성원의 신속한 AX(인공지능 전환)... 앞으로 DX부문 임직원들은 사내에서 챗GPT, 제미나이 엔터프라이즈, 클로드를 모두 활용할 수 있게 된다.... ",
-                "link": "https://n.news.naver.com/mnews/article/022/0004135322?sid=101",
-                "pubDate": "Sun, 14 Jun 2026 15:24:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "최태원 SK그룹 회장이 전 그룹사에 '1인 1에이전트' 도입과 외부 생성형 AI 활용을 통한 전사적 AX(인공지능 전환) 가속화를 강조했다.",
-                "category_code": "VET_GDC_FIRM"
+                "title": "SK AX, ‘에이전틱 엔터프라이즈’ 시장 공략 나선다",
+                "description": "기업의 AI 전환(AX)을 돕는 시스템통합(SI) 기업 SK AX가 기업의 실제 업무와 운영 전반을 인공지능(AI)으로 재설계하는 ‘에이전틱 엔터프라이즈’ 시장 공략에 나선다. SK AX는 16일 서울 강남구 그랜드 인터컨티넨탈... ",
+                "link": "https://n.news.naver.com/mnews/article/020/0003727195?sid=101",
+                "pubDate": "Tue, 16 Jun 2026 16:23:00 +0900",
+                "is_main": true
             },
             {
-                "title": "삼성전자, 12일부터 챗GPT·제미나이·클로드 사용 가능…AX 본격화",
-                "description": "삼성전자 디바이스경험(DX)부문은 12일 임직원을 대상으로 챗GPT(ChatGPT), 제미나이 엔터프라이즈(Gemini... 전환(AX)'을 본격 추진할 계획이다. 최근 글로벌 기업들이 생성형 AI를 업무 전반에 적용하며 생산성 경쟁에... ",
-                "link": "https://n.news.naver.com/mnews/article/421/0008997303?sid=101",
-                "pubDate": "Thu, 11 Jun 2026 08:26:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "삼성전자 디바이스경험(DX) 부문이 12일부터 임직원을 대상으로 챗GPT, 제미나이 엔터프라이즈, 클로드 등 외부 생성형 AI 서비스 사용을 공식 허용하며 AX(인공지능 전환)를 본격 추진한다.",
-                "category_code": "VET_GDC_FIRM"
+                "title": "SK AX, '에이전틱 엔터프라이즈' 선언…AI가 기업 성장 이끈다",
+                "description": "SK AX가 기업의 실제 업무와 운영 전반이 인공지능(AI)으로 재설계되는 '에이전틱 엔터프라이즈' 시대를 연다. AI 에이전트가 기업 업무를 스스로 판단·계획·실행하는 운영 체계를 꾸리고, 사람과의 협업을 통해... ",
+                "link": "https://n.news.naver.com/mnews/article/421/0009005825?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 10:25:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "SK AX “에이전틱 엔터프라이즈 시대 열겠다”",
+                "description": "SK AX가 기업 실제 업무와 운영 전반이 인공지능(AI)으로 재설계되는 '에이전틱 엔터프라이즈' 시대를 열겠다고 선언했다. 이 회사는 16일 서울 그랜드 인터컨티넨탈 파르나스 호텔에서 '이매진 AX 2026' 콘퍼런스를 열고... ",
+                "link": "https://n.news.naver.com/mnews/article/029/0003031998?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 11:25:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "SK AX, ‘에이전틱 엔터프라이즈’ 선언…&quot;AI 스스로 일하는 기업 재설계...",
+                "description": "(사진=SK AX) SK AX가 기업의 실제 업무와 운영 전반을 AI로 재설계하는 ‘에이전틱 엔터프라이즈’(Agentic Enterprise) 시대를 연다고 16일 밝혔다. 단순히 AI를 도입하는 단계를 넘어, AI 에이전트가 기업 업무를... ",
+                "link": "https://n.news.naver.com/mnews/article/018/0006307313?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 10:10:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "SK AX, ‘에이전틱 엔터프라이즈’ 시대 연다…“기업 경쟁력 격차”",
+                "description": "엔터프라이즈 AI 사업 협력을 위해 SK AX와 파트너십을 체결한 오픈AI는 기업 내부 시스템의 맥락을 정확히 이해하고 실제 업무 성과는 물론 투자 대비 효과까지 높이는 AX 혁신 모델을 고도화하고 있다.... ",
+                "link": "https://www.etoday.co.kr/news/view/2594039",
+                "pubDate": "Tue, 16 Jun 2026 11:18:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "AI가 보고서 쓰고 회의까지...SK AX, '에이전틱 엔터프라이즈 시대' 선언",
+                "description": "SK AX는 16일 서울 그랜드 인터컨티넨탈 파르나스 호텔에서 'IMAGINE AX 2026' 컨퍼런스를 열고, 앞으로 이 같은 에이전틱 엔터프라이즈 시대를 열겠다고 선언했다. AI로 비즈니스 모델을 혁신하고 사람-AI 협업을... ",
+                "link": "https://news.mtn.co.kr/news-detail/2026061613182728589",
+                "pubDate": "Tue, 16 Jun 2026 15:04:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "SK AX, ‘에이전틱 엔터프라이즈’ 선언…AI가 일하는 기업 만든다",
+                "description": "행사에는 제조와 금융, 통신, 유통, 서비스 등 다양한 산업군 경영진이 참석해 AI 전환(AX) 경험을 공유했다. 에이전틱 엔터프라이즈는 AI 에이전트가 업무를 스스로 판단하고 계획·실행하는 기업 운영 체계를... ",
+                "link": "https://n.news.naver.com/mnews/article/117/0004075082?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 13:43:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "SK AX, AI가 기업성장 이끄는 '에이전틱 엔터프라이즈' 시대 연다",
+                "description": "SK AX는 16일 서울 그랜드 인터컨티넨탈 파르나스 호텔에서 '이매진 AX 2026' 컨퍼런스를 열었다. '비욘드 AI: 디 에이전틱 엔터프라이즈(Beyond AI: The Agentic Enterprise)를 주제로 진행된 이번 행사에서 SK AX는 전사... ",
+                "link": "https://n.news.naver.com/mnews/article/008/0005372775?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 17:12:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "SK AX, 이매진 AX 2026 개최… ‘에이전틱 엔터프라이즈’ 비전 공개",
+                "description": "SK AX는 ‘비욘드 AI: 더 에이전틱 엔터프라이즈(AI를 도입하는 기업에서 AI가 일하는 기업으로)’를 주제로 열린 이번 행사에서 전사 업무와 운영 전반을 AI로 혁신한 경험을 소개했다. SK AX는 에이전틱 AI 기반... ",
+                "link": "https://n.news.naver.com/mnews/article/366/0001172194?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 14:42:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "SK AX, 기업 성장 이끄는 '에이전틱 엔터프라이즈' 비전 공개",
+                "description": "OpenAI는 SK AX와의 엔터프라이즈 AI 협력을 통해 기업 내부 시스템의 맥락을 이해하고 실제 업무 성과와 투자 효과를 높이는 모델을 고도화하고 있다고 소개했다. SK하이닉스는 디지털 트윈 기반 제조 공정... ",
+                "link": "https://www.eroun.net/news/articleView.html?idxno=83220",
+                "pubDate": "Tue, 16 Jun 2026 15:20:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "AX 패러다임 ‘AI 도입→AI 직접 실행’… SK AX, ‘에이전틱 엔터프라이...",
+                "description": "● ‘단순 AI 도입→최적화 AI가 업무 실행’ 기업 AX 패러다임 진화 SK AX가 제시하는 에이전틱 엔터프라이즈 시대는 단순 AI 도입을 넘어 AI로 비즈니스 모델을 혁신하고 사람과 AI 협업을 통해 기업 전체가... ",
+                "link": "https://n.news.naver.com/mnews/article/020/0003727104?sid=101",
+                "pubDate": "Tue, 16 Jun 2026 10:02:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "SK AX, '에이전틱 엔터프라이즈' 시대 선언",
+                "description": "SK AX가 기업의 실제 업무와 운영 전반을 AI로 재설계하는 '에이전틱 엔터프라이즈' 시대를 연다. SK AX는 16일 서울 그랜드 인터컨티넨탈 파르나스 호텔에서 'IMAGINE AX 2026' 컨퍼런스를 개최했다. 'AI를 도입하는... ",
+                "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=271356",
+                "pubDate": "Tue, 16 Jun 2026 11:20:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "김완종 SK AX 사장 &quot;AI 활용, 기업 격차 이미 벌어졌다&quot;",
+                "description": "김 사장은 이날 서울 그랜드 인터컨티넨탈 파르나스 호텔에서 열린 'IMAGINE AX 2026' 컨퍼런스 기조연설에서 이같이 말하며, 기업의 실제 업무와 운영 전반을 AI로 재설계하는 '에이전틱 엔터프라이즈' 시대를... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0014009659?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 15:39:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "“늦으면 도태된다”… AX 속도전 총대 멘 총수들",
+                "description": "높은 수준의 추론 능력과 강력한 보안성 등이 강점인 클로드 엔터프라이즈는 기업 내부 시스템과 연계한 AI 에이전트 구축 및 코딩 기능을 통해 AX를 지원하는 모델로 평가 받는다. 이에 따라 임직원들은 업무 목적에... ",
+                "link": "https://n.news.naver.com/mnews/article/005/0001855126?sid=101",
+                "pubDate": "Tue, 16 Jun 2026 00:07:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "SK AX '에이전틱 엔터프라이즈' 시대 선언",
+                "description": "SK AX는 이를 '에이전틱 엔터프라이즈'로 정의하며 기업 AI 경쟁의 다음 단계로 제시했다. SK AX는 16일 서울 그랜드 인터컨티넨탈 파르나스 호텔에서 'IMAGINE AX 2026' 콘퍼런스를 열었다. '비욘드 AI: 디 에이전틱... ",
+                "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=308374",
+                "pubDate": "Tue, 16 Jun 2026 14:22:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "AI 에이전트에 사번 부여한 SKT",
+                "description": "SK텔레콤이 통신사업과 사내업무에서 AI 에이전트 기반 조직 운영 모델을 실험하고, SK AX가 이를 기업 고객용 플랫폼과 컨설팅, 시스템통합(SI) 사업으로 확장하는 구조다. 차지원 SK AX 최고AI혁신책임자(CAIO)는... ",
+                "link": "https://n.news.naver.com/mnews/article/015/0005299389?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 17:37:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[종합] AI 모델부터 포털까지…업스테이지 컴퍼니, 에이전트 시대 연다",
+                "description": "조직을 운영하고 있다고 설명했다. 현재 주관사 선정을 마치고 기업공개(IPO) 준비에도 돌입한 상태다. 김 대표는 &quot;업스테이지 컴퍼니의 탄생은 강력한 AI 모델과 에이전트, 그리고 모두가 쓰는 플랫폼을 국내 최초로... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002426853?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 15:45:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "업스테이지, '모두를 위한 AI' 시대 연다…모델·에이전트·포털 하나로",
+                "description": "강력한 AI 모델과 에이전트, 모두가 쓰는 플랫폼을 하나로 잇는 첫걸음&quot;이라며 &quot;기업을 위한 AI를 넘어... 업스테이지 컴퍼니는 업스테이지를 중심으로 최근 인수 절차를 마친 포털 '다음' 운영사 AXZ와 범용 AI 에이전트... ",
+                "link": "https://n.news.naver.com/mnews/article/277/0005777019?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 12:00:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "업스테이지 컴퍼니 출범…&quot;모두를 위한 AI 시대 연다&quot;",
+                "description": "포털·에이전트·AI 모델 한 지붕 아래 업스테이지 컴퍼니는 업스테이지를 주축으로 최근 인수를 완료한 포털 '다음' 운영사 AXZ와 범용 AI 에이전트 플랫폼 '타임리'로 구성된다. 김성훈 업스테이지 대표는 &quot;미국·일본을... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016141228?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 12:00:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "다음·타임리 품은 업스테이지…종합 AI플랫폼 기업 도약 속도 [현장+]",
+                "description": "품으며 AI 모델·에이전트·포털 하나로 잇는 '종합 AI 플랫폼 기업'으로의 도약에 나선다. 특히 자체 AI... 스튜디오'를 운영할 것&quot;이라며 &quot;자율형 에이전트와 절차형 에이전트를 결합해 기업 업무 자동화 시장을... ",
+                "link": "https://n.news.naver.com/mnews/article/293/0000086352?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 17:14:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "김완종 SK AX 사장 &quot;AI 활용, 기업 격차 이미 벌어졌다&quot;",
+                "description": "업무와 운영 전반을 AI로 재설계하는 '에이전틱 엔터프라이즈' 시대를 열겠다고 강조했다. 그는 &quot;기업의... SK AX와 파트너십을 맺은 오픈AI는 AX 혁신 모델을 고도화하고 있으며, SK하이닉스는 디지털 트윈을... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0014009659?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 15:39:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "고위험 작업 로봇이 대신…중부발전·KAIST, 피지컬AI 업무협약",
+                "description": "피지컬 AI도입을 가속화하기 위해 기획됐다. 양 기관은 발전소 현장의 고위험∙고난도 작업을 로봇 기술로 대체해 운영과 정비 효율을 극대화하고, 중대재해를 원천 차단할 수 있는 실질적인 산학 협력 성공 모델을... ",
+                "link": "https://n.news.naver.com/mnews/article/022/0004135922?sid=101",
+                "pubDate": "Tue, 16 Jun 2026 16:52:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "업스테이지, AI 모델·에이전트·포털 하나로 묶는다",
+                "description": "업스테이지컴퍼니는 업스테이지, 최근 인수절차를 마친 포털 ‘다음’ 운영사 AXZ, 범용 AI 에이전트 플랫폼 ‘타임리’로 구성된다. 두뇌 격인 AI 모델과 손발 격인 에이전트, 접점 역할을 하는 포털을 묶어 ‘AI... ",
+                "link": "https://n.news.naver.com/mnews/article/032/0003452359?sid=101",
+                "pubDate": "Tue, 16 Jun 2026 16:43:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "“사번 받은 AI”…SKT ‘AX 드라이브’",
+                "description": "업무 효율성 개선에 집중했던 ‘AX 혁신 1.0’을 넘어, 조직 생산성의 획기적 향상과 비즈니스 모델... 기존 업무 방식을 AI 기반으로 재설계하는 ‘AX 샌드박스’도 도입한다. 직급과 부서 구분 없이 수평적으로 운영되... ",
+                "link": "https://n.news.naver.com/mnews/article/382/0001278599?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 16:58:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "AI 동료 ‘엘라’와 사녹에서 2인 팀 플레이한다",
+                "description": "이번 베타 서비스는 글로벌 이용자를 대상으로 17일부터 다음 달 1일까지 2주간 운영된다. Ally Duo는... 크래프톤은 지난 4월에는 멀티모달 AI 모델 ‘Raon(라온)’ 4종을 공개한 바 있다. 향후 게임별 특성에 맞게 라온... ",
+                "link": "https://m.sports.naver.com/esports/article/005/0001855299",
+                "pubDate": "Tue, 16 Jun 2026 16:41:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "업스테이지 &quot;모두를 위한 AI 시대 열 것&quot;",
+                "description": "다음의 운영사인 AXZ는 기업과 소비자간 거래(B2C) 시장 공략과 함께 데이터 수집의 관문 역할을 맡는다. 다음이 1990년부터 36년간 축적한 뉴스, 검색, 카페, 사전, 금융 등 버티컬 정보에 업스테이지의 자체 AI 모델을... ",
+                "link": "https://n.news.naver.com/mnews/article/015/0005299391?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 17:38:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[일문일답] 업스테이지 &quot;미중AI 통제 불가피…독자AI 더 큰 지원 필요&quot;",
+                "description": "자체 AI 모델과 에이전트, 포털 플랫폼을 하나로 잇는 '업스테이지 컴퍼니' 출범을 선언했다. 업스테이지를 중심으로 포털 '다음' 운영사 AXZ와 범용 AI 에이전트 플랫폼 '타임리'가 힘을 합친 업스테이지 컴퍼니를 통해... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016141305?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 12:27:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[AI픽] SKT, AI에 사번 부여…'AI 동료 시대' 연다",
+                "description": "비즈니스 모델 혁신을 이루겠다는 구상이다. 우선 SK텔레콤은 AI를 업무 보조 수단이 아닌 새로운 업무... SK텔레콤은 지난 3개월간 AI CIC 일부 조직에서 시범 운영한 결과, 한 사람이 여러 AI 에이전트와 함께 기획·개발... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016140508?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 08:47:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "SK AX, AI 에이전트로 기업 혁신…'에이전틱 기업' 청사진",
+                "description": "업무와 운영 전반을 인공지능(AI)으로 재설계하는 에이전틱 엔터프라이즈 시대를 열겠다고 16일 밝혔다.... SK하이닉스와는 자율형 공장 전환을 추진 중이며, 씨에스윈드와는 글로벌 제조 AX 모델을 구현했다.... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016140748?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 10:01:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "SK바이오팜, 바이오USA 참가…&quot;AI 혁신비전 소개&quot;",
+                "description": "회사는 자체 AI 플랫폼을 기반으로 예측 모델과 데이터 분석 체계를 발전시키며, 연구기획과 후보물질 설계·분석, 개발 전략 수립, 운영 최적화 등 업무 전반으로 AI 활용을 단계적 확대할 계획이다. 또 구성원이 AI... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0014008255?sid=102",
+                "pubDate": "Tue, 16 Jun 2026 09:12:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[경제일보] 김연수 한컴 대표, 유럽서 AI 승부수…'에이전틱 OS' 글로벌...",
+                "description": "복잡한 레거시 시스템 현대화 경험과 유럽 규제 대응 역량을 갖춘 점이 한컴의 현지화 파트너로 평가된다.... 기업으로의 전환을 선언했다. 소버린 에이전틱 OS는 기업 내부 데이터와 AI 모델, 업무 시스템을 연결해 AI... ",
+                "link": "https://www.ajunews.com/view/20260615092808974",
+                "pubDate": "Tue, 16 Jun 2026 08:44:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "한컴, &quot;에이전틱 OS 유럽 공략&quot;... 유럽 R&amp;D·AI 기업과 MOU",
+                "description": "대응·레거시 현대화 R&amp;D'를, 알고마인과 'AI 구현·현지 실증'을 각각 추진하며 유럽 공략의 두 축을 갖추게 됐다. 이번 MOU들은 지난 5월 19일 전략 발표회 '한컴: 더 시프트'에서 내놓은 소버린 에이전틱 OS 전환 비전을... ",
+                "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=354790",
+                "pubDate": "Tue, 16 Jun 2026 16:28:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "비투엔, AI ERP시장 공략",
+                "description": "국내 기업 상당수는 오래된 레거시 시스템과 부서별 데이터 단절 문제를 안고 있다. ERP 구축 비용 부담도... 국내 기업의 ERP 전환과 AI 기반 경영관리 체계 구축을 위한 파트너 생태계 확대도 추진한다. 이정훈 비투엔... ",
+                "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=844381",
+                "pubDate": "Mon, 15 Jun 2026 15:40:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "한컴, 유럽 AI·R&amp;D 기업과 잇단 MOU… '소버린 에이전틱 OS' 상용화 속도",
+                "description": "양사는 유럽 기업들이 사용하는 레거시 시스템과 업무 프로세스를 분석하고, 현지 규제 요건을 충족할... 분야에서 AI 기반 디지털 전환 프로젝트를 수행해 왔다. 양사는 온프레미스(On-Premise) 환경을 선호하는... ",
+                "link": "https://www.e-science.co.kr/news/articleView.html?idxno=130619",
+                "pubDate": "Mon, 15 Jun 2026 15:08:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[위클리AI] 앤트로픽, 클로드 미토스5·페이블5 출시···미 정부 수출...",
+                "description": "오라클 입장에서도 이번 오픈AI와의 파트너십은 전략적 전환점입니다. 오라클은 금융·제조·공공 부문에 강한 레거시 고객 기반을 갖고 있어, 기존 클라우드 빅3가 침투하기 어려웠던 엔터프라이즈 영역을 함께... ",
+                "link": "https://it.donga.com/109035/",
+                "pubDate": "Tue, 16 Jun 2026 17:24:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "한컴, 폴란드 IT·AI 기업과 잇달아 MOU…유럽 '에이전틱 OS' 시장 정조준",
+                "description": "한컴이 글로벌 소버린 에이전틱 OS 기업으로의 전환을 본격화했다는 평가가 나온다. ◆ 7불스와 현지화를... 한컴은 7불스와의 MOU를 통해 '규제 대응·레거시 현대화 R&amp;D'를 추진하며, 알고마인과의 MOU를 통해 'AI 구현... ",
+                "link": "https://www.thepublic.kr/news/articleView.html?idxno=307773",
+                "pubDate": "Mon, 15 Jun 2026 18:34:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "슈나이더 일렉트릭, 글로벌 CPG AI 조사 통해 제조업 디지털 전환 과제 ...",
+                "description": "AI 확산의 주요 장애요인으로는 AI 및 데이터 과학 인력 부족(43.0%), 레거시 자동화 시스템 및 인프라... 제조업의 산업용 AI 도입 현황과 향후 과제를 분석하고 성공적인 AI 전환을 위한 방향성을 제시한다.",
+                "link": "https://www.epnc.co.kr/news/articleView.html?idxno=403085",
+                "pubDate": "Tue, 16 Jun 2026 13:14:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "유럽 R&amp;D·AI 기업과 협력 확대···에이전틱 OS 현지 검증 착수",
+                "description": "양사는 기존 유럽 기업들이 사용해 온 레거시 시스템과 운영 구조를 분석하고 이를 기반으로 제품 구조를... 이번 협력은 앞서 제시된 기술 전환 전략을 구체화하는 과정으로, 유럽 시장에서의 초기 적용 가능성을... ",
+                "link": "http://www.koreastocknews.com/news/articleView.html?idxno=119096",
+                "pubDate": "Mon, 15 Jun 2026 16:54:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "한컴, 유럽 AI 기업들과 맞손...에이전틱 OS 시장 공략",
+                "description": "한컴은 7불스와의 협력을 통해 규제 대응과 레거시 현대화 R&amp;D를 추진하고, 알고마인과는 AI 구현 및 현지... 이번 협력은 지난 5월 전략 발표회 '한컴: 더 시프트(HANCOM: The SHIFT)'에서 제시한 소버린 에이전틱 OS 전환... ",
+                "link": "https://www.womentimes.co.kr/news/articleView.html?idxno=103648",
+                "pubDate": "Mon, 15 Jun 2026 11:46:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "AI 데이터 센터발 MLCC 공급 대공황… 사상 최악 병목",
+                "description": "치트리니 리서치는 AI 서버 수요가 연간 80%씩 폭풍 성장함에 따라 시장을 지배하는 한·일 탑티어 제조사들이 고마진 고급 라인업으로 캐파를 강제 전환, 레거시 소비자용 제품의 공급 펜스를 극도로 옥죄고 있다고... ",
+                "link": "https://www.g-enews.com/view.php?ud=2026061518012694140c8c1c064d_1",
+                "pubDate": "Tue, 16 Jun 2026 05:40:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "&quot;산업용AI가 제조 경쟁력 좌우한다&quot;…슈나이더일렉트릭, CPG산업 AI조사결...",
+                "description": "AI 확산의 주요 장애요인으로는 AI 및 데이터 과학 인력 부족(43.0%), 레거시 자동화 시스템 및 인프라(37.5... 이는 사이버보안 및 규제 준수 문제(21.7%)보다 높은 수치로, 기술 자체보다 디지털 전환 기반 마련이... ",
+                "link": "https://www.industrynews.co.kr/news/articleView.html?idxno=82177",
+                "pubDate": "Tue, 16 Jun 2026 14:16:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "슈나이더 일렉트릭, 글로벌 CPG 산업 AI 조사 결과...&quot;산업용 AI가 제조 ...",
+                "description": "AI 확산의 주요 장애요인으로는 AI 및 데이터 과학 인력 부족(43.0%), 레거시 자동화 시스템 및 인프라... 제조업의 산업용 AI 도입 현황과 향후 과제를 분석하고 성공적인 AI 전환을 위한 방향성을 제시한다.",
+                "link": "https://www.aitimes.kr/news/articleView.html?idxno=40526",
+                "pubDate": "Tue, 16 Jun 2026 11:46:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "“데이터가 새로운 석유”… 광업계, AI로 돌파구 찾는다",
+                "description": "지질 레거시 데이터를 AI로 재분석해 과거 인간 지질학자들이 간과하고 지나쳤던 막대한 광산 자산을... 넷제로 전환 흐름이 자원 M&amp;A 시장의 가장 거대한 투자 동력이 될 것으로 확신하고 있다. 데이비드 힐 자문은... ",
+                "link": "https://www.g-enews.com/view.php?ud=2026061517314276040c8c1c064d_1",
+                "pubDate": "Tue, 16 Jun 2026 05:26:00 +0900",
+                "is_main": true
             },
             {
                 "title": "토큰 맥스 아닌 AI 에이전트의 실전 가치 알린 세일즈포스",
                 "description": "발표 자료에 따르면 포스코의 AI 에이전트는 단 몇 초 만에 전문가급 답변을 도출할 만큼 고도화됐다. 포스코는 최고경영자(CEO) 직속의 디지털 전환(DX) 전략실을 주축으로 '미션 오리엔티드 AX(Mission-Oriented AX)' 과제를... ",
                 "link": "https://it.donga.com/109012/",
                 "pubDate": "Wed, 10 Jun 2026 23:08:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "포스코가 최고경영자(CEO) 직속의 디지털 전환(DX) 전략실 주축으로 '미션 오리엔티드 AX' 과제를 추진하며, AI 에이전트를 도입해 전문가급 답변을 도출하는 등 고도화된 AI 활용 사례를 선보였다.",
-                "category_code": "VET_GDC_FIRM"
+                "is_main": true
             },
             {
-                "title": "LG CNS, AI 플랫폼 'AIND' 공개…&quot;말로 하면 코딩·검증까지&quot;",
-                "description": "코드 변환 작업 분 단위로 단축 美 AI 기업 클라인과 공동 개발 LG CNS가 시스템 기획부터 검증까지 IT 개발 전... 오래된 시스템을 최신 환경에 맞춰 전환하는 레거시 모더나이제이션 기능도 지원한다. 코볼 등 구형 언어를... ",
-                "link": "https://n.news.naver.com/mnews/article/629/0000505669?sid=101",
-                "pubDate": "Mon, 08 Jun 2026 10:01:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "LG CNS가 AI 기반 개발 플랫폼 'AIND'를 공개하며 IT 시스템 개발 전 과정을 AI로 지원하고, 특히 오래된 시스템을 최신 환경으로 전환하는 레거시 모더나이제이션 기능을 제공한다.",
-                "category_code": "VET_GDC_FIRM"
+                "title": "中 AI ‘백 모델 전쟁’, 돈 버는 B2B 실용주의로 대전환",
+                "description": "가치사슬로 전환할 능력을 갖춘 글로벌 소수 강자 그룹으로 급격히 통합되고 있다고 진단했다. 특히... 지배적인 레거시 소프트웨어 생태계 내부로 AI 뇌선을 적극 통합해 가두리 양식(Lock-in)하는 인프라 전술을... ",
+                "link": "https://www.g-enews.com/view.php?ud=2026061507161376360c8c1c064d_1",
+                "pubDate": "Mon, 15 Jun 2026 07:20:00 +0900",
+                "is_main": true
             },
             {
                 "title": "&quot;업무 자료 어디 있지?&quot; BGF리테일, 사내 AI 플랫폼 'ASK' 론칭",
                 "description": "문서와 사내 게시글도 별도 가공 없이 학습할 수 있는 것이 특징이다. 데이터베이스(DB) 검색 연동 기술인 MCP(Model Context Protocol)를 적용한 하이브리드 AI RAG 시스템도 구축했다. 이를 통해 조직도와 업무분장 등... ",
                 "link": "https://n.news.naver.com/mnews/article/003/0013999901?sid=101",
                 "pubDate": "Thu, 11 Jun 2026 08:50:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "BGF리테일이 사내 게시판, 문서, DB 등을 통합 검색하는 하이브리드 AI RAG 기반 사내 AI 플랫폼 'ASK'를 론칭하여 임직원들의 업무 생산성을 높인다.",
-                "category_code": "VET_GDC_FIRM"
+                "is_main": true
+            },
+            {
+                "title": "한컴, BGF그룹과 AX 협력…사내 데이터 활용해 AI 검색 시스템 구축",
+                "description": "생성(RAG) 구조와 연결했다. 두 회사는 개념 검증을 통해 현업 적용 가능성을 확인한 뒤 사내 지식 검색 분야를 우선 적용 대상으로 선정했다. 1차 사업의 핵심은 전사 게시판 데이터와 연계한 한컴피디아 기반 지식... ",
+                "link": "https://n.news.naver.com/mnews/article/366/0001171160?sid=105",
+                "pubDate": "Thu, 11 Jun 2026 16:27:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "“그 자료 내용 좀”…BGF리테일, 사내 AI 플랫폼 ‘ASK’구축",
+                "description": "ASK는 사내 게시판, 문서, 첨부파일 등 곳곳에 흩어진 방대한 데이터를 통합한다. 또 임직원이 일상적인 언어(자연어)로 질문하면 원하는 정보를 빠르고 정확하게 찾아주는 AI RAG(검색증강생성) 기반 플랫폼이다.... ",
+                "link": "https://n.news.naver.com/mnews/article/018/0006302755?sid=101",
+                "pubDate": "Thu, 11 Jun 2026 09:08:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "BGF리테일, 사내 AI 플랫폼 'ASK' 선봬…&quot;업무 생산성 제고&quot;",
+                "description": "문서와 사내 게시글도 가공 없이 원본 그대로 학습해 질의응답 서비스를 제공한다. 추가로 데이터베이스(DB) 검색 연동 기술인 MCP를 접목한 하이브리드 AI RAG 시스템을 구현해 기술적 완성도를 높인 것도 특징이다.... ",
+                "link": "https://n.news.naver.com/mnews/article/629/0000506701?sid=101",
+                "pubDate": "Thu, 11 Jun 2026 09:28:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "BGF리테일, 사내 AI 플랫폼 도입…&quot;업무 생산성 높인다&quot;",
+                "description": "문서와 사내 게시글도 추가 가공 없이 원본 그대로 학습해 질의응답 서비스를 제공합니다. 데이터베이스(DB) 검색 연동 기술인 MCP(Model Context Protocol)를 접목한 하이브리드 AI RAG 시스템을 구현해 기술적 완성도를... ",
+                "link": "https://n.news.naver.com/mnews/article/374/0000515490?sid=101",
+                "pubDate": "Thu, 11 Jun 2026 15:28:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "BGF리테일, 한컴과 ‘맞손’…사내 AI 플랫폼 ‘ASK’ 론칭",
+                "description": "ASK는 임직원이 일상적인 언어(자연어)로 질문하면 사내 게시판, 문서, 첨부파일 등 데이터에서 원하는 정보를 빠르고 정확하게 찾아주는 AI 검색증강생성(RAG) 기반 플랫폼이다. 심층 검색(Deep Search) 방식도 더해... ",
+                "link": "https://n.news.naver.com/mnews/article/011/0004629951?sid=101",
+                "pubDate": "Thu, 11 Jun 2026 09:32:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "BGF리테일, 한컴과 손잡고 사내 AI 플랫폼 구축…AX 전환 속도",
+                "description": "문서와 사내 게시글까지 별도 가공 없이 학습할 수 있도록 설계됐다. 데이터베이스(DB) 검색 연동 기술인 MCP(Model Context Protocol)를 접목한 하이브리드 AI RAG 시스템도 구현해 조직도와 업무분장 등 자주 활용되는... ",
+                "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7168938",
+                "pubDate": "Thu, 11 Jun 2026 15:50:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "한컴·BGF그룹 AX 맞손…사내 데이터 AI 자산화",
+                "description": "양사는 2024년 8월부터 AI 개념검증(PoC)을 진행해 현업 적용 가능성을 확인한 뒤 사내 지식 검색 시스템 구축에 착수했다. 한컴은 게시판 DB와 HWP, PDF, XLSX, 텍스트 문서 등 다양한 자료를 가공해 검색증강생성(RAG) 기반... ",
+                "link": "https://www.sentv.co.kr/article/view/sentv202606110012",
+                "pubDate": "Thu, 11 Jun 2026 10:30:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "BGF리테일, 한컴과 사내 AI 플랫폼 ‘ASK’선봬… AX 속도",
+                "description": "ASK는 사내 데이터를 통합, 임직원이 자연어로 질문하면 원하는 정보를 정확하게 찾아주는 AI RAG(검색증강생성) 기반 플랫폼이다. 사내 게시판, 문서, 첨부파일 등 데이터를 고루 학습했다. 인사 규정 등 정형... ",
+                "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202606110912235890938",
+                "pubDate": "Thu, 11 Jun 2026 09:22:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "“업무 매뉴얼 찾아줘”⋯ BGF리테일, 사내 AI 지식 검색 체계 구축",
+                "description": "ASK는 사내 게시판과 문서, 첨부파일 등 조직 곳곳에 흩어진 데이터를 통합해 임직원들이 일상어로 질문하면 필요한 정보를 찾아주는 검색증강생성(RAG) 기반 플랫폼이다. 단순 키워드 검색을 넘어 질문 의도를... ",
+                "link": "https://www.viva100.com/article/20260611500322",
+                "pubDate": "Thu, 11 Jun 2026 10:38:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "BGF리테일, 사내 AI 플랫폼 'ASK' 론칭",
+                "description": "ASK는 임직원이 일상적인 언어(자연어)로 질문하면 사내 게시판, 문서, 첨부파일 등 데이터에서 원하는 정보를 빠르고 정확하게 찾아주는 AI RAG(검색증강생성) 기반 플랫폼이다. 심층 검색(Deep Search) 방식도 더해... ",
+                "link": "http://www.srtimes.kr/news/articleView.html?idxno=205033",
+                "pubDate": "Thu, 11 Jun 2026 09:58:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "&quot;사내 정보도 AI가 찾는다&quot;... BGF리테일, 지능형 검색체계 도입",
+                "description": "문서와 사내 게시글까지 별도 가공 없이 학습 대상으로 활용할 수 있도록 했다. 여기에 데이터베이스(DB) 검색 연동 기술인 MCP(Model Context Protocol)를 접목한 하이브리드 AI RAG 시스템을 구현해 조직도와 업무분장 등... ",
+                "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=201071",
+                "pubDate": "Thu, 11 Jun 2026 14:02:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "챗GPT부터 사내 AI까지…기업들 '일하는 방식' 바꾼다",
+                "description": "ASK는 사내 게시판과 문서, 첨부파일 등에 흩어진 데이터를 통합해 자연어 질문만으로 필요한 정보를 찾을 수 있는 RAG 기반 플랫폼이다. 인사규정과 조직도 같은 정형 데이터는 물론 한글·엑셀·파워포인트 등... ",
+                "link": "http://www.kdfnews.com/news/articleView.html?idxno=184121",
+                "pubDate": "Thu, 11 Jun 2026 10:04:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "한글과컴퓨터, BGF그룹과 인공지능 전환(AX) 협력…사내 데이터 자산화",
+                "description": "정비된 데이터를 바탕으로 한컴피디아는 검색증강생성(RAG) 검색, 자연어 질의응답, AI 에이전트, 심층 검색 기능을 제공한다. 이를 통해 BGF그룹 임직원들은 사내 정보를 자연어로 질문해 한곳에서 확인할 수 있으며... ",
+                "link": "https://www.dailysecu.com/news/articleView.html?idxno=207124",
+                "pubDate": "Thu, 11 Jun 2026 15:32:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "BGF리테일, 사내 AI 플랫폼 'ASK' 도입…업무 효율화 나서",
+                "description": "ASK는 사내 게시판과 문서, 첨부파일 등 분산된 데이터를 통합해 관리하고 임직원이 자연어로 질문하면 필요한 정보를 찾아주는 검색증강생성(RAG) 기반 플랫폼이다. 회사에 따르면 질문 의도를 분석해 여러 문서와... ",
+                "link": "https://daily.hankooki.com/news/articleView.html?idxno=1375499",
+                "pubDate": "Thu, 11 Jun 2026 08:44:00 +0900",
+                "is_main": true
             }
         ]
     },
