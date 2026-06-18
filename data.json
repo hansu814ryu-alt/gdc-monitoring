@@ -2,13 +2,43 @@
     "gdc": {
         "data": [
             {
-                "title": "[특징주] LG씨엔에스, AI 클라우드 성장 기대감에 강세… &quot;AX 솔루션 해외...",
-                "description": "AI 클라우드 사업의 고성장과 해외 시장 진출에 따른 외형 확대가 가시화되고 있다는 투자심리가 반영됐기 때문인 것으로 풀이된다. LG씨엔에스는 현재 해외 개발 인력 약 1200명 규모의 글로벌 딜리버리 센터(GDC)와... ",
-                "link": "https://www.bizwork.co.kr/news/articleView.html?idxno=416030",
-                "pubDate": "Fri, 29 May 2026 09:18:00 +0900",
+                "title": "피지컬AI·젠슨 황 효과…LG그룹주 재평가 불붙었다",
+                "description": "시장에서는 AI 클라우드 사업 확대와 해외 시장 진출, 글로벌딜리버리센터(GDC) 운영, 자체 AI 코딩 플랫폼인 ‘AIND’를 통한 수익성 개선 등을 바탕으로 향후 실적이 빠르게 개선될 것으로 보고 있다. 최근... ",
+                "link": "https://n.news.naver.com/mnews/article/011/0004625912?sid=101",
+                "pubDate": "Fri, 29 May 2026 17:50:00 +0900",
+                "score": 98,
+                "is_main": true,
+                "summary": "LG CNS는 1200명 규모의 해외 개발 인력을 보유한 글로벌 딜리버리 센터(GDC)를 통해 AI 클라우드 사업을 확대하고 해외 시장 진출을 가속화할 예정이다.",
+                "category_code": "DOMESTIC_GDC"
+            },
+            {
+                "title": "효성-STT GDC, 서울 가산동 'STT Seoul 1' 30MW 하이퍼스케일 데이터센터...",
+                "description": "효성-STT GDC의 AI 데이터센터 'STT Seoul 1' 개관식 축사(사진=효성중공업) 효성중공업과 ST Telemedia Global Data Centres(STT GDC)가 서울 금천구 가산동에서 하이퍼스케일 데이터센터 'STT Seoul 1' 개관식을 열고 데이터센터... ",
+                "link": "https://www.gukjenews.com/news/articleView.html?idxno=3612194",
+                "pubDate": "Thu, 18 Jun 2026 19:10:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "LG CNS는 1200명 규모의 해외 개발 인력을 보유한 글로벌 딜리버리 센터(GDC)를 통해 AX 솔루션의 해외 시장 진출을 가속화하며 AI 클라우드 사업 성장을 기대하고 있다.",
+                "summary": "효성중공업과 STT GDC 합작법인이 서울 가산동에 30MW 규모의 AI 특화 하이퍼스케일 데이터센터 'STT Seoul 1'을 개관하여 국내 클라우드 및 AI 수요에 대응한다.",
+                "category_code": "DOMESTIC_GDC"
+            },
+            {
+                "title": "싱가포르 STT GDC, 국내 첫 데이터센터 개관",
+                "description": "싱가포르의 데이터센터 전문기업 STT GDC는 국내 첫 데이터센터 ‘STT 서울1’을 개관했다고 17일 밝혔다. STT 서울1은 2021년 STT GDC(지분 60%)와 효성중공업(지분 40%)이 세운 합작법인 STT GDC 코리아가 구축해... ",
+                "link": "https://n.news.naver.com/mnews/article/011/0004631864?sid=105",
+                "pubDate": "Wed, 17 Jun 2026 06:01:00 +0900",
+                "score": 93,
+                "is_main": true,
+                "summary": "싱가포르 데이터센터 전문기업 STT GDC가 효성중공업과의 합작법인을 통해 국내 첫 데이터센터 'STT 서울1'을 개관하며 한국 시장에 본격 진출했다.",
+                "category_code": "DOMESTIC_GDC"
+            },
+            {
+                "title": "효성, 데이터센터 사업 본격화… “국가 AI산업 성장 뒷받침할 것”",
+                "description": "30㎿ 규모 ‘STT 서울1’ 개관 STT GDC 운영 노하우 결합 조현준 회장, 9년 구상 결실 효성이 인공지능(AI)... 효성중공업과 글로벌 데이터센터 운영 기업 ‘ST 텔레미디어 글로벌 데이터 센터’(STT GDC)의 합작법인인... ",
+                "link": "https://n.news.naver.com/mnews/article/022/0004136336?sid=101",
+                "pubDate": "Thu, 18 Jun 2026 06:02:00 +0900",
+                "score": 91,
+                "is_main": true,
+                "summary": "효성은 STT GDC와 협력하여 30MW 규모의 'STT 서울1' 데이터센터를 개관하며 AI 산업 성장을 뒷받침할 핵심 인프라 사업을 본격화한다.",
                 "category_code": "DOMESTIC_GDC"
             }
         ]
@@ -16,98 +46,58 @@
     "overseas": {
         "data": [
             {
-                "title": "Android 17 launches with new multitasking tools as Google expands Gemini features",
-                "description": "Google has released Android 17 and Wear OS 7, introducing new multitasking features, parental controls, security tools, and smartwatch upgrades. The launch is also accompanied by a Pixel Drop that brings Google’s latest AI models to its devices.",
-                "link": "https://techcrunch.com/2026/06/16/android-17-launches-with-new-multitasking-tools-as-google-expands-gemini-features/",
-                "pubDate": "Tue, 16 Jun 2026 18:00:00 +0000",
+                "title": "World model maker Odyssey nabs $1.45B valuation backed by Amazon and other big names",
+                "description": "World models are the next big thing in AI beyond LLMs and, with this round, Odyssey has cemented itself as one of the startups to watch.",
+                "link": "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/",
+                "pubDate": "Wed, 17 Jun 2026 17:43:07 +0000",
                 "score": 95,
                 "is_main": true,
-                "translated_title": "Google, 제미니 기능 확장과 함께 안드로이드 17 출시",
-                "summary": "Google이 안드로이드 17과 Wear OS 7을 출시하며 새로운 멀티태스킹 기능 등을 도입했다. 이번 출시에는 Pixel Drop을 통해 Google의 최신 AI 모델인 제미니가 자사 기기에 통합되는 내용이 포함되어, 빅테크의 AI 원천 기술 및 아키텍처 활용 사례를 보여준다."
+                "translated_title": "세계 모델 개발사 오디세이, 아마존 등 지원으로 14.5억 달러 가치 평가 확보",
+                "summary": "차세대 AI 기술인 '세계 모델(World models)'을 개발하는 스타트업 오디세이가 아마존 등 주요 투자자로부터 투자를 유치하며 14억 5천만 달러의 기업 가치를 인정받았다. 이로써 오디세이는 LLM을 넘어선 AI 분야에서 주목해야 할 기업으로 자리매김했다."
             },
             {
-                "title": "Pinterest launches an experimental AI shopping app called ‘Ask Pinterest’",
-                "description": "Pinterest has launched 'Ask Pinterest,' an experimental AI-powered shopping app that lets users seek recommendations and inspiration through a conversational interface.",
-                "link": "https://techcrunch.com/2026/06/17/pinterest-launches-an-experimental-ai-shopping-app-called-ask-pinterest/",
-                "pubDate": "Wed, 17 Jun 2026 11:00:00 +0000",
+                "title": "NEA’s Tiffany Luck says enterprises are still figuring out their AI ROI",
+                "description": "Tokenmaxxing&#160;was&#160;the hottest trend in Silicon Valley earlier this year, with CEOs encouraging employees to push AI usage as far&#160;as it would go.&#160;Then the bill came due. Uber&#160;reportedly blew&#160;through its annual AI budget in a few months, some companies cut Claude licenses for parts of their org, and Meta killed its internal leaderboard.&#160; This tension between [&#8230;]",
+                "link": "https://techcrunch.com/video/neas-tiffany-luck-says-enterprises-are-still-figuring-out-their-ai-roi/",
+                "pubDate": "Wed, 17 Jun 2026 20:17:38 +0000",
                 "score": 90,
                 "is_main": true,
-                "translated_title": "Pinterest, 'Ask Pinterest'라는 실험적인 AI 쇼핑 앱 출시",
-                "summary": "Pinterest가 AI 기반의 대화형 쇼핑 앱 'Ask Pinterest'를 출시했다. 이 앱은 사용자가 대화형 인터페이스를 통해 쇼핑 추천 및 영감을 얻을 수 있도록 설계되어, 최신 AI를 기업이 실제 활용하는 사례를 보여준다."
+                "translated_title": "NEA의 티파니 럭, 기업들이 여전히 AI ROI를 파악 중이라고 말하다",
+                "summary": "올해 초 실리콘밸리에서 AI 사용을 극대화하려는 '토큰맥싱'이 유행했으나, 우버가 몇 달 만에 연간 AI 예산을 소진하고 일부 기업이 클로드 라이선스를 줄이는 등 기업들이 AI 투자 대비 수익(ROI)을 파악하는 데 어려움을 겪고 있다."
+            },
+            {
+                "title": "World leaders want American AI. They just don’t want America to be able to turn it off.",
+                "description": "French President Macron and Indian PM Modi raised alarms at the G7 summit that the U.S. could cut off access to American AI overnight  — a fear the Anthropic blackout just made real.",
+                "link": "https://techcrunch.com/2026/06/17/world-leaders-want-american-ai-they-just-dont-want-america-to-be-able-to-turn-it-off/",
+                "pubDate": "Wed, 17 Jun 2026 19:01:19 +0000",
+                "score": 90,
+                "is_main": true,
+                "translated_title": "세계 정상들은 미국 AI를 원하지만, 미국이 AI 접근을 차단할 수 있는 것은 원치 않는다",
+                "summary": "G7 정상회담에서 프랑스 마크롱 대통령과 인도 모디 총리는 미국이 갑자기 미국 AI 접근을 차단할 수 있다는 우려를 제기했으며, 최근 앤트로픽 블랙아웃 사태로 이러한 불안감이 현실화되었다."
+            },
+            {
+                "title": "Social media’s next evolution: user-controlled algorithms",
+                "description": "Social media feeds are becoming more customizable as platforms like Threads, Instagram, and TikTok introduce tools that let users directly influence the algorithms powering their recommendations.",
+                "link": "https://techcrunch.com/2026/06/17/social-medias-next-evolution-user-controlled-algorithms/",
+                "pubDate": "Wed, 17 Jun 2026 18:19:48 +0000",
+                "score": 85,
+                "is_main": true,
+                "translated_title": "소셜 미디어의 다음 진화: 사용자 제어 알고리즘",
+                "summary": "스레드, 인스타그램, 틱톡과 같은 소셜 미디어 플랫폼이 사용자에게 추천 알고리즘에 직접 영향을 미칠 수 있는 도구를 도입하면서, 소셜 미디어 피드가 더욱 개인화되고 사용자 제어 기능이 강화되고 있다."
             }
         ]
     },
     "ax_news": {
         "data": [
             {
-                "title": "SK AX, ‘에이전틱 엔터프라이즈’ 시장 공략 나선다",
-                "description": "기업의 AI 전환(AX)을 돕는 시스템통합(SI) 기업 SK AX가 기업의 실제 업무와 운영 전반을 인공지능(AI)으로 재설계하는 ‘에이전틱 엔터프라이즈’ 시장 공략에 나선다. SK AX는 16일 서울 강남구 그랜드 인터컨티넨탈... ",
-                "link": "https://n.news.naver.com/mnews/article/020/0003727195?sid=101",
-                "pubDate": "Tue, 16 Jun 2026 16:23:00 +0900",
+                "title": "원주·천안·아산시 'K-AI 시티' 시범도시 선정",
+                "description": "교통신호와 도시시설, 각종 공공서비스를 AI가 분석·운영하는 미래형 도시 모델이 강원 원주시와 충남 천안·아산에서 처음 구현될 전망이다. 국토교통부는 'AI 특화 시범도시 사업' 공모 결과 강원권의 원주시... ",
+                "link": "https://n.news.naver.com/mnews/article/079/0004159448?sid=101",
+                "pubDate": "Thu, 18 Jun 2026 17:13:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "SK AX가 AI 에이전트가 업무를 재설계하는 '에이전틱 엔터프라이즈' 시대를 선언하며 기업 AI 전환 시장 공략에 나선다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "SK AX, ‘에이전틱 엔터프라이즈’ 시대 연다…“기업 경쟁력 격차”",
-                "description": "엔터프라이즈 AI 사업 협력을 위해 SK AX와 파트너십을 체결한 오픈AI는 기업 내부 시스템의 맥락을 정확히 이해하고 실제 업무 성과는 물론 투자 대비 효과까지 높이는 AX 혁신 모델을 고도화하고 있다.... ",
-                "link": "https://www.etoday.co.kr/news/view/2594039",
-                "pubDate": "Tue, 16 Jun 2026 11:18:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "SK AX가 OpenAI와의 파트너십을 통해 기업 내부 시스템의 맥락을 이해하고 AX 혁신 모델을 고도화하며 '에이전틱 엔터프라이즈' 시대를 연다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "AI가 보고서 쓰고 회의까지...SK AX, '에이전틱 엔터프라이즈 시대' 선언",
-                "description": "SK AX는 16일 서울 그랜드 인터컨티넨탈 파르나스 호텔에서 'IMAGINE AX 2026' 컨퍼런스를 열고, 앞으로 이 같은 에이전틱 엔터프라이즈 시대를 열겠다고 선언했다. AI로 비즈니스 모델을 혁신하고 사람-AI 협업을... ",
-                "link": "https://news.mtn.co.kr/news-detail/2026061613182728589",
-                "pubDate": "Tue, 16 Jun 2026 15:04:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "SK AX는 'IMAGINE AX 2026' 컨퍼런스에서 AI가 보고서 작성 및 회의까지 진행하는 '에이전틱 엔터프라이즈' 시대를 열겠다고 선언했다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "SK AX, 기업 성장 이끄는 '에이전틱 엔터프라이즈' 비전 공개",
-                "description": "OpenAI는 SK AX와의 엔터프라이즈 AI 협력을 통해 기업 내부 시스템의 맥락을 이해하고 실제 업무 성과와 투자 효과를 높이는 모델을 고도화하고 있다고 소개했다. SK하이닉스는 디지털 트윈 기반 제조 공정... ",
-                "link": "https://www.eroun.net/news/articleView.html?idxno=83220",
-                "pubDate": "Tue, 16 Jun 2026 15:20:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "SK AX가 OpenAI 협력 및 SK하이닉스의 디지털 트윈 기반 제조 공정 최적화 사례를 통해 기업 성장을 이끄는 '에이전틱 엔터프라이즈' 비전을 공개했다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "&quot;야구 틀어줘&quot; 취향 알아서 척척…KT, 초개인화 AI 에이전트 공개",
-                "description": "KT는 이를 내부 네트워크 운영에 활용한 뒤 공장과 화학시설, 발전소 등 복잡한 공정이 운영되는 산업... KT는 자체 임베딩·리랭커 모델과 지능형 AI 검색 엔진을 기반으로 산업별 RAG를 구축하고 있다. 검색 결과가... ",
-                "link": "https://n.news.naver.com/mnews/article/031/0001035683?sid=105",
-                "pubDate": "Wed, 17 Jun 2026 14:50:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "KT가 초개인화 AI 에이전트를 공개하며 자체 임베딩·리랭커 모델과 지능형 AI 검색 엔진 기반 산업별 RAG 구축 계획을 밝혔다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "KT, '챗봇 넘어 에이전트로'…AI 사업 전면 확대",
-                "description": "기업(B2B) 영역에서는 네트워크 운영과 법률 등 전문 데이터를 학습한 '버티컬 AI 에이전트'를 통해 산업별... 앞서 KT는 법률 분야에서 대법원에 자체 AI 모델과 서비스를 납품하고 있고, 향후 양형 지원 관련 사업... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016143402?sid=105",
-                "pubDate": "Wed, 17 Jun 2026 11:52:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "KT가 챗봇을 넘어 버티컬 AI 에이전트 사업을 전면 확대하며, 대법원 법률 분야 AI 모델 납품 등 B2B 레퍼런스를 소개했다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "KT, '한국형 오픈클로' 개발 중…다음 달부터 사내 시범 운영(종합)",
-                "description": "시키지 않아도 알아서 일하는 '자율형 에이전트'와 답변 신뢰도를 높이는 '자체 개발 RAG'(검색증강생성)를... 이날 KT는 자체 개발 RAG 'K RAG'도 소개했다. AI가 답변 전 근거를 검증하는 일종의 '안전장치' 같은... ",
-                "link": "https://n.news.naver.com/mnews/article/008/0005373261?sid=105",
-                "pubDate": "Wed, 17 Jun 2026 14:57:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "KT가 '한국형 오픈클로' 개발 중임을 밝히며, 스스로 판단·실행하는 자율형 에이전트와 자체 개발 K RAG를 통한 답변 신뢰도 향상을 강조했다.",
-                "category_code": "VET_GDC_FIRM"
+                "summary": "국토교통부가 원주, 천안, 아산시를 'K-AI 시티' 시범도시로 선정, AI가 교통, 시설, 공공서비스를 분석 및 운영하는 미래형 도시 모델을 구현한다.",
+                "category_code": "DOMESTIC_VET_IT"
             },
             {
                 "title": "'에이전틱 AI' 승부수 띄운 KT…초개인화 AI 비서 연내 상용화",
@@ -116,48 +106,18 @@
                 "pubDate": "Wed, 17 Jun 2026 15:50:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "KT가 자체 개발 K-RAG 기술을 사내 지식검색 서비스 'KT지식허브'에 적용해 임직원 1만4000명의 할루시네이션 감소 효과를 확인했다.",
-                "category_code": "VET_GDC_FIRM"
+                "summary": "KT가 자체 개발한 검색증강생성 기술 'K-RAG'를 사내 지식검색 서비스 'KT지식허브'에 적용하여 임직원 1만 4천명이 활용하며, AI 환각 현상을 줄이고 B2B/B2C 영역으로 확장할 계획이다.",
+                "category_code": "DOMESTIC_VET_IT"
             },
             {
-                "title": "LG CNS, 중소기업 AI 격차 줄인다…제조 AX 모델 확산 시동",
-                "description": "중기중앙회가 선정하는 중소 제조기업을 대상으로 제조 현장의 데이터 수집체계 구축부터 AI 모델 개발... LG CNS는 CEO를 포함한 중소기업 경영진을 대상으로 AX 교육을 운영한다. 기업별 핵심 문제를 정의한 뒤 어떤... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002427009?sid=105",
-                "pubDate": "Wed, 17 Jun 2026 14:31:00 +0900",
+                "title": "SK AX, ‘에이전틱 엔터프라이즈’ 시장 공략 나선다",
+                "description": "기업의 AI 전환(AX)을 돕는 시스템통합(SI) 기업 SK AX가 기업의 실제 업무와 운영 전반을 인공지능(AI)으로 재설계하는 ‘에이전틱 엔터프라이즈’ 시장 공략에 나선다. SK AX는 16일 서울 강남구 그랜드 인터컨티넨탈... ",
+                "link": "https://n.news.naver.com/mnews/article/020/0003727195?sid=101",
+                "pubDate": "Tue, 16 Jun 2026 16:23:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "LG CNS가 중소 제조기업을 대상으로 제조 현장의 데이터 수집부터 AI 모델 개발, AX 교육까지 지원하는 상생형 제조 AX 모델을 확산한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "수공의 디지털트윈·AI 정수장, 공공기관 혁신프로젝트에 선정",
-                "description": "(AI) 모델 확산을 위해 선정한 '공공기관 혁신 프로젝트 톱텐(TOP 10)'에 핵심 사업 2건이 선정됐다고 17일 밝혔다. 수공에 따르면 '디지털트윈 물관리 플랫폼'이 1위를, 'AI 기반 정수장 자율 운영 체계'가 3위에 각각 이름을... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016144130?sid=102",
-                "pubDate": "Wed, 17 Jun 2026 16:07:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "한국수자원공사가 '디지털트윈 물관리 플랫폼'과 'AI 기반 정수장 자율 운영 체계'를 통해 공공기관 혁신 프로젝트 톱텐에 선정되며 AX 성과를 인정받았다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "JW중외, 복지부 '구조기반 AI신약개발' 과제 선정",
-                "description": "제이웨이브는 500여 종의 세포주·오가노이드·질환 동물모델의 유전체 정보와 4만여 개의 자체 합성 화합물 데이터 등 생물·화학 빅데이터를 기반으로 운영된다. 구조 기반 모델링과 강화학습 알고리즘 등 AI 모델... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0014010557?sid=102",
-                "pubDate": "Wed, 17 Jun 2026 09:01:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "JW중외제약이 생물·화학 빅데이터와 AI 모델을 활용하는 복지부 '구조기반 AI신약개발' 과제에 선정되어 인공지능 기반의 신약 개발 역량을 강화한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "토큰 맥스 아닌 AI 에이전트의 실전 가치 알린 세일즈포스",
-                "description": "발표 자료에 따르면 포스코의 AI 에이전트는 단 몇 초 만에 전문가급 답변을 도출할 만큼 고도화됐다. 포스코는 최고경영자(CEO) 직속의 디지털 전환(DX) 전략실을 주축으로 '미션 오리엔티드 AX(Mission-Oriented AX)' 과제를... ",
-                "link": "https://it.donga.com/109012/",
-                "pubDate": "Wed, 10 Jun 2026 23:08:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "포스코가 최고경영자 직속의 디지털 전환 전략실을 주축으로 '미션 오리엔티드 AX' 과제를 수행하며 AI 에이전트의 실전 가치를 증명했다.",
-                "category_code": "VET_GDC_FIRM"
+                "summary": "SK AX가 기업의 업무 및 운영 전반을 AI로 재설계하는 '에이전틱 엔터프라이즈' 시장 공략을 선언하며 전사적 AX 운영 모델 도입을 가속화한다.",
+                "category_code": "DOMESTIC_VET_IT"
             },
             {
                 "title": "&quot;업무 자료 어디 있지?&quot; BGF리테일, 사내 AI 플랫폼 'ASK' 론칭",
@@ -166,38 +126,8 @@
                 "pubDate": "Thu, 11 Jun 2026 08:50:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "BGF리테일이 MCP를 적용한 하이브리드 AI RAG 시스템 기반의 사내 AI 플랫폼 'ASK'를 론칭하여 방대한 사내 데이터를 효율적으로 검색한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "비투엔, AI ERP시장 공략",
-                "description": "국내 기업 상당수는 오래된 레거시 시스템과 부서별 데이터 단절 문제를 안고 있다. ERP 구축 비용 부담도... 국내 기업의 ERP 전환과 AI 기반 경영관리 체계 구축을 위한 파트너 생태계 확대도 추진한다. 이정훈 비투엔... ",
-                "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=844381",
-                "pubDate": "Mon, 15 Jun 2026 15:40:00 +0900",
-                "score": 80,
-                "is_main": true,
-                "summary": "비투엔이 국내 기업의 오래된 레거시 시스템과 데이터 단절 문제를 해결하기 위해 AI ERP 시장 공략에 나서며 AI 기반 경영관리 체계 구축을 지원한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "“AI 시대에도 결국 화면이 중요하다”…투비소프트, 일본서 검증된 UI·...",
-                "description": "투비소프트 로고 (자료 제공: 투비소프트) 레거시 현대화 수요 커지는 일본 시장... 업계에서는 AI 전환이 본격화될수록 오히려 사용자 인터페이스와 업무 경험 설계의... ",
-                "link": "https://www.venturesquare.net/1091572/",
-                "pubDate": "Wed, 17 Jun 2026 08:39:00 +0900",
-                "score": 75,
-                "is_main": true,
-                "summary": "투비소프트가 AI 전환 시대에 사용자 인터페이스와 경험 설계의 중요성을 강조하며, 일본 시장에서 레거시 현대화 UI·UX 기술력을 검증했다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "[경제일보] 김연수 한컴 대표, 유럽서 AI 승부수…'에이전틱 OS' 글로벌...",
-                "description": "복잡한 레거시 시스템 현대화 경험과 유럽 규제 대응 역량을 갖춘 점이 한컴의 현지화 파트너로 평가된다.... 기업으로의 전환을 선언했다. 소버린 에이전틱 OS는 기업 내부 데이터와 AI 모델, 업무 시스템을 연결해 AI... ",
-                "link": "https://www.ajunews.com/view/20260615092808974",
-                "pubDate": "Tue, 16 Jun 2026 08:44:00 +0900",
-                "score": 75,
-                "is_main": true,
-                "summary": "한컴이 김연수 대표 주도로 유럽에서 '소버린 에이전틱 OS' 승부수를 띄우며 복잡한 레거시 시스템 현대화 및 규제 대응 역량을 강조했다.",
-                "category_code": "VET_GDC_FIRM"
+                "summary": "BGF리테일이 내부 문서 및 게시글 학습이 가능한 하이브리드 AI RAG 시스템 기반의 사내 AI 플랫폼 'ASK'를 론칭하여 전사적 지식 검색 및 업무 효율화를 추진한다.",
+                "category_code": "DOMESTIC_VET_IT"
             }
         ]
     },
