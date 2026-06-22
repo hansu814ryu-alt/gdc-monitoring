@@ -8,7 +8,7 @@
                 "pubDate": "Fri, 29 May 2026 09:18:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "LG CNS는 해외 개발 인력 1200명 규모의 글로벌 딜리버리 센터(GDC) 운영을 통해 AI 클라우드 사업 성장과 해외 시장 진출을 가속화하며 실적 개선이 기대된다.",
+                "summary": "LG CNS는 약 1200명 규모의 해외 개발 인력을 갖춘 글로벌 딜리버리 센터(GDC)를 통해 AI 클라우드 사업 성장과 해외 시장 진출을 가속화하고 있다.",
                 "category_code": "DOMESTIC_GDC"
             }
         ]
@@ -16,87 +16,67 @@
     "overseas": {
         "data": [
             {
-                "title": "Is the US government’s Anthropic ban accidentally helping the brand?",
-                "description": "Just as last week&#160;was ending,&#160;the US government&#160;forced Anthropic to pull its two newest models, Fable 5 and Mythos 5, citing national security concerns after Amazon researchers allegedly found a way to bypass Fable 5&#8217;s guardrails.&#160; Cybersecurity researchers have&#160;since signed an open letter&#160;calling&#160;the move dangerous, and Anthropic itself noted the same jailbreaks exist in other models.&#160;So&#160;is [&#8230;]",
-                "link": "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/",
-                "pubDate": "Fri, 19 Jun 2026 16:08:17 +0000",
-                "score": 90,
+                "title": "Beyond Siri: Here are the practical AI features coming to your iPhone in iOS 27",
+                "description": "Siri’s AI overhaul may have grabbed the headlines at WWDC, but some of Apple’s most useful AI features are arriving elsewhere in iOS 27.",
+                "link": "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/",
+                "pubDate": "Sun, 21 Jun 2026 14:40:28 +0000",
+                "score": 95,
                 "is_main": true,
-                "translated_title": "미국 정부의 앤트로픽 모델 금지가 의도치 않게 브랜드에 도움이 될까?",
-                "summary": "미국 정부는 아마존 연구원들이 앤트로픽의 'Fable 5' 모델 보호 장치를 우회하는 방법을 발견했다고 주장하며, 국가 안보를 이유로 앤트로픽에 최신 모델 'Fable 5'와 'Mythos 5'를 철회하도록 강제했다. 사이버 보안 연구자들은 이러한 조치가 위험하다고 비판하는 공개 서한에 서명했으며, 앤트로픽 역시 유사한 탈옥(jailbreak)이 다른 모델에도 존재한다고 지적했다. 이 사건은 AI 모델의 배포, 보안 취약점, 정부 규제, 그리고 연구 커뮤니티의 반응에 대한 중요한 논쟁을 촉발하고 있다."
+                "translated_title": "시리를 넘어: iOS 27에 아이폰에 적용될 실용적인 AI 기능들",
+                "summary": "애플의 WWDC에서 시리(Siri)의 AI 전면 개편이 주요 헤드라인을 장식했지만, iOS 27에서는 아이폰의 다양한 영역에 더욱 유용하고 실용적인 AI 기능들이 추가될 예정이다. 이는 개인 사용자를 위한 AI 활용 사례를 보여준다."
             },
             {
                 "title": "Billionaire Ambani wants AI in every call, app, and home",
                 "description": "Reliance is weaving AI into telecom services used by more than 500 million people.",
                 "link": "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/",
                 "pubDate": "Fri, 19 Jun 2026 15:23:28 +0000",
-                "score": 85,
+                "score": 95,
                 "is_main": true,
-                "translated_title": "억만장자 암바니, 모든 통화, 앱, 가정에 AI를 원한다",
-                "summary": "인도의 억만장자 무케시 암바니가 이끄는 릴라이언스(Reliance) 그룹은 5억 명 이상의 사람들이 사용하는 통신 서비스에 AI를 통합하고 있다. 이는 통화, 애플리케이션, 스마트홈 등 일상생활의 모든 영역에 AI를 적용하여 대규모 사용자 기반에 AI 활용을 확대하려는 전략이다."
-            },
-            {
-                "title": "From PGP to Mythos: a brief history of export controls that didn’t stop anyone",
-                "description": "For the last 30 years, stopping the flow of cybersecurity-related software has proven to be ineffective. It's unclear why it would work now with Anthropic’s cybersecurity model Mythos.",
-                "link": "https://techcrunch.com/2026/06/19/encryption-spyware-and-now-mythos-history-shows-why-cyber-export-control-doesnt-work/",
-                "pubDate": "Fri, 19 Jun 2026 22:40:14 +0000",
-                "score": 80,
-                "is_main": true,
-                "translated_title": "PGP부터 미토스까지: 아무도 막지 못한 수출 통제의 간략한 역사",
-                "summary": "지난 30년간 사이버 보안 관련 소프트웨어의 유통을 막으려는 시도는 비효율적임이 입증되었다. 이 기사는 앤트로픽의 사이버 보안 모델인 미토스(Mythos)에도 이러한 수출 통제가 효과적일지 의문을 제기하며, AI 모델의 확산과 통제에 대한 역사적 맥락과 현재의 도전을 다룬다."
-            },
-            {
-                "title": "Source: Elastic agrees to buy CRV-backed Deductive AI for up to $85M",
-                "description": "Deductive AI, a startup that uses AI to catch and resolve bugs in software, was founded just three years ago.",
-                "link": "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/",
-                "pubDate": "Fri, 19 Jun 2026 00:51:11 +0000",
-                "score": 80,
-                "is_main": true,
-                "translated_title": "소식통: Elastic, CRV가 지원하는 Deductive AI를 최대 8천5백만 달러에 인수 합의",
-                "summary": "클라우드 기반 데이터 분석 회사인 Elastic이 AI를 사용하여 소프트웨어 버그를 감지하고 해결하는 스타트업 Deductive AI를 최대 8천5백만 달러에 인수하기로 합의했다. Deductive AI는 설립 3년 만에 AI를 활용한 특정 소프트웨어 개발 및 유지보수 애플리케이션 분야에서 그 가치를 인정받았다."
+                "translated_title": "억만장자 암바니, 모든 통화, 앱, 가정에 AI를 도입하고자 한다",
+                "summary": "인도의 억만장자 암바니가 이끄는 릴라이언스(Reliance)는 5억 명 이상이 사용하는 통신 서비스 전반에 AI를 통합하여 모든 통화, 앱, 가정에서 AI를 활용할 수 있도록 추진하고 있다. 이는 대규모 기업의 AI 활용 확산 사례이다."
             }
         ]
     },
     "ax_news": {
         "data": [
             {
-                "title": "SKT, AI를 '동료'로… AX 2.0으로 일하는 방식 바꾼다",
-                "description": "AX가 조직 생산성의 획기적 향상과 회사의 비즈니스 모델 혁신으로까지 이어지도록 구성원이 일하는... 백지에서 AI 기반으로 다시 설계하는 사내 실험이다. 직급·부서 구분 없이 수평적으로 운영되고 점진적으로... ",
-                "link": "https://n.news.naver.com/mnews/article/417/0001148375?sid=105",
-                "pubDate": "Sun, 21 Jun 2026 10:00:00 +0900",
+                "title": "오픈AI 최대 고객된 삼성전자, 이재용 회장의 AX 본궤도",
+                "description": "삼성전자가 세계 임직원을 대상으로 챗GPT 엔터프라이즈와 인공지능(AI) 코딩 에이전트 '코덱스(Codex)'를 도입하며 전사 AI 전환(AX)에 속도를 낸다. 이번 계약은 오픈AI의 기업 고객 가운데 최대 규모 배포 사례 중 하나다.... ",
+                "link": "https://www.newspim.com/news/view/20260622000869",
+                "pubDate": "Mon, 22 Jun 2026 15:14:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "SKT는 'AI 동료'를 도입하고 'AX 2.0'을 통해 조직의 생산성을 높이고 비즈니스 모델을 혁신하는 전사적 업무 방식 변화를 가속화한다.",
+                "summary": "삼성전자가 전 세계 임직원을 대상으로 챗GPT 엔터프라이즈와 코덱스를 도입하며 전사 AX에 속도를 내며 오픈AI의 최대 기업 고객 중 하나가 되었다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
-                "title": "KT, '한국형 오픈클로' 개발 중…다음 달부터 사내 시범 운영(종합)",
-                "description": "시키지 않아도 알아서 일하는 '자율형 에이전트'와 답변 신뢰도를 높이는 '자체 개발 RAG'(검색증강생성)를... 이날 KT는 자체 개발 RAG 'K RAG'도 소개했다. AI가 답변 전 근거를 검증하는 일종의 '안전장치' 같은... ",
-                "link": "https://n.news.naver.com/mnews/article/008/0005373261?sid=105",
-                "pubDate": "Wed, 17 Jun 2026 14:57:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "KT는 자체 개발한 검색증강생성(K RAG) 기술과 한국형 오픈클로를 기반으로 한 자율형 AI 에이전트를 다음 달부터 사내에 시범 운영하며 AI 업무 효율화를 추진한다.",
-                "category_code": "VET_GDC_FIRM"
-            },
-            {
-                "title": "토큰 맥스 아닌 AI 에이전트의 실전 가치 알린 세일즈포스",
-                "description": "발표 자료에 따르면 포스코의 AI 에이전트는 단 몇 초 만에 전문가급 답변을 도출할 만큼 고도화됐다. 포스코는 최고경영자(CEO) 직속의 디지털 전환(DX) 전략실을 주축으로 '미션 오리엔티드 AX(Mission-Oriented AX)' 과제를... ",
-                "link": "https://it.donga.com/109012/",
-                "pubDate": "Wed, 10 Jun 2026 23:08:00 +0900",
+                "title": "국민연금도 AI 혁신 나선다...인프라 구축과 민관 협력 본격화",
+                "description": "활용 ▲AI 모델 테스트와 실증 환경 조성 ▲공공 분야 전문성을 활용한 제도·행정 지원 등을 함께 추진한다. 특히 국민연금은 AI 서비스의 안정적 운영을 위한 물리적 기반 구축에도 착수했다. 앞서 지난 16일 고성능 GPU... ",
+                "link": "https://n.news.naver.com/mnews/article/047/0002520066?sid=101",
+                "pubDate": "Mon, 22 Jun 2026 11:16:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "포스코는 CEO 직속 DX 전략실 주도로 '미션 오리엔티드 AX' 과제를 추진하며, AI 에이전트를 도입하여 전문가급 답변을 단 몇 초 만에 도출하는 등 실전 가치를 입증했다.",
+                "summary": "국민연금이 AI 혁신을 위해 고성능 GPU 확보 및 AI 모델 테스트 환경 조성 등 AI 서비스 운영을 위한 물리적 기반 구축에 착수한다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
-                "title": "BGF리테일, 사내 AI 플랫폼 'ASK' 선봬…&quot;업무 생산성 제고&quot;",
-                "description": "문서와 사내 게시글도 가공 없이 원본 그대로 학습해 질의응답 서비스를 제공한다. 추가로 데이터베이스(DB) 검색 연동 기술인 MCP를 접목한 하이브리드 AI RAG 시스템을 구현해 기술적 완성도를 높인 것도 특징이다.... ",
-                "link": "https://n.news.naver.com/mnews/article/629/0000506701?sid=101",
-                "pubDate": "Thu, 11 Jun 2026 09:28:00 +0900",
-                "score": 80,
+                "title": "KB증권, 금융권 첫 MCP 허브 기반 '생성형 AI 개발환경' 구축",
+                "description": "KB증권은 금융권 처음으로 'MCP(모델 컨텍스트 프로토콜) 허브(Hub)' 기반의 생성형 인공지능(AI) 개발·운영 플랫폼을 구축하고 금융보안원의 '생성형 AI 연계 이용 보안대책 평가'에서 '적합' 통지를 받았다고 22일 밝혔다.... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0014020730?sid=101",
+                "pubDate": "Mon, 22 Jun 2026 15:49:00 +0900",
+                "score": 90,
                 "is_main": true,
-                "summary": "BGF리테일은 사내 게시판, 문서 등 방대한 데이터를 통합하고 하이브리드 AI RAG 시스템을 적용한 AI 플랫폼 'ASK'를 선보여 업무 생산성 제고를 목표한다.",
+                "summary": "KB증권이 금융권 최초로 MCP 허브 기반의 생성형 AI 개발·운영 플랫폼을 구축하고 금융보안원으로부터 보안 적합 통지를 받았다.",
+                "category_code": "VET_GDC_FIRM"
+            },
+            {
+                "title": "&quot;AI가 예약하고 업무보조&quot;…KT, '에이전틱 AI' 청사진 공개",
+                "description": "하반기 초개인형 AI 서비스 출시…마이K·지니TV에 적용 자율 실행형 AI 7월 중 사내 시범 적용 K RAG로 AI 신뢰성 강화 [더팩트ㅣ최문정 기자] KT가 인공지능(AI) 에이전트 서비스를 사내 업무 전반에 적용하고, 이를... ",
+                "link": "https://n.news.naver.com/mnews/article/629/0000508330?sid=101",
+                "pubDate": "Wed, 17 Jun 2026 13:56:00 +0900",
+                "score": 90,
+                "is_main": true,
+                "summary": "KT가 자체 개발 RAG 기술 'K RAG'를 사내 업무에 적용하고 초개인화 AI 에이전트 서비스 '에이전틱 AI'를 하반기 상용화하며 AX를 본격화한다.",
                 "category_code": "VET_GDC_FIRM"
             }
         ]
