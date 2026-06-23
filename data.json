@@ -8,7 +8,47 @@
                 "pubDate": "Fri, 29 May 2026 09:18:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "LG CNS는 약 1200명 규모의 해외 개발 인력을 갖춘 글로벌 딜리버리 센터(GDC)를 통해 AI 클라우드 사업 성장과 해외 시장 진출을 가속화하고 있다.",
+                "summary": "LG CNS는 약 1200명 규모의 해외 개발 인력을 보유한 글로벌 딜리버리 센터(GDC)를 통해 AI 클라우드 사업의 고성장과 해외 시장 진출 확대를 가시화하고 있다.",
+                "category_code": "DOMESTIC_GDC"
+            },
+            {
+                "title": "싱가포르 STT GDC, 국내 첫 데이터센터 개관",
+                "description": "싱가포르의 데이터센터 전문기업 STT GDC는 국내 첫 데이터센터 ‘STT 서울1’을 개관했다고 17일 밝혔다. STT 서울1은 2021년 STT GDC(지분 60%)와 효성중공업(지분 40%)이 세운 합작법인 STT GDC 코리아가 구축해... ",
+                "link": "https://n.news.naver.com/mnews/article/011/0004631864?sid=105",
+                "pubDate": "Wed, 17 Jun 2026 06:01:00 +0900",
+                "score": 90,
+                "is_main": true,
+                "summary": "싱가포르 데이터센터 전문기업 STT GDC가 효성중공업과의 합작법인인 STT GDC 코리아를 통해 국내 첫 데이터센터 'STT 서울1'을 개관하며 한국 시장에 본격 진출했다.",
+                "category_code": "DOMESTIC_GDC"
+            },
+            {
+                "title": "STT GDC, 하이퍼스케일 데이터센터 개관…&quot;원전급 내진에 수냉식 냉각까...",
+                "description": "급증하는 인공지능(AI) 인프라 수요에 맞춰 STT GDC가 국내 첫 데이터센터를 개관한다. 이번 센터를 한국 내 전략 거점으로 삼아 동북아 지역의 AI 및 클라우드 인프라 수요에 적극 대응한다는 계획이다. 16일 STT GDC는... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002426840?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 14:32:00 +0900",
+                "score": 90,
+                "is_main": true,
+                "summary": "STT GDC가 국내 AI 인프라 수요에 대응하기 위해 한국 내 첫 하이퍼스케일 데이터센터를 개관했으며, 원전급 내진 설계와 수냉식 냉각 시스템 등 최신 기술을 적용해 AI 및 클라우드 인프라를 지원한다.",
+                "category_code": "DOMESTIC_GDC"
+            },
+            {
+                "title": "STT GDC, 서울에 국내 첫 데이터센터…한국 시장 진출 본격화",
+                "description": "(사진=STT GDC) 싱가포르에 본사를 둔 글로벌 데이터센터 전문 기업 STT GDC(ST 텔레미디어 글로벌 데이터센터)가 한국 시장 공략을 본격화한다. STT GDC는 15일 국내 첫 데이터센터인 ‘STT Seoul 1’을 성공적으로... ",
+                "link": "https://n.news.naver.com/mnews/article/018/0006307513?sid=105",
+                "pubDate": "Tue, 16 Jun 2026 14:31:00 +0900",
+                "score": 90,
+                "is_main": true,
+                "summary": "글로벌 데이터센터 전문기업 STT GDC가 서울에 국내 첫 데이터센터 'STT Seoul 1'을 개관하며, 서울을 동북아시아 AI 및 클라우드 인프라 전략 거점으로 삼아 한국 시장 공략을 본격화했다.",
+                "category_code": "DOMESTIC_GDC"
+            },
+            {
+                "title": "효성, 데이터센터 사업 본격화… “국가 AI산업 성장 뒷받침할 것”",
+                "description": "30㎿ 규모 ‘STT 서울1’ 개관 STT GDC 운영 노하우 결합 조현준 회장, 9년 구상 결실 효성이 인공지능(AI)... 효성중공업과 글로벌 데이터센터 운영 기업 ‘ST 텔레미디어 글로벌 데이터 센터’(STT GDC)의 합작법인인... ",
+                "link": "https://n.news.naver.com/mnews/article/022/0004136336?sid=101",
+                "pubDate": "Thu, 18 Jun 2026 06:02:00 +0900",
+                "score": 90,
+                "is_main": true,
+                "summary": "효성중공업이 STT GDC와의 합작법인 효성-STT GDC를 통해 'STT 서울1' 데이터센터를 개관하고, 국가 AI 산업 성장을 뒷받침할 핵심 인프라 사업에 본격적으로 나선다.",
                 "category_code": "DOMESTIC_GDC"
             }
         ]
@@ -16,67 +56,87 @@
     "overseas": {
         "data": [
             {
-                "title": "Beyond Siri: Here are the practical AI features coming to your iPhone in iOS 27",
-                "description": "Siri’s AI overhaul may have grabbed the headlines at WWDC, but some of Apple’s most useful AI features are arriving elsewhere in iOS 27.",
-                "link": "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/",
-                "pubDate": "Sun, 21 Jun 2026 14:40:28 +0000",
+                "title": "The AI world is getting ‘loopy’",
+                "description": "The loop takes agentic AI a step further by authorizing a swarm of agents to work continuously in the background, endlessly.",
+                "link": "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/",
+                "pubDate": "Mon, 22 Jun 2026 20:53:11 +0000",
                 "score": 95,
                 "is_main": true,
-                "translated_title": "시리를 넘어: iOS 27에 아이폰에 적용될 실용적인 AI 기능들",
-                "summary": "애플의 WWDC에서 시리(Siri)의 AI 전면 개편이 주요 헤드라인을 장식했지만, iOS 27에서는 아이폰의 다양한 영역에 더욱 유용하고 실용적인 AI 기능들이 추가될 예정이다. 이는 개인 사용자를 위한 AI 활용 사례를 보여준다."
+                "translated_title": "AI 세계가 '루피(Loopy)'해지고 있다",
+                "summary": "'루프(the loop)'라는 개념은 에이전트 AI를 한 단계 더 발전시켜, 여러 AI 에이전트가 백그라운드에서 끊임없이 작업을 수행하도록 허용한다. 이는 AI 시스템이 지속적이고 자율적으로 복잡한 목표를 추구하며 진화할 수 있는 새로운 활용 모델을 제시한다."
             },
             {
-                "title": "Billionaire Ambani wants AI in every call, app, and home",
-                "description": "Reliance is weaving AI into telecom services used by more than 500 million people.",
-                "link": "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/",
-                "pubDate": "Fri, 19 Jun 2026 15:23:28 +0000",
+                "title": "Google DeepMind bets $75M on AI’s future in Hollywood with A24 deal",
+                "description": "Google DeepMind and A24 are teaming up to build AI filmmaking tools.",
+                "link": "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal/",
+                "pubDate": "Mon, 22 Jun 2026 18:49:44 +0000",
                 "score": 95,
                 "is_main": true,
-                "translated_title": "억만장자 암바니, 모든 통화, 앱, 가정에 AI를 도입하고자 한다",
-                "summary": "인도의 억만장자 암바니가 이끄는 릴라이언스(Reliance)는 5억 명 이상이 사용하는 통신 서비스 전반에 AI를 통합하여 모든 통화, 앱, 가정에서 AI를 활용할 수 있도록 추진하고 있다. 이는 대규모 기업의 AI 활용 확산 사례이다."
+                "translated_title": "Google DeepMind, A24와의 협력으로 할리우드의 AI 미래에 7천5백만 달러 투자",
+                "summary": "Google DeepMind는 영화 제작사 A24와 협력하여 AI 기반 영화 제작 도구를 개발하는 데 7천5백만 달러를 투자한다. 이는 빅테크의 AI 원천 기술이 할리우드 영화 산업에 적용되어 시나리오 작성, 영상 편집 등 창의적인 작업 방식을 혁신할 잠재력을 보여주는 중요한 활용 사례이다."
+            },
+            {
+                "title": "Fika Jobs raises $4M to build a video-first hiring platform where AI agents interview candidates",
+                "description": "Stockholm-based startup Fika Jobs is building a video-first hiring platform that combines AI interview agents with short-form video profiles, creating something that feels like a cross between LinkedIn and TikTok.",
+                "link": "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/",
+                "pubDate": "Tue, 23 Jun 2026 13:00:00 +0000",
+                "score": 90,
+                "is_main": true,
+                "translated_title": "Fika Jobs, AI 에이전트가 후보자를 인터뷰하는 영상 우선 채용 플랫폼 구축을 위해 4백만 달러 유치",
+                "summary": "스톡홀름 기반 스타트업 Fika Jobs는 AI 인터뷰 에이전트와 짧은 영상 프로필을 결합한 영상 우선 채용 플랫폼을 개발하고 있다. 이 플랫폼은 지원자와의 초기 인터뷰 과정을 AI 에이전트가 수행하여 효율성을 높이고, TikTok과 유사한 방식으로 지원자의 개성을 보여주는 것을 목표로 한다."
+            },
+            {
+                "title": "OpenAI launches new initiative to help find and patch open source bugs",
+                "description": "OpenAI is using AI to help the open source community better protect itself.",
+                "link": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
+                "pubDate": "Tue, 23 Jun 2026 00:11:31 +0000",
+                "score": 90,
+                "is_main": true,
+                "translated_title": "OpenAI, 오픈소스 버그 탐지 및 패치 지원을 위한 새로운 이니셔티브 착수",
+                "summary": "OpenAI는 AI 기술을 활용하여 오픈소스 커뮤니티가 소프트웨어 버그를 더 효과적으로 찾아내고 수정할 수 있도록 돕는 새로운 프로젝트를 시작했다. 이 이니셔티브는 AI의 코딩 및 보안 역량을 활용하여 오픈소스 프로젝트의 안정성과 보안을 강화하는 데 기여할 것으로 기대된다."
             }
         ]
     },
     "ax_news": {
         "data": [
             {
-                "title": "오픈AI 최대 고객된 삼성전자, 이재용 회장의 AX 본궤도",
-                "description": "삼성전자가 세계 임직원을 대상으로 챗GPT 엔터프라이즈와 인공지능(AI) 코딩 에이전트 '코덱스(Codex)'를 도입하며 전사 AI 전환(AX)에 속도를 낸다. 이번 계약은 오픈AI의 기업 고객 가운데 최대 규모 배포 사례 중 하나다.... ",
-                "link": "https://www.newspim.com/news/view/20260622000869",
-                "pubDate": "Mon, 22 Jun 2026 15:14:00 +0900",
+                "title": "오픈AI, 삼성전자에 챗GPT·코덱스 공급…기업 AX 속도",
+                "description": "오픈AI가 전 세계 삼성전자 임직원에 생성형 인공지능(AI) 서비스를 공급해 기업 AX에 나섰다. 오픈AI는 삼성전자 국내 전 임직원과 디바이스경험 부문 전 세계 임직원에게 '챗GPT 엔터프라이즈'와 '코덱스'를 제공한다고... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002427498?sid=105",
+                "pubDate": "Mon, 22 Jun 2026 10:18:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "삼성전자가 전 세계 임직원을 대상으로 챗GPT 엔터프라이즈와 코덱스를 도입하며 전사 AX에 속도를 내며 오픈AI의 최대 기업 고객 중 하나가 되었다.",
+                "summary": "삼성전자가 전 임직원 대상으로 오픈AI의 챗GPT 엔터프라이즈 및 코덱스를 도입하며 전사적 AX 전환에 속도를 내고 있다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
-                "title": "국민연금도 AI 혁신 나선다...인프라 구축과 민관 협력 본격화",
-                "description": "활용 ▲AI 모델 테스트와 실증 환경 조성 ▲공공 분야 전문성을 활용한 제도·행정 지원 등을 함께 추진한다. 특히 국민연금은 AI 서비스의 안정적 운영을 위한 물리적 기반 구축에도 착수했다. 앞서 지난 16일 고성능 GPU... ",
-                "link": "https://n.news.naver.com/mnews/article/047/0002520066?sid=101",
-                "pubDate": "Mon, 22 Jun 2026 11:16:00 +0900",
-                "score": 90,
+                "title": "[단독] 삼성 AX 총대 멘 삼성SDS… 삼성그룹 계열사 AI 공급 맡는다",
+                "description": "올해 6월 내 삼성 전 계열사에 외부 AI툴 공급 전사적 AX 청사진 밝힌 삼성… 삼성SDS, 생성형 AI 서비스... 앞서 오픈AI는 삼성전자에 챗GPT 엔터프라이즈와 코덱스를 공급한다고 밝혔는데, 삼성전자는 챗GPT를 비롯해... ",
+                "link": "https://n.news.naver.com/mnews/article/366/0001173634?sid=105",
+                "pubDate": "Tue, 23 Jun 2026 10:38:00 +0900",
+                "score": 95,
                 "is_main": true,
-                "summary": "국민연금이 AI 혁신을 위해 고성능 GPU 확보 및 AI 모델 테스트 환경 조성 등 AI 서비스 운영을 위한 물리적 기반 구축에 착수한다.",
+                "summary": "삼성SDS가 삼성그룹 전 계열사의 AI 전환을 총괄하며 6월 내 외부 AI 툴 공급 및 전사적 AX 청사진을 제시했다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
-                "title": "KB증권, 금융권 첫 MCP 허브 기반 '생성형 AI 개발환경' 구축",
-                "description": "KB증권은 금융권 처음으로 'MCP(모델 컨텍스트 프로토콜) 허브(Hub)' 기반의 생성형 인공지능(AI) 개발·운영 플랫폼을 구축하고 금융보안원의 '생성형 AI 연계 이용 보안대책 평가'에서 '적합' 통지를 받았다고 22일 밝혔다.... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0014020730?sid=101",
-                "pubDate": "Mon, 22 Jun 2026 15:49:00 +0900",
-                "score": 90,
+                "title": "'에이전틱 AI' 승부수 띄운 KT…초개인화 AI 비서 연내 상용화",
+                "description": "KT가 자체 개발한 검색증강생성 기술 'K-RAG'는 답변 생성 전 근거 정보를 검색·검증해 생성형 AI의 환각(할루시네이션) 현상을 줄이는 기술이다. 현재 사내 지식검색 서비스 'KT지식허브'에 적용돼 임직원 약 1만4000명이... ",
+                "link": "https://n.news.naver.com/mnews/article/138/0002231202?sid=105",
+                "pubDate": "Wed, 17 Jun 2026 15:50:00 +0900",
+                "score": 95,
                 "is_main": true,
-                "summary": "KB증권이 금융권 최초로 MCP 허브 기반의 생성형 AI 개발·운영 플랫폼을 구축하고 금융보안원으로부터 보안 적합 통지를 받았다.",
+                "summary": "KT가 자체 개발한 K-RAG 기술을 사내 지식검색 서비스에 적용하고 초개인화 에이전틱 AI 비서를 연내 상용화하며 AX 전환에 박차를 가하고 있다.",
                 "category_code": "VET_GDC_FIRM"
             },
             {
-                "title": "&quot;AI가 예약하고 업무보조&quot;…KT, '에이전틱 AI' 청사진 공개",
-                "description": "하반기 초개인형 AI 서비스 출시…마이K·지니TV에 적용 자율 실행형 AI 7월 중 사내 시범 적용 K RAG로 AI 신뢰성 강화 [더팩트ㅣ최문정 기자] KT가 인공지능(AI) 에이전트 서비스를 사내 업무 전반에 적용하고, 이를... ",
-                "link": "https://n.news.naver.com/mnews/article/629/0000508330?sid=101",
-                "pubDate": "Wed, 17 Jun 2026 13:56:00 +0900",
+                "title": "[미래車 변신①] 현대차그룹, AI로 공장 재설계…제조 혁명 이끈다",
+                "description": "다른 글로벌 완성차 업체들도 스마트팩토리 전환을 추진했지만 현대차그룹처럼 진취적인 사례가 없다는 분석이다. 문 교수는 &quot;토요타와 폭스바겐 등 글로벌 레거시 업체들과 비교하면 AI와 소프트웨어 기반 제조... ",
+                "link": "https://www.insightkorea.co.kr/news/articleView.html?idxno=248586",
+                "pubDate": "Mon, 22 Jun 2026 16:36:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "KT가 자체 개발 RAG 기술 'K RAG'를 사내 업무에 적용하고 초개인화 AI 에이전트 서비스 '에이전틱 AI'를 하반기 상용화하며 AX를 본격화한다.",
+                "summary": "현대차그룹이 AI와 소프트웨어 기반으로 공장을 재설계하며 스마트팩토리 전환 및 제조 혁신을 이끌고 있다.",
                 "category_code": "VET_GDC_FIRM"
             }
         ]
