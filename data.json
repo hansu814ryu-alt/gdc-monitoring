@@ -2,23 +2,23 @@
     "gdc": {
         "data": [
             {
+                "title": "싱가포르 STT GDC, 국내 첫 데이터센터 개관",
+                "description": "싱가포르의 데이터센터 전문기업 STT GDC는 국내 첫 데이터센터 ‘STT 서울1’을 개관했다고 17일 밝혔다. STT 서울1은 2021년 STT GDC(지분 60%)와 효성중공업(지분 40%)이 세운 합작법인 STT GDC 코리아가 구축해... ",
+                "link": "https://n.news.naver.com/mnews/article/011/0004631864?sid=105",
+                "pubDate": "Wed, 17 Jun 2026 06:01:00 +0900",
+                "score": 95,
+                "is_main": true,
+                "summary": "싱가포르 데이터센터 전문기업 STT GDC가 효성중공업과의 합작을 통해 국내 첫 하이퍼스케일 데이터센터 'STT 서울1'을 개관하며 한국 시장 공략을 본격화했다.",
+                "category_code": "DOMESTIC_GDC"
+            },
+            {
                 "title": "[특징주] LG씨엔에스, AI 클라우드 성장 기대감에 강세… &quot;AX 솔루션 해외...",
                 "description": "AI 클라우드 사업의 고성장과 해외 시장 진출에 따른 외형 확대가 가시화되고 있다는 투자심리가 반영됐기 때문인 것으로 풀이된다. LG씨엔에스는 현재 해외 개발 인력 약 1200명 규모의 글로벌 딜리버리 센터(GDC)와... ",
                 "link": "https://www.bizwork.co.kr/news/articleView.html?idxno=416030",
                 "pubDate": "Fri, 29 May 2026 09:18:00 +0900",
                 "score": 95,
                 "is_main": true,
-                "summary": "LG CNS는 약 1200명 규모의 해외 개발 인력을 보유한 글로벌 딜리버리 센터(GDC)를 통해 AI 클라우드 사업의 고성장과 해외 시장 진출 확대를 가시화하고 있다.",
-                "category_code": "DOMESTIC_GDC"
-            },
-            {
-                "title": "싱가포르 STT GDC, 국내 첫 데이터센터 개관",
-                "description": "싱가포르의 데이터센터 전문기업 STT GDC는 국내 첫 데이터센터 ‘STT 서울1’을 개관했다고 17일 밝혔다. STT 서울1은 2021년 STT GDC(지분 60%)와 효성중공업(지분 40%)이 세운 합작법인 STT GDC 코리아가 구축해... ",
-                "link": "https://n.news.naver.com/mnews/article/011/0004631864?sid=105",
-                "pubDate": "Wed, 17 Jun 2026 06:01:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "싱가포르 데이터센터 전문기업 STT GDC가 효성중공업과의 합작법인인 STT GDC 코리아를 통해 국내 첫 데이터센터 'STT 서울1'을 개관하며 한국 시장에 본격 진출했다.",
+                "summary": "LG CNS는 약 1200명 규모의 해외 개발 인력을 보유한 글로벌 딜리버리 센터(GDC)를 통해 AI 클라우드 사업 성장을 가속화하며 해외 시장 진출을 확대하고 있다.",
                 "category_code": "DOMESTIC_GDC"
             },
             {
@@ -26,29 +26,9 @@
                 "description": "급증하는 인공지능(AI) 인프라 수요에 맞춰 STT GDC가 국내 첫 데이터센터를 개관한다. 이번 센터를 한국 내 전략 거점으로 삼아 동북아 지역의 AI 및 클라우드 인프라 수요에 적극 대응한다는 계획이다. 16일 STT GDC는... ",
                 "link": "https://n.news.naver.com/mnews/article/092/0002426840?sid=105",
                 "pubDate": "Tue, 16 Jun 2026 14:32:00 +0900",
-                "score": 90,
+                "score": 92,
                 "is_main": true,
-                "summary": "STT GDC가 국내 AI 인프라 수요에 대응하기 위해 한국 내 첫 하이퍼스케일 데이터센터를 개관했으며, 원전급 내진 설계와 수냉식 냉각 시스템 등 최신 기술을 적용해 AI 및 클라우드 인프라를 지원한다.",
-                "category_code": "DOMESTIC_GDC"
-            },
-            {
-                "title": "STT GDC, 서울에 국내 첫 데이터센터…한국 시장 진출 본격화",
-                "description": "(사진=STT GDC) 싱가포르에 본사를 둔 글로벌 데이터센터 전문 기업 STT GDC(ST 텔레미디어 글로벌 데이터센터)가 한국 시장 공략을 본격화한다. STT GDC는 15일 국내 첫 데이터센터인 ‘STT Seoul 1’을 성공적으로... ",
-                "link": "https://n.news.naver.com/mnews/article/018/0006307513?sid=105",
-                "pubDate": "Tue, 16 Jun 2026 14:31:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "글로벌 데이터센터 전문기업 STT GDC가 서울에 국내 첫 데이터센터 'STT Seoul 1'을 개관하며, 서울을 동북아시아 AI 및 클라우드 인프라 전략 거점으로 삼아 한국 시장 공략을 본격화했다.",
-                "category_code": "DOMESTIC_GDC"
-            },
-            {
-                "title": "효성, 데이터센터 사업 본격화… “국가 AI산업 성장 뒷받침할 것”",
-                "description": "30㎿ 규모 ‘STT 서울1’ 개관 STT GDC 운영 노하우 결합 조현준 회장, 9년 구상 결실 효성이 인공지능(AI)... 효성중공업과 글로벌 데이터센터 운영 기업 ‘ST 텔레미디어 글로벌 데이터 센터’(STT GDC)의 합작법인인... ",
-                "link": "https://n.news.naver.com/mnews/article/022/0004136336?sid=101",
-                "pubDate": "Thu, 18 Jun 2026 06:02:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "효성중공업이 STT GDC와의 합작법인 효성-STT GDC를 통해 'STT 서울1' 데이터센터를 개관하고, 국가 AI 산업 성장을 뒷받침할 핵심 인프라 사업에 본격적으로 나선다.",
+                "summary": "STT GDC는 AI 인프라 수요 급증에 맞춰 원전급 내진 설계와 수냉식 냉각 시스템을 갖춘 국내 첫 하이퍼스케일 데이터센터 'STT 서울1'을 개관하며 동북아 시장에 대응한다.",
                 "category_code": "DOMESTIC_GDC"
             }
         ]
@@ -56,34 +36,24 @@
     "overseas": {
         "data": [
             {
+                "title": "Anthropic’s Claude Tag is learning your company, one Slack message at a time",
+                "description": "Anthropic’s new Claude Tag brings an always-on AI teammate to Slack. But beyond productivity, the feature is a strategic play to capture organizational context, institutional knowledge, and enterprise workflows.",
+                "link": "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/",
+                "pubDate": "Tue, 23 Jun 2026 17:00:00 +0000",
+                "score": 95,
+                "is_main": true,
+                "translated_title": "Anthropic의 Claude Tag, 슬랙 메시지를 통해 회사 학습",
+                "summary": "Anthropic의 새로운 Claude Tag 기능은 슬랙에 상주하는 AI 동료로서 기업의 조직적 맥락, 기관 지식 및 엔터프라이즈 워크플로우를 학습하고 파악하여 생산성 향상을 넘어선 전략적 가치를 제공한다. 이는 최신 AI를 기업이 실제 활용하는 대표적인 사례이다."
+            },
+            {
                 "title": "The AI world is getting ‘loopy’",
                 "description": "The loop takes agentic AI a step further by authorizing a swarm of agents to work continuously in the background, endlessly.",
                 "link": "https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/",
                 "pubDate": "Mon, 22 Jun 2026 20:53:11 +0000",
                 "score": 95,
                 "is_main": true,
-                "translated_title": "AI 세계가 '루피(Loopy)'해지고 있다",
-                "summary": "'루프(the loop)'라는 개념은 에이전트 AI를 한 단계 더 발전시켜, 여러 AI 에이전트가 백그라운드에서 끊임없이 작업을 수행하도록 허용한다. 이는 AI 시스템이 지속적이고 자율적으로 복잡한 목표를 추구하며 진화할 수 있는 새로운 활용 모델을 제시한다."
-            },
-            {
-                "title": "Google DeepMind bets $75M on AI’s future in Hollywood with A24 deal",
-                "description": "Google DeepMind and A24 are teaming up to build AI filmmaking tools.",
-                "link": "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal/",
-                "pubDate": "Mon, 22 Jun 2026 18:49:44 +0000",
-                "score": 95,
-                "is_main": true,
-                "translated_title": "Google DeepMind, A24와의 협력으로 할리우드의 AI 미래에 7천5백만 달러 투자",
-                "summary": "Google DeepMind는 영화 제작사 A24와 협력하여 AI 기반 영화 제작 도구를 개발하는 데 7천5백만 달러를 투자한다. 이는 빅테크의 AI 원천 기술이 할리우드 영화 산업에 적용되어 시나리오 작성, 영상 편집 등 창의적인 작업 방식을 혁신할 잠재력을 보여주는 중요한 활용 사례이다."
-            },
-            {
-                "title": "Fika Jobs raises $4M to build a video-first hiring platform where AI agents interview candidates",
-                "description": "Stockholm-based startup Fika Jobs is building a video-first hiring platform that combines AI interview agents with short-form video profiles, creating something that feels like a cross between LinkedIn and TikTok.",
-                "link": "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/",
-                "pubDate": "Tue, 23 Jun 2026 13:00:00 +0000",
-                "score": 90,
-                "is_main": true,
-                "translated_title": "Fika Jobs, AI 에이전트가 후보자를 인터뷰하는 영상 우선 채용 플랫폼 구축을 위해 4백만 달러 유치",
-                "summary": "스톡홀름 기반 스타트업 Fika Jobs는 AI 인터뷰 에이전트와 짧은 영상 프로필을 결합한 영상 우선 채용 플랫폼을 개발하고 있다. 이 플랫폼은 지원자와의 초기 인터뷰 과정을 AI 에이전트가 수행하여 효율성을 높이고, TikTok과 유사한 방식으로 지원자의 개성을 보여주는 것을 목표로 한다."
+                "translated_title": "AI 세상이 '루피(loopy)'해지고 있다",
+                "summary": "에이전트 AI(Agentic AI)의 다음 단계인 '루프(the loop)' 개념은 다수의 AI 에이전트들이 백그라운드에서 끊임없이 자율적으로 작업하도록 권한을 부여하여, AI 시스템의 지속적인 발전과 활용 가능성을 확장한다. 이는 AI 원천기술 및 아키텍처 발전에 대한 심층적인 논의를 담고 있다."
             },
             {
                 "title": "OpenAI launches new initiative to help find and patch open source bugs",
@@ -92,52 +62,442 @@
                 "pubDate": "Tue, 23 Jun 2026 00:11:31 +0000",
                 "score": 90,
                 "is_main": true,
-                "translated_title": "OpenAI, 오픈소스 버그 탐지 및 패치 지원을 위한 새로운 이니셔티브 착수",
-                "summary": "OpenAI는 AI 기술을 활용하여 오픈소스 커뮤니티가 소프트웨어 버그를 더 효과적으로 찾아내고 수정할 수 있도록 돕는 새로운 프로젝트를 시작했다. 이 이니셔티브는 AI의 코딩 및 보안 역량을 활용하여 오픈소스 프로젝트의 안정성과 보안을 강화하는 데 기여할 것으로 기대된다."
+                "translated_title": "OpenAI, 오픈소스 버그 탐지 및 패치 지원 새 이니셔티브 시작",
+                "summary": "OpenAI는 인공지능(AI)을 활용하여 오픈소스 커뮤니티가 보안 취약점을 더 효과적으로 찾아내고 수정할 수 있도록 돕는 새로운 이니셔티브를 시작했다. 이는 빅테크의 AI 활용을 통해 오픈소스 생태계의 보안을 강화하는 중요한 사례이다."
+            },
+            {
+                "title": "Google DeepMind bets $75M on AI’s future in Hollywood with A24 deal",
+                "description": "Google DeepMind and A24 are teaming up to build AI filmmaking tools.",
+                "link": "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal/",
+                "pubDate": "Mon, 22 Jun 2026 18:49:44 +0000",
+                "score": 90,
+                "is_main": true,
+                "translated_title": "Google DeepMind, A24와의 협력으로 할리우드 AI 미래에 7천5백만 달러 투자",
+                "summary": "Google DeepMind는 영화 제작사 A24와 협력하여 AI 기반 영화 제작 도구를 개발하기 위해 7천5백만 달러를 투자한다. 이는 빅테크의 AI 원천 기술이 실제 할리우드 영화 산업에서 활용되는 새로운 사례이자, 창작 방식의 혁신을 모색하는 중요한 발걸음이다."
             }
         ]
     },
     "ax_news": {
         "data": [
             {
-                "title": "오픈AI, 삼성전자에 챗GPT·코덱스 공급…기업 AX 속도",
-                "description": "오픈AI가 전 세계 삼성전자 임직원에 생성형 인공지능(AI) 서비스를 공급해 기업 AX에 나섰다. 오픈AI는 삼성전자 국내 전 임직원과 디바이스경험 부문 전 세계 임직원에게 '챗GPT 엔터프라이즈'와 '코덱스'를 제공한다고... ",
-                "link": "https://n.news.naver.com/mnews/article/092/0002427498?sid=105",
-                "pubDate": "Mon, 22 Jun 2026 10:18:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "삼성전자가 전 임직원 대상으로 오픈AI의 챗GPT 엔터프라이즈 및 코덱스를 도입하며 전사적 AX 전환에 속도를 내고 있다.",
-                "category_code": "VET_GDC_FIRM"
+                "title": "LG CNS, 구글 클라우드 '제미나이 엔터프라이즈 어드밴스드 컴피턴시' 획...",
+                "description": "이번 인증 획득으로 LG CNS가 제미나이 엔터프라이즈 인공지능 전환(AX) 사업 경쟁력과 기술 역량을 확보했다는 평가가 나온다. LG CNS는 지난 2월 획득한 '제미나이 엔터프라이즈 컴피턴시'에 이어 약 4개월만에... ",
+                "link": "https://n.news.naver.com/mnews/article/030/0003440641?sid=105",
+                "pubDate": "Wed, 24 Jun 2026 09:59:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "LGU+, AI 상담·고객관리 통합 서비스…중소기업 AX 지원",
+                "description": "향후 LG유플러스 소버린클라우드 기반의 보안 강화와 LG AI연구원의 '엑사원(EXAONE)' 등 생성형 AI 기술 도입, 기업용 AI 플랫폼 '익시 엔터프라이즈(ixi Enterprise)' 기반의 에이전트형 AI 적용도 단계적으로 추진한다.",
+                "link": "https://n.news.naver.com/mnews/article/138/0002231919?sid=105",
+                "pubDate": "Wed, 24 Jun 2026 11:36:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "KT, 'AX 파트너' 스타트업 20곳 발굴",
+                "description": "KT는 이번 공모에서 국내 AI 스타트업을 대상으로 △AI 에이전트 플랫폼·엔터프라이즈 AI △데이터·데이터 포 AI △피지컬 AI·로보틱스 △AI 인프라·파운데이션 모델 등 핵심 AX 기술 분야에서 역량을 갖춘 기업을... ",
+                "link": "https://n.news.naver.com/mnews/article/629/0000509607?sid=101",
+                "pubDate": "Mon, 22 Jun 2026 17:44:00 +0900",
+                "is_main": true
             },
             {
                 "title": "[단독] 삼성 AX 총대 멘 삼성SDS… 삼성그룹 계열사 AI 공급 맡는다",
                 "description": "올해 6월 내 삼성 전 계열사에 외부 AI툴 공급 전사적 AX 청사진 밝힌 삼성… 삼성SDS, 생성형 AI 서비스... 앞서 오픈AI는 삼성전자에 챗GPT 엔터프라이즈와 코덱스를 공급한다고 밝혔는데, 삼성전자는 챗GPT를 비롯해... ",
                 "link": "https://n.news.naver.com/mnews/article/366/0001173634?sid=105",
                 "pubDate": "Tue, 23 Jun 2026 10:38:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "삼성SDS가 삼성그룹 전 계열사의 AI 전환을 총괄하며 6월 내 외부 AI 툴 공급 및 전사적 AX 청사진을 제시했다.",
-                "category_code": "VET_GDC_FIRM"
+                "is_main": true
             },
             {
-                "title": "'에이전틱 AI' 승부수 띄운 KT…초개인화 AI 비서 연내 상용화",
-                "description": "KT가 자체 개발한 검색증강생성 기술 'K-RAG'는 답변 생성 전 근거 정보를 검색·검증해 생성형 AI의 환각(할루시네이션) 현상을 줄이는 기술이다. 현재 사내 지식검색 서비스 'KT지식허브'에 적용돼 임직원 약 1만4000명이... ",
-                "link": "https://n.news.naver.com/mnews/article/138/0002231202?sid=105",
-                "pubDate": "Wed, 17 Jun 2026 15:50:00 +0900",
-                "score": 95,
-                "is_main": true,
-                "summary": "KT가 자체 개발한 K-RAG 기술을 사내 지식검색 서비스에 적용하고 초개인화 에이전틱 AI 비서를 연내 상용화하며 AX 전환에 박차를 가하고 있다.",
-                "category_code": "VET_GDC_FIRM"
+                "title": "오픈AI, 삼성전자에 챗GPT·코덱스 공급…기업 AX 속도",
+                "description": "오픈AI가 전 세계 삼성전자 임직원에 생성형 인공지능(AI) 서비스를 공급해 기업 AX에 나섰다. 오픈AI는 삼성전자 국내 전 임직원과 디바이스경험 부문 전 세계 임직원에게 '챗GPT 엔터프라이즈'와 '코덱스'를 제공한다고... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002427498?sid=105",
+                "pubDate": "Mon, 22 Jun 2026 10:18:00 +0900",
+                "is_main": true
             },
             {
-                "title": "[미래車 변신①] 현대차그룹, AI로 공장 재설계…제조 혁명 이끈다",
-                "description": "다른 글로벌 완성차 업체들도 스마트팩토리 전환을 추진했지만 현대차그룹처럼 진취적인 사례가 없다는 분석이다. 문 교수는 &quot;토요타와 폭스바겐 등 글로벌 레거시 업체들과 비교하면 AI와 소프트웨어 기반 제조... ",
-                "link": "https://www.insightkorea.co.kr/news/articleView.html?idxno=248586",
-                "pubDate": "Mon, 22 Jun 2026 16:36:00 +0900",
-                "score": 90,
-                "is_main": true,
-                "summary": "현대차그룹이 AI와 소프트웨어 기반으로 공장을 재설계하며 스마트팩토리 전환 및 제조 혁신을 이끌고 있다.",
-                "category_code": "VET_GDC_FIRM"
+                "title": "KT, 고객 AX 함께할 'AI 스타트업' 발굴 나선다",
+                "description": "KT는 이번 공모에서 국내 AI 스타트업을 대상으로 △AI 에이전트 플랫폼·엔터프라이즈 AI △데이터·데이터 for AI △피지컬 AI·로보틱스 △AI 인프라·파운데이션 모델 등 핵심 AX 기술 분야에서 역량을 갖춘... ",
+                "link": "https://n.news.naver.com/mnews/article/421/0009015801?sid=105",
+                "pubDate": "Mon, 22 Jun 2026 09:42:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "메가존소프트 &quot;에이전틱 WX로 AWT 기반 기업 AX 지원한다&quot;",
+                "description": "이날 행사에서는 제미나이 엔터프라이즈 기반 노코드 에이전트 구축 과정과 보안 거버넌스 설정을 체험하는 라이브 데모 세션도 마련됐다. 메가존소프트 진건 구글 클라우드 사업 총괄은 &quot;AI 전환에서 성패는... ",
+                "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=677902",
+                "pubDate": "Wed, 24 Jun 2026 14:16:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "KT, 고객 AX 함께 이끌 'AI 스타트업' 발굴…최대 20개 기업 선정",
+                "description": "이번 공모 대상은 ▲AI 에이전트 플랫폼·엔터프라이즈 AI ▲데이터▲데이터 for AI ▲피지컬 AI▲로보틱스 ▲AI 인프라·파운데이션 모델 등 핵심 AX 기술 분야 등이다. 또 금융, 제조, 교육, 공공 등 다양한 산업... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0014019242?sid=105",
+                "pubDate": "Mon, 22 Jun 2026 09:17:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "KT, 미래 AX 파트너 구한다…유망 스타트업 20곳 선발",
+                "description": "KT는 ▲AI 에이전트 플랫폼·엔터프라이즈 AI ▲데이터·데이터 for AI ▲피지컬 AI·로보틱스 ▲AI 인프라·파운데이션 모델 등 핵심 AX 기술 분야에서 역량을 갖춘 기업을 모집한다. ▲금융 ▲제조 ▲교육 ▲공공 등... ",
+                "link": "https://n.news.naver.com/mnews/article/243/0000099471?sid=105",
+                "pubDate": "Mon, 22 Jun 2026 14:59:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "LG CNS, 공공 AX 겨냥 ‘에이전틱웍스·엑사원’ 전시",
+                "description": "LG CNS(LG씨엔에스(064400))가 공공 인공지능 전환(AX)을 위한 에이전틱 AI 플랫폼과 초거대 AI 모델 활용... 챗엑사원은 기업과 공공 사용자의 업무 생산성을 높이는 엔터프라이즈 AI 에이전트 기능을 탑재했다. LG... ",
+                "link": "https://n.news.naver.com/mnews/article/018/0006313243?sid=105",
+                "pubDate": "Tue, 23 Jun 2026 17:31:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "KT, AX 혁신 이끌 스타트업 20곳 모집…'K-PATH' 공모 시작",
+                "description": "KT는 AI 에이전트 플랫폼·엔터프라이즈 AI, 데이터·데이터 포 AI, 피지컬 AI·로보틱스, AI 인프라·파운데이션 모델 등 핵심 AX 기술 분야에서 역량을 갖춘 기업을 모집한다. 또 금융, 제조, 교육, 공공 등 여러 산업... ",
+                "link": "https://n.news.naver.com/mnews/article/014/0005537900?sid=105",
+                "pubDate": "Mon, 22 Jun 2026 10:33:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "LG CNS, 구글 클라우드 '어드밴스드 컴피턴시' 획득…AX 역량 공식 입증",
+                "description": "이번 인증까지 더해지면서 AI·클라우드 기반 AX 사업 경쟁력을 한층 공고히 했다는 평가다. LG CNS 관계자는 “이번 인증은 제미나이 엔터프라이즈를 활용한 비즈니스 혁신 수행 역량을 입증한 것”이라며 “축적된... ",
+                "link": "https://www.ajunews.com/view/20260624083551201",
+                "pubDate": "Wed, 24 Jun 2026 08:52:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "&quot;AI 해야겠는데 뭘 해야 할지&quot;…KT가 'AX 전도사' 된 사연 [현장]",
+                "description": "지방은 AI는 해야 하는데 '무엇부터 시작해야 할지 모르겠다'는 기업이 정말 많습니다.&quot; 노희철 KT 엔터프라이즈부문 AX컨설팅팀장은 18일 부산 벡스코에서 열린 '부산 클라우드 데이 2026' 현장에서 &quot;지역 기업들은 AI를... ",
+                "link": "https://n.news.naver.com/mnews/article/031/0001036046?sid=105",
+                "pubDate": "Thu, 18 Jun 2026 15:52:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "KT, 'K-PATH 2026' 공모..&quot;고객 AX 함께 이끌 AI 스타트업 찾는다&quot;",
+                "description": "KT는 이번 공모에서 국내 AI 스타트업을 대상으로 ▲AI 에이전트 플랫폼·엔터프라이즈 AI ▲데이터·데이터 for AI ▲피지컬 AI·로보틱스 ▲AI 인프라·파운데이션 모델 등 핵심 AX 기술 분야에서 역량을 갖춘... ",
+                "link": "https://n.news.naver.com/mnews/article/108/0003446578?sid=004",
+                "pubDate": "Mon, 22 Jun 2026 08:58:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "KT, 고객 AX 함께할 AI 스타트업 찾는다…K-패쓰 공모",
+                "description": "KT AX 사업 파트너로 육성하고, 공동 프로젝트를 통해 사업화 기회를 넓히는 오픈 이노베이션 프로그램이다. 기존 'KPAS' 명칭을 올해부터 K-PATH로 바꿔 운영한다. 모집 분야는 AI 에이전트 플랫폼·엔터프라이즈 AI... ",
+                "link": "https://n.news.naver.com/mnews/article/030/0003439758?sid=105",
+                "pubDate": "Mon, 22 Jun 2026 09:54:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "금보원-인터넷은행 3사, 보이스피싱 탐지 AI 개발 7월 적용",
+                "description": "금보원은 보이스피싱 탐지를 위해 직접 AI 모델을 개발·운영해 온 인터넷은행 3사의 현장 경험과 원에서 연구및 개발한 연합학습 알고리즘을 더해 설계했다. 공동모델을 활용할 경우 각 은행이 보유한 사기탐지 역량이... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002427940?sid=105",
+                "pubDate": "Wed, 24 Jun 2026 20:48:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "&quot;3만원짜리 AI 앱, 1000원에 뚝딱&quot;…KT, AI '이노베이션 허브' 가보니",
+                "description": "고성능 오픈소스 기반으로 설계해 필요한 AI 모델을 언제든 자유롭게 바꿀 수 있는 유연성도 갖췄다.... (Squad)'를 운영한다. 기술 엔지니어와 비즈니스 컨설턴트, 개발자 등 5명의 정예 인력이 한 팀으로 묶여 현장에... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0014023911?sid=105",
+                "pubDate": "Wed, 24 Jun 2026 08:00:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "메타, 첫 자체 브랜드 AI 스마트안경 출시…299달러 저가형",
+                "description": "메타는 이들 신제품에 최근 선보인 자체 AI 모델 '뮤즈 스파크'를 탑재했다. 화면이 없는 모델이지만... 다만 그는 애플이 아이폰 운영체제 iOS를 폐쇄적으로 운영해 자사 스마트 안경이 아이폰과 완벽하게 상호작용하지... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016154863?sid=104",
+                "pubDate": "Wed, 24 Jun 2026 02:31:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "AI로 보이스피싱 사전 차단…금보원·인뱅 3사 공동모델 가동",
+                "description": "이번 공동모델은 보이스피싱 탐지 AI를 직접 개발·운영해 온 인터넷은행 3사의 현장 경험에 금융보안원의 연합학습 알고리즘을 더해 설계됐다. 각 은행이 보유한 사기 탐지 역량이 다른 은행으로 전파되면서 기존 개별... ",
+                "link": "https://n.news.naver.com/mnews/article/011/0004634520?sid=101",
+                "pubDate": "Wed, 24 Jun 2026 16:55:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "&quot;AI는 일상&quot; 선언한 이재준의 승부수... 846억 확보한 수원, '대한민국 A...",
+                "description": "수원시가 전국 최초 AI 전담 조직 신설에 이어 대규모 국비 확보까지 성공하면서, AI를 도시 운영 전반에 접목하는 지방정부 혁신 모델로 자리매김할 수 있을지 주목된다.",
+                "link": "https://n.news.naver.com/mnews/article/047/0002520403?sid=100",
+                "pubDate": "Wed, 24 Jun 2026 15:31:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "크래프톤 김창한, 이번엔 AWS CEO와 회동...AIㆍ로봇 기업 ‘레벨업’ 속...",
+                "description": "AI 모델 개발과 서비스 운영에 필요한 대규모 컴퓨팅 인프라를 제공하는 글로벌 최대 클라우드 사업자 AWS 역시 AI 인프라 사업 확대를 도모하는 만큼 추후 양사의 협력이 기대된다는 분석이 나온다. 이번 회동은 김... ",
+                "link": "https://www.etoday.co.kr/news/view/2596871",
+                "pubDate": "Wed, 24 Jun 2026 15:58:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "AI 상담부터 고객관리까지…LGU+·블룸AI 맞손",
+                "description": "언어모델(LLM), 음성합성(TTS) 등 AI 기술을 접목한다. 기업이 별도의 시스템 구축 없이 상담과 고객관리, 마케팅 등 핵심 기능을 손쉽게 운영할 수 있도록 엔드투엔드(End-to-End) 통합 서비스를 제공한다. 양사는 AICC... ",
+                "link": "https://n.news.naver.com/mnews/article/421/0009020576?sid=105",
+                "pubDate": "Wed, 24 Jun 2026 10:57:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "김창한 대표, 이번엔 AWS CEO 만났다…게임 넘어 ‘AI·로봇 기업’ 변신...",
+                "description": "AWS는 글로벌 최대 클라우드 사업자로 AI 모델 개발과 서비스 운영에 필요한 대규모 컴퓨팅 인프라를 제공하고 있다. 크래프톤 관계자는 “이번 만남에서는 크래프톤의 AI 연구개발 역량과 AWS의 클라우드·AI 인프라를... ",
+                "link": "https://n.news.naver.com/mnews/article/018/0006313741?sid=105",
+                "pubDate": "Wed, 24 Jun 2026 11:09:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "아이파킹, 강남구 AI 무인 노상주차 실증 완료…공영주차장 확산 나선다",
+                "description": "이번 사업은 강남구 공영 노상주차장에 설치된 기존 시스템의 한계를 개선하고 AI 기반 무인 운영 모델을 검증하기 위해 추진됐다. 공공기관의 행정 혁신 수요와 민간 기업의 기술 투자가 결합된 사례라는 점에서 의미가... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002427936?sid=105",
+                "pubDate": "Wed, 24 Jun 2026 20:22:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "ETRI, AI 핵심 생태계 '초고속 네트워크' 구축 나섰다",
+                "description": "AI 데이터센터 네트워크는 여러 데이터센터에 분산된 인공지능 연산 자원을 하나의 시스템처럼 연결해 활용할 수 있도록 지원하는 기술이며 네트워크 성능이 높을수록 대규모 AI 모델학습과 서비스 운영효율이... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0014024648?sid=102",
+                "pubDate": "Wed, 24 Jun 2026 11:12:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "LGU+, 중소기업 고객센터 AI 전환 지원 확대",
+                "description": "블룸에이아이의 AI 상담 플랫폼, 고객관리 솔루션과 결합해 상담 자동화와 운영 효율을 높인다는... 향후에는 LG AI연구원의 생성형 AI 모델 엑사원과 기업용 AI 플랫폼 '익시 엔터프라이즈'를 활용해 맞춤형 AI 서비스를... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016155195?sid=105",
+                "pubDate": "Wed, 24 Jun 2026 09:00:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "금보원, 인뱅 3사와 보이스피싱 대응 모델 개발…금융권 확대",
+                "description": "보이스피싱 탐지를 위해 직접 AI 모델을 개발·운영해 온 인터넷은행 3사의 현장 경험과 금융보안원에서 연구·개발한 연합학습 알고리즘을 더해 설계했다. 공동 모델을 활용할 경우 각 은행이 보유한 사기탐지 역량이... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0014024547?sid=101",
+                "pubDate": "Wed, 24 Jun 2026 10:56:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[현장] 데이터이쿠 &quot;AI 에이전트, 검증·통제 속에서 탄생해야…'코빌드...",
+                "description": "이에 사람과 오케스트레이션, 거버넌스를 결합한 운영 모델을 통해 기업 AI 확산을 지원한다는 방침이다. 앤드류 보이드 데이터이쿠 아시아태평양·일본 총괄 수석 부사장은 &quot;AI 가치는 기술 자체가 아니라 실제 조직... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002427852?sid=105",
+                "pubDate": "Wed, 24 Jun 2026 13:28:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "서울AI허브, 'AI 네이티브 교육' 강좌 개설…지원자 270명 몰려",
+                "description": "하반기 과정은 AI 에이전트를 단순 활용하는 수준을 넘어 반복 업무를 AI 운영 워크플로로 전환하고 보안·권한·승인 체계를 갖춘 AI 네이티브 운영 모델 구축에 초점을 맞춘다. 변우석 서울AI허브 센터장은 &quot;AI... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002427893?sid=105",
+                "pubDate": "Wed, 24 Jun 2026 16:39:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[가보니] &quot;말 한마디에 앱 뚝딱&quot;…KT가 보여준 AI 에이전트 시대",
+                "description": "분석 모델의 실행 비용은 약 1천500원 수준이라고 KT는 설명했다. 지난해 10월 운영 이후 약 200개 기업이 허브를 방문해 AX 적용 가능성을 검토했고, 이 가운데 30개 이상 기업이 KT AI 전문가 그룹과 함께 실제 업무 개선... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016155105?sid=105",
+                "pubDate": "Wed, 24 Jun 2026 08:00:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "삼성SDS·LG CNS, AI로 개발 혁신…코딩보다는 설계 역량",
+                "description": "복잡한 요구사항을 개발에 필요한 구조화된 정보로 전환해 요구사항 분석과 설계 단계의 업무 부담을 줄인다. 삼성SDS는 금융권 레거시 시스템 현대화 프로젝트 등 다양한 사업에 AI 활용 범위를 확대하고 있다. AI를... ",
+                "link": "https://daily.hankooki.com/news/articleView.html?idxno=1379458",
+                "pubDate": "Wed, 24 Jun 2026 15:46:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "데이터이쿠가 밝힌 'AI 내재화' 전략은? &quot;사람·오케스트레이션·거버넌...",
+                "description": "기업 레거시 시스템 외부에서 통제 불가능한 프로토타입을 무분별하게 생성해 유발하던 'AI 백로그 증가... 이 밖에도 사내 비즈니스 전문가의 지식과 판단 기준을 AI 에이전트의 구조화된 추론 로직으로 전환하는 'E2A... ",
+                "link": "https://www.thedailypost.kr/news/articleView.html?idxno=114465",
+                "pubDate": "Wed, 24 Jun 2026 12:30:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "HNIX-맨텍솔루션, 컨테이너 플랫폼 기반 클라우드 전환 가속 '맞손'",
+                "description": "컨테이너 전환 사업을 수행한 바 있다. 올해는 전사 공통 레거시 내·외부망 업무시스템의 컨테이너 전환... HNIX는 범현대그룹 등 국내 유수 기업을 대상으로 통합유지보수(ITO), 시스템 개발·운영, IT·DX·AI전환(AX)... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002427497?sid=105",
+                "pubDate": "Mon, 22 Jun 2026 10:17:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "레거시 부품 저물고 AI 독식…2030년 반도체 판도 변한다",
+                "description": "구조적 전환점 역할을 하며 글로벌 공급망 판도를 뒤흔들 것이라는 전망이 나온다. 23일 통계 조사기관... ◆ 2030년 집적회로 시장 130조원 기습 폭증 앞선 레거시의 몰락과 AI 칩의 폭발적 성장은 결론적으로 전체... ",
+                "link": "https://n.news.naver.com/mnews/article/138/0002231813?sid=105",
+                "pubDate": "Tue, 23 Jun 2026 16:46:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "파이브아이즈 &quot;AI 무장한 적국, 수개월 내 방어망 돌파 가능&quot;",
+                "description": "공격으로 전환한 사례를 차단했다고 밝혔다. 러시아 연계 행위자들이 AI를 활용해 자동으로 변형되는 공격을... 실무 권고로는 불필요한 시스템 접근·외부 연결 제한, 취약점 패치 속도 향상, 레거시 시스템 정비, 접근... ",
+                "link": "https://www.newspim.com/news/view/20260623000627",
+                "pubDate": "Tue, 23 Jun 2026 13:52:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "언리얼 엔진 5.8 전격 출시... 대규모 오픈 월드 및 AI 워크플로 강화",
+                "description": "‘컨트롤 릭 피직스(Control Rig Physics)’는 베타로 전환되어 동적 래그돌 애니메이션부터 피부나 살의... 레거시 및 커스텀 기즈모 시스템은 하나의 일관된 통합 프레임워크로 재구성되어 사용성, 안정성, 정밀도가... ",
+                "link": "https://m.sports.naver.com/esports/article/442/0000193630",
+                "pubDate": "Mon, 22 Jun 2026 14:02:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "인텔 'Arc G3 Extreme' 탑재한 MSI Claw 8 Ex AI+, 라이젠을 뛰어넘다",
+                "description": "모드를 전환할 수 있다. 공장 출하 시 설정은 AI 엔진이다. MSI의 설명에 따르면, AI 엔진 모드는... 그래프 10에는 '파이널 판타지 XIV: 황금의 레거시 벤치마크'(이하 FFXIV 황금의 레거시 벤치)의 종합... ",
+                "link": "https://www.gamevu.co.kr/news/articleView.html?idxno=58916",
+                "pubDate": "Wed, 24 Jun 2026 10:28:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[2026 상반기 혁신상품 대상] 와치텍 - AI 기반 IT 통합운영관리 솔루션...",
+                "description": "와치텍(대표 박권재)이 개발한 '와치올(WatchAll)'은 클라우드 환경 전환에 따른 복잡해진 정보기술 (IT) 관리범위의 변화를 반영해 만든 AI 기반 IT 통합운영관리 솔루션이다. 레거시 인프라부터 클라우드... ",
+                "link": "https://n.news.naver.com/mnews/article/030/0003440296?sid=105",
+                "pubDate": "Tue, 23 Jun 2026 12:01:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[넥스트라이즈 2026] 박민준 뤼튼AX 대표 &quot;경영진 역할도 AI로 대체될 것...",
+                "description": "사람 중심 조직 구조가 AI 에이전트 관리 체계로 재구성되면서, 스타트업일수록 레거시가 적어 이러한 전환 속도가 더 빠를 것이라는 분석이다. 박 대표는 “스타트업의 경우 기존 시스템에 얽매인 레거시가 적은 만큼... ",
+                "link": "https://dealsite.co.kr/articles/163992",
+                "pubDate": "Tue, 23 Jun 2026 08:02:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "AI 열풍에 구형 D램이 귀해졌다…DDR2 가격 어디까지 오르나",
+                "description": "생산능력을 전환하고 있다. 트렌드포스는 윈본드의 전략 변화가 DDR2 공급 부족을 더욱 심화시킬 것으로... AI 수요 확대가 첨단 메모리뿐 아니라 레거시 D램 시장 구조까지 변화시키고 있다는 설명이다.",
+                "link": "https://n.news.naver.com/mnews/article/123/0002385161?sid=101",
+                "pubDate": "Mon, 22 Jun 2026 16:08:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "&quot;AI 도입보다 어려운 건 운영&quot;…락플레이스, '통제형 자율 운영' 해법 제...",
+                "description": "빠르게 전환되고 있다. 특히 생성형 AI 도입이 본격화되면서 대규모 GPU 자원과 탄력적 확장성이 요구되는 AI 워크로드와 강력한 보안 및 안정성이 요구되는 기존 레거시 업무 시스템이 서로 다른 인프라 환경에서 분산... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002427522?sid=105",
+                "pubDate": "Mon, 22 Jun 2026 11:37:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "빔 &quot;제로 트러스트 시대, 데이터 복원 넘어 서비스 복구로 전환해야&quot;",
+                "description": "AI 기반 위협 확산에 대응하기 위해 데이터 복원을 넘어 서비스 복구 중심의 데이터 보호 전략으로 전환해... 레거시 백업 방식은 OS 백업 솔루션과 DB 백업 솔루션을 별도로 운영하는 경우가 많아, 장애 발생 시 여러... ",
+                "link": "https://www.datanet.co.kr/news/articleView.html?idxno=212562",
+                "pubDate": "Wed, 24 Jun 2026 08:30:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[데일리시큐 CISO 조찬] &quot;AI는 키 탈취 가속, 양자는 공개키 위협&quot;…키페...",
+                "description": "양자내성암호 전환 전략을 제시했다. 'AI 및 양자컴퓨팅 시대, 금융권이 준비해야 할 정보보호 전략과... 기존 인프라 유지하며 키관리 계층부터 강화 키페어는 기존 DB 암호화, PKI, 레거시 HSM, 웹방화벽과 API 보안... ",
+                "link": "https://www.dailysecu.com/news/articleView.html?idxno=207287",
+                "pubDate": "Tue, 23 Jun 2026 17:42:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "중기중앙회, LG CNS·메가존과 中企 제조업 AX 전환 지원",
+                "description": "또한 자체 AI 에이전트 플랫폼 ‘Marl-E’와 AI 기반 SDLC 방법론을 활용해 기존 레거시 시스템 교체 없이 전사 AX 전환을 지원한다. 사업 참여를 희망하는 중소기업은 중소기업중앙회 홈페이지 및 스마트공장... ",
+                "link": "http://amenews.kr/news/view.php?idx=67157",
+                "pubDate": "Mon, 22 Jun 2026 10:44:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "HNIX, 맨텍솔루션과 손잡고 클라우드 전환 시장 공략…아코디언 사업 확...",
+                "description": "공통 레거시 업무시스템의 컨테이너 전환 프로젝트를 진행 중이다. 양사는 이번... 정보보안, AI 솔루션 등을 제공하고 있다. 최근에는 AI와 RPA 자동화, IoT, 메타버스, VR... ",
+                "link": "https://www.venturesquare.net/1092602/",
+                "pubDate": "Mon, 22 Jun 2026 11:39:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "올거나이즈, 하나증권 AI챗봇 구축…&quot;RAG 기술로 정확도↑&quot;",
+                "description": "특히 하나증권의 금융상품·약관·질의응답 등 사내 데이터를 RAG(검색증강생성)로 검색·학습해 정확한 답변을 제공한다. 하나증권 측은 하나Q 고도화를 위해 금융상품·약관 등 데이터를 매일 점검한다는 계획이다.... ",
+                "link": "https://n.news.naver.com/mnews/article/008/0005376034?sid=101",
+                "pubDate": "Tue, 23 Jun 2026 17:30:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "“AI의 진짜 경쟁력은 데이터”… 유니콘 키운 스노클 AI의 철학[최중혁...",
+                "description": "필요하다.” ●검색증강생성(RAG·Retrieval-Augmented Generation): AI가 답변을 만들기 전에 사내 문서나 데이터베이스에서 관련 정보를 검색한 뒤, 이를 바탕으로 답하는 방식이다. 기업용 AI에서 널리 쓰이지만, 어떤 질문에서... ",
+                "link": "https://n.news.naver.com/mnews/article/020/0003729064?sid=101",
+                "pubDate": "Wed, 24 Jun 2026 09:51:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "KT RAG, 산업 최적화·데이터 선순환 '강점'",
+                "description": "KT는 사내환경을 지속적으로 모니터링하고 운영한 경험을 바탕으로 실제 산업에도 완성도 높은 AI 서비스를 제공할 계획이다. 김준석 KT AX미래기술원 에이전틱AI랩장은 환각 현상을 줄이기 위한 노력과 관련해 &quot;RAG... ",
+                "link": "https://n.news.naver.com/mnews/article/293/0000086425?sid=105",
+                "pubDate": "Wed, 17 Jun 2026 17:49:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "&quot;AI가 예약하고 업무보조&quot;…KT, '에이전틱 AI' 청사진 공개",
+                "description": "하반기 초개인형 AI 서비스 출시…마이K·지니TV에 적용 자율 실행형 AI 7월 중 사내 시범 적용 K RAG로 AI 신뢰성 강화 [더팩트ㅣ최문정 기자] KT가 인공지능(AI) 에이전트 서비스를 사내 업무 전반에 적용하고, 이를... ",
+                "link": "https://n.news.naver.com/mnews/article/629/0000508330?sid=101",
+                "pubDate": "Wed, 17 Jun 2026 13:56:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "인포뱅크, AI 협업 플랫폼 ‘인세븐’에 KMS 연동… “사내 문서가 답하...",
+                "description": "인포뱅크는 이러한 문제를 해결하기 위해 검색증강생성(RAG, Retrieval-Augmented Generation) 기반의 KMS 기능을 구현했다. 인세븐 KMS 기능 업데이트 (자료 제공: 인포뱅크) 사내... ",
+                "link": "https://www.venturesquare.net/1092779/",
+                "pubDate": "Mon, 22 Jun 2026 21:26:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "&quot;알아서 요금제 바꾸는 AI&quot;…KT, '초개인화 AI 에이전트' 띄운다",
+                "description": "KT는 K RAG의 실효성을 검증하기 위해 AI 기반 사내 지식 검색 서비스인 'KT지식허브'에 해당 기술을 적용했다. 이를 통해 맥락 기반의 답변을 제공하는 K RAG의 성능을 확인했다. 향후 B2B와 B2C 영역의 모든 에이전트... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0014011116?sid=105",
+                "pubDate": "Wed, 17 Jun 2026 11:20:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "KT, 스스로 생각·실행하는 개인맞춤형 '에이전틱 AI' 실현한다",
+                "description": "약점인 환각(Hallucination) 현상을 효과적으로 줄인 것이 특징이다. K RAG는 현재 KT지식허브, My K 등 사내 여러 에이전트 서비스에 적용되고 있다. KT는 향후 B2B·B2C 영역의 에이전트 서비스로 확장 적용할 예정이다.",
+                "link": "https://n.news.naver.com/mnews/article/421/0009008425?sid=105",
+                "pubDate": "Wed, 17 Jun 2026 13:35:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "인포뱅크 '인세븐', 사내 지식관리시스템 연동 기능 추가",
+                "description": "이 같은 과제의 해법으로 RAG(검색증강생성) 기반의 사내 지식 활용이 주목받고 있다. 인세븐의 KMS 기능은 규정·매뉴얼·기안문·계약서·회의록 등 부서별로 흩어진 사내 문서를 단일 지식 베이스로 모으고, 질문 시... ",
+                "link": "https://platum.kr/archives/289449",
+                "pubDate": "Mon, 22 Jun 2026 12:58:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "사내 AI 플랫폼 제작해 업무혁신",
+                "description": "남동아이는 사내 문서 기반 질의응답, 보고서 초안 작성, 번역, 보도자료 작성 지원 등 임직원의 실무와 밀접한 기능을 제공하고 있다. 특히 RAG(검색증강생성) 기술을 적용해 답변의 근거 문서와 출처를 확인할 수... ",
+                "link": "https://n.news.naver.com/mnews/article/020/0003728963?sid=101",
+                "pubDate": "Wed, 24 Jun 2026 04:34:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "AI가 요금제 바꾸고 일정 잡고···KT, '에이전틱 AI' 공략 본격화",
+                "description": "K RAG 사업화 방향에 대해 임지희 KT A-서치담당 상무보는 &quot;현재 K RAG는 사내 서비스뿐 아니라 B2C 에이전트에 포함돼 있다. 플랫폼이라는 부분을 KT에서 지속적으로 보고 있는데 그 플랫폼의 컴포넌트로 제공하고 있다.... ",
+                "link": "https://www.sisajournal-e.com/news/articleView.html?idxno=421789",
+                "pubDate": "Wed, 17 Jun 2026 14:16:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "KT, '한국형 오픈클로' 개발 중…다음 달부터 사내 시범 운영(종합)",
+                "description": "시키지 않아도 알아서 일하는 '자율형 에이전트'와 답변 신뢰도를 높이는 '자체 개발 RAG'(검색증강생성)를... 이날 KT는 자체 개발 RAG 'K RAG'도 소개했다. AI가 답변 전 근거를 검증하는 일종의 '안전장치' 같은... ",
+                "link": "https://n.news.naver.com/mnews/article/008/0005373261?sid=105",
+                "pubDate": "Wed, 17 Jun 2026 14:57:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "&quot;휴가 간 동안 AI가 대신 응대&quot;…KT, 하반기 '초개인화 AI 에이전트' 적...",
+                "description": "KT는 자사 RAG를 'K RAG'로 명명했다.KT는 K RAG를 마이 K와 KT지식허브 등 사내 에이전트 서비스에 적용한 상태다. 향후 B2B와 B2C 에이전트 서비스로도 확장할 계획이다.임지희 KT 서치AI 담당(상무)은 &quot;잘못된 지식은... ",
+                "link": "https://news.mtn.co.kr/news-detail/2026061713205515921",
+                "pubDate": "Wed, 17 Jun 2026 13:58:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "&quot;업무 자료 어디 있지?&quot; BGF리테일, 사내 AI 플랫폼 'ASK' 론칭",
+                "description": "문서와 사내 게시글도 별도 가공 없이 학습할 수 있는 것이 특징이다. 데이터베이스(DB) 검색 연동 기술인 MCP(Model Context Protocol)를 적용한 하이브리드 AI RAG 시스템도 구축했다. 이를 통해 조직도와 업무분장 등... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0013999901?sid=101",
+                "pubDate": "Thu, 11 Jun 2026 08:50:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "[경제인사이드] &quot;이제는 에이전트&quot;… 2026년 'AI 대전환' 가속화",
+                "description": "이를 통해 내부 기밀 정보가 외부 AI 학습 데이터로 유출되는 리스크를 완벽하게 차단하며 독자적인 사내 지식 관리(RAG) 환경을 성공적으로 안착시켰다. LG유플러스 역시 사내 AX 중심의 핵심 사업별 조직을 강화하고... ",
+                "link": "https://www.newscj.com/news/articleView.html?idxno=3409834",
+                "pubDate": "Thu, 18 Jun 2026 07:02:00 +0900",
+                "is_main": true
+            },
+            {
+                "title": "&quot;휴가 간 동료 대신 답변&quot;…KT가 그리는 AI 에이전트 시대",
+                "description": "K RAG는 KT지식허브, 마이K 등 사내 여러 에이전트 서비스에 적용되고 있으며, 향후 B2B·B2C 영역의 에이전트 서비스로 확장 적용 예정이다. 또 에이전틱 AI와 관련해 한·중·일 통신사 연합체(SCFA) 등과 전략적... ",
+                "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1712823",
+                "pubDate": "Wed, 17 Jun 2026 15:08:00 +0900",
+                "is_main": true
             }
         ]
     },
