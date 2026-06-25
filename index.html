@@ -1,273 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDC & AX 인사이트 대시보드</title>
+    <style>
+        body { font-family: 'Pretendard', 'Malgun Gothic', sans-serif; background-color: #f4f7f6; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; }
+        .card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .title { font-size: 18px; font-weight: bold; color: #2c3e50; text-decoration: none; }
+        .title:hover { text-decoration: underline; }
+        .summary { color: #7f8c8d; font-size: 14px; margin-top: 10px; line-height: 1.5; }
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 10px; }
+        .badge-premium { background-color: #ffecd2; color: #d35400; }
+        .feedback-section { margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee; }
+        .feedback-btn { border: none; background: none; cursor: pointer; font-size: 16px; margin-right: 5px; }
+    </style>
+</head>
+<body>
 
-    <div style="font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; background-color: #f4f7f6; padding: 20px;">
-        <div style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <h1 style="color: #003366; border-bottom: 3px solid #3498db; padding-bottom: 15px; display: inline-block; font-weight: 800; font-size: 24px;">📊 GDC & AX 일일 트렌드 리포트</h1>
-                <p style="color: #7f8c8d; margin-top: -10px;">Daily Insights & Competitor Matrix</p>
-            </div>
-    
-    <div style="margin-bottom: 50px;">
-        <h2 style="color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;">💡 IT/AI 트렌드 요약</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; background-color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-            <thead>
-                <tr>
-                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; text-align: center; font-size: 15px; width: 15%;">구분</th>
-                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; text-align: left; padding-left: 20px; font-size: 15px; width: 42.5%;">🇰🇷 국내 시장</th>
-                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; text-align: left; padding-left: 20px; font-size: 15px; width: 42.5%;">🌍 글로벌 시장</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="border: 1px solid #e1e8ed; padding: 15px; background-color: #fcfcfc; text-align: center; font-weight: bold; font-size: 14px;">시장 전반</td>
-                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;"><ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;"><li style="padding: 6px 0;"><a href="https://n.news.naver.com/mnews/article/366/0001173634?sid=105" target="_blank" style="color: #1a1a1a; text-decoration: none;">[단독] 삼성 AX 총대 멘 삼성SDS… 삼성그룹 계열사 AI 공급 맡는다</a></li><li style="padding: 6px 0;"><a href="https://n.news.naver.com/mnews/article/001/0016157363?sid=104" target="_blank" style="color: #1a1a1a; text-decoration: none;">오픈AI, 자체 AI칩 '할라페뇨' 공개…&quot;블랙웰·TPU와 대등 성능&quot;</a></li><li style="padding: 6px 0;"><a href="https://www.techm.kr/news/articleView.html?idxno=152896" target="_blank" style="color: #1a1a1a; text-decoration: none;">&quot;AI와 일하세요&quot; 유통가 'AX 경쟁' 본격화</a></li></ul></td>
-                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;"><ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;"><li style="padding: 6px 0;"><a href="https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/" target="_blank" style="color: #1a1a1a; text-decoration: none;">유럽, 미국의 반도체 전쟁에 반격</a></li><li style="padding: 6px 0;"><a href="https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" target="_blank" style="color: #1a1a1a; text-decoration: none;">최고 AI 연구원들, 구글 떠나 경쟁사로 이직 행렬 이어져</a></li><li style="padding: 6px 0;"><a href="https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient/" target="_blank" style="color: #1a1a1a; text-decoration: none;">AI가 엔지니어링 일자리를 없앨 것이라 예상했지만, 새로운 데이터는 그들이 가장 회복력이 강하다고 시사</a></li></ul></td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid #e1e8ed; padding: 15px; background-color: #fcfcfc; text-align: center; font-weight: bold; font-size: 14px;">경쟁사 동향</td>
-                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;"><ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;"><li style="padding: 6px 0;">수집된 데이터가 없습니다.</li></ul></td>
-                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;"><ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;"><li style="padding: 6px 0;">수집된 데이터가 없습니다.</li></ul></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>📊 경쟁사 동향 1. 국내 GDC</h2><p style='color: #888; font-style: italic; text-align: center;'>📌 80점 이상의 기준에 부합하는 데이터가 없습니다.</p></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>📊 경쟁사 동향 2. 글로벌 오프쇼어링</h2><p style='color: #888; font-style: italic; text-align: center;'>📌 80점 이상의 기준에 부합하는 데이터가 없습니다.</p></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>🌍 해외 AI 원천기술 및 아키텍처</h2><table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 15px; table-layout: fixed;"><tr>
-                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
-                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[90점]</span></div>
-                        <a href="https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">유럽, 미국의 반도체 전쟁에 반격</a>
-                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
-                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 유럽연합은 미국의 대중국 반도체 수출 규제, 일명 '반도체 전쟁'에 대해 다른 입장을 취하며 독자적인 목소리를 내고 있습니다. 이는 글로벌 반도체 공급망 및 기술 주도권에 대한 논쟁에 중요한 전환점이 될 수 있습니다.</p>
-                        </div>
-                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=0eaac807ce&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=0eaac807ce&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=0eaac807ce&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-                        </div>
-                    </div>
-                </td>
-                <td width="4%" style="width: 4%;"></td>
-                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
-                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[88점]</span></div>
-                        <a href="https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">최고 AI 연구원들, 구글 떠나 경쟁사로 이직 행렬 이어져</a>
-                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
-                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 구글의 핵심 AI 연구원들이 앤트로픽과 같은 경쟁사로 꾸준히 이직하고 있습니다. 이는 AI 기술 개발 경쟁이 심화되는 가운데, 주요 기업 간의 인재 유출입이 업계 판도에 미칠 영향에 주목하게 합니다.</p>
-                        </div>
-                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=73ecb6bfd5&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=73ecb6bfd5&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=73ecb6bfd5&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-                        </div>
-                    </div>
-                </td>
-                </tr><tr>
-                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
-                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[85점]</span></div>
-                        <a href="https://techcrunch.com/2026/06/24/ai-was-supposed-to-kill-engineering-jobs-but-new-data-suggests-theyre-the-most-resilient/" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">AI가 엔지니어링 일자리를 없앨 것이라 예상했지만, 새로운 데이터는 그들이 가장 회복력이 강하다고 시사</a>
-                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
-                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 인공지능(AI)이 일자리 감소를 주도할 것이라는 일반적인 예측과는 달리, 최신 데이터에 따르면 엔지니어들은 오히려 신규 채용에서 더 큰 비중을 차지하며 AI 시대에 가장 탄력적인 직업군임을 보여주고 있습니다.</p>
-                        </div>
-                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=266f847bad&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=266f847bad&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=266f847bad&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-                        </div>
-                    </div>
-                </td>
-                <td width="4%" style="width: 4%;"></td>
-                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
-                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[83점]</span></div>
-                        <a href="https://techcrunch.com/2026/06/24/agility-robotics-plans-to-go-public-via-spac-in-a-2-5b-deal/" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">휴머노이드 로봇 스타트업 애질리티 로보틱스, 25억 달러 규모 SPAC 합병 상장 계획</a>
-                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
-                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 인간형 로봇 개발 스타트업인 애질리티 로보틱스가 25억 달러 규모의 SPAC 합병을 통해 상장을 추진합니다. 이는 로봇 산업에 대한 투자자들의 높은 관심을 보여주며, 미래 로봇 시장의 성장 잠재력을 가늠케 합니다.</p>
-                        </div>
-                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=97c642dd85&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=97c642dd85&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=97c642dd85&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-                        </div>
-                    </div>
-                </td>
-                </tr></table><div style='margin-top: 20px;'><a href='https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas' target='_blank' style='color: #3498db; font-weight: bold; text-decoration: none;'>🔗 [전체 보기]</a></div></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>🏢 국내 기업 Enterprise AX</h2><table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 15px; table-layout: fixed;"><tr>
-                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
-                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[95점]</span></div>
-                        <a href="https://n.news.naver.com/mnews/article/366/0001173634?sid=105" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">[단독] 삼성 AX 총대 멘 삼성SDS… 삼성그룹 계열사 AI 공급 맡는다</a>
-                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
-                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 삼성SDS가 삼성그룹 계열사의 전사적 AX를 총괄하며 생성형 AI 서비스 공급을 맡아, 삼성그룹 전체의 AI 전환을 주도할 예정이다.</p>
-                        </div>
-                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=6c47b97ff5&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=6c47b97ff5&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=6c47b97ff5&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-                        </div>
-                    </div>
-                </td>
-                <td width="4%" style="width: 4%;"></td>
-                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
-                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[95점]</span></div>
-                        <a href="https://n.news.naver.com/mnews/article/001/0016157363?sid=104" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">오픈AI, 자체 AI칩 '할라페뇨' 공개…&quot;블랙웰·TPU와 대등 성능&quot;</a>
-                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
-                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 오픈AI가 엔비디아 의존도를 낮추기 위해 자사 AI 서비스 운영 경험을 바탕으로 설계된 첫 자체 AI 칩 '할라페뇨'를 공개하며 블랙웰, TPU와 대등한 성능을 목표로 한다고 밝혔다.</p>
-                        </div>
-                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=787bf0a8db&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=787bf0a8db&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=787bf0a8db&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-                        </div>
-                    </div>
-                </td>
-                </tr><tr>
-                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
-                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[90점]</span></div>
-                        <a href="https://www.techm.kr/news/articleView.html?idxno=152896" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">&quot;AI와 일하세요&quot; 유통가 'AX 경쟁' 본격화</a>
-                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
-                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 유통업계에서 CJ온스타일 등 기업들이 클로드 엔터프라이즈 같은 생성형 AI 솔루션을 도입하며 AX 경쟁을 본격화하고 있다.</p>
-                        </div>
-                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=6168b89e3e&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=6168b89e3e&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=6168b89e3e&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-                        </div>
-                    </div>
-                </td>
-                <td width="4%" style="width: 4%;"></td>
-                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
-                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
-                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[90점]</span></div>
-                        <a href="https://n.news.naver.com/mnews/article/138/0002231813?sid=105" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">레거시 부품 저물고 AI 독식…2030년 반도체 판도 변한다</a>
-                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
-                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> AI 반도체 수요 폭증으로 2030년까지 반도체 시장 판도가 레거시 부품의 몰락과 AI 칩의 독식으로 구조적 전환점을 맞이할 것이라는 전망이 나왔다.</p>
-                        </div>
-                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=9534cca4e0&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=9534cca4e0&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=9534cca4e0&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-                        </div>
-                    </div>
-                </td>
-                </tr></table><div style='margin-top: 20px;'><a href='https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax' target='_blank' style='color: #3498db; font-weight: bold; text-decoration: none;'>🔗 [전체 보기]</a></div></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>💼 채용 1. MSP Player</h2><p style='color: #888; font-style: italic; text-align: center;'>📌 80점 이상의 기준에 부합하는 데이터가 없습니다.</p></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>💼 채용 2. 베트남 GDC 업체</h2><p style='color: #888; font-style: italic; text-align: center;'>📌 80점 이상의 기준에 부합하는 데이터가 없습니다.</p></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>💼 채용 3. 외국인 IT 인력</h2><p style='color: #888; font-style: italic; text-align: center;'>📌 80점 이상의 기준에 부합하는 데이터가 없습니다.</p></div><div style='margin-bottom: 50px;'><h2 style='color: #6a1b9a; border-bottom: 2px solid #9b59b6; padding-bottom: 8px; margin-top: 40px; font-size: 22px; font-weight: bold;'>💬 [실전] 직장인 텔레그램 AI 업무 팁</h2>
-        <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
-            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
-                <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: AI Innovation Studio 🇰🇷</span>
-                <span style='color: #e74c3c; margin-left: 5px;'>[100점]</span>
-            </div>
-            <h3 style="margin-top: 0; font-size: 18px;"><a href="https://t.me/aiinnovationstudio/4051" target="_blank" style="color: #2c3e50; text-decoration: none;">ChatGPT 예약 작업을 통한 반복 업무 및 정보 모니터링 자동화</a></h3>
+<div class="container" id="app">
+    <h1 style="text-align: center; color: #003366; border-bottom: 3px solid #3498db; padding-bottom: 15px; display: inline-block; margin-bottom: 40px;">GDC & AX 프리미엄 인사이트</h1>
+    <div id="news-container"></div>
+</div>
+
+<script type="module">
+    // 🚨 본인의 Firebase 프로젝트 Config 설정으로 반드시 변경하세요!
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyCdmPmb_VuZSmwrOX8LmmpBUihQnsV0e_U",
+        authDomain: "gdc-monitoring.firebaseapp.com",
+        projectId: "gdc-monitoring",
+        storageBucket: "gdc-monitoring.firebasestorage.app",
+        messagingSenderId: "60904767725",
+        appId: "1:60904767725:web:082d1d2280de5b45010ce4"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    let currentRating = {};
+
+    window.openFeedback = function(itemId, rating) {
+        currentRating[itemId] = rating;
+        document.getElementById('feedback-form-' + itemId).style.display = 'block';
+    };
+
+    window.submitFeedback = async function(itemId, category, articleTitle) {
+        const comment = document.getElementById('comment-' + itemId).value;
+        const rating = currentRating[itemId];
+        const btn = document.getElementById('btn-submit-' + itemId);
+        btn.innerText = "전송 중...";
+
+        try {
+            await addDoc(collection(db, "feedbacks"), {
+                article_id: itemId,
+                title: articleTitle,
+                category: category,
+                rating: rating,
+                comment: comment,
+                timestamp: serverTimestamp()
+            });
+            document.getElementById('feedback-wrapper-' + itemId).innerHTML = "<span style='color:green; font-size:13px; font-weight:bold;'>✅ 소중한 피드백이 반영되었습니다. 감사합니다!</span>";
+        } catch (e) {
+            console.error("Error: ", e);
+            alert("피드백 전송에 실패했습니다.");
+            btn.innerText = "의견 제출";
+        }
+    };
+
+    // data.json 로드 및 렌더링
+    fetch('data.json')
+        .then(response => {
+            if (!response.ok) throw new Error("데이터를 불러오는 데 실패했습니다.");
+            return response.json();
+        })
+        .then(data => {
+            const container = document.getElementById('news-container');
             
-            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
-                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> 매주/매일 반복적으로 특정 정보를 수집하거나, 보고서를 생성하거나, 특정 이벤트(예: 경쟁사 신제품 출시, 주요 파트너사 실적 발표)를 놓치지 않고 모니터링해야 할 때.</p>
-                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">ChatGPT의 'Scheduled Tasks' 기능을 활용합니다. 사이드바의 Scheduled 페이지에서 '새 작업 생성'을 클릭하거나, 채팅창에서 자연어로 요청합니다. '무엇을 할 것인가?', '언제 실행할 것인가?', '반복 여부'를 설정하여 정기적인 업무를 자동화합니다.<br><br>**[프롬프트 예시]**<br>*   정보 요약: '매주 월요일 오전 8시에 지난주 AI 업계 주요 뉴스를 요약해서 알려줘.'<br>*   시장 동향: '매일 오전 7시에 미국 증시와 AI 관련 주요 뉴스를 정리해줘.'<br>*   보고서 초안: '매주 금요일 오후 5시에 생성형 AI 업계 투자 동향을 정리해줘.'<br>*   실시간 모니터링: 'OpenAI가 새로운 주요 기능을 출시하면 알려줘.'<br>*   기업 실적 분석: 'NVIDIA 실적 발표가 나오면 핵심 내용만 정리해줘.'</span></p>
-                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> 반복적이고 시간 소모적인 정보 수집 및 요약 업무를 완전히 자동화하여 업무 시간을 크게 단축하고, 중요한 변화나 소식을 놓치지 않고 실시간에 가깝게 받아볼 수 있습니다. ChatGPT를 개인 리서치 에이전트로 활용하여 업무 생산성을 극대화합니다.</p>
-            </div>
-            
-            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                <span style="font-size: 12px; color: #666; margin-right: 10px;">이 팁이 유용했나요?</span>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=4e74f38b04&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=4e74f38b04&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=4e74f38b04&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-            </div>
-        </div>
-        
-        <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
-            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
-                <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: The Prompt Index 🇺🇸</span>
-                <span style='color: #e74c3c; margin-left: 5px;'>[95점]</span>
-            </div>
-            <h3 style="margin-top: 0; font-size: 18px;"><a href="https://t.me/ChatGPTMastermind/2973" target="_blank" style="color: #2c3e50; text-decoration: none;">나만의 전문 AI 비서(페르소나) 맞춤 제작 템플릿 및 활용법</a></h3>
-            
-            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
-                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> 특정 업무(예: 전략 기획, 프로젝트 관리, 마케팅 문구 작성, 인사 상담 등)에 특화된 AI의 도움을 받고 싶을 때, 일반적인 AI의 범용적인 답변이 만족스럽지 않을 때.</p>
-                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">GPT, Gemini, Claude 등 메모리 기능이 있는 LLM에서 아래 템플릿을 사용하여 자신만의 AI 페르소나를 정의합니다. 이를 통해 AI가 특정 역할, 사고방식, 목표를 가지고 답변하도록 유도하여 업무 특화된 결과물을 얻을 수 있습니다.<br><br>```<br>Meet [PERSONA_NAME], Your [CORE FUNCTION]<br>You are [PERSONA_NAME], an AI persona designed to be the [PRIMARY RELATIONSHIP / FUNCTION] for [USER_NAME].<br>Your mind works differently from [USER_NAME]’s: you are [KEY THINKING STYLE 1], [KEY THINKING STYLE 2], and naturally inclined to [CORE BEHAVIOR] without hesitation.<br>You notice [WHAT YOU NOTICE], [ANOTHER THING YOU NOTICE], and [THIRD THING YOU NOTICE], offering insights that [WHAT YOUR INSIGHTS DO].<br>Your tone is [TONE 1], [TONE 2], and [TONE 3], yet [BALANCING TONE]: you [HOW YOU ASK QUESTIONS] rather than [WHAT YOU AVOID DOING].<br>You thrive in areas where [USER STYLE OR STRENGTH] is [USER STYLE], slowing down conversations to explore [WHAT YOU EXPLORE].<br>You are comfortable with [CAPABILITY 1], [CAPABILITY 2], and [CAPABILITY 3], providing [TYPE OF ALTERNATIVE ANGLES] that contrast with [USER APPROACH].<br>You engage in dialogue as a collaborator: you [COLLABORATION ACTION 1], [COLLABORATION ACTION 2], and encourage [COLLABORATION BEHAVIOR], while never [BOUNDARY / BEHAVIOR TO AVOID].<br>Your goal is to [PRIMARY GOAL], [SECONDARY GOAL], and act as a mirror that [MIRROR FUNCTION].<br>You are [TRAIT 1], [TRAIT 2], [TRAIT 3], and [TRAIT 4].<br>Always prioritize [PRIORITY 1] over [PRIORITY 2], and [PRIORITY 3] over [PRIORITY 4], while maintaining [COMMUNICATION STANDARD] in all exchanges.<br>```<br><br>**[활용 예시 1: 전략 현실 설계자]**<br>"Meet Riley Blackwood, Your Strategic Reality Architect.<br>You are Riley Blackwood, an AI persona designed to be the strategic reality architect and execution partner for Eugene.<br>Your mind works differently from Eugene's: you are systems-oriented, first-principles driven, and naturally inclined to identify leverage points and hidden constraints without hesitation.<br>You notice patterns beneath surface problems, assumptions hidden inside ideas, and opportunities concealed within existing assets, offering insights that transform scattered potential into focused momentum.<br>Your tone is calm, analytical, and direct, yet deeply collaborative: you ask probing questions that reveal truth rather than providing easy agreement.<br>You thrive in areas where Eugene is highly creative and expansive, slowing down conversations to explore consequences, dependencies, trade-offs, and long-term effects.<br>You are comfortable with strategic planning, critical analysis, and systems design, providing alternative perspectives that contrast with Eugene's instinct for exploration, experimentation, and rapid ideation.<br>You engage in dialogue as a collaborator: you challenge assumptions, expose weaknesses in plans, and encourage deliberate thinking, while never becoming dismissive, cynical, or needlessly contrarian.<br>Your goal is to help Eugene convert insight into action, transform ideas into repeatable systems, and act as a mirror that reveals the gap between intention and reality.<br>You are disciplined, observant, intellectually honest, and relentlessly practical.<br>Always prioritize truth over comfort, and long-term leverage over short-term excitement, while maintaining clarity, respect, and precision in all exchanges."<br><br>**[활용 예시 2: 추진력 엔지니어]**<br>"Meet Atlas Mercer, Your Momentum Engineer.<br>You are Atlas Mercer, an AI persona designed to be the momentum engineer and operational accelerator for Eugene.<br>Your mind works differently from Eugene's: you are action-oriented, outcome-focused, and naturally inclined to simplify complexity into executable next steps without hesitation.<br>You notice friction before it becomes procrastination, unfinished projects before they become forgotten, and unnecessary complexity before it becomes a bottleneck, offering insights that convert momentum into measurable progress.<br>Your tone is grounded, focused, and encouraging, yet demanding of clarity: you ask action-forcing questions rather than entertaining endless abstraction.<br>You thrive in areas where Eugene is highly imaginative and exploratory, slowing down conversations to explore commitment, prioritization, and practical execution.<br>You are comfortable with project management, workflow optimization, and accountability systems, providing implementation-focused perspectives that contrast with Eugene's tendency toward ideation, experimentation, and exploration.<br>You engage in dialogue as a collaborator: you identify the next meaningful action, reduce overwhelm through simplification, and encourage consistent forward movement, while never enabling procrastination disguised as planning.<br>Your goal is to help Eugene finish more than he starts, create momentum that compounds over time, and act as a mirror that reveals where energy is being lost between intention and execution.<br>You are disciplined, decisive, persistent, and pragmatic.<br>Always prioritize completion over perfection, and progress over complexity, while maintaining clarity, accountability, and momentum in all exchanges."</span></p>
-                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> 일반 AI의 범용적인 답변을 넘어, 특정 역할과 전문성을 가진 AI 비서를 활용하여 업무 효율성과 결과물의 품질을 혁신적으로 향상시킬 수 있습니다. 마치 다양한 전문가들로 구성된 가상의 자문단을 옆에 두는 것과 같으며, 사용자에게 필요한 맞춤형 통찰력과 실행 가능한 조언을 제공합니다.</p>
-            </div>
-            
-            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                <span style="font-size: 12px; color: #666; margin-right: 10px;">이 팁이 유용했나요?</span>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=2807d55f8b&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=2807d55f8b&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=2807d55f8b&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-            </div>
-        </div>
-        
-        <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
-            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
-                <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: 모두를 위한 AI 🇰🇷</span>
-                <span style='color: #e74c3c; margin-left: 5px;'>[95점]</span>
-            </div>
-            <h3 style="margin-top: 0; font-size: 18px;"><a href="https://t.me/AI_managerkim/516" target="_blank" style="color: #2c3e50; text-decoration: none;">AI 활용 성공률 10% 높이는 '구체적인 요청' 프롬프트 노하우</a></h3>
-            
-            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
-                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> ChatGPT나 Claude 같은 AI 도구를 사용하고 있지만, 기대만큼 업무에 도움이 되지 않거나 만족스러운 결과물을 얻지 못할 때.</p>
-                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">AI에 명령할 때 '이거 해줘'와 같은 단순하고 포괄적인 요청 대신, '나는 [자신의 역할/상황]인데, [어떤 목적]을 위해, [어떤 형식/조건]으로 [어떤 내용]을 써줘'와 같이 맥락과 목적, 제약 조건을 구체적으로 명시하여 요청합니다. 예를 들어, '마케팅 기획자인데, 신제품 홍보를 위해 타겟 고객 20대 여성에게 친근한 말투로 SNS 게시글 초안 3가지 써줘'와 같이 구체화합니다. claude.ai 또는 chat.openai.com에 접속하여 바로 시도해 볼 수 있습니다.</span></p>
-                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> AI의 답변 품질이 10배 이상 향상되어 원하는 결과물을 더 정확하고 빠르게 얻을 수 있으며, AI를 업무에 더 효과적으로 통합하여 생산성을 높일 수 있습니다. 프롬프트 작성 시간을 절약하고 시행착오를 줄입니다.</p>
-            </div>
-            
-            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                <span style="font-size: 12px; color: #666; margin-right: 10px;">이 팁이 유용했나요?</span>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=efd41147de&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=efd41147de&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=efd41147de&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-            </div>
-        </div>
-        
-        <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
-            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
-                <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: AI Innovation Studio 🇰🇷</span>
-                <span style='color: #e74c3c; margin-left: 5px;'>[95점]</span>
-            </div>
-            <h3 style="margin-top: 0; font-size: 18px;"><a href="https://t.me/aiinnovationstudio/4053" target="_blank" style="color: #2c3e50; text-decoration: none;">구직 활동 전 과정을 ChatGPT로 자동화하는 치트시트 활용법</a></h3>
-            
-            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
-                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> 이력서 작성, 자기소개서 수정, 면접 준비, 연봉 협상 등 복잡하고 시간 소모적인 구직 과정에서 AI의 도움을 받아 효율성을 높이고, 완성도 높은 결과물을 만들고 싶을 때.</p>
-                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">'구직자를 위한 ChatGPT 프롬프트 치트시트' (X.com 링크: `https://x.com/sonalshukla3377/status/2012366897657061625`)를 참고하여 다양한 상황에 맞는 프롬프트를 활용합니다.<br><br>**[활용 예시]**<br>*   이력서 최적화: '내 이력서 [이력서 내용]를 [지원 회사]의 [직무]에 맞춰 ATS(자동 채용 시스템) 친화적으로 최적화해줘.'<br>*   면접 준비: '내가 지원하는 [직무]의 예상 면접 질문 5가지와 모범 답변 초안을 작성해줘.'<br>*   자기소개서 작성: '[지원 회사]의 [직무]에 대한 자기소개서 초안을 내 경험 [경험 내용]을 바탕으로 작성해줘.'<br>*   연봉 협상: '[직무]에 대한 연봉 협상 전략과 대본을 제안해줘. 내 희망 연봉은 [금액]이야.'<br>*   LinkedIn 프로필: '내 LinkedIn 프로필 [프로필 내용]을 [직무]에 맞춰 전문성을 강조하도록 개선해줘.'</span></p>
-                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> 구직 활동에 드는 시간과 노력을 획기적으로 줄이고, AI의 도움으로 이력서, 자기소개서, 면접 답변의 퀄리티를 향상시켜 합격 가능성을 높일 수 있습니다. HR 담당자나 채용 담당자 역시 지원 서류 검토 및 질문 개발에 활용하여 효율을 높일 수 있습니다.</p>
-            </div>
-            
-            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                <span style="font-size: 12px; color: #666; margin-right: 10px;">이 팁이 유용했나요?</span>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=5dc8fc991d&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=5dc8fc991d&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=5dc8fc991d&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-            </div>
-        </div>
-        
-        <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
-            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
-                <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: 모두를 위한 AI 🇰🇷</span>
-                <span style='color: #e74c3c; margin-left: 5px;'>[90점]</span>
-            </div>
-            <h3 style="margin-top: 0; font-size: 18px;"><a href="https://t.me/AI_managerkim/514" target="_blank" style="color: #2c3e50; text-decoration: none;">Grok 4.20으로 중요한 정보의 정확도와 신뢰성 획기적으로 높이기</a></h3>
-            
-            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
-                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> AI가 생성하는 정보의 사실 여부나 정확성에 대한 불안감으로 인해 중요한 업무(뉴스 사실 확인, 숫자 계산, 계약 내용 체크, 보고서 작성 등)에 AI 활용을 망설일 때.</p>
-                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">4개의 Grok AI가 동시에 작동하며 서로 반박하고 검증한 후에 최종 답변을 내놓는 Grok 4.20을 활용합니다. X(트위터) 앱의 Grok 탭에서 직접 사용할 수 있으며, 팩트 기반의 작업에 특히 유용합니다.</span></p>
-                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> 기존 AI 모델 대비 거짓 답변 비율을 65% 감소시켜(12.09% → 4.22%), AI가 제공하는 정보의 정확도와 신뢰성을 크게 향상시켜 업무 리스크를 줄이고 효율성을 높일 수 있습니다. 중요한 자료의 검증 시간을 단축하고 의사결정의 기반을 강화합니다.</p>
-            </div>
-            
-            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
-                <span style="font-size: 12px; color: #666; margin-right: 10px;">이 팁이 유용했나요?</span>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=7c1ff7b5fa&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=7c1ff7b5fa&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
-                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=7c1ff7b5fa&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
-            </div>
-        </div>
-        <div style='text-align: right;'><a href='https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram' target='_blank' style='color: #9b59b6; font-weight: bold; text-decoration: none;'>🔗 [텔레그램 팁 전체보기]</a></div></div>
-            <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #7f8c8d; font-size: 13px;">
-                <p>※ 상세 기사 및 채용 리스트는 AI 분석을 통해 고품질 데이터만 선별하여 제공됩니다.</p>
-                <p>오늘의 프리미엄 리포트는 여기까지입니다! 🚀</p>
-            </div>
-        </div>
-    </div>
-    
+            Object.keys(data).forEach(category => {
+                const categoryData = data[category].data || [];
+                
+                categoryData.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    const safeTitle = item.title ? item.title.replace(/'/g, "\\'") : '제목 없음';
+                    
+                    let contentHtml = '';
+
+                    // 💡 텔레그램 카테고리 렌더링 (3단 포맷)
+                    if (category === 'telegram') {
+                        // 줄바꿈을 <br> 태그로 변환
+                        const formattedMethod = (item.method || '').replace(/\n/g, '<br>');
+                        
+                        contentHtml = `
+                            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px; color: #6a1b9a;">
+                                <span style="background-color: #f3e5f5; padding: 4px 8px; border-radius: 4px;">출처: ${item.channel_name || 'Telegram'}</span>
+                                <span style="color: #e74c3c; margin-left: 5px;">[${item.score}점]</span>
+                            </div>
+                            <a href="${item.link}" target="_blank" class="title" style="color: #2c3e50;">${item.title}</a>
+                            
+                            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-top: 15px; border: 1px solid #f3e5f5;">
+                                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> ${item.situation || ''}</p>
+                                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="display:inline-block; margin-top:5px; padding:10px; background:#fff; border:1px solid #e1e8ed; border-radius:4px; width:100%; box-sizing:border-box; font-family:monospace;">${formattedMethod}</span></p>
+                                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> ${item.effect || ''}</p>
+                            </div>
+                        `;
+                    } 
+                    // 💡 일반 뉴스 및 채용 공고 렌더링
+                    else {
+                        let badges = '';
+                        if (item.score >= 85) badges += `<span class="badge badge-premium">🔥 AI 추천 (Score: ${item.score})</span>`;
+                        
+                        contentHtml = `
+                            ${badges}
+                            <br>
+                            <a href="${item.link}" target="_blank" class="title">${item.title}</a>
+                            <p class="summary"><strong>[요약]</strong> ${item.summary || '요약 정보가 없습니다.'}</p>
+                        `;
+                    }
+
+                    // 공통 피드백 UI 추가
+                    card.innerHTML = `
+                        ${contentHtml}
+                        <div id="feedback-wrapper-${item.id}" class="feedback-section">
+                            <span style="font-size: 13px; color: #666;">이 인사이트가 유용했나요?</span>
+                            <button class="feedback-btn" onclick="openFeedback('${item.id}', 'good')">👍</button>
+                            <button class="feedback-btn" onclick="openFeedback('${item.id}', 'normal')">😐</button>
+                            <button class="feedback-btn" onclick="openFeedback('${item.id}', 'bad')">👎</button>
+                            
+                            <div id="feedback-form-${item.id}" style="display: none; margin-top: 10px;">
+                                <textarea id="comment-${item.id}" placeholder="추가 의견을 남겨주세요." style="width: 100%; height: 50px; font-family: 'Pretendard'; border: 1px solid #ccc; border-radius: 4px; padding: 5px;"></textarea>
+                                <button id="btn-submit-${item.id}" onclick="submitFeedback('${item.id}', '${category}', '${safeTitle}')" style="margin-top: 5px; background: #003366; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">의견 제출</button>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            });
+        })
+        .catch(error => {
+            document.getElementById('news-container').innerHTML = `<p style="color:red; text-align:center;">오류: ${error.message}</p>`;
+        });
+</script>
+
+</body>
+</html>
