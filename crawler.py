@@ -324,3 +324,259 @@ def process_telegram_with_ai(data_list, api_key, yesterday_context="", seen_link
 ### ==========================================
 def build_matrix_section(gdc_domestic, gdc_global, overseas_data, ax_data):
     domestic_market = ax_data[:3] if ax_data else []
+    global_market = overseas_data[:3] if overseas_data else []
+    domestic_competitor = gdc_domestic[:3] if gdc_domestic else []
+    global_competitor = gdc_global[:3] if gdc_global else []
+
+    def to_list_html(items):
+        if not items: return '<ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;"><li style="padding: 6px 0;">수집된 데이터가 없습니다.</li></ul>'
+        html = '<ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;">'
+        for item in items:
+            title = item.get('translated_title', item['title'])
+            html += f'<li style="padding: 6px 0;"><a href="{item["link"]}" target="_blank" style="color: #1a1a1a; text-decoration: none;">{title}</a></li>'
+        html += '</ul>'
+        return html
+
+    return f"""
+    <div style="margin-bottom: 50px;">
+        <h2 style="color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;">💡 IT/AI 트렌드 요약</h2>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; background-color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; text-align: center; font-size: 15px; width: 15%;">구분</th>
+                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; text-align: left; padding-left: 20px; font-size: 15px; width: 42.5%;">🇰🇷 국내 시장</th>
+                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; text-align: left; padding-left: 20px; font-size: 15px; width: 42.5%;">🌍 글로벌 시장</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; background-color: #fcfcfc; text-align: center; font-weight: bold; font-size: 14px;">시장 전반</td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;">{to_list_html(domestic_market)}</td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;">{to_list_html(global_market)}</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; background-color: #fcfcfc; text-align: center; font-weight: bold; font-size: 14px;">경쟁사 동향</td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;">{to_list_html(domestic_competitor)}</td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;">{to_list_html(global_competitor)}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    """
+
+def build_email_section(title, data_list, more_link, category_type, pages_url, is_job=False, is_overseas=False):
+    html = f"<div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>{title}</h2>"
+    display_list = [item for item in data_list if item.get('is_main', True) and item.get('score', 0) > 80]
+    
+    if not display_list:
+        return html + "<p style='color: #888; font-style: italic; text-align: center;'>📌 80점 이상의 기준에 부합하는 데이터가 없습니다.</p></div>"
+        
+    html += '<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 15px; table-layout: fixed;">'
+    display_items = display_list[:4]
+    
+    for i in range(0, len(display_items), 2):
+        html += '<tr>'
+        for j in range(2):
+            if j == 1: html += '<td width="4%" style="width: 4%;"></td>' 
+            if i + j < len(display_items):
+                item = display_items[i + j]
+                item_id = item.get('id', '')
+                fb_url_good = f"{pages_url}/more.html?type={category_type}&feedback_id={item_id}&rating=good"
+                fb_url_normal = f"{pages_url}/more.html?type={category_type}&feedback_id={item_id}&rating=normal"
+                fb_url_bad = f"{pages_url}/more.html?type={category_type}&feedback_id={item_id}&rating=bad"
+
+                score_html = f"<span style='color: #e74c3c;'>[{item.get('score', 0)}점]</span>"
+                display_title = item.get('translated_title', item['title']) if is_overseas else item['title']
+                badge_html = score_html
+                
+                if is_job:
+                    cat = item.get('category_code', '')
+                    b_style = "display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; margin-bottom: 10px;"
+                    if cat == 'MSP_PLAYER': badge_html = f"<span style='{b_style} background-color: #e3f2fd; color: #1565c0;'>MSP 채용</span> {score_html}"
+                    elif cat == 'VET_GDC_FIRM': badge_html = f"<span style='{b_style} background-color: #e8f5e9; color: #2e7d32;'>GDC 전문업체</span> {score_html}"
+                    else: badge_html = f"<span style='{b_style} background-color: #fff3e0; color: #ef6c00;'>외국인 IT 채용</span> {score_html}"
+
+                summary_text = item.get('summary') or 'AI 핵심 요약 정보가 없습니다.'
+                
+                html += f"""
+                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
+                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">{badge_html}</div>
+                        <a href="{item['link']}" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">{display_title}</a>
+                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> {summary_text}</p>
+                        </div>
+                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
+                            <a href="{fb_url_good}" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                            <a href="{fb_url_normal}" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                            <a href="{fb_url_bad}" style="text-decoration:none; font-size:16px;">👎</a>
+                        </div>
+                    </div>
+                </td>
+                """
+            else:
+                html += '<td width="48%" style="width: 48%;"></td>'
+        html += '</tr>'
+    html += '</table>'
+    if more_link: html += f"<div style='margin-top: 20px;'><a href='{more_link}' target='_blank' style='color: #3498db; font-weight: bold; text-decoration: none;'>🔗 [전체 보기]</a></div>"
+    html += "</div>"
+    return html
+
+# [NEW] 텔레그램 가이드 렌더링 섹션
+def build_telegram_section(data_list, pages_url):
+    html = f"<div style='margin-bottom: 50px;'><h2 style='color: #6a1b9a; border-bottom: 2px solid #9b59b6; padding-bottom: 8px; margin-top: 40px; font-size: 22px; font-weight: bold;'>💬 [실전] 직장인 텔레그램 AI 업무 팁</h2>"
+    
+    if not data_list:
+        return html + "<p style='color: #888; font-style: italic; text-align: center;'>📌 오늘 수집된 텔레그램 실무 팁이 없습니다.</p></div>"
+
+    for item in data_list[:5]:
+        item_id = item.get('id', '')
+        fb_url_good = f"{pages_url}/more.html?type=telegram&feedback_id={item_id}&rating=good"
+        fb_url_normal = f"{pages_url}/more.html?type=telegram&feedback_id={item_id}&rating=normal"
+        fb_url_bad = f"{pages_url}/more.html?type=telegram&feedback_id={item_id}&rating=bad"
+        
+        html += f"""
+        <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
+            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
+                <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: {item.get('channel_name', 'Telegram')}</span>
+                <span style='color: #e74c3c; margin-left: 5px;'>[{item.get('score', 0)}점]</span>
+            </div>
+            <h3 style="margin-top: 0; font-size: 18px;"><a href="{item['link']}" target="_blank" style="color: #2c3e50; text-decoration: none;">{item['title']}</a></h3>
+            
+            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> {item.get('situation', '')}</p>
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">{item.get('method', '').replace(chr(10), '<br>')}</span></p>
+                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> {item.get('effect', '')}</p>
+            </div>
+            
+            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                <span style="font-size: 12px; color: #666; margin-right: 10px;">이 팁이 유용했나요?</span>
+                <a href="{fb_url_good}" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                <a href="{fb_url_normal}" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                <a href="{fb_url_bad}" style="text-decoration:none; font-size:16px;">👎</a>
+            </div>
+        </div>
+        """
+    html += f"<div style='text-align: right;'><a href='{pages_url}/more.html?type=telegram' target='_blank' style='color: #9b59b6; font-weight: bold; text-decoration: none;'>🔗 [텔레그램 팁 전체보기]</a></div></div>"
+    return html
+
+def generate_html_content(data, pages_url):
+    html_content = """
+    <div style="font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; background-color: #f4f7f6; padding: 20px;">
+        <div style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h1 style="color: #003366; border-bottom: 3px solid #3498db; padding-bottom: 15px; display: inline-block; font-weight: 800; font-size: 24px;">📊 GDC & AX 일일 트렌드 리포트</h1>
+                <p style="color: #7f8c8d; margin-top: -10px;">Daily Insights & Competitor Matrix</p>
+            </div>
+    """
+    gdc_domestic = [item for item in data['gdc']['data'] if item.get('category_code') == 'DOMESTIC_GDC']
+    gdc_global = [item for item in data['gdc']['data'] if item.get('category_code') == 'GLOBAL_GDC']
+    
+    html_content += build_matrix_section(gdc_domestic, gdc_global, data['overseas']['data'], data['ax_news']['data'])
+    
+    html_content += build_email_section("📊 경쟁사 동향 1. 국내 GDC", gdc_domestic, f"{pages_url}/more.html?type=gdc", "gdc", pages_url)
+    html_content += build_email_section("📊 경쟁사 동향 2. 글로벌 오프쇼어링", gdc_global, f"{pages_url}/more.html?type=gdc", "gdc", pages_url)
+    html_content += build_email_section("🌍 해외 AI 원천기술 및 아키텍처", data['overseas']['data'], f"{pages_url}/more.html?type=overseas", "overseas", pages_url, is_overseas=True)
+    html_content += build_email_section("🏢 국내 기업 Enterprise AX", data['ax_news']['data'], f"{pages_url}/more.html?type=ax", "ax", pages_url)
+    
+    msp_jobs = [j for j in data['vn_jobs']['data'] if j.get('category_code') == 'MSP_PLAYER']
+    gdc_jobs = [j for j in data['vn_jobs']['data'] if j.get('category_code') == 'VET_GDC_FIRM']
+    vet_jobs = [j for j in data['vn_jobs']['data'] if j.get('category_code') == 'DOMESTIC_VET_IT']
+    
+    html_content += build_email_section("💼 채용 1. MSP Player", msp_jobs, f"{pages_url}/more.html?type=msp_jobs", "msp_jobs", pages_url, is_job=True)
+    html_content += build_email_section("💼 채용 2. 베트남 GDC 업체", gdc_jobs, f"{pages_url}/more.html?type=gdc_jobs", "gdc_jobs", pages_url, is_job=True)
+    html_content += build_email_section("💼 채용 3. 외국인 IT 인력", vet_jobs, f"{pages_url}/more.html?type=vet_jobs", "vet_jobs", pages_url, is_job=True)
+    
+    # 💡 텔레그램 섹션 추가
+    html_content += build_telegram_section(data.get('telegram', {}).get('data', []), pages_url)
+
+    html_content += """
+            <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #7f8c8d; font-size: 13px;">
+                <p>※ 상세 기사 및 채용 리스트는 AI 분석을 통해 고품질 데이터만 선별하여 제공됩니다.</p>
+                <p>오늘의 프리미엄 리포트는 여기까지입니다! 🚀</p>
+            </div>
+        </div>
+    </div>
+    """
+    return html_content
+
+def send_email(html_content):
+    sender_email = os.environ.get("SENDER_EMAIL")
+    sender_password = os.environ.get("SENDER_PASSWORD")
+    receiver_emails = ["hansu814.ryu@samsung.com", "th.jeong@samsung.com"] # 테스트용(필요시 본인 명단으로 복구하세요)
+    
+    if not sender_email or not sender_password: 
+        print("⚠️ 발신자 정보 누락")
+        return
+
+    msg = MIMEMultipart()
+    msg['Subject'] = "📊 [자동화] 기술 트렌드 및 텔레그램 AI 활용 팁 리포트"
+    msg['From'] = sender_email
+    msg['To'] = ", ".join(receiver_emails)
+    msg.attach(MIMEText(html_content, 'html'))
+    
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(sender_email, sender_password)
+            server.sendmail(sender_email, receiver_emails, msg.as_string())
+            print("✅ 이메일 발송 성공!")
+    except Exception as e:
+        print(f"❌ 이메일 발송 실패: {e}")
+
+### ==========================================
+### 🚀 6. 메인 실행부
+### ==========================================
+if __name__ == "__main__":
+    GITHUB_PAGES_URL = "https://hansu814ryu-alt.github.io/gdc-monitoring"
+    NAVER_ID = os.environ.get("NAVER_CLIENT_ID", "")
+    NAVER_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "")
+    GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
+    
+    print("--- 🚀 데이터 크롤링 시작 ---")
+    yesterday_context, seen_links, seen_titles = load_yesterday_context()
+    
+    gdc_queries = ["GDC", "글로벌 딜리버리 센터", "오프쇼어", "MSP 오프쇼어링"]
+    raw_gdc = []
+    for q in gdc_queries: raw_gdc.extend(get_naver_news(NAVER_ID, NAVER_SECRET, query=q, display=15))
+        
+    raw_overseas = get_overseas_rss_news()
+    
+    ax_queries = ["엔터프라이즈 AX", "AI 운영모델", "레거시 AI 전환"]
+    raw_ax_news = []
+    for q in ax_queries: raw_ax_news.extend(get_naver_news(NAVER_ID, NAVER_SECRET, query=q, display=15))
+        
+    raw_vn_jobs = get_wanted_postings("베트남", ['it', '개발', '소프트웨어', 'bse'])
+    
+    raw_telegram = get_telegram_messages() # 텔레그램 수집
+    
+    print("--- 🧠 AI 기반 맥락 평가 / 번역 및 정렬 중 ---")
+    sorted_gdc = process_data_with_ai_batch(raw_gdc, 'GDC 동향 뉴스', GEMINI_KEY, yesterday_context, seen_links, seen_titles)
+    sorted_ax_news = process_data_with_ai_batch(raw_ax_news, 'AX 근황 뉴스', GEMINI_KEY, yesterday_context, seen_links, seen_titles)
+    sorted_overseas = process_overseas_with_ai_translation(raw_overseas, GEMINI_KEY, yesterday_context, seen_links, seen_titles)
+    sorted_vn_jobs = process_data_with_ai_batch(raw_vn_jobs, '베트남 IT 채용 공고', GEMINI_KEY, yesterday_context, seen_links, seen_titles)
+    
+    sorted_telegram = process_telegram_with_ai(raw_telegram, GEMINI_KEY, yesterday_context, seen_links) # 텔레그램 AI 가공
+    
+    result = {
+        "gdc": {"data": sorted_gdc},
+        "overseas": {"data": sorted_overseas},
+        "ax_news": {"data": sorted_ax_news},
+        "vn_jobs": {"data": sorted_vn_jobs},
+        "telegram": {"data": sorted_telegram} # 결과에 추가
+    }
+    
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump(result, f, ensure_ascii=False, indent=4)
+    print("✅ data.json 저장 완료.")
+    
+    final_html = generate_html_content(result, GITHUB_PAGES_URL)
+    with open('index.html', 'w', encoding='utf-8') as f:
+        f.write(final_html)
+    print("✅ index.html 통일 웹페이지 저장 완료.")
+        
+    save_today_history(result)
+    
+    print("--- 📧 이메일 발송 중 ---")
+    send_email(final_html)
+    print("✅ 모든 파이프라인 완료!")
