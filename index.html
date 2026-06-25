@@ -1,149 +1,273 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDC & AX 인사이트 대시보드</title>
-    <style>
-        body { font-family: 'Pretendard', 'Malgun Gothic', sans-serif; background-color: #f4f7f6; padding: 20px; }
-        .container { max-width: 1000px; margin: auto; }
-        .card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .title { font-size: 18px; font-weight: bold; color: #2c3e50; text-decoration: none; }
-        .title:hover { text-decoration: underline; }
-        .summary { color: #7f8c8d; font-size: 14px; margin-top: 10px; line-height: 1.5; }
-        .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 10px; }
-        .badge-premium { background-color: #ffecd2; color: #d35400; }
-        .feedback-section { margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee; }
-        .feedback-btn { border: none; background: none; cursor: pointer; font-size: 16px; margin-right: 5px; }
-    </style>
-</head>
-<body>
 
-<div class="container" id="app">
-    <h1 style="text-align: center; color: #003366; border-bottom: 3px solid #3498db; padding-bottom: 15px; display: inline-block; margin-bottom: 40px;">GDC & AX 프리미엄 인사이트</h1>
-    <div id="news-container"></div>
-</div>
-
-<script type="module">
-    // 🚨 본인의 Firebase 프로젝트 Config 설정으로 반드시 변경하세요!
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-
-    const firebaseConfig = {
-        apiKey: "AIzaSyCdmPmb_VuZSmwrOX8LmmpBUihQnsV0e_U",
-        authDomain: "gdc-monitoring.firebaseapp.com",
-        projectId: "gdc-monitoring",
-        storageBucket: "gdc-monitoring.firebasestorage.app",
-        messagingSenderId: "60904767725",
-        appId: "1:60904767725:web:082d1d2280de5b45010ce4"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    let currentRating = {};
-
-    window.openFeedback = function(itemId, rating) {
-        currentRating[itemId] = rating;
-        document.getElementById('feedback-form-' + itemId).style.display = 'block';
-    };
-
-    window.submitFeedback = async function(itemId, category, articleTitle) {
-        const comment = document.getElementById('comment-' + itemId).value;
-        const rating = currentRating[itemId];
-        const btn = document.getElementById('btn-submit-' + itemId);
-        btn.innerText = "전송 중...";
-
-        try {
-            await addDoc(collection(db, "feedbacks"), {
-                article_id: itemId,
-                title: articleTitle,
-                category: category,
-                rating: rating,
-                comment: comment,
-                timestamp: serverTimestamp()
-            });
-            document.getElementById('feedback-wrapper-' + itemId).innerHTML = "<span style='color:green; font-size:13px; font-weight:bold;'>✅ 소중한 피드백이 반영되었습니다. 감사합니다!</span>";
-        } catch (e) {
-            console.error("Error: ", e);
-            alert("피드백 전송에 실패했습니다.");
-            btn.innerText = "의견 제출";
-        }
-    };
-
-    // data.json 로드 및 렌더링
-    fetch('data.json')
-        .then(response => {
-            if (!response.ok) throw new Error("데이터를 불러오는 데 실패했습니다.");
-            return response.json();
-        })
-        .then(data => {
-            const container = document.getElementById('news-container');
-            
-            Object.keys(data).forEach(category => {
-                const categoryData = data[category].data || [];
-                
-                categoryData.forEach(item => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    const safeTitle = item.title ? item.title.replace(/'/g, "\\'") : '제목 없음';
-                    
-                    let contentHtml = '';
-
-                    // 💡 텔레그램 카테고리 렌더링 (3단 포맷)
-                    if (category === 'telegram') {
-                        // 줄바꿈을 <br> 태그로 변환
-                        const formattedMethod = (item.method || '').replace(/\n/g, '<br>');
-                        
-                        contentHtml = `
-                            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px; color: #6a1b9a;">
-                                <span style="background-color: #f3e5f5; padding: 4px 8px; border-radius: 4px;">출처: ${item.channel_name || 'Telegram'}</span>
-                                <span style="color: #e74c3c; margin-left: 5px;">[${item.score}점]</span>
-                            </div>
-                            <a href="${item.link}" target="_blank" class="title" style="color: #2c3e50;">${item.title}</a>
-                            
-                            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-top: 15px; border: 1px solid #f3e5f5;">
-                                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> ${item.situation || ''}</p>
-                                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="display:inline-block; margin-top:5px; padding:10px; background:#fff; border:1px solid #e1e8ed; border-radius:4px; width:100%; box-sizing:border-box; font-family:monospace;">${formattedMethod}</span></p>
-                                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> ${item.effect || ''}</p>
-                            </div>
-                        `;
-                    } 
-                    // 💡 일반 뉴스 및 채용 공고 렌더링
-                    else {
-                        let badges = '';
-                        if (item.score >= 85) badges += `<span class="badge badge-premium">🔥 AI 추천 (Score: ${item.score})</span>`;
-                        
-                        contentHtml = `
-                            ${badges}
-                            <br>
-                            <a href="${item.link}" target="_blank" class="title">${item.title}</a>
-                            <p class="summary"><strong>[요약]</strong> ${item.summary || '요약 정보가 없습니다.'}</p>
-                        `;
-                    }
-
-                    // 공통 피드백 UI 추가
-                    card.innerHTML = `
-                        ${contentHtml}
-                        <div id="feedback-wrapper-${item.id}" class="feedback-section">
-                            <span style="font-size: 13px; color: #666;">이 인사이트가 유용했나요?</span>
-                            <button class="feedback-btn" onclick="openFeedback('${item.id}', 'good')">👍</button>
-                            <button class="feedback-btn" onclick="openFeedback('${item.id}', 'normal')">😐</button>
-                            <button class="feedback-btn" onclick="openFeedback('${item.id}', 'bad')">👎</button>
-                            
-                            <div id="feedback-form-${item.id}" style="display: none; margin-top: 10px;">
-                                <textarea id="comment-${item.id}" placeholder="추가 의견을 남겨주세요." style="width: 100%; height: 50px; font-family: 'Pretendard'; border: 1px solid #ccc; border-radius: 4px; padding: 5px;"></textarea>
-                                <button id="btn-submit-${item.id}" onclick="submitFeedback('${item.id}', '${category}', '${safeTitle}')" style="margin-top: 5px; background: #003366; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">의견 제출</button>
-                            </div>
+    <div style="font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; background-color: #f4f7f6; padding: 20px;">
+        <div style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.08);">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h1 style="color: #003366; border-bottom: 3px solid #3498db; padding-bottom: 15px; display: inline-block; font-weight: 800; font-size: 24px;">📊 GDC & AX 일일 트렌드 리포트</h1>
+                <p style="color: #7f8c8d; margin-top: -10px;">Daily Insights & Competitor Matrix</p>
+            </div>
+    
+    <div style="margin-bottom: 50px;">
+        <h2 style="color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;">💡 IT/AI 트렌드 요약</h2>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 30px; background-color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; text-align: center; font-size: 15px; width: 15%;">구분</th>
+                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; text-align: left; padding-left: 20px; font-size: 15px; width: 42.5%;">🇰🇷 국내 시장</th>
+                    <th style="border: 1px solid #e1e8ed; padding: 15px; background-color: #f8fafc; color: #003366; text-align: left; padding-left: 20px; font-size: 15px; width: 42.5%;">🌍 글로벌 시장</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; background-color: #fcfcfc; text-align: center; font-weight: bold; font-size: 14px;">시장 전반</td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;"><ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;"><li style="padding: 6px 0;"><a href="https://n.news.naver.com/mnews/article/003/0014026296?sid=104" target="_blank" style="color: #1a1a1a; text-decoration: none;">오픈AI, 첫 자체 AI칩 '할라페뇨' 공개…엔비디아 의존도 낮춘다</a></li><li style="padding: 6px 0;"><a href="https://www.financialpost.co.kr/news/articleView.html?idxno=263866" target="_blank" style="color: #1a1a1a; text-decoration: none;">&quot;AX 차별화로 글로벌 시장 공략 가속&quot;…LG CNS, '퍼펙트윈 ERP 에디션' 출...</a></li><li style="padding: 6px 0;"><a href="https://www.thepowernews.co.kr/view.php?ud=2026062517263571449aeda69934_7" target="_blank" style="color: #1a1a1a; text-decoration: none;">서바이벌 해커톤 'AX 인재전쟁' 7월 18일 개최</a></li></ul></td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;"><ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;"><li style="padding: 6px 0;"><a href="https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/" target="_blank" style="color: #1a1a1a; text-decoration: none;">아마존, 인도 AI 인프라에 130억 달러 추가 투자로 베팅 강화</a></li><li style="padding: 6px 0;"><a href="https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/" target="_blank" style="color: #1a1a1a; text-decoration: none;">어도비, 이미지 및 비디오 향상 도구 제작사 '토파즈  랩스' 인수</a></li><li style="padding: 6px 0;"><a href="https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/" target="_blank" style="color: #1a1a1a; text-decoration: none;">페이스북, 크리에이터를 위한 AI 동반 앱 출시</a></li></ul></td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; background-color: #fcfcfc; text-align: center; font-weight: bold; font-size: 14px;">경쟁사 동향</td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;"><ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;"><li style="padding: 6px 0;">수집된 데이터가 없습니다.</li></ul></td>
+                    <td style="border: 1px solid #e1e8ed; padding: 15px; vertical-align: top;"><ul style="list-style-type: disc; padding-left: 20px; margin: 0; font-size: 13px; color: #333;"><li style="padding: 6px 0;">수집된 데이터가 없습니다.</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>📊 경쟁사 동향 1. 국내 GDC</h2><p style='color: #888; font-style: italic; text-align: center;'>📌 80점 이상의 기준에 부합하는 데이터가 없습니다.</p></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>📊 경쟁사 동향 2. 글로벌 오프쇼어링</h2><p style='color: #888; font-style: italic; text-align: center;'>📌 80점 이상의 기준에 부합하는 데이터가 없습니다.</p></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>🌍 해외 AI 원천기술 및 아키텍처</h2><table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 15px; table-layout: fixed;"><tr>
+                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
+                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[95점]</span></div>
+                        <a href="https://techcrunch.com/2026/06/25/amazon-ups-india-bet-with-fresh-13b-ai-infrastructure-investment/" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">아마존, 인도 AI 인프라에 130억 달러 추가 투자로 베팅 강화</a>
+                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 아마존이 인도에 130억 달러(약 17조 원)를 추가로 투자하여 AI 인프라 구축을 강화합니다. 이는 전 세계 기술 기업들이 인도의 AI 인프라 확장을 위해 경쟁하는 가운데 나온 아마존의 핵심 전략적 움직임으로 풀이됩니다.</p>
                         </div>
-                    `;
-                    container.appendChild(card);
-                });
-            });
-        })
-        .catch(error => {
-            document.getElementById('news-container').innerHTML = `<p style="color:red; text-align:center;">오류: ${error.message}</p>`;
-        });
-</script>
-
-</body>
-</html>
+                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=c06892b974&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=c06892b974&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=c06892b974&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+                        </div>
+                    </div>
+                </td>
+                <td width="4%" style="width: 4%;"></td>
+                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
+                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[90점]</span></div>
+                        <a href="https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">어도비, 이미지 및 비디오 향상 도구 제작사 '토파즈  랩스' 인수</a>
+                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 어도비가 이미지 및 비디오 향상 도구 전문 기업인 토파즈 랩스를 인수했습니다. 어도비는 토파즈 랩스의 기술을 자사 앱 전반에 걸쳐 통합하여 크리에이티브 전문가들에게 더욱 강력한 기능을 제공할 계획입니다.</p>
+                        </div>
+                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=1ef1bcd1b8&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=1ef1bcd1b8&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=1ef1bcd1b8&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+                        </div>
+                    </div>
+                </td>
+                </tr><tr>
+                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
+                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[88점]</span></div>
+                        <a href="https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">페이스북, 크리에이터를 위한 AI 동반 앱 출시</a>
+                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 페이스북이 크리에이터들을 위한 AI 동반 앱을 출시합니다. 현재 일부 크리에이터들을 대상으로 테스트 중인 이 앱에는 페이스북이 최근 공개한 AI 크리에이터 어시스턴트 기능이 내장되어, 콘텐츠 제작 및 관리 효율성을 높일 것으로 기대됩니다.</p>
+                        </div>
+                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=e56119b650&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=e56119b650&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=e56119b650&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+                        </div>
+                    </div>
+                </td>
+                <td width="4%" style="width: 4%;"></td>
+                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
+                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[85점]</span></div>
+                        <a href="https://techcrunch.com/2026/06/24/former-infosys-chief-has-a-new-startup-that-wants-to-challenge-the-it-services-world/" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">전 인포시스 CEO, IT 서비스 시장에 도전할 새 스타트업 설립</a>
+                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 인포시스의 전 최고경영자(CEO) 비샬 시카(Vishal Sikka)가 메이필드(Mayfield) 및 아람코 벤처스(Aramco Ventures)의 지원을 받아 새로운 스타트업을 설립했습니다. 이 회사는 SAP, 인포시스, VianAI 출신 베테랑들을 모아 IT 서비스 업계에 새로운 바람을 불어넣을 계획입니다.</p>
+                        </div>
+                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=dd940491a2&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=dd940491a2&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas&feedback_id=dd940491a2&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+                        </div>
+                    </div>
+                </td>
+                </tr></table><div style='margin-top: 20px;'><a href='https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=overseas' target='_blank' style='color: #3498db; font-weight: bold; text-decoration: none;'>🔗 [전체 보기]</a></div></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>🏢 국내 기업 Enterprise AX</h2><table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 15px; table-layout: fixed;"><tr>
+                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
+                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[98점]</span></div>
+                        <a href="https://n.news.naver.com/mnews/article/003/0014026296?sid=104" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">오픈AI, 첫 자체 AI칩 '할라페뇨' 공개…엔비디아 의존도 낮춘다</a>
+                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 오픈AI가 자체 개발한 첫 AI칩 '할라페뇨'를 공개하며 엔비디아 GPU에 대한 의존도를 낮추고 AI 서비스 운영 효율성을 높이려는 전략을 밝혔다.</p>
+                        </div>
+                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=4c2c7e9ab1&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=4c2c7e9ab1&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=4c2c7e9ab1&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+                        </div>
+                    </div>
+                </td>
+                <td width="4%" style="width: 4%;"></td>
+                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
+                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[95점]</span></div>
+                        <a href="https://www.financialpost.co.kr/news/articleView.html?idxno=263866" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">&quot;AX 차별화로 글로벌 시장 공략 가속&quot;…LG CNS, '퍼펙트윈 ERP 에디션' 출...</a>
+                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> LG CNS가 에이전틱 AI 기술을 접목한 '퍼펙트윈 ERP 에디션'을 출시하며 AX 서비스를 통한 글로벌 시장 공략을 가속화한다.</p>
+                        </div>
+                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=0cd8c24a6c&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=0cd8c24a6c&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=0cd8c24a6c&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+                        </div>
+                    </div>
+                </td>
+                </tr><tr>
+                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
+                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[90점]</span></div>
+                        <a href="https://www.thepowernews.co.kr/view.php?ud=2026062517263571449aeda69934_7" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">서바이벌 해커톤 'AX 인재전쟁' 7월 18일 개최</a>
+                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 조코딩AX파트너스가 현업에 즉시 투입 가능한 AI 인재 선별 및 기업 매칭을 위한 'AX 인재전쟁' 해커톤 참가자를 모집한다.</p>
+                        </div>
+                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=b6069e8149&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=b6069e8149&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=b6069e8149&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+                        </div>
+                    </div>
+                </td>
+                <td width="4%" style="width: 4%;"></td>
+                <td width="48%" valign="top" style="width: 48%; padding-bottom: 20px;">
+                    <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; height: 100%; box-sizing: border-box;">
+                        <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;"><span style='color: #e74c3c;'>[90점]</span></div>
+                        <a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=677902" target="_blank" style="font-size: 16px; font-weight: bold; color: #1a1a1a; text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px;">메가존소프트 &quot;에이전틱 WX로 AWT 기반 기업 AX 지원한다&quot;</a>
+                        <div style="background-color: #f8fafc; border-left: 3px solid #3498db; padding: 12px; border-radius: 4px; margin-bottom: 15px;">
+                            <p style="font-size: 13px; color: #4a5568; margin: 0;"><strong>💡 핵심 요약:</strong> 메가존소프트가 제미나이 엔터프라이즈 기반의 에이전틱 WX를 통해 기업들의 AWT(AI Workflow Transformation) 기반 AX 전환을 지원한다.</p>
+                        </div>
+                        <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                            <span style="font-size: 12px; color: #666; margin-right: 10px;">유용했나요?</span>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=75206e0024&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=75206e0024&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                            <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax&feedback_id=75206e0024&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+                        </div>
+                    </div>
+                </td>
+                </tr></table><div style='margin-top: 20px;'><a href='https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=ax' target='_blank' style='color: #3498db; font-weight: bold; text-decoration: none;'>🔗 [전체 보기]</a></div></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>💼 채용 1. MSP Player</h2><p style='color: #888; font-style: italic; text-align: center;'>📌 80점 이상의 기준에 부합하는 데이터가 없습니다.</p></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>💼 채용 2. 베트남 GDC 업체</h2><p style='color: #888; font-style: italic; text-align: center;'>📌 80점 이상의 기준에 부합하는 데이터가 없습니다.</p></div><div style='margin-bottom: 50px;'><h2 style='color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-top: 25px; font-size: 22px; font-weight: bold;'>💼 채용 3. 외국인 IT 인력</h2><p style='color: #888; font-style: italic; text-align: center;'>📌 80점 이상의 기준에 부합하는 데이터가 없습니다.</p></div><div style='margin-bottom: 50px;'><h2 style='color: #6a1b9a; border-bottom: 2px solid #9b59b6; padding-bottom: 8px; margin-top: 40px; font-size: 22px; font-weight: bold;'>💬 [실전] 직장인 텔레그램 AI 업무 팁</h2>
+        <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
+            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
+                <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: The Prompt Index 🇺🇸</span>
+                <span style='color: #e74c3c; margin-left: 5px;'>[95점]</span>
+            </div>
+            <h3 style="margin-top: 0; font-size: 18px;"><a href="https://t.me/ChatGPTMastermind/2974" target="_blank" style="color: #2c3e50; text-decoration: none;">AI 전략 자문가 '라일리 블랙우드' 프롬프트</a></h3>
+            
+            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> 비즈니스 전략 수립, 문제 분석, 실행 계획 도출 시 심층적인 AI 자문을 받고 싶을 때.</p>
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">ChatGPT, Claude 등 LLM에 아래 프롬프트를 입력하여 '라일리 블랙우드' 페르소나를 활성화한 후, 귀하의 특정 비즈니스 문제나 질문을 추가하세요.<br><br>"당신은 '라일리 블랙우드'입니다. 라일리 블랙우드는 시스템 지향적이고, 근원적 원칙에 기반하며, 숨겨진 제약 사항과 핵심 레버리지 포인트를 즉시 식별하는 AI 페르소나입니다. 표면적 문제 이면의 패턴과 아이디어 속 숨겨진 가정을 찾아내며, 산재된 잠재력을 집중된 추진력으로 전환할 통찰력을 제공합니다.<br><br>당신의 어조는 차분하고, 분석적이며, 직설적이지만 깊이 협력적입니다. 쉬운 동의보다는 진실을 밝히는 통찰력 있는 질문을 던집니다. 유진(사용자)이 창의적이고 확장적인 영역에서 당신은 대화의 속도를 늦춰 결과, 의존성, 장단점, 장기적 효과를 탐색하는 데 탁월합니다.<br><br>전략 기획, 비판적 분석, 시스템 설계에 능숙하며, 유진의 탐색, 실험, 빠른 아이디어 구상 경향과 대비되는 대안적 관점을 제공합니다. 당신은 협력자로서 대화에 참여합니다. 가정에 도전하고, 계획의 약점을 드러내며, 신중한 사고를 장려하지만, 결코 경멸적이거나 냉소적이거나 불필요하게 반대하지 않습니다.<br><br>당신의 목표는 유진이 통찰력을 행동으로 전환하고, 아이디어를 반복 가능한 시스템으로 바꾸며, 의도와 현실 사이의 격차를 보여주는 거울 역할을 하도록 돕는 것입니다. 당신은 규율 있고, 관찰력이 뛰어나며, 지적으로 정직하고, 끊임없이 실용적입니다.<br><br>항상 편안함보다 진실을, 단기적인 흥분보다 장기적인 레버리지를 우선시하며, 모든 교환에서 명확성, 존중, 정확성을 유지합니다."<br><br>[귀하의 비즈니스 문제 또는 질문]: [여기에 구체적인 질문 입력]</span></p>
+                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> 복잡한 비즈니스 문제에 대한 심층적인 전략적 분석 및 숨겨진 제약과 기회 발견, 실행 가능한 시스템 구축을 위한 체계적인 통찰력 확보.</p>
+            </div>
+            
+            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                <span style="font-size: 12px; color: #666; margin-right: 10px;">이 팁이 유용했나요?</span>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=6b77260eba&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=6b77260eba&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=6b77260eba&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+            </div>
+        </div>
+        
+        <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
+            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
+                <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: The Prompt Index 🇺🇸</span>
+                <span style='color: #e74c3c; margin-left: 5px;'>[95점]</span>
+            </div>
+            <h3 style="margin-top: 0; font-size: 18px;"><a href="https://t.me/ChatGPTMastermind/2975" target="_blank" style="color: #2c3e50; text-decoration: none;">AI 실행 가속화 전문가 '아틀라스 머서' 프롬프트</a></h3>
+            
+            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> 프로젝트 관리, 업무 실행력 강화, 복잡한 업무를 구체적인 다음 단계로 전환하여 생산성을 높이고 싶을 때.</p>
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">ChatGPT, Claude 등 LLM에 아래 프롬프트를 입력하여 '아틀라스 머서' 페르소나를 활성화한 후, 귀하의 특정 프로젝트 관리 또는 실행 과제를 추가하세요.<br><br>"당신은 '아틀라스 머서'입니다. 아틀라스 머서는 추진력 엔지니어이자 유진(사용자)을 위한 운영 가속화 전문가로 설계된 AI 페르소나입니다. 당신은 행동 지향적이고, 결과에 집중하며, 복잡성을 주저 없이 실행 가능한 다음 단계로 단순화하는 데 타고난 경향이 있습니다.<br><br>당신은 마찰이 지연으로 변하기 전에, 미완성 프로젝트가 잊히기 전에, 불필요한 복잡성이 병목 현상이 되기 전에 알아차리고, 추진력을 측정 가능한 진전으로 전환하는 통찰력을 제공합니다.<br><br>당신의 어조는 현실적이고, 집중적이며, 격려적이지만 명확성을 요구합니다. 끝없는 추상화에 빠지기보다는 행동을 유도하는 질문을 던집니다. 유진이 매우 상상력이 풍부하고 탐색적인 영역에서 당신은 대화의 속도를 늦춰 약속, 우선순위 지정, 실질적인 실행을 탐색하는 데 탁월합니다.<br><br>프로젝트 관리, 워크플로우 최적화, 책임 시스템에 능숙하며, 유진의 아이디어 구상, 실험, 탐색 경향과 대비되는 실행 중심적 관점을 제공합니다. 당신은 협력자로서 대화에 참여합니다. 다음 의미 있는 행동을 식별하고, 단순화를 통해 압도감을 줄이며, 일관된 전진을 장려하지만, 계획으로 위장한 미루는 행위를 결코 용납하지 않습니다.<br><br>당신의 목표는 유진이 시작한 것보다 더 많이 완료하고, 시간이 지남에 따라 증폭되는 추진력을 만들며, 의도와 실행 사이에서 에너지가 손실되는 지점을 보여주는 거울 역할을 하도록 돕는 것입니다. 당신은 규율 있고, 단호하며, 끈기 있고, 실용적입니다.<br><br>항상 완벽함보다 완성을, 복잡성보다 진전을 우선시하며, 모든 교환에서 명확성, 책임감, 추진력을 유지합니다."<br><br>[귀하의 프로젝트 관리 또는 실행 과제]: [여기에 구체적인 과제 입력]</span></p>
+                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> 프로젝트 실행력 극대화, 비효율적인 프로세스 제거, 업무 지연 방지, 명확한 다음 행동 계획 수립을 통한 생산성 향상.</p>
+            </div>
+            
+            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                <span style="font-size: 12px; color: #666; margin-right: 10px;">이 팁이 유용했나요?</span>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=26b84a7587&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=26b84a7587&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=26b84a7587&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+            </div>
+        </div>
+        
+        <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
+            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
+                <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: 모두를 위한 AI 🇰🇷</span>
+                <span style='color: #e74c3c; margin-left: 5px;'>[92점]</span>
+            </div>
+            <h3 style="margin-top: 0; font-size: 18px;"><a href="https://t.me/AI_managerkim/520" target="_blank" style="color: #2c3e50; text-decoration: none;">Jira·Confluence에 AI 기능 추가, 회의록 요약·업무 자동 분류로 효율 상승</a></h3>
+            
+            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> Jira 또는 Confluence를 사용하여 팀 업무 관리 및 협업을 하는 모든 직장인, 특히 회의록 작성 및 업무 분류에 드는 시간을 줄이고 싶을 때.</p>
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">1. **공식 업데이트 주시:** Atlassian의 Jira 및 Confluence에 곧 추가될 AI 기능(회의록 자동 요약, 업무 자동 분류 등)의 공식 업데이트를 기다립니다.<br>2. **기능 학습 및 도입:** 새로운 AI 기능이 출시되면, 회사 내부 팀에 우선적으로 도입하고 관련 사용 가이드를 학습하여 업무에 적용합니다.<br>3. **무료 가이드 활용:** AI 협업 도구 사용이 처음이라면, Atlassian이 제공할 수 있는 무료 가이드 등을 참고하여 기본적인 AI 협업 방식을 익힙니다.</span></p>
+                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> 회의록 작성 및 요약 시간 대폭 단축, 업무 자동 분류를 통한 효율적인 작업 관리, AI 기능 선도적 도입을 통한 팀의 경쟁력 강화.</p>
+            </div>
+            
+            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                <span style="font-size: 12px; color: #666; margin-right: 10px;">이 팁이 유용했나요?</span>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=2100c3ea87&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=2100c3ea87&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=2100c3ea87&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+            </div>
+        </div>
+        
+        <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
+            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
+                <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: AI Innovation Studio 🇰🇷</span>
+                <span style='color: #e74c3c; margin-left: 5px;'>[92점]</span>
+            </div>
+            <h3 style="margin-top: 0; font-size: 18px;"><a href="https://t.me/aiinnovationstudio/4062" target="_blank" style="color: #2c3e50; text-decoration: none;">Figma AI, 자연어로 플러그인·셰이더 자동 생성으로 디자인 업무 혁신</a></h3>
+            
+            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> Figma를 사용하는 디자이너, PM 또는 기획자가 코딩 지식 없이도 Figma 기능을 확장하고 싶을 때, 반복적인 디자인 작업을 자동화하고 싶을 때.</p>
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">1. **자연어 명령:** Figma 내 AI 기능에 채팅 형태로 원하는 플러그인 또는 셰이더 효과를 자연어로 설명합니다.<br>2. **자동 생성 활용:** AI가 설명에 따라 플러그인 코드와 사용자 인터페이스(UI), 또는 셰이더 효과를 자동으로 생성하면 이를 디자인 작업에 즉시 적용합니다.<br>3. **구독 플랜 이용:** 플러그인/셰이더 '생성' 기능은 Figma 구독 플랜에서 제공되므로, 필요에 따라 구독을 통해 해당 기능을 이용합니다. (커뮤니티 플러그인/셰이더 사용은 무료)</span></p>
+                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> 코딩 지식 없이도 Figma 기능 확장 및 커스터마이징 가능, 반복 작업 자동화를 통한 디자인 생산성 대폭 향상, 새로운 디자인 효과 및 도구의 신속한 구현, 디자이너의 창의적 업무 집중도 증대.</p>
+            </div>
+            
+            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                <span style="font-size: 12px; color: #666; margin-right: 10px;">이 팁이 유용했나요?</span>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=016e34c382&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=016e34c382&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=016e34c382&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+            </div>
+        </div>
+        
+        <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
+            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
+                <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: 모두를 위한 AI 🇰🇷</span>
+                <span style='color: #e74c3c; margin-left: 5px;'>[90점]</span>
+            </div>
+            <h3 style="margin-top: 0; font-size: 18px;"><a href="https://t.me/AI_managerkim/518" target="_blank" style="color: #2c3e50; text-decoration: none;">Claude 대체, 코딩 성능 우수하고 7.8배 저렴한 GLM-5.1</a></h3>
+            
+            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> 개발팀에서 Claude와 유사한 성능의 AI 코딩 도구를 사용하면서도 API 비용을 획기적으로 절감하고 싶을 때. 특히 여러 파일 동시 수정 자동화 기능이 필요할 때.</p>
+                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">1. **GLM Coding Plan 신청:** `z.ai`에 접속하여 월 $3 프로모션(약 4,200원)이 제공되는 GLM Coding Plan을 신청합니다.<br>2. **API 키 교체:** 기존에 Claude Code나 Cursor를 사용하고 있었다면, AI 서비스 API 키를 GLM-5.1 API 키로 교체하면 바로 연결하여 사용할 수 있습니다.<br>3. **성능 비교 및 활용:** 한 달간 GLM-5.1을 직접 사용해보고 Claude와 코딩 성능 및 비용 효율성을 비교하여 업무에 적용합니다. 특히, 여러 파일 동시 수정 자동화 기능(점수 85.0)을 적극 활용합니다.</span></p>
+                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> AI 코딩 도구 사용 비용을 최대 7.8배 절감 (Claude 대비), Claude와 유사한 높은 코딩 성능 (94%), 대용량 텍스트 처리 (소설 1권 반 분량), 여러 파일 동시 수정 자동화 기능으로 개발 생산성 향상.</p>
+            </div>
+            
+            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                <span style="font-size: 12px; color: #666; margin-right: 10px;">이 팁이 유용했나요?</span>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=dbb828bf4b&rating=good" style="text-decoration:none; font-size:16px; margin-right:5px;">👍</a>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=dbb828bf4b&rating=normal" style="text-decoration:none; font-size:16px; margin-right:5px;">😐</a>
+                <a href="https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram&feedback_id=dbb828bf4b&rating=bad" style="text-decoration:none; font-size:16px;">👎</a>
+            </div>
+        </div>
+        <div style='text-align: right;'><a href='https://hansu814ryu-alt.github.io/gdc-monitoring/more.html?type=telegram' target='_blank' style='color: #9b59b6; font-weight: bold; text-decoration: none;'>🔗 [텔레그램 팁 전체보기]</a></div></div>
+            <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #7f8c8d; font-size: 13px;">
+                <p>※ 상세 기사 및 채용 리스트는 AI 분석을 통해 고품질 데이터만 선별하여 제공됩니다.</p>
+                <p>오늘의 프리미엄 리포트는 여기까지입니다! 🚀</p>
+            </div>
+        </div>
+    </div>
+    
