@@ -2,8 +2,7 @@ name: Trends and AX Data Crawler
 
 on:
   schedule:
-    # 한국 시간(KST) 월~금 오전 8시 발송 
-    # = UTC 기준 일~목(0-4) 23시 00분
+    # 한국 시간(KST) 월~금 오후 9시 발송 (크론식은 UTC 기준 12:00)
     - cron: '0 12 * * 0-6'
   workflow_dispatch:
 
@@ -24,6 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade google-generativeai
+        pip install beautifulsoup4 lxml requests
         pip install -r requirements.txt
 
     - name: Run Crawler
@@ -33,16 +33,15 @@ jobs:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
         SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
-        THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}       # 추가된 부분
-        THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }} # 추가된
-        
-         
+        THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+        THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
       run: python crawler.py
 
     - name: Commit and Push if changed
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add data.json
-        git diff-index --quiet HEAD || git commit -m "Update Crawled Data"
+        # data.json 뿐만 아니라 AI 히스토리와 생성된 웹페이지까지 모두 추가
+        git add data.json history.json index.html
+        git diff-index --quiet HEAD || git commit -m "Update Crawled Data, History, and Webpage"
         git push
