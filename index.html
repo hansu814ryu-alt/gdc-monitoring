@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDC & AX 인사이트 대시보드</title>
     <style>
-        body { font-family: 'Pretendard', sans-serif; background-color: #f4f7f6; padding: 20px; }
+        body { font-family: 'Pretendard', 'Malgun Gothic', sans-serif; background-color: #f4f7f6; padding: 20px; }
         .container { max-width: 1000px; margin: auto; }
         .card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .title { font-size: 18px; font-weight: bold; color: #2c3e50; text-decoration: none; }
@@ -13,18 +13,64 @@
         .summary { color: #7f8c8d; font-size: 14px; margin-top: 10px; line-height: 1.5; }
         .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 10px; }
         .badge-premium { background-color: #ffecd2; color: #d35400; }
-        .badge-threads { background-color: #000000; color: #ffffff; margin-left: 5px; }
+        .feedback-section { margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee; }
+        .feedback-btn { border: none; background: none; cursor: pointer; font-size: 16px; margin-right: 5px; }
     </style>
 </head>
 <body>
 
 <div class="container" id="app">
-    <h1 style="text-align: center; color: #2c3e50;">GDC & AX 프리미엄 인사이트</h1>
+    <h1 style="text-align: center; color: #003366; border-bottom: 3px solid #3498db; padding-bottom: 15px; display: inline-block; margin-bottom: 40px;">GDC & AX 프리미엄 인사이트</h1>
     <div id="news-container"></div>
 </div>
 
-<script>
-    // data.json 로드 및 에러 처리 적용
+<script type="module">
+    // 🚨 본인의 Firebase 프로젝트 Config 설정으로 반드시 변경하세요!
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_PROJECT_ID.appspot.com",
+        messagingSenderId: "YOUR_SENDER_ID",
+        appId: "YOUR_APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    let currentRating = {};
+
+    window.openFeedback = function(itemId, rating) {
+        currentRating[itemId] = rating;
+        document.getElementById('feedback-form-' + itemId).style.display = 'block';
+    };
+
+    window.submitFeedback = async function(itemId, category, articleTitle) {
+        const comment = document.getElementById('comment-' + itemId).value;
+        const rating = currentRating[itemId];
+        const btn = document.getElementById('btn-submit-' + itemId);
+        btn.innerText = "전송 중...";
+
+        try {
+            await addDoc(collection(db, "feedbacks"), {
+                article_id: itemId,
+                title: articleTitle,
+                category: category,
+                rating: rating,
+                comment: comment,
+                timestamp: serverTimestamp()
+            });
+            document.getElementById('feedback-wrapper-' + itemId).innerHTML = "<span style='color:green; font-size:13px; font-weight:bold;'>✅ 소중한 피드백이 반영되었습니다. 감사합니다!</span>";
+        } catch (e) {
+            console.error("Error: ", e);
+            alert("피드백 전송에 실패했습니다.");
+            btn.innerText = "의견 제출";
+        }
+    };
+
+    // data.json 로드 및 렌더링
     fetch('data.json')
         .then(response => {
             if (!response.ok) throw new Error("데이터를 불러오는 데 실패했습니다.");
@@ -33,28 +79,62 @@
         .then(data => {
             const container = document.getElementById('news-container');
             
-            // 카테고리별 데이터 렌더링
             Object.keys(data).forEach(category => {
                 const categoryData = data[category].data || [];
                 
                 categoryData.forEach(item => {
                     const card = document.createElement('div');
                     card.className = 'card';
+                    const safeTitle = item.title ? item.title.replace(/'/g, "\\'") : '제목 없음';
                     
-                    // 점수 85점 이상은 프리미엄 배지, 90점 이상은 쓰레드 배지 추가
-                    let badges = '';
-                    if (item.score >= 85) {
-                        badges += `<span class="badge badge-premium">🔥 AI 추천 (Score: ${item.score})</span>`;
-                    }
-                    if (item.score >= 90) {
-                        badges += `<span class="badge badge-threads">🧵 Threads 발행됨</span>`;
+                    let contentHtml = '';
+
+                    // 💡 텔레그램 카테고리 렌더링 (3단 포맷)
+                    if (category === 'telegram') {
+                        // 줄바꿈을 <br> 태그로 변환
+                        const formattedMethod = (item.method || '').replace(/\n/g, '<br>');
+                        
+                        contentHtml = `
+                            <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px; color: #6a1b9a;">
+                                <span style="background-color: #f3e5f5; padding: 4px 8px; border-radius: 4px;">출처: ${item.channel_name || 'Telegram'}</span>
+                                <span style="color: #e74c3c; margin-left: 5px;">[${item.score}점]</span>
+                            </div>
+                            <a href="${item.link}" target="_blank" class="title" style="color: #2c3e50;">${item.title}</a>
+                            
+                            <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-top: 15px; border: 1px solid #f3e5f5;">
+                                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> ${item.situation || ''}</p>
+                                <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="display:inline-block; margin-top:5px; padding:10px; background:#fff; border:1px solid #e1e8ed; border-radius:4px; width:100%; box-sizing:border-box; font-family:monospace;">${formattedMethod}</span></p>
+                                <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> ${item.effect || ''}</p>
+                            </div>
+                        `;
+                    } 
+                    // 💡 일반 뉴스 및 채용 공고 렌더링
+                    else {
+                        let badges = '';
+                        if (item.score >= 85) badges += `<span class="badge badge-premium">🔥 AI 추천 (Score: ${item.score})</span>`;
+                        
+                        contentHtml = `
+                            ${badges}
+                            <br>
+                            <a href="${item.link}" target="_blank" class="title">${item.title}</a>
+                            <p class="summary"><strong>[요약]</strong> ${item.summary || '요약 정보가 없습니다.'}</p>
+                        `;
                     }
 
+                    // 공통 피드백 UI 추가
                     card.innerHTML = `
-                        ${badges}
-                        <br>
-                        <a href="${item.link}" target="_blank" class="title">${item.title}</a>
-                        <p class="summary"><strong>[요약]</strong> ${item.summary || '요약 정보가 없습니다.'}</p>
+                        ${contentHtml}
+                        <div id="feedback-wrapper-${item.id}" class="feedback-section">
+                            <span style="font-size: 13px; color: #666;">이 인사이트가 유용했나요?</span>
+                            <button class="feedback-btn" onclick="openFeedback('${item.id}', 'good')">👍</button>
+                            <button class="feedback-btn" onclick="openFeedback('${item.id}', 'normal')">😐</button>
+                            <button class="feedback-btn" onclick="openFeedback('${item.id}', 'bad')">👎</button>
+                            
+                            <div id="feedback-form-${item.id}" style="display: none; margin-top: 10px;">
+                                <textarea id="comment-${item.id}" placeholder="추가 의견을 남겨주세요." style="width: 100%; height: 50px; font-family: 'Pretendard'; border: 1px solid #ccc; border-radius: 4px; padding: 5px;"></textarea>
+                                <button id="btn-submit-${item.id}" onclick="submitFeedback('${item.id}', '${category}', '${safeTitle}')" style="margin-top: 5px; background: #003366; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">의견 제출</button>
+                            </div>
+                        </div>
                     `;
                     container.appendChild(card);
                 });
