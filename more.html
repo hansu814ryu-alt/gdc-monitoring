@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDC & AX 전체 기사 리스트</title>
     <style>
-        body { font-family: 'Malgun Gothic', sans-serif; padding: 40px; background-color: #f4f7f6; line-height: 1.6; }
+        body { font-family: 'Malgun Gothic', 'Pretendard', sans-serif; padding: 40px; background-color: #f4f7f6; line-height: 1.6; }
         .container { background-color: #fff; padding: 30px; border-radius: 12px; max-width: 800px; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         h1 { color: #003366; border-bottom: 2px solid #3498db; padding-bottom: 10px; font-size: 24px; }
         ul { list-style-type: none; padding: 0; }
@@ -14,18 +14,23 @@
         a { color: #1a1a1a; text-decoration: none; font-size: 16px; word-break: keep-all; }
         a:hover { color: #3498db; text-decoration: underline; }
         .feedback-box { margin-top: 15px; background: #f9f9f9; padding: 10px; border-radius: 5px; }
+        
+        /* 🔥 클릭 하이라이트 애니메이션 적용된 피드백 버튼 스타일 */
+        .feedback-btn { border: 1px solid transparent; background: transparent; cursor: pointer; font-size: 18px; margin-right: 5px; padding: 5px 8px; border-radius: 8px; transition: all 0.2s ease; }
+        .feedback-btn:hover { background-color: #eaeaea; transform: scale(1.1); }
+        .feedback-btn.selected { background-color: #e8f4fd; border: 1px solid #3498db; transform: scale(1.1); }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 id="page-title">전체 기사 리스트</h1>
         <ul id="list-container">
-            <li>데이터를 분석하여 불러오는 중입니다...</li>
+            <li>데이터를 로드하는 중입니다...</li>
         </ul>
     </div>
 
     <script type="module">
-        // 🚨 본인의 Firebase 프로젝트 Config 설정으로 반드시 변경하세요!
+        // 🚨 중요: indexs.html과 동일한 Firebase 프로젝트 Config 설정값을 입력하세요!
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
@@ -44,6 +49,15 @@
 
         window.openFeedback = function(itemId, rating) {
             currentRating[itemId] = rating;
+            
+            // 💡 클릭된 버튼 시각적 효과 (클래스 토글 및 하이라이트 전개)
+            ['good', 'normal', 'bad'].forEach(r => {
+                const btn = document.getElementById(`btn-${r}-${itemId}`);
+                if(btn) btn.classList.remove('selected');
+            });
+            const selectedBtn = document.getElementById(`btn-${rating}-${itemId}`);
+            if(selectedBtn) selectedBtn.classList.add('selected');
+
             const form = document.getElementById('feedback-form-' + itemId);
             if(form) form.style.display = 'block';
         };
@@ -65,7 +79,7 @@
                 });
                 document.getElementById('feedback-wrapper-' + itemId).innerHTML = "<span style='color:green; font-weight:bold;'>✅ 피드백 반영 완료! 감사합니다.</span>";
             } catch (e) {
-                console.error("Error: ", e);
+                console.error("Error adding document: ", e);
                 alert("피드백 전송에 실패했습니다.");
                 btn.innerText = "의견 제출";
             }
@@ -76,7 +90,6 @@
         const autoFeedbackId = urlParams.get('feedback_id');
         const autoRating = urlParams.get('rating');
         
-        // 카테고리별 타이틀 매핑 추가
         const titles = {
             'gdc': '📊 GDC 오프쇼어링 동향',
             'overseas': '🌍 해외 AI 원천기술 및 아키텍처',
@@ -84,13 +97,16 @@
             'msp_jobs': '💼 채용: MSP Player',
             'gdc_jobs': '💼 채용: 베트남 GDC 업체',
             'vet_jobs': '💼 채용: 외국인 IT 인력',
-            'telegram': '💬 직장인 텔레그램 AI 업무 팁' // 💡 텔레그램 추가
+            'telegram': '💬 직장인 텔레그램 AI 업무 팁'
         };
         
         document.getElementById('page-title').textContent = titles[type] || '전체 리스트';
 
         fetch('data.json')
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) throw new Error("data.json 파일 파싱 실패");
+                return res.json();
+            })
             .then(data => {
                 let items = [];
                 if (type === 'gdc') items = data.gdc?.data || [];
@@ -99,7 +115,7 @@
                 else if (type === 'msp_jobs') items = (data.vn_jobs?.data || []).filter(j => j.category_code === 'MSP_PLAYER');
                 else if (type === 'gdc_jobs') items = (data.vn_jobs?.data || []).filter(j => j.category_code === 'VET_GDC_FIRM');
                 else if (type === 'vet_jobs') items = (data.vn_jobs?.data || []).filter(j => j.category_code === 'DOMESTIC_VET_IT');
-                else if (type === 'telegram') items = data.telegram?.data || []; // 💡 텔레그램 추가
+                else if (type === 'telegram') items = data.telegram?.data || [];
 
                 const container = document.getElementById('list-container');
                 container.innerHTML = '';
@@ -116,7 +132,7 @@
                     
                     let contentHtml = '';
                     
-                    // 💡 텔레그램 전용 레이아웃 분기
+                    // 💡 전체보기 페이지에서의 텔레그램 전용 출력 레이아웃
                     if (type === 'telegram') {
                         const formattedMethod = (item.method || '').replace(/\n/g, '<br>');
                         contentHtml = `
@@ -127,12 +143,11 @@
                             </div>
                             <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 10px; border: 1px solid #f3e5f5; font-size: 14px;">
                                 <p style="margin: 0 0 8px 0; color: #34495e;"><strong>🎯 적용 상황:</strong> ${item.situation || ''}</p>
-                                <p style="margin: 0 0 8px 0; color: #34495e;"><strong>🛠️ 활용법:</strong><br><span style="display:inline-block; margin-top:4px; padding:8px; background:#fff; border:1px solid #e1e8ed; width:100%; box-sizing:border-box;">${formattedMethod}</span></p>
+                                <p style="margin: 0 0 8px 0; color: #34495e;"><strong>🛠️ 활용법:</strong><br><span style="display:inline-block; margin-top:4px; padding:8px; background:#fff; border:1px solid #e1e8ed; width:100%; box-sizing:border-box; line-height:1.6;">${formattedMethod}</span></p>
                                 <p style="margin: 0; color: #34495e;"><strong>✨ 기대 효과:</strong> ${item.effect || ''}</p>
                             </div>
                         `;
                     } else {
-                        // 일반 기사/공고 레이아웃
                         const company = item.company ? `[${item.company}] ` : '';
                         contentHtml = `
                             <div style="display: flex; align-items: flex-start;">
@@ -145,16 +160,15 @@
                     li.innerHTML = `
                         <div id="item-${item.id}">
                             ${contentHtml}
-                            
                             <div id="feedback-wrapper-${item.id}" class="feedback-box">
-                                <span style="font-size: 13px; color: #666;">평가하기:</span>
-                                <button onclick="openFeedback('${item.id}', 'good')" style="border:none; background:none; cursor:pointer;">👍</button>
-                                <button onclick="openFeedback('${item.id}', 'normal')" style="border:none; background:none; cursor:pointer;">😐</button>
-                                <button onclick="openFeedback('${item.id}', 'bad')" style="border:none; background:none; cursor:pointer;">👎</button>
+                                <span style="font-size: 13px; color: #666; margin-right: 5px;">평가하기:</span>
+                                <button id="btn-good-${item.id}" class="feedback-btn" onclick="openFeedback('${item.id}', 'good')">👍</button>
+                                <button id="btn-normal-${item.id}" class="feedback-btn" onclick="openFeedback('${item.id}', 'normal')">😐</button>
+                                <button id="btn-bad-${item.id}" class="feedback-btn" onclick="openFeedback('${item.id}', 'bad')">👎</button>
                                 
                                 <div id="feedback-form-${item.id}" style="display: none; margin-top: 10px;">
-                                    <textarea id="comment-${item.id}" placeholder="추가 의견을 남겨주세요." style="width: 100%; height: 50px; border-radius: 4px; padding: 5px; border: 1px solid #ccc;"></textarea>
-                                    <button id="btn-submit-${item.id}" onclick="submitFeedback('${item.id}', '${type}', '${safeTitle}')" style="margin-top: 5px; background: #3498db; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">의견 제출</button>
+                                    <textarea id="comment-${item.id}" placeholder="추가 의견을 주관식으로 남겨주세요." style="width: 100%; height: 50px; border-radius: 4px; padding: 5px; border: 1px solid #ccc; font-family: sans-serif; resize: vertical;"></textarea>
+                                    <button id="btn-submit-${item.id}" onclick="submitFeedback('${item.id}', '${type}', '${safeTitle}')" style="margin-top: 5px; background: #3498db; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: bold;">의견 제출</button>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +176,7 @@
                     container.appendChild(li);
                 });
 
-                // 이메일에서 유입 시 해당 섹션으로 스크롤 이동 및 창 자동 오픈
+                // 💡 이메일 리포트에서 따봉 클릭 후 연동 접속 시 자동 하이라이팅 및 자동 입력창 활성화 로직
                 if (autoFeedbackId && autoRating) {
                     setTimeout(() => {
                         const targetEl = document.getElementById('item-' + autoFeedbackId);
@@ -170,13 +184,13 @@
                             targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                             window.openFeedback(autoFeedbackId, autoRating);
                             targetEl.style.backgroundColor = "#e8f4fd";
-                            setTimeout(() => targetEl.style.backgroundColor = "transparent", 2000);
+                            setTimeout(() => targetEl.style.backgroundColor = "transparent", 2500);
                         }
-                    }, 500);
+                    }, 600);
                 }
             })
             .catch(err => {
-                document.getElementById('list-container').innerHTML = '<li style="color:red;">❌ 데이터를 불러오는 데 실패했습니다.</li>';
+                document.getElementById('list-container').innerHTML = `<li style="color:red;">❌ 데이터를 불러오지 못했습니다: ${err.message}</li>`;
             });
     </script>
 </body>
