@@ -183,7 +183,7 @@ def get_telegram_messages():
                         "link": link
                     })
         except Exception as e:
-            print(f"텔레그램 스크래핑 오류 ({channel}): {e}")
+            print(f"스크래핑 오류 ({channel}): {e}")
             
     return scraped_data
 
@@ -316,7 +316,7 @@ def process_telegram_with_ai(data_list, api_key, yesterday_context="", seen_link
                     
             return sorted([item for item in filtered_initial if item.get("is_main")], key=lambda x: x.get('score', 0), reverse=True)
     except Exception as e:
-        print(f"⚠️ 텔레그램 AI 평가 오류: {e}")
+        print(f"⚠️ AI 평가 오류: {e}")
         return []
 
 ### ==========================================
@@ -425,10 +425,10 @@ def build_email_section(title, data_list, more_link, category_type, pages_url, i
 
 # [NEW] 텔레그램 가이드 렌더링 섹션
 def build_telegram_section(data_list, pages_url):
-    html = f"<div style='margin-bottom: 50px;'><h2 style='color: #6a1b9a; border-bottom: 2px solid #9b59b6; padding-bottom: 8px; margin-top: 40px; font-size: 22px; font-weight: bold;'>💬 [실전] 직장인 텔레그램 AI 업무 팁</h2>"
+    html = f"<div style='margin-bottom: 50px;'><h2 style='color: #6a1b9a; border-bottom: 2px solid #9b59b6; padding-bottom: 8px; margin-top: 40px; font-size: 22px; font-weight: bold;'>💬 [실전] 직장인 AI 업무 팁</h2>"
     
     if not data_list:
-        return html + "<p style='color: #888; font-style: italic; text-align: center;'>📌 오늘 수집된 텔레그램 실무 팁이 없습니다.</p></div>"
+        return html + "<p style='color: #888; font-style: italic; text-align: center;'>📌 오늘 수집된 실무 팁이 없습니다.</p></div>"
 
     for item in data_list[:5]:
         item_id = item.get('id', '')
@@ -458,7 +458,7 @@ def build_telegram_section(data_list, pages_url):
             </div>
         </div>
         """
-    html += f"<div style='text-align: right;'><a href='{pages_url}/more.html?type=telegram' target='_blank' style='color: #9b59b6; font-weight: bold; text-decoration: none;'>🔗 [텔레그램 팁 전체보기]</a></div></div>"
+    html += f"<div style='text-align: right;'><a href='{pages_url}/more.html?type=telegram' target='_blank' style='color: #9b59b6; font-weight: bold; text-decoration: none;'>🔗 [AI 활용 팁 전체보기]</a></div></div>"
     return html
 
 def generate_html_content(data, pages_url):
@@ -511,7 +511,7 @@ def send_email(html_content):
         return
 
     msg = MIMEMultipart()
-    msg['Subject'] = "📊 [자동화] 기술 트렌드 및 텔레그램 AI 활용 팁 리포트"
+    msg['Subject'] = "📊 [자동화] 기술 트렌드 및 AI 활용 팁 리포트"
     msg['From'] = sender_email
     msg['To'] = ", ".join(receiver_emails)
     msg.attach(MIMEText(html_content, 'html'))
