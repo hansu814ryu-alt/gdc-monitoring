@@ -3,7 +3,7 @@ name: Trends and AX Data Crawler
 on:
   schedule:
     # 한국 시간(KST) 월~금 오후 9시 발송 (크론식은 UTC 기준 12:00)
-    - cron: '0 24 * * 1-5'
+    - cron: '0 0 * * 1-5'
   workflow_dispatch:
 
 jobs:
