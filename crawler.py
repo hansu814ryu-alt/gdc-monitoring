@@ -146,7 +146,7 @@ def get_overseas_rss_news():
             print(f"RSS 파싱 오류: {e}")
     return filtered_news
 
-# [NEW] 텔레그램 채널 스크래핑 함수
+# 💡 [NEW] 텔레그램 스크래핑 시 이미지 및 링크 추출 로직 추가
 def get_telegram_messages():
     channels = [
         ("AI MASTERS 🇰🇷", "ai_masters_community"),
@@ -165,26 +165,39 @@ def get_telegram_messages():
                 soup = BeautifulSoup(response.text, 'html.parser')
                 msgs = soup.find_all('div', class_='tgme_widget_message')
                 
-                for msg in msgs[-10:]: # 각 채널별 최근 10개 메시지
+                for msg in msgs[-10:]:
                     text_div = msg.find('div', class_='tgme_widget_message_text')
                     if not text_div: continue
-                    
                     text = text_div.get_text(separator='\n', strip=True)
-                    if len(text) < 50: continue # 너무 짧은 메시지는 스킵
+                    if len(text) < 50: continue 
                     
                     post_id = msg.get('data-post', '')
                     link = f"https://t.me/{post_id}" if post_id else url
                     item_id = hashlib.md5((channel+text).encode('utf-8')).hexdigest()[:10]
                     
+                    # 🖼️ 이미지 URL 추출 로직
+                    image_url = ""
+                    photo_wrap = msg.find('a', class_='tgme_widget_message_photo_wrap')
+                    if photo_wrap and 'style' in photo_wrap.attrs:
+                        match = re.search(r"url\('(.*?)'\)", photo_wrap['style'])
+                        if match: image_url = match.group(1)
+                    
+                    # 🔗 참고 링크 추출 로직
+                    reference_link = ""
+                    link_preview = msg.find('a', class_='tgme_widget_message_link_preview')
+                    if link_preview and 'href' in link_preview.attrs:
+                        reference_link = link_preview['href']
+                    
                     scraped_data.append({
                         "id": item_id,
                         "channel_name": name,
                         "text": text,
-                        "link": link
+                        "link": link,
+                        "image_url": image_url,
+                        "reference_link": reference_link
                     })
         except Exception as e:
-            print(f"스크래핑 오류 ({channel}): {e}")
-            
+            print(f"텔레그램 스크래핑 오류 ({channel}): {e}")
     return scraped_data
 
 ### ==========================================
@@ -263,7 +276,6 @@ def process_overseas_with_ai_translation(data_list, api_key, yesterday_context="
     except Exception as e:
         return []
 
-# [NEW] 텔레그램 AI 가이드 생성 함수
 def process_telegram_with_ai(data_list, api_key, yesterday_context="", seen_links=None):
     if not api_key or not data_list: return []
     seen_links = seen_links or set()
@@ -280,16 +292,13 @@ def process_telegram_with_ai(data_list, api_key, yesterday_context="", seen_link
         아래 텔레그램 메시지들을 분석하여 다음 규칙에 따라 JSON 배열로 반환하세요.
         
         [평가 룰]
-        1. 직장인 실전성: 일반 회사원(기획, 마케팅, 인사 등)이 당장 쓸 수 있는 프롬프트, 엑셀/문서 자동화 툴 소개면 85점 이상 부여. 개발자용 코드는 70점, 단순 주식 뉴스는 0점.
+        1. 직장인 실전성: 일반 회사원(기획, 마케팅, 인사 등)이 당장 쓸 수 있는 프롬프트, 엑셀/문서 자동화 툴 소개면 85점 이상 부여. 
         2. 영어 원문일 경우 전문 용어를 살려 100% 자연스러운 한국어로 번역/의역.
         3. 80점 이상인 경우에만 아래 [3단 포맷]으로 재구성.
         
         [형식]:
         [{{
-            "id": 0,
-            "score": 90,
-            "is_main": true,
-            "title": "요약된 직관적인 제목 (한국어)",
+            "id": 0, "score": 90, "is_main": true, "title": "요약된 직관적인 제목 (한국어)",
             "situation": "어떤 업무를 할 때 쓰면 좋은지 1줄 요약",
             "method": "실제 입력할 프롬프트 예시나 툴 사용법 (원문을 바탕으로 구체적 작성)",
             "effect": "시간 단축, 퀄리티 상승 등 얻을 수 있는 이점"
@@ -311,12 +320,11 @@ def process_telegram_with_ai(data_list, api_key, yesterday_context="", seen_link
                     item["situation"] = eval_data.get("situation", "")
                     item["method"] = eval_data.get("method", "")
                     item["effect"] = eval_data.get("effect", "")
-                else:
-                    item["is_main"] = False
+                else: item["is_main"] = False
                     
             return sorted([item for item in filtered_initial if item.get("is_main")], key=lambda x: x.get('score', 0), reverse=True)
     except Exception as e:
-        print(f"⚠️ AI 평가 오류: {e}")
+        print(f"⚠️ 텔레그램 AI 평가 오류: {e}")
         return []
 
 ### ==========================================
@@ -423,12 +431,12 @@ def build_email_section(title, data_list, more_link, category_type, pages_url, i
     html += "</div>"
     return html
 
-# [NEW] 텔레그램 가이드 렌더링 섹션
+# 💡 [NEW] 이메일 템플릿 내 텔레그램 이미지/링크 렌더링
 def build_telegram_section(data_list, pages_url):
-    html = f"<div style='margin-bottom: 50px;'><h2 style='color: #6a1b9a; border-bottom: 2px solid #9b59b6; padding-bottom: 8px; margin-top: 40px; font-size: 22px; font-weight: bold;'>💬 [실전] 직장인 AI 업무 팁</h2>"
+    html = f"<div style='margin-bottom: 50px;'><h2 style='color: #6a1b9a; border-bottom: 2px solid #9b59b6; padding-bottom: 8px; margin-top: 40px; font-size: 22px; font-weight: bold;'>💬 [실전] 직장인 텔레그램 AI 업무 팁</h2>"
     
     if not data_list:
-        return html + "<p style='color: #888; font-style: italic; text-align: center;'>📌 오늘 수집된 실무 팁이 없습니다.</p></div>"
+        return html + "<p style='color: #888; font-style: italic; text-align: center;'>📌 오늘 수집된 텔레그램 실무 팁이 없습니다.</p></div>"
 
     for item in data_list[:5]:
         item_id = item.get('id', '')
@@ -436,18 +444,26 @@ def build_telegram_section(data_list, pages_url):
         fb_url_normal = f"{pages_url}/more.html?type=telegram&feedback_id={item_id}&rating=normal"
         fb_url_bad = f"{pages_url}/more.html?type=telegram&feedback_id={item_id}&rating=bad"
         
+        # 썸네일 이미지 및 참고 링크 HTML 조건부 생성
+        img_html = f"<img src='{item['image_url']}' style='max-width: 100%; height: auto; border-radius: 6px; margin-bottom: 15px; border: 1px solid #eee;'/>" if item.get('image_url') else ""
+        link_html = f"<div style='margin-top: 12px;'><a href='{item['reference_link']}' target='_blank' style='display: inline-block; background-color: #f3e5f5; color: #6a1b9a; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: bold; border: 1px solid #ce93d8;'>🌐 원본/참고 링크 열기</a></div>" if item.get('reference_link') else ""
+        
         html += f"""
         <div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #9b59b6;">
             <div style="font-size: 13px; font-weight: bold; margin-bottom: 10px;">
                 <span style="display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; background-color: #f3e5f5; color: #6a1b9a;">출처: {item.get('channel_name', 'Telegram')}</span>
                 <span style='color: #e74c3c; margin-left: 5px;'>[{item.get('score', 0)}점]</span>
             </div>
-            <h3 style="margin-top: 0; font-size: 18px;"><a href="{item['link']}" target="_blank" style="color: #2c3e50; text-decoration: none;">{item['title']}</a></h3>
+            
+            <h3 style="margin-top: 0; font-size: 18px; margin-bottom: 15px;"><a href="{item['link']}" target="_blank" style="color: #2c3e50; text-decoration: none;">{item['title']}</a></h3>
+            
+            {img_html}
             
             <div style="background-color: #faf5ff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #f3e5f5;">
                 <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🎯 적용 상황:</strong> {item.get('situation', '')}</p>
                 <p style="margin: 0 0 10px 0; font-size: 14px; color: #34495e;"><strong>🛠️ 구체적 활용법:</strong><br><span style="background-color: #ffffff; padding: 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-family: monospace; border: 1px solid #e1e8ed; width: 95%;">{item.get('method', '').replace(chr(10), '<br>')}</span></p>
                 <p style="margin: 0; font-size: 14px; color: #34495e;"><strong>✨ 기대 효과:</strong> {item.get('effect', '')}</p>
+                {link_html}
             </div>
             
             <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
@@ -458,7 +474,7 @@ def build_telegram_section(data_list, pages_url):
             </div>
         </div>
         """
-    html += f"<div style='text-align: right;'><a href='{pages_url}/more.html?type=telegram' target='_blank' style='color: #9b59b6; font-weight: bold; text-decoration: none;'>🔗 [AI 활용 팁 전체보기]</a></div></div>"
+    html += f"<div style='text-align: right;'><a href='{pages_url}/more.html?type=telegram' target='_blank' style='color: #9b59b6; font-weight: bold; text-decoration: none;'>🔗 [텔레그램 팁 전체보기]</a></div></div>"
     return html
 
 def generate_html_content(data, pages_url):
@@ -488,7 +504,7 @@ def generate_html_content(data, pages_url):
     html_content += build_email_section("💼 채용 2. 베트남 GDC 업체", gdc_jobs, f"{pages_url}/more.html?type=gdc_jobs", "gdc_jobs", pages_url, is_job=True)
     html_content += build_email_section("💼 채용 3. 외국인 IT 인력", vet_jobs, f"{pages_url}/more.html?type=vet_jobs", "vet_jobs", pages_url, is_job=True)
     
-    # 💡 텔레그램 섹션 추가
+    # 텔레그램 섹션
     html_content += build_telegram_section(data.get('telegram', {}).get('data', []), pages_url)
 
     html_content += """
@@ -504,14 +520,14 @@ def generate_html_content(data, pages_url):
 def send_email(html_content):
     sender_email = os.environ.get("SENDER_EMAIL")
     sender_password = os.environ.get("SENDER_PASSWORD")
-    receiver_emails = ["hansu814.ryu@samsung.com","th.jeong@samsung.com","jihoon33.kim@samsung.com","glassman@samsung.com","chaneast.kim@samsung.com","bangz0@samsung.com","tjsong@samsung.com","hj71.song@samsung.com","yoonsj@samsung.com","heeseon.yoon@samsung.com","laguna@samsung.com","jackie.chung@samsung.com","ally.chae@samsung.com","yoonseok@samsung.com","eunji0313.choi@samsung.com","yh0721.chung@samsung.com"] # 테스트용(필요시 본인 명단으로 복구하세요)
+    receiver_emails = ["hansu814.ryu@samsung.com", "th.jeong@samsung.com"] # 테스트용
     
     if not sender_email or not sender_password: 
         print("⚠️ 발신자 정보 누락")
         return
 
     msg = MIMEMultipart()
-    msg['Subject'] = "📊 [자동화] 기술 트렌드 및 AI 활용 팁 리포트"
+    msg['Subject'] = "📊 [자동화] 기술 트렌드 및 텔레그램 AI 활용 팁 리포트"
     msg['From'] = sender_email
     msg['To'] = ", ".join(receiver_emails)
     msg.attach(MIMEText(html_content, 'html'))
@@ -547,23 +563,21 @@ if __name__ == "__main__":
     for q in ax_queries: raw_ax_news.extend(get_naver_news(NAVER_ID, NAVER_SECRET, query=q, display=15))
         
     raw_vn_jobs = get_wanted_postings("베트남", ['it', '개발', '소프트웨어', 'bse'])
-    
-    raw_telegram = get_telegram_messages() # 텔레그램 수집
+    raw_telegram = get_telegram_messages() 
     
     print("--- 🧠 AI 기반 맥락 평가 / 번역 및 정렬 중 ---")
     sorted_gdc = process_data_with_ai_batch(raw_gdc, 'GDC 동향 뉴스', GEMINI_KEY, yesterday_context, seen_links, seen_titles)
     sorted_ax_news = process_data_with_ai_batch(raw_ax_news, 'AX 근황 뉴스', GEMINI_KEY, yesterday_context, seen_links, seen_titles)
     sorted_overseas = process_overseas_with_ai_translation(raw_overseas, GEMINI_KEY, yesterday_context, seen_links, seen_titles)
     sorted_vn_jobs = process_data_with_ai_batch(raw_vn_jobs, '베트남 IT 채용 공고', GEMINI_KEY, yesterday_context, seen_links, seen_titles)
-    
-    sorted_telegram = process_telegram_with_ai(raw_telegram, GEMINI_KEY, yesterday_context, seen_links) # 텔레그램 AI 가공
+    sorted_telegram = process_telegram_with_ai(raw_telegram, GEMINI_KEY, yesterday_context, seen_links) 
     
     result = {
         "gdc": {"data": sorted_gdc},
         "overseas": {"data": sorted_overseas},
         "ax_news": {"data": sorted_ax_news},
         "vn_jobs": {"data": sorted_vn_jobs},
-        "telegram": {"data": sorted_telegram} # 결과에 추가
+        "telegram": {"data": sorted_telegram} 
     }
     
     with open('data.json', 'w', encoding='utf-8') as f:
