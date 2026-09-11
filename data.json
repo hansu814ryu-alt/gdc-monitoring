@@ -2,166 +2,287 @@
     "gdc": {
         "data": [
             {
-                "id": "fe455171ee",
-                "title": "케이포시큐리티, 'GDC2026' 참가… KSPTS 기반 DPP 구현 사례 선봬",
-                "description": "케이포시큐리티는 GDC2026과 연계해 진행되는 'Global Digital Trust Awards 2026'에 해당 솔루션을 실제... 박경철 대표는 “이번 GDC2026 참가와 사례 공개를 통해 KSPTS의 기술과 적용 가능성을 해외... ",
-                "link": "https://n.news.naver.com/mnews/article/030/0003464548?sid=101",
-                "pubDate": "Tue, 08 Sep 2026 09:01:00 +0900",
+                "id": "e0d2ffac0a",
+                "title": "케이포시큐리티, ‘GDC2026’ 참가… KSPTS 기반 DPP 구현 사례 선봬",
+                "description": "2026(GDC2026)’에 삼성SDS와 함께 참가해 United Nations Transparency Protocol(UNTP) 표준 기반 KSPTS, 디지털 제품 여권(DPP), 구현 사례를 선보였다고 밝혔다. 케이포시큐리티는 GDC2026과 연계해 진행되는... ",
+                "link": "https://n.news.naver.com/mnews/article/029/0003046705?sid=105",
+                "pubDate": "Tue, 08 Sep 2026 09:00:00 +0900",
+                "score": 95,
+                "is_main": true,
+                "summary": "케이포시큐리티가 GDC2026에 참가하여 UNTP 표준 기반 KSPTS 및 디지털 제품 여권(DPP) 구현 사례를 선보이며 IT 트렌드에 발맞춘 보안 기술을 공개했다.",
+                "category_code": "GDC_IT_Security"
+            },
+            {
+                "id": "27fb470b1f",
+                "title": "글로벌 데이터센터 기업 STTGDC, KKR·싱텔 품으로…'AI-레디' 인프라 키...",
+                "description": "STTGDC가 글로벌 사모펀드 KKR과 싱가포르 통신사 싱텔이 참여한 컨소시엄에 인수되면서 새로운 도약에 나선다. 인공지능(AI) 확산에 따른 데이터센터 수요 증가에 대응해 장기 자본과 글로벌 인프라 역량을 확보하고... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002436301?sid=105",
+                "pubDate": "Fri, 04 Sep 2026 15:56:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "케이포시큐리티가 'GDC2026'에 참가하여 UNTP 표준 기반의 KSPTS 및 디지털 제품 여권(DPP) 구현 사례를 선보이며 글로벌 시장에 기술과 적용 가능성을 공개했다.",
-                "category_code": "GDC_SECURITY"
+                "summary": "글로벌 데이터센터 기업 STTGDC가 KKR과 싱텔 컨소시엄에 인수되어 AI 확산에 따른 데이터센터 수요 증가에 대응하는 'AI-레디' 인프라 역량 강화에 나선다.",
+                "category_code": "GDC_DataCenter_AI_Infra"
             },
             {
-                "id": "b68688df53",
-                "title": "국가AI전략위 출범 1년…'AI 3대 강국' 향한 실행체계 고도화",
-                "description": "데이터센터 구축과 국방 특화 AI 개발을 지원한다. ■AI 인재·지역·글로벌 협력도 강화 AI 산업의 지속적인... 하 부위원장은 &quot;프로젝트라고 하는 것은 결국 최종 성과물, 딜리버리물이 명확한 것&quot;이라며 &quot;현재 분과들은... ",
-                "link": "https://www.koit.co.kr/news/articleView.html?idxno=208909",
-                "pubDate": "Tue, 08 Sep 2026 15:02:00 +0900",
-                "score": 75,
+                "id": "d2769a35da",
+                "title": "배민, 글로벌 스타트업에 성장 노하우 공유",
+                "description": "'K-스타트업 그랜드챌린지'는 중소벤처기업부가 주최하고 경기창조경제혁신센터가 주관하는 글로벌... 모집 분야는 푸드테크(외식업 관련 포함), 로보틱스(물류, 딜리버리). 커머스, 마케팅 인공지능 전환(AX), 핀테크... ",
+                "link": "https://n.news.naver.com/mnews/article/030/0003465909?sid=101",
+                "pubDate": "Fri, 11 Sep 2026 11:30:00 +0900",
+                "score": 85,
                 "is_main": true,
-                "summary": "국가AI전략위가 출범 1년을 맞아 'AI 3대 강국' 실현을 위한 실행체계 고도화 계획을 발표하며, AI 데이터센터 구축과 인재 양성 및 글로벌 협력 강화 방안을 제시했다.",
-                "category_code": "AI_POLICY_STRATEGY"
+                "summary": "배민이 'K-스타트업 그랜드챌린지'에서 푸드테크, 로보틱스, 커머스, 마케팅 인공지능 전환(AX), 핀테크 등 IT 핵심 분야의 성장 노하우를 글로벌 스타트업에 공유한다.",
+                "category_code": "AI_AX_Robotics_TechBiz"
             },
             {
-                "id": "e48aed08b6",
-                "title": "KS한국고용정보 &quot;AI·중앙아시아 오프쇼어 결합, CS 혁신 해답&quot;",
-                "description": "중앙아시아 오프쇼어(Offshore)'를 결합한 새로운 운영 모델이 제시됐다. KS한국고용정보는 AI가 단순·반복... 차세대 오프쇼어 고객센터 운영 모델과 실증 성과를 공개했다. 현재 국내 CS 시장은 경기 침체에 따른... ",
-                "link": "http://www.newsprime.co.kr/news/article.html?no=744703",
-                "pubDate": "Fri, 21 Aug 2026 17:58:00 +0900",
-                "score": 75,
+                "id": "08ac9a68b9",
+                "title": "LG CNS &quot;데이터·검증·서비스로 ‘독자 보안 모델’ 차별화&quot;",
+                "description": "&quot;글로벌 모델을 가져다 쓸 수도 있겠지만 국가안보 측면에서도 우리만의 인공지능(AI)이 있어야 하지... LG CNS는 모델 개발 이후 실제 보안서비스로 연결하는 '딜리버리' 역량도 강조했다. 2005년부터 보안관제센터(SOC)를... ",
+                "link": "https://n.news.naver.com/mnews/article/029/0003047296?sid=105",
+                "pubDate": "Thu, 10 Sep 2026 12:10:00 +0900",
+                "score": 80,
                 "is_main": true,
-                "summary": "KS한국고용정보가 AI와 중앙아시아 오프쇼어 서비스를 결합하여 단순 반복 업무를 AI가 처리하고, 고품질 상담은 효율적인 오프쇼어 인력으로 담당하는 차세대 고객 서비스(CS) 운영 모델을 제시했다.",
-                "category_code": "AI_CS_INNOVATION"
+                "summary": "LG CNS가 데이터, 검증, 서비스 역량을 활용한 독자적인 인공지능(AI) 보안 모델을 차별화하고, 보안관제센터(SOC)를 통한 실제 서비스 딜리버리 역량을 강조했다.",
+                "category_code": "AI_Security_ITService"
             }
         ]
     },
     "overseas": {
         "data": [
             {
-                "id": "f37bc5517e",
-                "title": "Mistral raises €3B as sovereign AI becomes big business",
-                "description": "The French AI lab has raised €3 billion at a €21 billion valuation in a Series D round led by Samsung, Scaleup Europe, and PSG Equity.",
-                "link": "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/",
-                "pubDate": "Tue, 08 Sep 2026 14:17:48 +0000",
+                "id": "3f1b7e6d6a",
+                "title": "Jensen Huang explains why Nvidia will grow an astounding 70% next year",
+                "description": "Nvidia has its finger in every pie, and sees another year of plenty in its future, Jensen Huang says. But, he insists, its deals are not circular.",
+                "link": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
+                "pubDate": "Thu, 10 Sep 2026 21:51:59 +0000",
+                "score": 95,
+                "is_main": true,
+                "translated_title": "젠슨 황, 엔비디아가 내년 70% 성장할 놀라운 이유 설명",
+                "summary": "엔비디아 CEO 젠슨 황은 회사가 모든 분야에서 영향력을 확대하고 있으며, 내년에 70%라는 경이로운 성장을 기록할 것이라고 밝혔다. 그는 엔비디아의 사업 거래가 순환적이지 않다고 강조했다."
+            },
+            {
+                "id": "e9590b50c0",
+                "title": "AI research startup Listen Labs scrubbed a $1.5B funding round for Salesforce talks",
+                "description": "Listen Labs walked away from a signed Series C term sheet from Menlo Ventures, sources say.",
+                "link": "https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/",
+                "pubDate": "Thu, 10 Sep 2026 00:00:37 +0000",
+                "score": 93,
+                "is_main": true,
+                "translated_title": "AI 연구 스타트업 Listen Labs, 세일즈포스와 협상 위해 15억 달러 투자 유치 취소",
+                "summary": "AI 연구 스타트업 리슨 랩스(Listen Labs)가 멘로 벤처스(Menlo Ventures)로부터 서명된 15억 달러 규모의 시리즈 C 투자 유치 계약을 철회했다고 소식통이 전했다. 이는 세일즈포스와의 협상을 위한 것으로 알려졌다."
+            },
+            {
+                "id": "755f7769e7",
+                "title": "India’s Pocket FM doubles revenue run rate to $500M as AI powers 93% of audio content",
+                "description": "Pocket FM uses AI to produce 99% of its new content, helping make content production about 80 times cheaper.",
+                "link": "https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content/",
+                "pubDate": "Thu, 10 Sep 2026 17:45:00 +0000",
                 "score": 92,
                 "is_main": true,
-                "translated_title": "미스트랄, 30억 유로 투자 유치... 주권 AI, 거대 산업으로 부상",
-                "summary": "프랑스 AI 연구소 미스트랄이 삼성, 스케일업 유럽 등으로부터 30억 유로(약 210억 유로 기업가치) 규모의 시리즈 D 투자를 유치했다. 이는 국가 주도의 '주권 AI' 개념이 점차 중요해지고 거대한 비즈니스 기회로 인식되고 있음을 보여준다."
+                "translated_title": "인도 포켓 FM, AI 기반 93% 오디오 콘텐츠로 매출 $500M 달성",
+                "summary": "인도의 오디오 콘텐츠 플랫폼 포켓 FM(Pocket FM)은 AI를 활용해 신규 콘텐츠의 99%를 제작하며 콘텐츠 생산 비용을 80배 절감, 연간 매출 실행률(revenue run rate)을 5억 달러로 두 배 늘렸다. AI가 전체 오디오 콘텐츠의 93%를 구동한다."
             },
             {
-                "id": "baf4c2ebab",
-                "title": "Hackers are stealing Claude tokens from subscribers",
-                "description": "Last month, a Claude user noticed his account was consuming tokens even though he wasn't working. Anthropic has since warned users about hackers.",
-                "link": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
-                "pubDate": "Tue, 08 Sep 2026 21:10:27 +0000",
+                "id": "999f113dc0",
+                "title": "Anthropic details distillation campaigns from Alibaba, Moonshot AI, and DeepSeek",
+                "description": "A new report released Thursday by Anthropic alleges persistent distillation attacks by China-based AI companies, which have escalated in recent months as competition in the space has intensified.",
+                "link": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
+                "pubDate": "Thu, 10 Sep 2026 20:57:30 +0000",
                 "score": 90,
                 "is_main": true,
-                "translated_title": "해커들이 구독자 클로드 토큰을 훔치고 있다",
-                "summary": "클로드 사용자들이 계정 활동 없이 토큰이 소모되는 현상을 발견했으며, 앤스로픽은 이에 대해 해커들의 소행일 수 있다고 경고했다. 이는 AI 서비스 사용자들의 보안에 대한 중요한 문제로 부상하고 있다."
+                "translated_title": "Anthropic, 알리바바, 문샷 AI, 딥시크의 '증류 공격' 상세 보고",
+                "summary": "앤트로픽(Anthropic)은 목요일 발표한 보고서에서 중국 기반 AI 기업들(알리바바, 문샷 AI, 딥시크 등)이 자사의 모델에 대한 지속적인 '증류 공격(distillation attacks)'을 감행하고 있다고 주장했다. 이는 AI 경쟁 심화와 함께 최근 몇 달간 더욱 격화되었다고 덧붙였다."
             },
             {
-                "id": "20d984cb02",
-                "title": "Meta debuts its Muse AI agent. Will consumers trust it?",
-                "description": "Meta's new personal AI agent Muse wants access to users' email, calendars, payments, health services, and more — making the company's biggest consumer AI bet yet a major test of whether people still trust Meta with their data.",
-                "link": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
-                "pubDate": "Tue, 08 Sep 2026 19:00:00 +0000",
-                "score": 90,
-                "is_main": true,
-                "translated_title": "메타, AI 에이전트 '뮤즈' 공개... 소비자 신뢰 얻을까?",
-                "summary": "메타가 개인 AI 에이전트 '뮤즈'를 선보였다. 이 에이전트는 이메일, 캘린더, 결제, 건강 서비스 등 사용자 정보에 광범위하게 접근하려 해, 메타의 소비자 AI 분야 최대 베팅이 개인 정보 보호와 소비자 신뢰 확보에 성공할지 주목된다."
-            },
-            {
-                "id": "95a190e6d2",
-                "title": "Chrome is now shipping updates every 2 weeks as AI changes the security landscape",
-                "description": "Google is speeding up Chrome’s release schedule to ship security patches and new features faster.",
-                "link": "https://techcrunch.com/2026/09/08/chrome-is-now-shipping-updates-every-2-weeks-as-ai-changes-the-security-landscape/",
-                "pubDate": "Tue, 08 Sep 2026 15:04:09 +0000",
+                "id": "d40cabdd4c",
+                "title": "Maven Robotics wants to steal your robot deployment deal",
+                "description": "Maven Robotics emerged from stealth today with a $100 million Series A and active deployments.",
+                "link": "https://techcrunch.com/2026/09/10/maven-robotics-wants-to-steal-your-robot-deployment-deal/",
+                "pubDate": "Thu, 10 Sep 2026 14:17:37 +0000",
                 "score": 88,
                 "is_main": true,
-                "translated_title": "크롬, AI 변화에 대응해 2주마다 업데이트 배포 시작",
-                "summary": "구글이 AI로 인해 변화하는 보안 환경에 대응하기 위해 크롬의 업데이트 주기를 2주로 단축했다. 이는 보안 패치와 새로운 기능을 더 빠르게 제공하여 사용자 보호를 강화하고 최신 기술 변화에 신속하게 대응하기 위함이다."
+                "translated_title": "메이븐 로보틱스, 1억 달러 시리즈 A 투자 유치 및 로봇 배치 사업 경쟁 돌입",
+                "summary": "메이븐 로보틱스(Maven Robotics)가 오늘 공식적으로 공개되며 1억 달러 규모의 시리즈 A 투자를 유치했다고 발표했다. 이 회사는 이미 활발한 로봇 배치 사업을 진행 중이며, 로봇 시장에서 경쟁 구도를 형성할 것으로 보인다."
             },
             {
-                "id": "ba0725adef",
-                "title": "Cognition hits $48B valuation, signaling investors believe AI coding is far from a winner-take-all market",
-                "description": "Cognition's valuation multiple is higher than Cursor's was before selling to SpaceX.",
-                "link": "https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/",
-                "pubDate": "Tue, 08 Sep 2026 21:04:06 +0000",
+                "id": "5a7a028d73",
+                "title": "OpenAI puts Pro subscriptions on hold due to Astra demand",
+                "description": "The company said Pro subscriptions put the most strain on its systems, so it's pausing sign-ups while adding more capacity.",
+                "link": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
+                "pubDate": "Thu, 10 Sep 2026 20:59:51 +0000",
                 "score": 85,
                 "is_main": true,
-                "translated_title": "코그니션, 480억 달러 가치 달성... AI 코딩 시장 독점 어려움 시사",
-                "summary": "AI 코딩 스타트업 코그니션이 480억 달러의 높은 기업 가치를 인정받으며 투자자들의 기대를 모았다. 이는 AI 코딩 시장이 단일 승자가 모든 것을 차지하는 시장이 아님을 보여주며, 해당 분야의 치열한 경쟁과 성장 잠재력을 시사한다."
-            },
-            {
-                "id": "d081e58264",
-                "title": "Google Cloud races to catch up in the AI deployment wars with Accenture deal",
-                "description": "Google Cloud expands its enterprise AI push with Accenture, betting on forward-deployed engineers to drive adoption and overcome deployment bottlenecks.",
-                "link": "https://techcrunch.com/2026/09/08/google-cloud-races-to-catch-up-in-the-ai-deployment-wars-with-accenture-deal/",
-                "pubDate": "Tue, 08 Sep 2026 16:20:31 +0000",
-                "score": 85,
-                "is_main": true,
-                "translated_title": "구글 클라우드, 액센츄어와 협력해 AI 배포 경쟁 가속화",
-                "summary": "구글 클라우드가 액센츄어와의 파트너십을 통해 기업 AI 시장 점유율 확대를 노린다. 현장 엔지니어 배치를 통해 AI 도입을 가속화하고 배포 병목 현상을 해결함으로써, 빠르게 변화하는 AI 배포 경쟁에서 선두를 차지하려는 전략이다."
+                "translated_title": "OpenAI, Astra 수요 폭증으로 Pro 구독 일시 중단",
+                "summary": "OpenAI는 'Astra' 서비스에 대한 높은 수요로 인해 시스템 부하가 크게 증가하자, Pro 구독 신규 가입을 일시적으로 중단한다고 밝혔다. 이는 시스템 용량을 확충하기 위한 조치이다."
             }
         ]
     },
     "ax_news": {
         "data": [
             {
-                "id": "84038cb397",
-                "title": "삼성SDS, AX·로봇까지…오픈AI·앤트로픽 손잡는다",
-                "description": "삼성SDS는 8일 서울 코엑스에서 엔터프라이즈 AI 전환(AX) 콘퍼런스 '리얼 서밋 2026'을 열고 '다차원 AI 풀스택' 전략을 공개했다. 현장에는 8000여명, 온라인까지 합치면 1만5000여명이 이날 발표를 지켜봤다. ◇“AI는... ",
-                "link": "https://n.news.naver.com/mnews/article/030/0003464629?sid=105",
-                "pubDate": "Tue, 08 Sep 2026 10:22:00 +0900",
-                "score": 95,
+                "id": "9569e43e77",
+                "title": "삼성SDS, 오픈AI·앤트로픽 손잡고 로봇까지…AX 영토 넓힌다",
+                "description": "삼성SDS는 8일 서울 코엑스 컨벤션센터에서 엔터프라이즈 AX 콘퍼런스 '리얼 서밋 2026'을 열고, 약 8천명(온라인 포함 1만5천여명)이 참석한 가운데 '다차원(Multi-Dimensional) AI 풀스택' 전략을 발표했다. &quot;AI는 업무... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016295963?sid=105",
+                "pubDate": "Tue, 08 Sep 2026 09:00:00 +0900",
+                "score": 98,
                 "is_main": true,
-                "summary": "삼성SDS는 '리얼 서밋 2026'에서 다차원 AI 풀스택 전략을 공개하며 오픈AI, 앤트로픽과 협력해 AX를 로봇 기반 RX로 확장하고 제조 현장 AX를 본격화한다고 밝혔다.",
-                "category_code": "Enterprise AI/AX Strategy"
+                "summary": "삼성SDS는 '리얼 서밋 2026'에서 오픈AI 및 앤트로픽과 협력해 AX를 넘어 로봇 사업까지 영토를 확장하는 '다차원 AI 풀스택' 전략을 발표하며 비즈니스 혁신을 강조했다.",
+                "category_code": "Enterprise AX, Robotics"
             },
             {
-                "id": "8bbf39c0d7",
-                "title": "[AI픽] 삼성SDS, AX 넘어 RX까지…글로벌 빅테크 총집결(종합)",
-                "description": "삼성SDS는 8일 서울 코엑스 컨벤션센터에서 엔터프라이즈 AX 콘퍼런스 '리얼 서밋 2026'을 열고, 약 8천명(온라인 포함 1만5천여명)이 참석한 가운데 '다차원(Multi-Dimensional) AI 풀스택' 전략을 발표했다. &quot;AI는 업무... ",
-                "link": "https://n.news.naver.com/mnews/article/001/0016297162?sid=105",
-                "pubDate": "Tue, 08 Sep 2026 14:06:00 +0900",
+                "id": "e448732a4b",
+                "title": "KT, 서울아산·서울대병원 잇단 협력…‘AI 병원’ 확산 나선다",
+                "description": "진료·간호·연구·병원 운영 등 의료 전반에 AI 모델을 적용하고 공공의료 분야의 AI 혁신 과제를 공동 검증한다는 내용이다. 연세의료원과도 의료 데이터 표준화와 AI 기반 의료서비스 적용 방안을 연구하는 등 협력... ",
+                "link": "https://n.news.naver.com/mnews/article/018/0006366917?sid=105",
+                "pubDate": "Thu, 10 Sep 2026 14:50:00 +0900",
                 "score": 90,
                 "is_main": true,
-                "summary": "삼성전자가 프랑스 AI 기업 미스트랄에 대규모 투자를 주도하며, 반도체 설계 및 제조에 특화된 AI 모델을 온프레미스 방식으로 공동 개발해 핵심 기술 유출 없이 활용할 계획이다.",
-                "category_code": "Industry-specific AI"
+                "summary": "KT가 서울아산병원과 서울대병원 등 주요 의료기관과의 잇단 협력을 통해 AI 진료, 간호, 연구 등 의료 전반에 AI 모델을 적용하며 'AI 병원' 확산에 나선다.",
+                "category_code": "Medical AX"
             },
             {
-                "id": "e663f42992",
-                "title": "삼성SDS, AX 넘어 ‘RX’까지…내년 로봇 통합 플랫폼 선보인다",
-                "description": "이준희 삼성SDS 대표는 8일 서울 코엑스 컨벤션센터에서 열린 엔터프라이즈 AX 콘퍼런스 ‘리얼 서밋 2026’ 기조연설에서 “삼성SDS는 AX 무대를 디지털은 물론 피지컬로 확장하고자 한다”며 “2027년에 생산 설비와... ",
-                "link": "https://www.etoday.co.kr/news/view/2623055",
-                "pubDate": "Tue, 08 Sep 2026 14:12:00 +0900",
+                "id": "c1a7983aa3",
+                "title": "2000억 투입한 네이버, '보파모'로 사업보국 실현…&quot;AI 보안 주권 지킬 ...",
+                "description": "이들은 외산 AI 모델 의존도를 낮추고 국내 기술로 'AI 보안 주권'을 확보하는 데 개발 초점을 맞췄다. 앞서... 않도록 운영될 예정이다. 네이버클라우드는 33개 기관을 ▲데이터 분석·처리 ▲모델 학습 ▲평가·검증... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002437056?sid=105",
+                "pubDate": "Fri, 11 Sep 2026 06:01:00 +0900",
+                "score": 90,
+                "is_main": true,
+                "summary": "네이버가 2000억원을 투입하여 독자적인 'AI 보안 주권'을 확보하기 위한 '보파모' 프로젝트를 통해 외산 AI 모델 의존도를 낮추고 국내 기술 기반의 AI 보안 역량 강화를 추진한다.",
+                "category_code": "AI Security, National AI Sovereignty"
+            },
+            {
+                "id": "e09d43dc64",
+                "title": "오픈AI 코리아 1년…기업용 챗GPT 28배 성장, AI 활용 '실행 단계' 진입",
+                "description": "국내 AI 시장이 새로운 전환점을 맞고 있다는 분석이다. 오픈AI는 9일 서울 강남구 조선팰리스 호텔에서... GPT-6 아스트라는 고도화된 추론 능력과 컴퓨터 사용 기능을 결합해 앱과 파일, 레거시 시스템 화면... ",
+                "link": "https://www.koit.co.kr/news/articleView.html?idxno=208940",
+                "pubDate": "Wed, 09 Sep 2026 12:02:00 +0900",
+                "score": 90,
+                "is_main": true,
+                "summary": "오픈AI 코리아가 한국 진출 1년 만에 기업용 챗GPT 이용률이 28배 성장하며, 국내 AI 시장이 AI 활용의 '실행 단계'에 진입했음을 밝히고 AX 지원 및 생태계 강화를 약속했다.",
+                "category_code": "Generative AI Adoption"
+            },
+            {
+                "id": "d77648612a",
+                "title": "[AI프리즘] AI 모델만 좋으면 끝?…성패 가르는 '데이터 인프라'",
+                "description": "local Seoul) 2026'을 열고, 한국 기업들이 AI 전환에서 겪는 공통된 난관과 해법을 제시했다. 핵심 메시지는 &quot;AI... &quot;AI 모델 뛰어나도 데이터 낡으면 실패&quot;…레거시 인프라가 장벽 장정욱 몽고DB 코리아 지사장은 IDC와 공동... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016283317?sid=105",
+                "pubDate": "Tue, 01 Sep 2026 15:48:00 +0900",
+                "score": 88,
+                "is_main": true,
+                "summary": "몽고DB 코리아가 'Data Day 2026'에서 AI 전환의 성공을 위해서는 뛰어난 AI 모델뿐 아니라 낡은 데이터 인프라와 레거시 시스템을 현대화하는 것이 핵심 과제임을 강조했다.",
+                "category_code": "AI Infrastructure, AX Challenges"
+            },
+            {
+                "id": "fd39c4f902",
+                "title": "한진, AI로 물류현장 위험 잡는다…AI 세이프티 가디언 구축",
+                "description": "화물 사진을 분석하는 ‘체적 이미지 판독 AI 모델’도 운영하고 있다. 화물 크기 등과 관련한 고객사의 문의를 보다 신속하게 처리하기 위해서다. 생성형 AI를 적용한 챗봇 ‘한지니’를 통해 고객 상담 업무도 지원한다.... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002437070?sid=103",
+                "pubDate": "Fri, 11 Sep 2026 09:11:00 +0900",
                 "score": 85,
                 "is_main": true,
-                "summary": "몽고DB 코리아는 AI 모델의 성패가 낡은 데이터 인프라와 레거시 시스템에 달려 있음을 지적하며, 국내 기업의 AI 전환을 위한 데이터 레이어 현대화의 중요성을 강조했다.",
-                "category_code": "AI Infrastructure/Platforms"
+                "summary": "한진이 물류 현장 안전 강화를 위해 AI 기반 '세이프티 가디언' 시스템을 구축하여 위험 행동을 줄이고, 체적 이미지 판독 및 생성형 AI 챗봇 등으로 물류 전반의 효율을 높인다.",
+                "category_code": "Logistics AX"
             },
             {
-                "id": "8ffb33711d",
-                "title": "이준희 삼성SDS 대표 &quot;AI는 업무를 바꾸지만, AX는 비즈니스를 바꾼다&quot;",
-                "description": "이 대표는 8일 오전 서울 강남구 코엑스에서 열린 엔터프라이즈 인공지능 전환(AX) 콘퍼런스 '리얼 서밋 2026' 기조연설에서 &quot;AX는 단순히 AI를 도입해 시간과 비용을 절감하는 것과는 차원이 다른 훨씬 더 근본적인 변화... ",
-                "link": "https://n.news.naver.com/mnews/article/003/0014175488?sid=105",
-                "pubDate": "Tue, 08 Sep 2026 09:07:00 +0900",
+                "id": "bdfa48b144",
+                "title": "정부, 원주·천안아산·새만금·광주에 'K-AI 시티' 조성한다",
+                "description": "실행전략은 ▲AI 혁신서비스 발굴 ▲AI 시티 인프라 구축 ▲AI 특화 시범도시 조성·운영 ▲K-AI 시티 선도모델 확산 ▲법·제도 기반 마련 등 5대 과제로 구성됐다. 정부는 우선 도시 분야에 AI를 접목한 'AI시티+X 서비스... ",
+                "link": "https://n.news.naver.com/mnews/article/003/0014178173?sid=101",
+                "pubDate": "Wed, 09 Sep 2026 06:00:00 +0900",
+                "score": 85,
+                "is_main": true,
+                "summary": "정부가 'AI 시티 인프라 구축' 및 'AI 특화 시범도시 조성' 등을 통해 원주, 천안아산, 새만금, 광주에 도시 전반에 AI를 접목하는 'K-AI 시티'를 조성하여 AI 혁신을 확산한다.",
+                "category_code": "National AI Strategy, Smart City"
+            },
+            {
+                "id": "4807251373",
+                "title": "&quot;일하는 AI 만들려면 오케스트레이션부터&quot;…워카토, 엔터프라이즈 MCP 전...",
+                "description": "형태로 전환할 수 있도록 지원하고 있다. 애플리케이션 프로그래밍 인터페이스(API)가 없는 오래된 레거시 시스템도 기존 인터페이스를 활용해 워크플로우와 연결함으로써 AI가 사용할 수 있도록 구성할 수 있도록... ",
+                "link": "https://n.news.naver.com/mnews/article/092/0002436746?sid=105",
+                "pubDate": "Wed, 09 Sep 2026 10:00:00 +0900",
+                "score": 82,
+                "is_main": true,
+                "summary": "워카토가 '엔터프라이즈 MCP' 전략을 통해 AI가 레거시 시스템의 API가 없는 인터페이스까지 활용하여 워크플로우를 연결하고 업무를 자동화할 수 있는 오케스트레이션 솔루션을 제공한다.",
+                "category_code": "Enterprise AI Integration"
+            },
+            {
+                "id": "cf83e23678",
+                "title": "AI 진심인 최태원… SK의 AI 역량 결집된 울산 전격 점검 [리더의 나침반...",
+                "description": "통합 운영체계다. AI가 250만평에 달하는 울산CLX 전 공정과 설비를 24시간 상시 감지·분석하면, 사람의 판단을 거쳐 신속하게 대응하는 방식이다. 향후 다른 제조 현장에도 적용될 수 있는 실행 모델이 될 전망이다.... ",
+                "link": "https://n.news.naver.com/mnews/article/022/0004157944?sid=101",
+                "pubDate": "Thu, 10 Sep 2026 11:02:00 +0900",
                 "score": 80,
                 "is_main": true,
-                "summary": "정부는 원주, 천안아산, 새만금, 광주 4개 도시에 'K-AI 시티'를 조성하여 AI 혁신 서비스 발굴 및 AI 시티 인프라 구축을 목표로 5대 과제를 추진한다.",
-                "category_code": "AI Policy/Urban Development"
+                "summary": "최태원 SK 회장이 AI 통합 운영체계를 갖춘 울산CLX를 점검하며, 250만평 공정 설비를 AI가 24시간 감지·분석하고 사람이 대응하는 제조 AI 모델의 중요성을 강조했다.",
+                "category_code": "Industrial AX"
             },
             {
-                "id": "24ec2e0357",
-                "title": "삼성SDS, 오픈AI 손잡고 AX 확대…로봇 사업도 본격화",
-                "description": "삼성SDS는 오늘(8일) 서울 코엑스 컨벤션센터에서 엔터프라이즈 AX 콘퍼런스 '리얼 서밋 2026'을 열고 '다차원(Multi-Dimensional) AI 풀스택' 전략을 공개했습니다. 행사에는 온라인을 포함해 약 1만5천명이 참석했습니다.... ",
-                "link": "https://n.news.naver.com/mnews/article/374/0000531714?sid=101",
-                "pubDate": "Tue, 08 Sep 2026 09:24:00 +0900",
+                "id": "92c2117c4b",
+                "title": "아스트라 수요 폭증에…오픈AI, 月 200달러 요금제 신규 가입 중단",
+                "description": "최근 오픈AI는 '범용인공지능(AGI)에 도달했다'는 선언과 함께 'GPT-6 아스트라' 모델을 선보였다. 오픈AI는 챗GPT 유료 요금제를 저가형 '고'(월 8달러)와 일반형 '플러스'(월 20달러), 고급형 '프로'로 나눠 운영하고 있다.... ",
+                "link": "https://n.news.naver.com/mnews/article/030/0003465796?sid=105",
+                "pubDate": "Fri, 11 Sep 2026 08:52:00 +0900",
+                "score": 80,
+                "is_main": true,
+                "summary": "오픈AI가 최신 AI 모델 '아스트라'의 수요 폭증으로 월 200달러 요금제인 '프로'의 신규 가입을 일시 중단하며, 고성능 AI 모델에 대한 높은 시장 반응을 보여주었다.",
+                "category_code": "Generative AI Model"
+            },
+            {
+                "id": "798a923b60",
+                "title": "산업부, 제조 AI 전환 전국 확산 시동…경남서 첫 콘퍼런스",
+                "description": "이날 행사에서는 지역 기업들이 적용할 수 있는 AX 사례를 공유하는 동시에 1대 1 상담창구를 운영하는 등... 내년 정부 예산안에 반영된 풀스택 AI팩토리, 제조AI 파운데이션 모델 개발, 제조 암묵지 활용 AI 솔루션 개발... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016304320?sid=101",
+                "pubDate": "Fri, 11 Sep 2026 11:00:00 +0900",
+                "score": 80,
+                "is_main": true,
+                "summary": "산업부가 경남에서 제조 AI 전환 콘퍼런스를 개최하며 지역 기업에 적용 가능한 AX 사례를 공유하고, 풀스택 AI팩토리, 제조AI 파운데이션 모델 개발 등 제조 AI 전환 전국 확산에 시동을 건다.",
+                "category_code": "Industrial AX"
+            },
+            {
+                "id": "86d2ad2e37",
+                "title": "베스핀글로벌, aT 'ChaTi' 고도화 사업 수주…공공 AI 표준화 박차",
+                "description": "분야 AI 전환(AX) 사업 확대에 속도를 내고 있다. 베스핀글로벌은 aT의 농식품 수출정보 전문 플랫폼 'KATI... 등 AI 보안 기능을 갖추고 있으며, 공공기관의 폐쇄망 환경과 기존 레거시 시스템과의 연계를 지원한다.... ",
+                "link": "https://www.public25.com/news/articleView.html?idxno=54272",
+                "pubDate": "Tue, 08 Sep 2026 08:58:00 +0900",
+                "score": 78,
+                "is_main": true,
+                "summary": "베스핀글로벌이 aT의 농식품 수출정보 전문 플랫폼 'ChaTi' 고도화 사업을 수주하며 공공 분야 AI 전환(AX) 사업을 확대하고, 공공기관 AI 표준화에 박차를 가한다.",
+                "category_code": "Public Sector AX"
+            },
+            {
+                "id": "fa36d407da",
+                "title": "더존비즈온, ‘K-ICT WEEK’서 기업용 AI 솔루션 공개…AX 경쟁력 부각",
+                "description": "지용구 사장은 “기업의 업무 환경은 클라우드와 AI 전환이라는 두 축을 중심으로 빠르게 재편되고 있다”며 “국내 시장에서 축적한 AX 역량과 도입 경험을 기반으로 글로벌 엔터프라이즈 AI 시장 공략을... ",
+                "link": "https://www.etoday.co.kr/news/view/2624429",
+                "pubDate": "Fri, 11 Sep 2026 10:36:00 +0900",
                 "score": 75,
                 "is_main": true,
-                "summary": "삼성SDS는 AI 에이전트가 기존 레거시 시스템을 분석하고 코드를 변환하는 방식으로 기업의 레거시 현대화를 지원하는 기업용 AI 플랫폼 '패브릭스 2.0'을 10월 출시한다.",
-                "category_code": "AI Infrastructure/Platforms"
+                "summary": "더존비즈온이 'K-ICT WEEK'에서 클라우드 및 AI 전환 중심의 기업 업무 환경 재편에 발맞춰 AX 역량을 선보이고 글로벌 엔터프라이즈 AI 시장 공략을 선언했다.",
+                "category_code": "Enterprise AX"
+            },
+            {
+                "id": "064859b983",
+                "title": "[AI시대, 권력 대이동-농심] 생산·R&amp;D·공급망까지 전사 AX…글로벌 수...",
+                "description": "기존 레거시 시스템과 외부 솔루션도 연동했다. 여기에 구글의 생성형 AI '제미나이'를 결합했다. 농심은... 안에서 AI를 일상적인 업무도구로 사용할 수 있는 구조로 전환한 것이다. 특히 공급망 분야는 농심의 글로벌... ",
+                "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=318850",
+                "pubDate": "Fri, 11 Sep 2026 01:40:00 +0900",
+                "score": 75,
+                "is_main": true,
+                "summary": "농심이 구글 제미나이를 결합한 전사 AX를 통해 기존 레거시 시스템과 외부 솔루션을 연동하고, 생산·R&D·공급망 등 모든 업무에 AI를 일상적인 도구로 활용하며 글로벌 경쟁력을 강화한다.",
+                "category_code": "Enterprise AX, Food & Beverage"
+            },
+            {
+                "id": "1937fedf2c",
+                "title": "[AI픽] 퓨리오사AI, 싱가포르 법인 설립…아태 시장 공략",
+                "description": "퓨리오사AI는 싱가포르 법인을 설립해 핵심 거점으로 운영한다고 11일 밝혔다. 2세대 인공지능(AI) 추론... RNGD는 대규모언어모델(LLM)과 멀티모달 모델, 에이전틱 AI 등 여러 워크로드의 고성능·고효율 추론을 겨냥해... ",
+                "link": "https://n.news.naver.com/mnews/article/001/0016304016?sid=105",
+                "pubDate": "Fri, 11 Sep 2026 09:23:00 +0900",
+                "score": 72,
+                "is_main": true,
+                "summary": "퓨리오사AI가 싱가포르 법인을 설립하여 아시아태평양 시장 공략의 핵심 거점으로 삼고, 2세대 AI 추론 칩 'RNGD'를 통해 LLM 및 멀티모달 모델 등의 고성능·고효율 추론 시장을 겨냥한다.",
+                "category_code": "AI Hardware, Global Expansion"
             }
         ]
     },
@@ -169,21 +290,6 @@
         "data": []
     },
     "telegram": {
-        "data": [
-            {
-                "id": "8a98943a95",
-                "channel_name": "The Prompt Index 🇺🇸",
-                "text": "Free Custom Project Giveaway\nOnly one person can get it, so please read the chat to see if it's already been given out.\nHere's what I'm going to be giving away: it's a custom project in GPT. You give it a task, and it will generate you 20 components.\nEssentially, it treats it like a shopping market where you pick your components, and you can't exceed a budget.\nThe message below is a better description.",
-                "link": "https://t.me/ChatGPTMastermind/3362",
-                "image_url": "",
-                "reference_link": "",
-                "score": 95,
-                "is_main": true,
-                "title": "프롬프트 컴포넌트 마켓플레이스: 맞춤형 프롬프트 구축",
-                "situation": "특정 업무나 문제 해결을 위한 맞춤형 AI 프롬프트가 필요하지만, 어떻게 구성해야 할지 막막할 때 체계적인 접근법을 제공합니다.",
-                "method": "AI에게 특정 업무(예: 마케팅 보고서 초안 작성)나 문제를 제시합니다. AI는 이로부터 재사용 가능한 프롬프트 구성 요소들을 마켓플레이스 형태로 제시하며, 각 컴포넌트는 '1000 크레딧' 예산 내에서 구매할 수 있습니다. 컴포넌트는 추론, 구조, 연구, 분석, 창의성, 검증, 역할 정의, 출력 형식, 워크플로우 제어, 오류 처리 등을 다룰 수 있습니다. 사용자는 예산을 고려하여 필요한 컴포넌트를 선택하고, AI는 이를 바탕으로 최종 프롬프트를 조립하고, 구성 요소 간의 충돌을 확인하며, 호환성을 해결하고, 예산 제약으로 인해 희생된 부분을 설명해줍니다. 다른 마켓플레이스를 원하면 'New Market'을 입력합니다.",
-                "effect": "복잡한 프롬프트 구성을 위한 체계적인 가이드를 제공하여 고품질의 맞춤 프롬프트 생성 시간을 단축하고, 프롬프트 엔지니어링 학습 효과를 증대시킵니다. 마치 AI 코파일럿과 함께 프롬프트를 쇼핑하듯 구성하여 시행착오를 줄일 수 있습니다."
-            }
-        ]
+        "data": []
     }
 }
